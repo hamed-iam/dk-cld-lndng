@@ -1,29 +1,30 @@
-import { createGlobalStyle } from "styled-components";
-import { GlobalStyledProps } from "./theme";
+import { createGlobalStyle, css } from "styled-components";
+import { ThemeStyledProps } from "./theme";
 
 const GlobalStyle = createGlobalStyle(
   ({
     theme: {
-      colors: { blue },
+      colors: { background, coral },
     },
-  }: GlobalStyledProps) => {
-    return `
-    html,
-    body {
-      color: ${blue};
-      padding: 0;
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    }
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-    * {
-      box-sizing: border-box;
-    }
-  `;
+  }: ThemeStyledProps) => {
+    return css`
+      html,
+      body {
+        background-color: ${background};
+        color: ${coral};
+        padding: 0;
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    `;
   }
 );
 

@@ -1,25 +1,25 @@
-import Head from "next/head";
-import type { FC } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
-type Props = {
-  heading: string;
-  title: string;
+const Header = ({ toggleTheme, theme }) => {
+  const { pathname } = useRouter();
+
+  return (
+    <header>
+      <button onClick={toggleTheme}>
+        {theme === "light" ? "Dark" : "Light"} Mode
+      </button>
+      <Link href="/" className={pathname === "/" ? "is-active" : ""}>
+        Home
+      </Link>
+      <Link
+        href="/client-only"
+        className={pathname === "/client-only" ? "is-active" : ""}
+      >
+        Client-Only
+      </Link>
+    </header>
+  );
 };
 
- const Header: FC<Props> = ({ heading, title }) => (
-  <>
-    <Head>
-      <title>{title}</title>
-    </Head>
-    <h2>
-      next-i18next
-      <hr />
-    </h2>
-    <h1>{heading}</h1>
-    <a className="github" href="//github.com/i18next/next-i18next">
-      <i className="typcn typcn-social-github-circular" />
-    </a>
-  </>
-);
-
-export default Header
+export default Header;

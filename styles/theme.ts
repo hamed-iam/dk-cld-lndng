@@ -1,4 +1,3 @@
-// JS reimplementation of Style Closet scales for use in styled-components
 const colors = {
   blue: "#2179ee",
   green: "#00cc9a",
@@ -86,7 +85,7 @@ const theme: StyleClosetTheme = {
   secondaryColors,
 };
 
-interface GlobalStyledProps {
+interface ThemeStyledProps {
   theme: {
     colors: { [key in keyof typeof colors]: string };
     breakpoints: string[];
@@ -97,4 +96,4 @@ interface GlobalStyledProps {
 }
 
 export { theme };
-export type { StyleClosetTheme,GlobalStyledProps };
+export type { StyleClosetTheme, ThemeStyledProps };
