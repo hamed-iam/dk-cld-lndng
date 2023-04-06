@@ -7,7 +7,7 @@ const Layout = ({ children, toggleTheme, theme }: any) => {
   return (
     <StyledWrapper>
       <Header toggleTheme={toggleTheme} theme={theme} />
-      {children}
+      <main className="main">{children}</main>
       <Footer />
     </StyledWrapper>
   );

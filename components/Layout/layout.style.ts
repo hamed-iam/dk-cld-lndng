@@ -4,11 +4,14 @@ import { ThemeStyledProps } from "@/styles/themes";
 export default styled.main(
   ({
     theme: {
-      colors: { blue },
+      colors: { blue, background },
     },
   }: ThemeStyledProps) => {
     return css`
-      background: papayawhip;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: ${background};
       color: ${blue};
 
       a {
