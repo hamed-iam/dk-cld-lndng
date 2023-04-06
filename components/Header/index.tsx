@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-const Header = ({ toggleTheme, theme }) => {
+const Header = ({ toggleTheme, theme }:any) => {
   const { pathname } = useRouter();
 
   return (

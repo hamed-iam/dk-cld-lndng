@@ -1,4 +1,4 @@
-import { ThemeStyledProps } from "@/styles/theme";
+import { ThemeStyledProps } from "@/styles/themes";
 import styled, { css } from "styled-components";
 
 export default styled.main(

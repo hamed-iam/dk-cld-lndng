@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { ThemeStyledProps } from "@/styles/theme";
+import { ThemeStyledProps } from "@/styles/themes";
 
 export default styled.main(
   ({
