@@ -1,0 +1,25 @@
+{
+  "h1": "چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
+  "change-locale": "تغییر لوکل \"{{changeTo}}\"",
+  "to-second-page": "صفحه ۲",
+  "error-with-status": "خطا ({{statusCode}})",
+  "error-without-status": "خطا بدون کد",
+  "title": "کلاد | next-i18next",
+  "blog": {
+    "appDir": {
+      "question": "سوال؟",
+      "answer": "جواب",
+      "link": "https://locize.com/blog/next-13-app-dir-i18n/"
+    },
+    "optimized": {
+      "question": "سوال ۲",
+      "answer": "جواب ۲",
+      "link": "https://locize.com/blog/next-i18next-de/"
+    },
+    "ssg": {
+      "question": "اس اس جی سوال؟",
+      "answer": "اس اس جی جواب",
+      "link": "https://locize.com/blog/next-i18n-statisch/"
+    }
+  }
+}
