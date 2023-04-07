@@ -7,10 +7,10 @@ import StyleWrapper from "./header.style";
 import SvgIcon from "../SvgIcon";
 
 const Header = ({ toggleTheme, theme }: any) => {
-  const { pathname } = useRouter();
+  const { pathname, push } = useRouter();
 
   const handleChange = (value: string) => {
-    console.log(`selected ${value}`);
+    push(value);
   };
 
   return (
@@ -27,29 +27,21 @@ const Header = ({ toggleTheme, theme }: any) => {
           </Link>
 
           <Select
-            defaultValue="lucy"
             className="page-links-link"
             style={{ width: 120 }}
             onChange={handleChange}
+            placeholder="Products"
             options={[
-              { value: "jack", label: "Jack" },
-              { value: "lucy", label: "Lucy" },
-              { value: "Yiminghe", label: "yiminghe" },
-              { value: "disabled", label: "Disabled", disabled: true },
+              { value: "cloud-computing", label: "Cloud Computing" },
+              { value: "oss", label: "OSS Storage" },
+              { value: "edge-services", label: "Edge Services" },
             ]}
           />
 
-          <Link
-            href="/about"
-            className="page-links-link"
-          >
+          <Link href="/about" className="page-links-link">
             About/Contact us
           </Link>
-          <Link
-            href="/docs"
-            aria-disabled
-            className="page-links-link"
-          >
+          <Link href="/docs" aria-disabled className="page-links-link">
             Docs
           </Link>
         </div>
