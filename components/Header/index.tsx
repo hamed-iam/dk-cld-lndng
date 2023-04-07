@@ -7,18 +7,16 @@ import CustomSelect from "../DataEntry/Select";
 import StyleWrapper from "./header.style";
 import SvgIcon from "../SvgIcon";
 
-import { DatePicker } from "../DataEntry";
+import { DatePicker, Input } from "../DataEntry";
 
 const Header = ({ toggleTheme, theme }: any) => {
   const { pathname, push } = useRouter();
 
-  const handleChange = (value: string) => {
-    push(value);
-  };
-
   const { handleSubmit, control } = useForm({
     defaultValues: {
       products: "",
+      date: "",
+      input: "",
     },
   });
 
@@ -32,11 +30,14 @@ const Header = ({ toggleTheme, theme }: any) => {
     { value: "edge-services", label: "Edge Services" },
   ];
 
-  const handleSelectChange = (value: string) => {
-    console.log("Selected value:", value);
+  const handleProductSelectChange = (value: string) => {
+    push(value);
   };
   const handleDateChange = (value: string) => {
     console.log("Selected value:", value);
+  };
+  const handleInputChange = (value: string) => {
+    console.log("Input value:", value);
   };
 
   return (
@@ -57,7 +58,7 @@ const Header = ({ toggleTheme, theme }: any) => {
               name="products"
               placeholder="Select an option"
               options={options}
-              onChange={handleSelectChange}
+              onChange={handleProductSelectChange}
               control={control}
             />
 
@@ -65,11 +66,16 @@ const Header = ({ toggleTheme, theme }: any) => {
               placeholder="Start Date"
               control={control}
               onChange={handleDateChange}
-              name="startDate"
+              name="date"
+            />
+            <Input
+              placeholder="Input"
+              control={control}
+              onChange={handleInputChange}
+              name="input"
             />
             <input type="submit" />
           </form>
-          {/* <DevTool control={control} /> */}
 
           <Link href="/about" className="page-links-link">
             About/Contact us

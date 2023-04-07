@@ -1,17 +1,14 @@
 import { Control, Controller } from "react-hook-form";
-import { Select } from "antd";
+import { Input } from "antd";
 
-interface RHFSelectFieldProps {
+interface RHFInputFieldProps {
   control: Control<any>;
   name: string;
   placeholder?: string;
-  options: any;
   onChange?: (value: string) => void;
 }
 
-const { Option } = Select;
-
-const RHFSelectField = (props: RHFSelectFieldProps) => {
+const RHFInputField = (props: RHFInputFieldProps) => {
   return (
     <Controller
       control={props.control}
@@ -22,26 +19,22 @@ const RHFSelectField = (props: RHFSelectFieldProps) => {
       render={({ field, fieldState }) => {
         return (
           <>
-            <Select
+            <Input
               placeholder={props.placeholder}
               status={fieldState.error ? "error" : undefined}
               ref={field.ref}
-              //   name={field.name}
+              name={field.name}
               onBlur={field.onBlur}
               value={field.value}
-              onChange={(value) => {
-                field.onChange(value);
+              onChange={(e) => {
+                console.log(e);
+                field.onChange(e.target.value);
                 if (props.onChange) {
-                  props.onChange(value);
+                  props.onChange(e.target.value);
                 }
               }}
-            >
-              {props.options.map((option: any) => (
-                <Option key={option.value} value={option.value}>
-                  {option.label}
-                </Option>
-              ))}
-            </Select>
+            />
+
             <br />
             {fieldState.error ? (
               <span style={{ color: "red" }}>{fieldState.error?.message}</span>
@@ -53,4 +46,4 @@ const RHFSelectField = (props: RHFSelectFieldProps) => {
   );
 };
 
-export default RHFSelectField;
+export default RHFInputField;

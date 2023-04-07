@@ -6,7 +6,7 @@ interface RHFDatePickerFieldProps {
   control: Control<any>;
   name: string;
   placeholder?: string;
-  onChange? : (value: any) => void
+  onChange?: (value: any) => void;
 }
 
 const RHFDatePickerField = (props: RHFDatePickerFieldProps) => {
@@ -29,8 +29,8 @@ const RHFDatePickerField = (props: RHFDatePickerFieldProps) => {
               value={field.value ? dayjs(field.value) : null}
               onChange={(date) => {
                 field.onChange(date ? date.valueOf() : null);
-                if(props.onChange){
-                    props.onChange(date ? date.valueOf() : null)
+                if (props.onChange) {
+                  props.onChange(date ? date.valueOf() : null);
                 }
               }}
             />
