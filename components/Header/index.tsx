@@ -1,16 +1,42 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { Button, Select, Switch } from "antd";
-import { CheckOutlined, CloseOutlined } from "@ant-design/icons";
+import { Switch } from "antd";
 
+import { useForm } from "react-hook-form";
+import CustomSelect from "../DataEntry/Select";
 import StyleWrapper from "./header.style";
 import SvgIcon from "../SvgIcon";
+
+import { DatePicker } from "../DataEntry";
 
 const Header = ({ toggleTheme, theme }: any) => {
   const { pathname, push } = useRouter();
 
   const handleChange = (value: string) => {
     push(value);
+  };
+
+  const { handleSubmit, control } = useForm({
+    defaultValues: {
+      products: "",
+    },
+  });
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+  const options = [
+    { value: "cloud-computing", label: "Cloud Computing" },
+    { value: "oss", label: "OSS Storage" },
+    { value: "edge-services", label: "Edge Services" },
+  ];
+
+  const handleSelectChange = (value: string) => {
+    console.log("Selected value:", value);
+  };
+  const handleDateChange = (value: string) => {
+    console.log("Selected value:", value);
   };
 
   return (
@@ -26,17 +52,24 @@ const Header = ({ toggleTheme, theme }: any) => {
             Overview
           </Link>
 
-          <Select
-            className="page-links-link"
-            style={{ width: 120 }}
-            onChange={handleChange}
-            placeholder="Products"
-            options={[
-              { value: "cloud-computing", label: "Cloud Computing" },
-              { value: "oss", label: "OSS Storage" },
-              { value: "edge-services", label: "Edge Services" },
-            ]}
-          />
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <CustomSelect
+              name="products"
+              placeholder="Select an option"
+              options={options}
+              onChange={handleSelectChange}
+              control={control}
+            />
+
+            <DatePicker
+              placeholder="Start Date"
+              control={control}
+              onChange={handleDateChange}
+              name="startDate"
+            />
+            <input type="submit" />
+          </form>
+          {/* <DevTool control={control} /> */}
 
           <Link href="/about" className="page-links-link">
             About/Contact us
