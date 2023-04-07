@@ -22,7 +22,7 @@ const Header = ({ toggleTheme, theme }: any) => {
     },
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = (data: any) => {
     console.log(data);
   };
 
