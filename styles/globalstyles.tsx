@@ -4,14 +4,13 @@ import { ThemeStyledProps } from "./themes";
 const GlobalStyle = createGlobalStyle(
   ({
     theme: {
-      colors: { background, coral },
+      colors: { background },
     },
   }: ThemeStyledProps) => {
     return css`
       html,
       body {
         background-color: ${background};
-        color: ${coral};
         padding: 0;
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,

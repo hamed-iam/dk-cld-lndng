@@ -1,6 +1,6 @@
 import { InfoBox, PostList } from "@/components";
 
-const ClientOnly = () => {
+const AboutPage = () => {
   return (
     <>
       <InfoBox>ℹ️ This data is loaded on client and not prefetched</InfoBox>
@@ -9,4 +9,4 @@ const ClientOnly = () => {
   );
 };
 
-export default ClientOnly;
+export default AboutPage;

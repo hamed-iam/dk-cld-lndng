@@ -7,6 +7,27 @@ export default styled.div(
       colors: { blue, background },
     },
   }: ThemeStyledProps) => {
-    return css``;
+    return css`
+      padding: 24px 130px;
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo-lang {
+          display: flex;
+          .icon {
+            width: 200px;
+          }
+        }
+
+        .page-links {
+          display: flex;
+          align-items: center;
+            &-link{
+                margin: 0 10px;
+            }
+        }
+      }
+    `;
   }
 );
