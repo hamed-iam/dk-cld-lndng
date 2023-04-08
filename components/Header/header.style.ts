@@ -4,6 +4,7 @@ import { ThemeStyledProps } from "@/styles/themes";
 export default styled.div(
   ({
     theme: {
+      locale,
       colors: { blue, background },
     },
   }: ThemeStyledProps) => {
@@ -23,9 +24,9 @@ export default styled.div(
         .page-links {
           display: flex;
           align-items: center;
-            &-link{
-                margin: 0 10px;
-            }
+          &-link {
+            margin: 0 10px;
+          }
         }
       }
     `;

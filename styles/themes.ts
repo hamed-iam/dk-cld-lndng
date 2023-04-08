@@ -11,6 +11,7 @@ const fontSizes = [
   "4.8rem",
   "6.4rem",
 ];
+
 const space = [
   "0",
   ".4rem",
@@ -126,11 +127,20 @@ const darkTheme = {
   space,
 };
 
+const light = (locale: string) => {
+  return { ...lightTheme, locale };
+};
+
+const dark = (locale: string) => {
+  return { ...darkTheme, locale };
+};
+
 interface ThemeStyledProps {
   theme: {
     colors: {
       [key in keyof typeof darkTheme.colors]: string;
     };
+    locale: "en" | "fa";
     breakpoints: string[];
     fontSizes: string[];
     space: string[];
@@ -142,4 +152,4 @@ interface ThemeStyledProps {
 
 export type { ThemeStyledProps };
 
-export { lightTheme, darkTheme };
+export { light, dark, lightTheme, darkTheme };

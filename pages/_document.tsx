@@ -88,7 +88,10 @@ export default class CustomDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html
+        lang={this.props.locale}
+        dir={this.props.locale === "en" ? "ltr" : "rtl"}
+      >
         <Head>{this.props.styles}</Head>
         <body>
           <Main />

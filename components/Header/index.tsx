@@ -8,6 +8,7 @@ import SvgIcon from "../SvgIcon";
 import StyleWrapper from "./header.style";
 
 import { DatePicker, Input } from "../DataEntry";
+import LocaleSwitcher from "../locale-switcher";
 
 const Header = ({ toggleTheme, theme }: any) => {
   const { pathname, push } = useRouter();
@@ -52,6 +53,8 @@ const Header = ({ toggleTheme, theme }: any) => {
           <p>Lang</p>
         </div>
 
+        <LocaleSwitcher />
+
         <div className="page-links">
           <Link
             href="/"
@@ -85,10 +88,19 @@ const Header = ({ toggleTheme, theme }: any) => {
             <input type="submit" />
           </form>
 
-          <Link href="/about" className="page-links-link" onClick={handleCurrentRoute}>
+          <Link
+            href="/about"
+            className="page-links-link"
+            onClick={handleCurrentRoute}
+          >
             About/Contact us
           </Link>
-          <Link href="/docs" aria-disabled className="page-links-link" onClick={handleCurrentRoute}>
+          <Link
+            href="/docs"
+            aria-disabled
+            className="page-links-link"
+            onClick={handleCurrentRoute}
+          >
             Docs
           </Link>
         </div>
