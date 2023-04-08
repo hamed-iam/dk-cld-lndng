@@ -23,12 +23,12 @@ const RHFSelectField = (props: RHFSelectFieldProps) => {
         return (
           <>
             <Select
-              placeholder={props.placeholder}
               status={fieldState.error ? "error" : undefined}
               ref={field.ref}
               //   name={field.name}
               onBlur={field.onBlur}
-              value={field.value}
+              value={field.value || null}
+              placeholder={props.placeholder}
               onChange={(value) => {
                 field.onChange(value);
                 if (props.onChange) {

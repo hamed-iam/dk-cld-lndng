@@ -1,20 +1,21 @@
+import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { Switch } from "antd";
-
 import { useForm } from "react-hook-form";
 import CustomSelect from "../DataEntry/Select";
-import StyleWrapper from "./header.style";
 import SvgIcon from "../SvgIcon";
+import StyleWrapper from "./header.style";
 
 import { DatePicker, Input } from "../DataEntry";
 
 const Header = ({ toggleTheme, theme }: any) => {
   const { pathname, push } = useRouter();
+  const [currentProduct, setCurrentProduct] = useState("");
 
-  const { handleSubmit, control } = useForm({
+  const { handleSubmit, control, setValue } = useForm({
     defaultValues: {
-      products: "",
+      products: pathname.slice(1),
       date: "",
       input: "",
     },
@@ -40,6 +41,9 @@ const Header = ({ toggleTheme, theme }: any) => {
     console.log("Input value:", value);
   };
 
+  const handleCurrentRoute = () => {
+    setValue("products", "");
+  };
   return (
     <StyleWrapper>
       <header>
@@ -49,17 +53,21 @@ const Header = ({ toggleTheme, theme }: any) => {
         </div>
 
         <div className="page-links">
-          <Link href="/" className="page-links-link">
+          <Link
+            href="/"
+            className="page-links-link"
+            onClick={handleCurrentRoute}
+          >
             Overview
           </Link>
 
           <form onSubmit={handleSubmit(onSubmit)}>
             <CustomSelect
               name="products"
-              placeholder="Select an option"
               options={options}
               onChange={handleProductSelectChange}
               control={control}
+              placeholder="Products"
             />
 
             <DatePicker
@@ -77,10 +85,10 @@ const Header = ({ toggleTheme, theme }: any) => {
             <input type="submit" />
           </form>
 
-          <Link href="/about" className="page-links-link">
+          <Link href="/about" className="page-links-link" onClick={handleCurrentRoute}>
             About/Contact us
           </Link>
-          <Link href="/docs" aria-disabled className="page-links-link">
+          <Link href="/docs" aria-disabled className="page-links-link" onClick={handleCurrentRoute}>
             Docs
           </Link>
         </div>
