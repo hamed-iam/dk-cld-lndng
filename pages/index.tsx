@@ -6,7 +6,8 @@ import { fetchPosts } from "@/hooks";
 const Home = () => {
   return (
     <>
-      <InfoBox>ℹ️ This page shows how to use SSG with React-Query.</InfoBox>
+      <div style={{ marginInlineStart: "200px" }}>hi</div>
+      <InfoBox>This page shows how to use SSG with React-Query.</InfoBox>
       <PostList />
     </>
   );

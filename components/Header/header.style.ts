@@ -9,23 +9,27 @@ export default styled.div(
     },
   }: ThemeStyledProps) => {
     return css`
-      padding: 24px 130px;
       header {
+        padding: 16px 24px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+
         .logo-lang {
+          max-height: 56px;
+          border: 2px solid red;
           display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          width: 100%;
+
           .icon {
-            width: 200px;
+            width: 109px;
           }
         }
 
         .page-links {
-          display: flex;
-          align-items: center;
           &-link {
-            margin: 0 10px;
           }
         }
       }

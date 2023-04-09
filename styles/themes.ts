@@ -127,6 +127,8 @@ const darkTheme = {
   space,
 };
 
+
+
 const light = (locale: string) => {
   return { ...lightTheme, locale };
 };

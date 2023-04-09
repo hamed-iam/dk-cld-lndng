@@ -21,6 +21,7 @@ const RHFDatePickerField = (props: RHFDatePickerFieldProps) => {
         return (
           <>
             <DatePicker
+              {...props}
               placeholder={props.placeholder}
               status={fieldState.error ? "error" : undefined}
               ref={field.ref}

@@ -35,6 +35,7 @@
 
 // ? this is the reference of code for antd ssr and it seem to work, needs more testing https://github.com/vercel/next.js/pull/44015/files#diff-94faec492176ae2f396da10c6159c337f7cf23e28aac6a62f5229b285555096b
 // ? related doc https://beta.nextjs.org/docs/styling/css-in-js
+// @ts-ignore
 import Document, {
   Html,
   Head,
@@ -47,30 +48,51 @@ import { ServerStyleSheet } from "styled-components";
 import { createCache, extractStyle, StyleProvider } from "@ant-design/cssinjs";
 
 export default class CustomDocument extends Document {
-  static async getInitialProps(
-    ctx: DocumentContext
-  ): Promise<DocumentInitialProps> {
+  static async getInitialProps(ctx: any) {
     const originalRenderPage = ctx.renderPage;
     const cache = createCache();
     const sheet = new ServerStyleSheet();
 
     ctx.renderPage = () =>
       originalRenderPage({
-        enhanceApp: (App) => (props) =>
+        enhanceApp: (App:any) => (props:any) =>
           sheet.collectStyles(
             <StyleProvider cache={cache}>
               <App {...props} />
             </StyleProvider>
           ),
-        enhanceComponent: (Component) => Component,
+        enhanceComponent: (Component:any) => Component,
       });
+
+    let cookies = null;
+
+    if (ctx.req && ctx.req.headers.cookie) {
+      console.log("cookie values: ", ctx.req.headers.cookie.split("lang="));
+      cookies = ctx.req.headers.cookie;
+    }
 
     const initialProps = await Document.getInitialProps(ctx);
     const styles = sheet.getStyleElement();
 
+    const handleDir = (arg: any) => {
+      // arg?.includes("lang")
+      //   ? this.props.cookies.split("lang=")[1]
+      //   : this.props.locale === "en"
+      //   ? "ltr"
+      //   : "rtl";
+
+      if (arg.includes("lang")) {
+        if (arg.split("lang=")[1] === "fa") {
+          return "rtl";
+        } else return "ltr";
+      }
+    };
+
     // return { ...intialProps, styles };
     return {
       ...initialProps,
+      handleDir,
+      cookies,
       styles: (
         <>
           {initialProps.styles}
@@ -87,10 +109,18 @@ export default class CustomDocument extends Document {
   }
 
   render() {
+    // console.log("hasCookie: ", this.props.cookies);
+
+    console.log(
+      "this.props.handleDir(this.props.cookies)",
+      // @ts-ignore
+      this.props.handleDir(this.props.cookies)
+    );
     return (
       <Html
         lang={this.props.locale}
-        dir={this.props.locale === "en" ? "ltr" : "rtl"}
+        // @ts-ignore
+        dir={this.props.handleDir(this.props.cookies)}
       >
         <Head>{this.props.styles}</Head>
         <body>

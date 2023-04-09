@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { Switch } from "antd";
+import { Button, Drawer, Space, Switch } from "antd";
 import { useForm } from "react-hook-form";
 import CustomSelect from "../DataEntry/Select";
 import SvgIcon from "../SvgIcon";
@@ -9,10 +9,19 @@ import StyleWrapper from "./header.style";
 
 import { DatePicker, Input } from "../DataEntry";
 import LocaleSwitcher from "../locale-switcher";
+import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
 
 const Header = ({ toggleTheme, theme }: any) => {
   const { pathname, push } = useRouter();
-  const [currentProduct, setCurrentProduct] = useState("");
+  const [open, setOpen] = useState(false);
+
+  const showDrawer = () => {
+    setOpen(true);
+  };
+
+  const handleCloseSideMenu = () => {
+    setOpen(false);
+  };
 
   const { handleSubmit, control, setValue } = useForm({
     defaultValues: {
@@ -33,6 +42,7 @@ const Header = ({ toggleTheme, theme }: any) => {
   ];
 
   const handleProductSelectChange = (value: string) => {
+    handleCloseSideMenu()
     push(value);
   };
   const handleDateChange = (value: string) => {
@@ -43,6 +53,7 @@ const Header = ({ toggleTheme, theme }: any) => {
   };
 
   const handleCurrentRoute = () => {
+    handleCloseSideMenu()
     setValue("products", "");
   };
   return (
@@ -50,67 +61,92 @@ const Header = ({ toggleTheme, theme }: any) => {
       <header>
         <div className="logo-lang">
           <SvgIcon title="brandingIcon" viewBox="0 0 146 32" />
-          <p>Lang</p>
+          <Button type="ghost" onClick={showDrawer}>
+            <MenuOutlined />
+          </Button>
         </div>
 
-        <LocaleSwitcher />
-
-        <div className="page-links">
-          <Link
-            href="/"
-            className="page-links-link"
-            onClick={handleCurrentRoute}
+        <div>
+          <Drawer
+            title="Menu"
+            placement="right"
+            headerStyle={{}}
+            onClose={handleCloseSideMenu}
+            closeIcon={null}
+            open={open}
+            extra={
+              <Space>
+                <Button type="ghost" onClick={handleCloseSideMenu}>
+                  <CloseOutlined />
+                </Button>
+              </Space>
+            }
           >
-            Overview
-          </Link>
+            <div>
+              <LocaleSwitcher />
+              <div className="page-links">
+                <Link
+                  href="/"
+                  className="page-links-link"
+                  onClick={handleCurrentRoute}
+                >
+                  Overview
+                </Link>
 
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <CustomSelect
-              name="products"
-              options={options}
-              onChange={handleProductSelectChange}
-              control={control}
-              placeholder="Products"
-            />
+                <form onSubmit={handleSubmit(onSubmit)}>
+                  <CustomSelect
+                    name="products"
+                    options={options}
+                    onChange={handleProductSelectChange}
+                    control={control}
+                    placeholder="Products"
+                  />
 
-            <DatePicker
-              placeholder="Start Date"
-              control={control}
-              onChange={handleDateChange}
-              name="date"
-            />
-            <Input
-              placeholder="Input"
-              control={control}
-              onChange={handleInputChange}
-              name="input"
-            />
-            <input type="submit" />
-          </form>
+                  <DatePicker
+                    placeholder="Start Date"
+                    control={control}
+                    onChange={handleDateChange}
+                    name="date"
+                  />
+                  <Input
+                    placeholder="Input"
+                    control={control}
+                    onChange={handleInputChange}
+                    name="input"
+                  />
+                  <input type="submit" />
+                </form>
 
-          <Link
-            href="/about"
-            className="page-links-link"
-            onClick={handleCurrentRoute}
-          >
-            About/Contact us
-          </Link>
-          <Link
-            href="/docs"
-            aria-disabled
-            className="page-links-link"
-            onClick={handleCurrentRoute}
-          >
-            Docs
-          </Link>
+                <Link
+                  href="/about"
+                  className="page-links-link"
+                  onClick={handleCurrentRoute}
+                >
+                  About/Contact us
+                </Link>
+                <Link
+                  href="/docs"
+                  aria-disabled
+                  className="page-links-link"
+                  onClick={handleCurrentRoute}
+                >
+                  Docs
+                </Link>
+              </div>
+
+              <Switch
+                checkedChildren={
+                  <SvgIcon title="moonIcon" viewBox="0 0 24 24" />
+                }
+                unCheckedChildren={
+                  <SvgIcon title="sunIcon" viewBox="0 0 24 24" />
+                }
+                checked={theme === "light"}
+                onChange={toggleTheme}
+              />
+            </div>
+          </Drawer>
         </div>
-
-        <Switch
-          checkedChildren={<SvgIcon title="moonIcon" viewBox="0 0 24 24" />}
-          unCheckedChildren={<SvgIcon title="sunIcon" viewBox="0 0 24 24" />}
-          checked={theme === "light"}
-          onChange={toggleTheme}
-        />
       </header>
     </StyleWrapper>
   );
