@@ -81,7 +81,7 @@ export default class CustomDocument extends Document {
       //   ? "ltr"
       //   : "rtl";
 
-      if (arg.includes("lang")) {
+      if (arg?.includes("lang")) {
         if (arg.split("lang=")[1] === "fa") {
           return "rtl";
         } else return "ltr";
