@@ -12,7 +12,7 @@ import LocaleSwitcher from "../locale-switcher";
 import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
 
 const Header = ({ toggleTheme, theme }: any) => {
-  const { pathname, push } = useRouter();
+  const { pathname, push, locale } = useRouter();
   const [open, setOpen] = useState(false);
 
   const showDrawer = () => {
@@ -42,7 +42,7 @@ const Header = ({ toggleTheme, theme }: any) => {
   ];
 
   const handleProductSelectChange = (value: string) => {
-    handleCloseSideMenu()
+    handleCloseSideMenu();
     push(value);
   };
   const handleDateChange = (value: string) => {
@@ -53,7 +53,7 @@ const Header = ({ toggleTheme, theme }: any) => {
   };
 
   const handleCurrentRoute = () => {
-    handleCloseSideMenu()
+    handleCloseSideMenu();
     setValue("products", "");
   };
   return (
@@ -69,7 +69,7 @@ const Header = ({ toggleTheme, theme }: any) => {
         <div>
           <Drawer
             title="Menu"
-            placement="right"
+            placement={locale === "fa" ? "left" : "right"}
             headerStyle={{}}
             onClose={handleCloseSideMenu}
             closeIcon={null}

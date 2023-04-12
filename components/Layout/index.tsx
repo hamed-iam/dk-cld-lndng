@@ -6,13 +6,13 @@ import RouterLoading from "../RouterLoading";
 
 const Layout = ({ children, toggleTheme, theme }: any) => {
   return (
-    <RouterLoading>
+    // <RouterLoading>
       <StyledWrapper>
         <Header toggleTheme={toggleTheme} theme={theme} />
         <main className="main">{children}</main>
         <Footer />
       </StyledWrapper>
-    </RouterLoading>
+    // </RouterLoading>
   );
 };
 

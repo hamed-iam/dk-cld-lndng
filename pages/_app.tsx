@@ -18,9 +18,6 @@ import { useRouter } from "next/router";
 export default function App({ Component, pageProps ,...rest}: AppProps) {
 
   const [queryClient] = useState(() => new QueryClient());
-  // const cookieStore = cookies();
-  // const lang = cookieStore.get("lang");
-  // console.log("lang", lang);
   const [theme, toggleTheme] = useDarkMode();
   const { locale = "en" } = useRouter();
   const themeMode = theme === "light" ? light : dark;
