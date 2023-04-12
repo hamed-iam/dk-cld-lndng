@@ -1,5 +1,5 @@
 import { Layout } from "@/components";
-import { useTranslation } from "next-i18next";
+import { AboutCTR } from "@/containers";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 interface PageProps {
@@ -8,11 +8,9 @@ interface PageProps {
 }
 
 export default function AboutPage({ toggleTheme, theme }: PageProps) {
-  const { t } = useTranslation("common");
-
   return (
     <Layout toggleTheme={toggleTheme} theme={theme}>
-      <h1>{t("h1")}</h1>
+      <AboutCTR />
     </Layout>
   );
 }
@@ -20,7 +18,7 @@ export default function AboutPage({ toggleTheme, theme }: PageProps) {
 export async function getServerSideProps({ locale }: any) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common", "footer"])),
+      ...(await serverSideTranslations(locale, ["common", "about"])),
     },
   };
 }

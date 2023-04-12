@@ -1,4 +1,5 @@
-import { InfoBox, Layout, PostList } from "@/components";
+import { Layout } from "@/components";
+import { OssCTR } from "@/containers";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 interface PageProps {
@@ -9,9 +10,7 @@ interface PageProps {
 const OssPage = ({ toggleTheme, theme }: PageProps) => {
   return (
     <Layout toggleTheme={toggleTheme} theme={theme}>
-      <h1>Oss Page</h1>
-      <InfoBox>ℹ️ This data is loaded on client and not prefetched</InfoBox>
-      <PostList />
+      <OssCTR />
     </Layout>
   );
 };
@@ -19,7 +18,7 @@ const OssPage = ({ toggleTheme, theme }: PageProps) => {
 export async function getStaticProps({ locale }: any) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["footer"])),
+      ...(await serverSideTranslations(locale, ["common",'oss'])),
     },
   };
 }

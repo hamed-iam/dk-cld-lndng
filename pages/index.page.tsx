@@ -1,8 +1,9 @@
 import React from "react";
 import { dehydrate, QueryClient } from "@tanstack/react-query";
-import { InfoBox, PostList, Layout } from "@/components";
+import { Layout } from "@/components";
 import { fetchPosts } from "@/hooks";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { DashboardCTR } from "@/containers";
 
 interface PageProps {
   theme: string | (() => void);
@@ -12,9 +13,7 @@ interface PageProps {
 const Home = ({ toggleTheme, theme }: PageProps) => {
   return (
     <Layout toggleTheme={toggleTheme} theme={theme}>
-      <div style={{ marginInlineStart: "200px" }}>hi</div>
-      <InfoBox>This page shows how to use SSG with React-Query.</InfoBox>
-      <PostList />
+      <DashboardCTR />
     </Layout>
   );
 };
@@ -26,7 +25,7 @@ export async function getStaticProps({ locale }: any) {
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["footer"])),
+      ...(await serverSideTranslations(locale, ["dashboard", "common"])),
       dehydratedState: dehydrate(queryClient),
     },
   };

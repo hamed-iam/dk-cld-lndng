@@ -1,25 +1,20 @@
 {
-    "h1": "لورم ایپسوم متن",
-    "change-locale": "ساختگی با تولید سادگی  \"{{changeTo}}\"",
-    "to-second-page": "شناخت فراوان جامع",
-    "error-with-status": "A {{statusCode}} شرایط سخت تایپ به پایان رسد",
-    "error-without-status": " را می طلبد تا با نرم افزارها",
-    "title": "نامفهوم از صنعت چاساختگی",
-    "blog": {
-      "appDir": {
-        "question": " بهبود ابزارهای کاربردی ?",
-        "answer": "this is Persian <1>this blog post</1>.",
-        "link": "https://locize.com/blog/next-13-app-dir-i18n/"
-      },
-      "optimized": {
-        "question": "شته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ا?",
-        "answer": "this is persian <1>this blog post</1>.",
-        "link": "https://locize.com/blog/next-i18next/"
-      },
-      "ssg": {
-        "question": " بیشتری را برای?",
-        "answer": "this is answer in persian <1>this blog post</1>.",
-        "link": "https://locize.com/blog/next-i18n-static/"
-      }
+  "h1": "دیجی کلاد",
+  "change-locale": "ساختگی با تولید سادگی  \"{{changeTo}}\"",
+  "error-with-status": "A {{statusCode}} شرایط سخت تایپ به پایان رسد",
+  "error-without-status": " را می طلبد تا با نرم افزارها",
+  "header": {
+    "overview":"صفحه اصلی",
+    "about-us":"درباره/تماس با ما",
+    "docs":"اسناد",
+    "products-label":"محصولات",
+    "products":{
+      "cloud-computing":"رایانش ابری",
+      "oss":"ابجکت استوریج",
+      "edge-services":"سرویس های ادج"
     }
+  },
+  "footer": {
+    "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است."
   }
+}

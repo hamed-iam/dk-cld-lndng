@@ -3,11 +3,11 @@ import StyleWrapper from "./footer.style";
 import { useTranslation } from "next-i18next";
 
 const Footer = () => {
-  const { t } = useTranslation("footer");
+  const { t } = useTranslation("common");
 
   return (
     <StyleWrapper>
-      <p>{t("description")}</p>
+      <p>{t("footer.description")}</p>
     </StyleWrapper>
   );
 };

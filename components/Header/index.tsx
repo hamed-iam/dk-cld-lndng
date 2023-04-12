@@ -5,13 +5,14 @@ import { Button, Drawer, Space, Switch } from "antd";
 import { useForm } from "react-hook-form";
 import CustomSelect from "../DataEntry/Select";
 import SvgIcon from "../SvgIcon";
-import StyleWrapper from "./header.style";
-
+import { useTranslation } from "next-i18next";
 import { DatePicker, Input } from "../DataEntry";
 import LocaleSwitcher from "../locale-switcher";
 import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
+import StyleWrapper from "./header.style";
 
 const Header = ({ toggleTheme, theme }: any) => {
+  const { t } = useTranslation("common");
   const { pathname, push, locale } = useRouter();
   const [open, setOpen] = useState(false);
 
@@ -36,9 +37,9 @@ const Header = ({ toggleTheme, theme }: any) => {
   };
 
   const options = [
-    { value: "cloud-computing", label: "Cloud Computing" },
-    { value: "oss", label: "OSS Storage" },
-    { value: "edge-services", label: "Edge Services" },
+    { value: "cloud-computing", label: t("header.products.cloud-computing") },
+    { value: "oss", label: t("header.products.oss") },
+    { value: "edge-services", label: t("header.products.edge-services") },
   ];
 
   const handleProductSelectChange = (value: string) => {
@@ -56,6 +57,9 @@ const Header = ({ toggleTheme, theme }: any) => {
     handleCloseSideMenu();
     setValue("products", "");
   };
+
+
+  const productsLabel:string = t('header.products-label')
   return (
     <StyleWrapper>
       <header>
@@ -90,7 +94,7 @@ const Header = ({ toggleTheme, theme }: any) => {
                   className="page-links-link"
                   onClick={handleCurrentRoute}
                 >
-                  Overview
+                  {t("header.overview")}
                 </Link>
 
                 <form onSubmit={handleSubmit(onSubmit)}>
@@ -99,7 +103,7 @@ const Header = ({ toggleTheme, theme }: any) => {
                     options={options}
                     onChange={handleProductSelectChange}
                     control={control}
-                    placeholder="Products"
+                    placeholder={productsLabel}
                   />
 
                   <DatePicker
@@ -122,7 +126,7 @@ const Header = ({ toggleTheme, theme }: any) => {
                   className="page-links-link"
                   onClick={handleCurrentRoute}
                 >
-                  About/Contact us
+                  {t("header.about-us")}{" "}
                 </Link>
                 <Link
                   href="/docs"
@@ -130,7 +134,7 @@ const Header = ({ toggleTheme, theme }: any) => {
                   className="page-links-link"
                   onClick={handleCurrentRoute}
                 >
-                  Docs
+                  {t("header.docs")}
                 </Link>
               </div>
 
