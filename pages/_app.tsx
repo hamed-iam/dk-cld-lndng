@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyle from "@/styles/globalstyles";
 import { light, dark } from "@/styles/themes";
 import { useDarkMode } from "@/hooks/useDarkMode";
+import { appWithTranslation } from "next-i18next";
 
 import {
   Hydrate,
@@ -11,12 +12,9 @@ import {
   QueryClientProvider,
 } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { Layout } from "@/components";
 import { useRouter } from "next/router";
-// import { cookies } from "next/headers";
 
-export default function App({ Component, pageProps ,...rest}: AppProps) {
-
+function App({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(() => new QueryClient());
   const [theme, toggleTheme] = useDarkMode();
   const { locale = "en" } = useRouter();
@@ -27,10 +25,7 @@ export default function App({ Component, pageProps ,...rest}: AppProps) {
       <Hydrate state={pageProps.dehydratedState}>
         <ThemeProvider theme={themeMode(locale)}>
           <GlobalStyle />
-
-          <Layout toggleTheme={toggleTheme} theme={theme}>
-            <Component {...pageProps} />
-          </Layout>
+          <Component {...pageProps} toggleTheme={toggleTheme} theme={theme} />
         </ThemeProvider>
       </Hydrate>
       <ReactQueryDevtools />
@@ -38,21 +33,4 @@ export default function App({ Component, pageProps ,...rest}: AppProps) {
   );
 }
 
-
-
-
-// App.getInitialProps = async (appContext) => {
-//   // calls page's `getInitialProps` and fills `appProps.pageProps`
-//   const appProps = await App.getInitialProps(appContext);
-//   // you will need to parse the cookies by writing a method yourself or using something like the `cookie` npm package
-//   const cookies = parseTheCookies(appContext.req.headers.cookie);
-//   const searchesFromCookie = cookies;
-//   return { ...appProps, searchesFromCookie };
-// };
-
-// export async function getServerSideProps(context) {
-//   console.log('context', context)
-//   return {
-//     props: {}, // will be passed to the page component as props
-//   }
-// }
+export default appWithTranslation(App);

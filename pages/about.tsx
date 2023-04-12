@@ -1,16 +1,26 @@
-import { InfoBox, PostList } from "@/components";
-import useData from '@/hooks/useTranslate';
+import { Layout } from "@/components";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-const AboutPage = () => {
-  const data = useData('fa', 'common');
+interface PageProps {
+  theme: string | (() => void);
+  toggleTheme: string | (() => void);
+}
+
+export default function AboutPage({ toggleTheme, theme }: PageProps) {
+  const { t } = useTranslation("common");
+
   return (
-    <>
-      <InfoBox>ℹ️ This .data is loaded on client and not prefetched</InfoBox>
-      <PostList />
-      {/* {JSON.stringify(data)} */}
-      <h1>{data.h1}</h1>
-    </>
+    <Layout toggleTheme={toggleTheme} theme={theme}>
+      <h1>{t("h1")}</h1>
+    </Layout>
   );
-};
+}
 
-export default AboutPage;
+export async function getServerSideProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common", "footer"])),
+    },
+  };
+}
