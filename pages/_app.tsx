@@ -16,7 +16,7 @@ import { useRouter } from "next/router";
 // import { cookies } from "next/headers";
 
 export default function App({ Component, pageProps ,...rest}: AppProps) {
-  console.log('rest', rest)
+
   const [queryClient] = useState(() => new QueryClient());
   // const cookieStore = cookies();
   // const lang = cookieStore.get("lang");

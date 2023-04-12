@@ -6,14 +6,14 @@ export default function LocaleSwitcher() {
   const router = useRouter();
   const { locales, locale: activeLocale } = router;
 
-  const otherLocales = (locales || []).filter(
-    (locale) => locale !== activeLocale
-  );
+  const otherLocales = (locales || [])
+    .filter((locale) => locale !== activeLocale)
+    .filter((item) => item !== "default");
 
   const handleLocaleChange = () => {
     const handleReplaceRoute = () => {
       const current = new URL(window.location.href);
-      document.cookie = `lang=${otherLocales.join("")}`;
+      document.cookie = `NEXT_LOCALE=${otherLocales.join("")}`;
       window.location.replace(current.href);
     };
     router.events.on("routeChangeComplete", handleReplaceRoute);
