@@ -19,6 +19,7 @@
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
     "next": "13.2.4",
+    "next-translate": "^2.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.9",
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "@hookform/devtools": "^4.3.1",
-    "@types/styled-components": "^5.1.26"
+    "@types/styled-components": "^5.1.26",
+    "next-translate-plugin": "^2.0.4"
   }
 }
