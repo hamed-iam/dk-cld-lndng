@@ -11,7 +11,7 @@
     "products": {
       "cloud-computing": "Cloud computing",
       "oss": "Oss Storage",
-      "edge-serviced": "Edge Services"
+      "edge-services": "Edge Services"
     }
   },
   "footer": {
