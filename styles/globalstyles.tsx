@@ -39,6 +39,15 @@ const GlobalStyle = createGlobalStyle(
                   all: unset;
                   cursor: pointer;
                   margin: 8px 0;
+                  a {
+                    color: #73798f;
+                  }
+                  &.docs {
+                    pointer-events: none;
+                    a {
+                      color: #a4a7b3;
+                    }
+                  }
                 }
 
                 &-link {
@@ -53,12 +62,21 @@ const GlobalStyle = createGlobalStyle(
               }
 
               .burger-menu-products {
+                background: transparent;
+
+                .ant-collapse-item .ant-collapse-header {
+                  color: #73798f;
+                }
                 margin: 8px 0;
                 .products-container {
                   margin: 16px 0;
                   &:first-child,
                   &:last-child {
                     margin: unset;
+                  }
+                  .ant-collapse-item .ant-collapse-header {
+                    color: #73798f;
+                    background-color: transparent;
                   }
                 }
                 .product-btn {

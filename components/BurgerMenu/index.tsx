@@ -17,6 +17,8 @@ const BurgerMenu = ({
   onCloseSideMenu,
 }: any) => {
   const { t } = useTranslation("common");
+  const productsLabel: string = t("header.products-label");
+
 
   const { locale } = useRouter();
 
@@ -60,7 +62,7 @@ const BurgerMenu = ({
             </button>
 
             <Collapse className="burger-menu-products" expandIconPosition="end">
-              <Panel header="Products" key="1">
+              <Panel header={productsLabel} key="1">
                 {options.map((product) => (
                   <div key={product.value} className="products-container">
                     <button
@@ -86,7 +88,8 @@ const BurgerMenu = ({
 
             <button
               type="button"
-              className="page-links-btn"
+              className="page-links-btn docs"
+              disabled={true}
               onClick={handleCurrentRoute}
             >
               <Link href="/docs" aria-disabled className="page-links-link">
