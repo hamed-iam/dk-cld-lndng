@@ -1,9 +1,10 @@
-import React from "react";
+import Head from "next/head";
 import { dehydrate, QueryClient } from "@tanstack/react-query";
 import { Layout } from "@/components";
 import { fetchPosts } from "@/hooks";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { DashboardCTR } from "@/containers";
+import { useTranslation } from "next-i18next";
 
 interface PageProps {
   theme: string | (() => void);
@@ -11,10 +12,17 @@ interface PageProps {
 }
 
 const Home = ({ toggleTheme, theme }: PageProps) => {
+  const { t } = useTranslation("dashboard");
+
   return (
-    <Layout toggleTheme={toggleTheme} theme={theme}>
-      <DashboardCTR />
-    </Layout>
+    <>
+      <Head>
+        <title>{t("title")}</title>
+      </Head>
+      <Layout toggleTheme={toggleTheme} theme={theme}>
+        <DashboardCTR />
+      </Layout>
+    </>
   );
 };
 

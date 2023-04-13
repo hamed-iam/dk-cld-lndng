@@ -1,4 +1,4 @@
-import { Button, Drawer, Space, Switch } from "antd";
+import { Button, Drawer, Space, Switch, Collapse } from "antd";
 import StyledWrapper from "./burgerMenu.style";
 import { useRouter } from "next/router";
 import { CloseOutlined } from "@ant-design/icons";
@@ -6,15 +6,19 @@ import { useTranslation } from "next-i18next";
 import LocaleSwitcher from "../LocaleSwitcher";
 
 import Link from "next/link";
-import { useForm } from "react-hook-form";
-import { DatePicker, Input, Select } from "../DataEntry";
 import SvgIcon from "../SvgIcon";
 
-const BurgerMenu = ({ toggleTheme, theme, isMenuShow, onCloseSideMenu }: any) => {
-  const { t } = useTranslation("common");
-  const productsLabel: string = t("header.products-label");
+const { Panel } = Collapse;
 
-  const { locale, pathname, push } = useRouter();
+const BurgerMenu = ({
+  toggleTheme,
+  theme,
+  isMenuShow,
+  onCloseSideMenu,
+}: any) => {
+  const { t } = useTranslation("common");
+
+  const { locale } = useRouter();
 
   const options = [
     { value: "cloud-computing", label: t("header.products.cloud-computing") },
@@ -22,33 +26,8 @@ const BurgerMenu = ({ toggleTheme, theme, isMenuShow, onCloseSideMenu }: any) =>
     { value: "edge-services", label: t("header.products.edge-services") },
   ];
 
-  const { handleSubmit, control, setValue } = useForm({
-    defaultValues: {
-      products: pathname.slice(1),
-      date: "",
-      input: "",
-    },
-  });
-
   const handleCurrentRoute = () => {
     onCloseSideMenu();
-    setValue("products", "");
-  };
-
-  const onSubmit = (data: any) => {
-    console.log(data);
-  };
-
-  const handleProductSelectChange = (value: string) => {
-    onCloseSideMenu();
-    push(value);
-  };
-
-  const handleDateChange = (value: string) => {
-    console.log("Selected value:", value);
-  };
-  const handleInputChange = (value: string) => {
-    console.log("Input value:", value);
   };
 
   return (
@@ -56,8 +35,8 @@ const BurgerMenu = ({ toggleTheme, theme, isMenuShow, onCloseSideMenu }: any) =>
       <Drawer
         title="Menu"
         placement={locale === "fa" ? "left" : "right"}
-        headerStyle={{}}
         onClose={onCloseSideMenu}
+        className="burger-menu"
         closeIcon={null}
         open={isMenuShow}
         extra={
@@ -68,56 +47,54 @@ const BurgerMenu = ({ toggleTheme, theme, isMenuShow, onCloseSideMenu }: any) =>
           </Space>
         }
       >
-        <div>
-          <LocaleSwitcher />
+        <div className="menu-container">
           <div className="page-links">
-            <Link
-              href="/"
-              className="page-links-link"
+            <button
+              type="button"
+              className="page-links-btn"
               onClick={handleCurrentRoute}
             >
-              {t("header.overview")}
-            </Link>
+              <Link href="/" className="page-links-link">
+                {t("header.overview")}
+              </Link>
+            </button>
 
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <Select
-                name="products"
-                options={options}
-                onChange={handleProductSelectChange}
-                control={control}
-                placeholder={productsLabel}
-              />
-
-              <DatePicker
-                placeholder="Start Date"
-                control={control}
-                onChange={handleDateChange}
-                name="date"
-              />
-              <Input
-                placeholder="Input"
-                control={control}
-                onChange={handleInputChange}
-                name="input"
-              />
-              <input type="submit" />
-            </form>
-
-            <Link
-              href="/about"
-              className="page-links-link"
+            <Collapse className="burger-menu-products" expandIconPosition="end">
+              <Panel header="Products" key="1">
+                {options.map((product) => (
+                  <div key={product.value} className="products-container">
+                    <button
+                      type="button"
+                      className="product-btn"
+                      onClick={handleCurrentRoute}
+                    >
+                      <Link href={product.value}>{product.label}</Link>
+                    </button>
+                  </div>
+                ))}
+              </Panel>
+            </Collapse>
+            <button
+              type="button"
+              className="page-links-btn"
               onClick={handleCurrentRoute}
             >
-              {t("header.about-us")}{" "}
-            </Link>
-            <Link
-              href="/docs"
-              aria-disabled
-              className="page-links-link"
+              <Link href="/about" className="page-links-link">
+                {t("header.about-us")}
+              </Link>
+            </button>
+
+            <button
+              type="button"
+              className="page-links-btn"
               onClick={handleCurrentRoute}
             >
-              {t("header.docs")}
-            </Link>
+              <Link href="/docs" aria-disabled className="page-links-link">
+                {t("header.docs")}
+              </Link>
+            </button>
+
+            <LocaleSwitcher />
           </div>
 
           <Switch
