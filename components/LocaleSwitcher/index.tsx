@@ -2,6 +2,8 @@ import { Button } from "antd";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+import StyleWrapper from "./localeSwitcher.style";
+
 export default function LocaleSwitcher() {
   const router = useRouter();
   const { locales, locale: activeLocale } = router;
@@ -20,9 +22,8 @@ export default function LocaleSwitcher() {
   };
 
   return (
-    <div>
-      <p>Locale switcher:</p>
-      <ul>
+    <StyleWrapper>
+      <ul className="locale-list">
         {otherLocales.map((locale) => {
           const { pathname, query, asPath } = router;
 
@@ -35,6 +36,6 @@ export default function LocaleSwitcher() {
           );
         })}
       </ul>
-    </div>
+    </StyleWrapper>
   );
 }

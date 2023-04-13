@@ -13,23 +13,32 @@ export default styled.div(
         padding: 16px 24px;
         display: flex;
         align-items: center;
+        max-height: 74px;
 
-        .logo-lang {
-          max-height: 56px;
+        .container {
           border: 2px solid red;
           display: flex;
           justify-content: space-between;
           align-items: center;
-
           width: 100%;
 
-          .icon {
-            width: 109px;
+          &-logo {
+            display: flex;
+            align-items: center;
+            .icon {
+              width: 146px;
+            }
           }
-        }
 
-        .page-links {
-          &-link {
+          &-burger-btn {
+            @media (min-width: 480px) {
+              display: none;
+            }
+          }
+          &-locale {
+            @media (max-width: 480px) {
+              display: none;
+            }
           }
         }
       }
