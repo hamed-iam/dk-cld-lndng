@@ -1,9 +1,26 @@
 {
-    "h1": "Dashboard",
-    "title": "DigiCloud",
-    "hero":{
-      "super-h1": "What is DigiCloud?",
-      "h1": "Let’s Build a Better Infrastructure, together",
-      "sub-h1": "Safe, economical and according to your priorities"
-    }
+  "title": "DigiCloud",
+  "hero": {
+    "super-h1": "What is DigiCloud?",
+    "h1": "Let’s Build a Better Infrastructure, together",
+    "sub-h1": "Safe, economical and according to your priorities"
+  },
+  "products": {
+    "super-h1": "Our Products",
+    "h1-cloud-c": "Cloud Computing",
+    "h1-cloud-e": "Edge Services",
+    "h1-cloud-o": "Object Storage",
+    "sub-h1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  "about": {
+    "super-h1": "The Team",
+    "h1": "About Us",
+    "sub-h1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  "save": {
+    "super-h1": "Our Solutions",
+    "h1": "Save More",
+    "sub-h1": "Economic and Reliable",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   }
+}

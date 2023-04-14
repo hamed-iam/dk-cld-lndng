@@ -8,4 +8,3 @@ export { default as PostList } from "./PostList";
 export { default as SvgIcon } from "./SvgIcon";
 export { default as NavigationBar } from "./NavigationBar";
 
-export * from "./Dashboard";
