@@ -22,5 +22,44 @@
     "h1": "Save More",
     "sub-h1": "Economic and Reliable",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  "solutions": {
+    "super-h1": "Our Solutions",
+    "h1": "Answer Your Business Complexity with Our Solution",
+    "sub-h1": "Safe, economical and according to your business"
+  },
+  "scenarios": {
+    "h1": "Top 5 business scenarios for Digicloud"
+  },
+  "security": {
+    "super-h1": "Security",
+    "h1": "Deploy Safely on digicloud",
+    "sub-h1": "Have any question about features?"
+  },
+  "cli": {
+    "super-h1": "Interfaces",
+    "h1": "CLI",
+    "sub-h1": "Fast and Handicraft",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  "customers": {
+    "super-h1": "Fabulous Clients",
+    "h1": "Speed up your infrastructure with digiclould",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  "faq": {
+    "h1": "FAQ",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  "easy-acc": {
+    "h1": "Easy Access To All Products",
+    "cld-opt": "Cloud Computing",
+    "edg-opt": "Edge Services",
+    "oss-opt": "Object Storage"
+  },
+  "share":{
+    "super-h1":"Download and share",
+    "h1":"Share with your team",
+    "desc":"Everything you need to know is provided in a PDF file and you can download and share it with your teammates"
   }
 }
