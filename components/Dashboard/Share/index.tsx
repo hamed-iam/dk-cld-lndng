@@ -7,10 +7,10 @@ const Share = () => {
   return (
     <StyledWrapper>
       <div>
-        <h1>{t("share.super-h1")}</h1>
+        <p>{t("share.super-h1")}</p>
       </div>
       <div>
-        <p>{t("share.h1")}</p>
+        <h1>{t("share.h1")}</h1>
       </div>
       <div>
         <p>{t("share.desc")}</p>
