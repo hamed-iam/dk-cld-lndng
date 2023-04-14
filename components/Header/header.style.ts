@@ -16,7 +16,7 @@ export default styled.div(
         max-height: 74px;
 
         .container {
-          border: 2px solid red;
+          /* border: 2px solid red; */
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -31,12 +31,12 @@ export default styled.div(
           }
 
           &-burger-btn {
-            @media (min-width: 480px) {
+            @media (min-width: 930px) {
               display: none;
             }
           }
           &-locale {
-            @media (max-width: 480px) {
+            @media (max-width: 930px) {
               display: none;
             }
           }

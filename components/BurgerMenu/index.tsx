@@ -35,7 +35,7 @@ const BurgerMenu = ({
   return (
     <StyledWrapper>
       <Drawer
-        title="Menu"
+        title={t('header.menu')}
         placement={locale === "fa" ? "left" : "right"}
         onClose={onCloseSideMenu}
         className="burger-menu"

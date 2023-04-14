@@ -1,4 +1,9 @@
 {
     "h1": "Dashboard",
-    "title": "DigiCloud"
+    "title": "DigiCloud",
+    "hero":{
+      "super-h1": "What is DigiCloud?",
+      "h1": "Let’s Build a Better Infrastructure, together",
+      "sub-h1": "Safe, economical and according to your priorities"
+    }
   }

@@ -8,7 +8,7 @@ export default styled.nav(
     },
   }: ThemeStyledProps) => {
     return css`
-      @media (max-width: 480px) {
+      @media (max-width: 930px) {
         display: none;
       }
 
