@@ -1,15 +1,23 @@
 import { useTranslation } from "next-i18next";
 import StyledWrapper from "./ossCtr.style";
-import { InfoBox, PostList } from "@/components";
+import {
+  BenefitsSection,
+  DefineSection,
+  SolutionsSection,
+  SuccessStorySection,
+} from "@/components/Oss";
+import { Faq } from "@/components/Dashboard";
 
 const OssCtr = () => {
   const { t } = useTranslation("oss");
 
   return (
     <StyledWrapper>
-      <h1>{t('h1')}</h1>
-      <InfoBox>ℹ️ This data is loaded on client and not prefetched</InfoBox>
-      <PostList />
+      <DefineSection />
+      <BenefitsSection />
+      <SolutionsSection />
+      <SuccessStorySection />
+      <Faq />
     </StyledWrapper>
   );
 };
