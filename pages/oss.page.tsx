@@ -18,7 +18,7 @@ const OssPage = ({ toggleTheme, theme }: PageProps) => {
 export async function getStaticProps({ locale }: any) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common",'oss'])),
+      ...(await serverSideTranslations(locale, ["common", "oss"])),
     },
   };
 }
