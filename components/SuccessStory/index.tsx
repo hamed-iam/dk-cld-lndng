@@ -1,4 +1,4 @@
-import StyleWrapper from "./successStorySection.style";
+import StyleWrapper from "./successStory.style";
 
 export default function SuccessStorySection() {
   return (

@@ -23,11 +23,6 @@
     "sub-h1": "Economic and Reliable",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
-  "solutions": {
-    "super-h1": "Our Solutions",
-    "h1": "Answer Your Business Complexity with Our Solution",
-    "sub-h1": "Safe, economical and according to your business"
-  },
   "scenarios": {
     "h1": "Top 5 business scenarios for Digicloud"
   },
@@ -45,10 +40,6 @@
   "customers": {
     "super-h1": "Fabulous Clients",
     "h1": "Speed up your infrastructure with digiclould",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-  },
-  "faq": {
-    "h1": "FAQ",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
   },
   "easy-acc": {

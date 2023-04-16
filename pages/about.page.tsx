@@ -18,7 +18,7 @@ export default function AboutPage({ toggleTheme, theme }: PageProps) {
 export async function getStaticProps({ locale }: any) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common", "about","dashboard"])),
+      ...(await serverSideTranslations(locale, ["common", "about"])),
     },
   };
 }

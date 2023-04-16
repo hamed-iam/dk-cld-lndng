@@ -6,7 +6,7 @@ import {
   AddressSection,
 } from "@/components/AboutUs";
 import StyledWrapper from "./aboutCtr.style";
-import { Faq } from "@/components/Dashboard";
+import { Faq } from "@/components";
 
 const AboutCtr = ({}: any) => {
   const { t } = useTranslation("about");

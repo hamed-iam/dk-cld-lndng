@@ -8,7 +8,7 @@ export default styled.div(
     },
   }: ThemeStyledProps) => {
     return css`
-      min-height: 716px;
+      min-height: 530px ;
       border: 2px solid red;
     `;
   }

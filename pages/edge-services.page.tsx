@@ -18,7 +18,7 @@ const EdgeServicesPage = ({ toggleTheme, theme }: PageProps) => {
 export async function getStaticProps({ locale }: any) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common",'edge-services'])),
+      ...(await serverSideTranslations(locale, ["common", "edge-services"])),
     },
   };
 }

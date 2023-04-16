@@ -5,15 +5,14 @@ import {
   Cli,
   Customers,
   EasyAccess,
-  Faq,
   Hero,
   ProductsFeatures,
   SaveMore,
   Scenarios,
   Security,
   Share,
-  Solutions,
 } from "@/components/Dashboard";
+import { Faq, Solutions } from "@/components";
 
 const DashboardCtr = () => {
   const { t } = useTranslation("dashboard");

@@ -3,10 +3,8 @@ import StyledWrapper from "./ossCtr.style";
 import {
   BenefitsSection,
   DefineSection,
-  SolutionsSection,
-  SuccessStorySection,
 } from "@/components/Oss";
-import { Faq } from "@/components/Dashboard";
+import { SuccessStory,Faq ,Solutions} from "@/components";
 
 const OssCtr = () => {
   const { t } = useTranslation("oss");
@@ -15,8 +13,8 @@ const OssCtr = () => {
     <StyledWrapper>
       <DefineSection />
       <BenefitsSection />
-      <SolutionsSection />
-      <SuccessStorySection />
+      <Solutions/>
+      <SuccessStory />
       <Faq />
     </StyledWrapper>
   );

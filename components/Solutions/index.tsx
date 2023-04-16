@@ -2,7 +2,7 @@ import { useTranslation } from "next-i18next";
 import StyledWrapper from "./solutions.style";
 
 const Solutions = () => {
-  const { t } = useTranslation("dashboard");
+  const { t } = useTranslation("common");
 
   return (
     <StyledWrapper>
