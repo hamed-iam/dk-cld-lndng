@@ -1,18 +1,24 @@
 import { useTranslation } from "next-i18next";
 import StyledWrapper from "./edgeServicesCtr.style";
-import { SuccessStory } from "@/components";
-import { DefineSection, FeaturesSection } from "@/components/EdgeServices";
-import { Solutions } from "@/components";
+import { CaseStudy, Faq, SuccessStory } from "@/components";
+import {
+  EdgeFeaturesSection,
+  EdgePricingSection,
+} from "@/components/PageEdgeServices";
+import { Solutions, ProductDefineSection } from "@/components";
 
 const EdgeServicesCtr = () => {
   const { t } = useTranslation("edge-services");
 
   return (
     <StyledWrapper>
-      <DefineSection />
-      <FeaturesSection />
+      <ProductDefineSection />
+      <EdgeFeaturesSection />
       <Solutions />
       <SuccessStory />
+      <EdgePricingSection />
+      <CaseStudy />
+      <Faq />
     </StyledWrapper>
   );
 };

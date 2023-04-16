@@ -1,19 +1,21 @@
 import { useTranslation } from "next-i18next";
 import StyledWrapper from "./ossCtr.style";
+import { BenefitsSection } from "@/components/PageOss";
 import {
-  BenefitsSection,
-  DefineSection,
-} from "@/components/Oss";
-import { SuccessStory,Faq ,Solutions} from "@/components";
+  SuccessStory,
+  Faq,
+  Solutions,
+  ProductDefineSection,
+} from "@/components";
 
 const OssCtr = () => {
   const { t } = useTranslation("oss");
 
   return (
     <StyledWrapper>
-      <DefineSection />
+      <ProductDefineSection />
       <BenefitsSection />
-      <Solutions/>
+      <Solutions />
       <SuccessStory />
       <Faq />
     </StyledWrapper>

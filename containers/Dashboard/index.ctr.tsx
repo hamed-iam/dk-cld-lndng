@@ -11,7 +11,7 @@ import {
   Scenarios,
   Security,
   Share,
-} from "@/components/Dashboard";
+} from "@/components/PageDashboard";
 import { Faq, Solutions } from "@/components";
 
 const DashboardCtr = () => {

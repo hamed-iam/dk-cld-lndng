@@ -4,7 +4,7 @@ import {
   AboutUsSection,
   CallbackSection,
   AddressSection,
-} from "@/components/AboutUs";
+} from "@/components/PageAboutUs";
 import StyledWrapper from "./aboutCtr.style";
 import { Faq } from "@/components";
 

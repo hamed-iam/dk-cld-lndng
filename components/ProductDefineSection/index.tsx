@@ -1,4 +1,4 @@
-import StyledWrapper from "./defineSection.style";
+import StyledWrapper from "./productDefineSection.style";
 
 export default function DefineSection() {
   return (
