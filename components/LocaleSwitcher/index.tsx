@@ -31,6 +31,7 @@ export default function LocaleSwitcher() {
       <Select
         placeholder={activeLocale?.toUpperCase()}
         className="locale-select"
+        bordered={false}
         dropdownRender={() => (
           <div className="locale-list">
             {otherLocales.map((locale) => {

@@ -9,7 +9,6 @@ const NavigationBar = () => {
   const { t } = useTranslation("common");
   const productsLabel: string = t("header.products-label");
 
-
   const handleChange = (value: string) => {
     router.push(value);
   };
@@ -40,6 +39,7 @@ const NavigationBar = () => {
         placeholder={productsLabel}
         style={{ width: 120 }}
         className="nav"
+        bordered={false}
         onChange={handleChange}
         options={options}
       />

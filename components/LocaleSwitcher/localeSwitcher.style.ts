@@ -19,15 +19,15 @@ export default styled.nav(
       .lang-flag {
         .icon {
           width: unset !important;
+          height: 20px;
         }
         svg {
           width: 20px;
+          height: 20px;
         }
       }
       .locale-select {
-        .ant-select > .ant-select-selector {
-          border: none;
-        }
+        align-items: baseline;
       }
     `;
   }
