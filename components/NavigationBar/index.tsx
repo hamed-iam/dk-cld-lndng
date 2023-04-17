@@ -37,7 +37,7 @@ const NavigationBar = () => {
       <Select
         defaultValue={handleDefaultValue()}
         placeholder={productsLabel}
-        style={{ width: 120 }}
+        // style={{ width: 120 }}
         className="nav"
         bordered={false}
         onChange={handleChange}
