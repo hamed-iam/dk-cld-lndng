@@ -1,5 +1,31 @@
 import { createGlobalStyle, css } from "styled-components";
 import { ThemeStyledProps } from "./themes";
+import localFont from "next/font/local";
+
+const yekan = localFont({
+  src: [
+    {
+      path: "../public/fonts/yekanbakh/300/yekanbakh-300.woff2",
+      weight: "300",
+    },
+    {
+      path: "../public/fonts/yekanbakh/400/yekanbakh-400.woff2",
+      weight: "400",
+    },
+    {
+      path: "../public/fonts/yekanbakh/500/yekanbakh-500.woff2",
+      weight: "500",
+    },
+    {
+      path: "../public/fonts/yekanbakh/600/yekanbakh-600.woff2",
+      weight: "600",
+    },
+    {
+      path: "../public/fonts/yekanbakh/800/yekanbakh-800.woff2",
+      weight: "800",
+    },
+  ],
+});
 
 const GlobalStyle = createGlobalStyle(
   ({
@@ -8,20 +34,24 @@ const GlobalStyle = createGlobalStyle(
     },
   }: ThemeStyledProps) => {
     return css`
+      :root {
+        --yekan-font: ${yekan.style.fontFamily};
+      }
+
       html,
       body {
         background-color: ${background};
         padding: 0;
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
       }
+
       a {
         color: inherit;
         text-decoration: none;
       }
       * {
         box-sizing: border-box;
+        font-family: var(--yekan-font);
       }
 
       /* BURGER MENU */

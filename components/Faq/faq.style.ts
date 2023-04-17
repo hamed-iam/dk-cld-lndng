@@ -8,6 +8,9 @@ export default styled.aside(
     },
   }: ThemeStyledProps) => {
     return css`
+      font-family: var(--cooper-font);
+      font-weight: 600;
+      font-size: 20px;
       border: 1px solid red;
       min-height: 887px;
     `;
