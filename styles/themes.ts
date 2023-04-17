@@ -27,6 +27,12 @@ const space = [
 
 const lightTheme = {
   colors: {
+    LightTextDarkMid: "#36384A",
+    LightTextDarkLow: "#73798F",
+    LightThemePrimary600: "#3D88EB",
+
+    //
+
     primary: "#0070f3",
     text: "#000",
     background: "#fff",
@@ -78,6 +84,9 @@ const lightTheme = {
 
 const darkTheme = {
   colors: {
+    LightTextDarkMid: "#36384A",
+    LightTextDarkLow: "#73798F",
+    LightThemePrimary600: "#3D88EB",
     primary: "#0070f3",
     text: "#fff",
     background: "#000",
@@ -126,8 +135,6 @@ const darkTheme = {
   fontSizes,
   space,
 };
-
-
 
 const light = (locale: string) => {
   return { ...lightTheme, locale };

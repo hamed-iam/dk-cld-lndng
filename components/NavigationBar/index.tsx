@@ -28,29 +28,41 @@ const NavigationBar = () => {
     return null;
   };
 
+  const handleActiveClassName = (link: string | string[]) => {
+    let currentPath = router.pathname.slice(1);
+    if (Array.isArray(link) && link.includes(currentPath)) return "active";
+    if (link === currentPath) return "active";
+    return "";
+  };
+
   return (
     <StyledWrapper>
-      <Link href="/" className="nav">
-        {t("header.overview")}
-      </Link>
+      <span className={`nav ${handleActiveClassName("")}`}>
+        <Link href="/">{t("header.overview")}</Link>
+      </span>
 
       <Select
         defaultValue={handleDefaultValue()}
         placeholder={productsLabel}
-        // style={{ width: 120 }}
-        className="nav"
+        className={`nav ${handleActiveClassName([
+          "oss",
+          "cloud-computing",
+          "edge-services",
+        ])}`}
         bordered={false}
         onChange={handleChange}
         options={options}
       />
 
-      <Link href="/about" className="nav">
-        {t("header.about-us")}
-      </Link>
+      <span className={`nav ${handleActiveClassName("about")}`}>
+        <Link href="/about">{t("header.about-us")}</Link>
+      </span>
 
-      <Link href="/docs" aria-disabled className="nav">
-        {t("header.docs")}
-      </Link>
+      <span>
+        <Link href="/docs" aria-disabled className="nav docs">
+          {t("header.docs")}
+        </Link>
+      </span>
     </StyledWrapper>
   );
 };

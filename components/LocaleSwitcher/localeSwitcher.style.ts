@@ -8,6 +8,7 @@ export default styled.nav(
     },
   }: ThemeStyledProps) => {
     return css`
+      margin-inline-start: 12px;
       display: flex;
       align-items: center;
       border: 1px solid #dadced;
