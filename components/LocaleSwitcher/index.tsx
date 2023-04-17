@@ -26,7 +26,10 @@ export default function LocaleSwitcher() {
   return (
     <StyleWrapper>
       <span className="lang-flag">
-        <SvgIcon title="enLangIcon" viewBox="0 0 60 30" />
+        <SvgIcon
+          title={activeLocale === "en" ? "enLangIcon" : "faLangIcon"}
+          viewBox={activeLocale === "en" ? "0 0 60 30" : "0 0 630 360"}
+        />
       </span>
       <Select
         placeholder={activeLocale?.toUpperCase()}
