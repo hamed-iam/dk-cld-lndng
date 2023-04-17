@@ -8,8 +8,26 @@ export default styled.nav(
     },
   }: ThemeStyledProps) => {
     return css`
-      .locale-list {
-        list-style-type: none;
+      display: flex;
+      align-items: center;
+      border: 1px solid #dadced;
+      border-radius: 8px;
+      padding: 10px;
+      max-width: 110px;
+      height: 42px;
+
+      .lang-flag {
+        .icon {
+          width: unset !important;
+        }
+        svg {
+          width: 20px;
+        }
+      }
+      .locale-select {
+        .ant-select > .ant-select-selector {
+          border: none;
+        }
       }
     `;
   }

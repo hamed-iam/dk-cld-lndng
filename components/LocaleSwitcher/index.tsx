@@ -1,8 +1,10 @@
-import { Button } from "antd";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 import StyleWrapper from "./localeSwitcher.style";
+
+import { Select, Button } from "antd";
+import SvgIcon from "../SvgIcon";
 
 export default function LocaleSwitcher() {
   const router = useRouter();
@@ -23,19 +25,32 @@ export default function LocaleSwitcher() {
 
   return (
     <StyleWrapper>
-      <ul className="locale-list">
-        {otherLocales.map((locale) => {
-          const { pathname, query, asPath } = router;
-
-          return (
-            <li key={locale}>
-              <Link href={{ pathname, query }} as={asPath} locale={locale}>
-                <Button onClick={handleLocaleChange}>{locale}</Button>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      <span className="lang-flag">
+        <SvgIcon title="enLangIcon" viewBox="0 0 60 30" />
+      </span>
+      <Select
+        placeholder={activeLocale?.toUpperCase()}
+        className="locale-select"
+        dropdownRender={() => (
+          <div className="locale-list">
+            {otherLocales.map((locale) => {
+              const { pathname, query, asPath } = router;
+              return (
+                <Link
+                  href={{ pathname, query }}
+                  as={asPath}
+                  locale={locale}
+                  key={locale}
+                >
+                  <Button onClick={handleLocaleChange}>
+                    {locale.toUpperCase()}
+                  </Button>
+                </Link>
+              );
+            })}
+          </div>
+        )}
+      />
     </StyleWrapper>
   );
 }
