@@ -100,12 +100,12 @@ const BurgerMenu = ({
             <LocaleSwitcher />
           </div>
 
-          <Switch
+          {/* <Switch
             checkedChildren={<SvgIcon title="moonIcon" viewBox="0 0 24 24" />}
             unCheckedChildren={<SvgIcon title="sunIcon" viewBox="0 0 24 24" />}
             checked={theme === "light"}
             onChange={toggleTheme}
-          />
+          /> */}
         </div>
       </Drawer>
     </StyledWrapper>

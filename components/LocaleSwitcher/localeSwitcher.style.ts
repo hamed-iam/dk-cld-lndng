@@ -8,14 +8,16 @@ export default styled.nav(
     },
   }: ThemeStyledProps) => {
     return css`
-      margin-inline-start: 12px;
       display: flex;
       align-items: center;
       border: 1px solid #dadced;
       border-radius: 8px;
       padding: 10px;
-      max-width: 110px;
+      width: 100%;
       height: 42px;
+      .ant-select{
+        width: 100%;
+      }
 
       .lang-flag {
         .icon {

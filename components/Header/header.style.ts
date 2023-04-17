@@ -25,7 +25,9 @@ export default styled.div(
           &-logo {
             display: flex;
             align-items: center;
+
             .icon {
+              margin-inline-end: 12px;
               width: 146px;
             }
           }
