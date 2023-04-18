@@ -30,6 +30,10 @@ const lightTheme = {
     LightTextDarkMid: "#36384A",
     LightTextDarkLow: "#73798F",
     LightThemePrimary600: "#3D88EB",
+    DarkBGGrade15: "#101021",
+    DarkThemePrimary500Light: "#2E518F",
+    DarkBasicWhite: "#FFFFFF",
+    DarkTextLightLow: "#83899F",
 
     //
 
@@ -87,6 +91,12 @@ const darkTheme = {
     LightTextDarkMid: "#36384A",
     LightTextDarkLow: "#73798F",
     LightThemePrimary600: "#3D88EB",
+    DarkBGGrade15: "#101021",
+    DarkThemePrimary500Light: "#2E518F",
+    DarkBasicWhite: "#FFFFFF",
+    DarkTextLightLow: "#83899F",
+
+    //
     primary: "#0070f3",
     text: "#fff",
     background: "#000",
