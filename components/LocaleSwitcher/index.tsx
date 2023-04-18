@@ -46,7 +46,12 @@ export default function LocaleSwitcher() {
                   locale={locale}
                   key={locale}
                 >
-                  <Button onClick={handleLocaleChange}>
+                  <Button
+                    type="link"
+                    style={{ width: "100%" }}
+                    onClick={handleLocaleChange}
+                    className="locale-list-btn"
+                  >
                     {locale.toUpperCase()}
                   </Button>
                 </Link>

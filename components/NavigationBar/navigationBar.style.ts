@@ -18,6 +18,9 @@ export default styled.nav(
         font-weight: 400;
         font-size: 14px;
         position: relative;
+        &-link {
+          color: ${LightTextDarkLow};
+        }
         .ant-select-selection-placeholder,
         .ant-select-selection-item {
           color: ${LightTextDarkLow};
@@ -46,7 +49,7 @@ export default styled.nav(
           ::before {
             content: "";
             position: absolute;
-            display: inline-block;
+            /* display: inline-block; */
             width: 6px;
             height: 6px;
             bottom: 0;

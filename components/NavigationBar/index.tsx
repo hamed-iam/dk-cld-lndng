@@ -38,7 +38,9 @@ const NavigationBar = () => {
   return (
     <StyledWrapper>
       <span className={`nav ${handleActiveClassName("")}`}>
-        <Link href="/">{t("header.overview")}</Link>
+        <Link className="nav-link" href="/">
+          {t("header.overview")}
+        </Link>
       </span>
 
       <Select
@@ -55,11 +57,17 @@ const NavigationBar = () => {
       />
 
       <span className={`nav ${handleActiveClassName("about")}`}>
-        <Link href="/about">{t("header.about-us")}</Link>
+        <Link className="nav-link" href="/about">
+          {t("header.about-us")}
+        </Link>
       </span>
 
       <span>
-        <Link href="/docs" aria-disabled className="nav docs">
+        <Link
+          href="/docs"
+          aria-disabled
+          className="nav docs"
+        >
           {t("header.docs")}
         </Link>
       </span>
