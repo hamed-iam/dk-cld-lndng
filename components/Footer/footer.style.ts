@@ -97,6 +97,19 @@ export default styled.div(
         justify-content: center;
         .icon {
           width: 18px;
+          height: 23px;
+          margin: 0 3px;
+        }
+
+        &-desc {
+          color: ${DarkTextLightLow};
+          font-weight: 400;
+          font-size: 12px;
+        }
+        a {
+          font-weight: 400;
+          font-size: 12px;
+          margin: 0 2px;
         }
       }
     `;

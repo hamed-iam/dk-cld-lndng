@@ -95,15 +95,14 @@ const Footer = () => {
       </div>
       <div className="copyright">
         <SvgIcon title="copyrightIcon" viewBox="0 0 18 19" />
-        <span>
-          {t("footer.copyright.text", {
-            date:
-              router.locale === "fa"
-                ? dayjs().calendar("jalali").format("YYYY")
-                : dayjs().format("YYYY"),
-          })}
-          <Link href="/">{t("footer.copyright.link")}</Link>
+        <span className="copyright-desc">
+          {`${
+            router.locale === "fa"
+              ? dayjs().calendar("jalali").format("YYYY")
+              : dayjs().format("YYYY")
+          } ${t("footer.copyright.text")} `}
         </span>
+        <Link href="/">{t("footer.copyright.link")}</Link>
       </div>
     </StyleWrapper>
   );
