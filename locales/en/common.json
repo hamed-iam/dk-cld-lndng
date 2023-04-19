@@ -38,7 +38,8 @@
     },
     "contact": {
       "title": "Contact Us",
-      "presentation": "Request for Free Demo Trial"
+      "presentation": "Request for Free Demo Trial",
+      "phone":"021 - 61930777"
     },
     "copyright": {
       "text": "All rights reserved by {{date}} ",

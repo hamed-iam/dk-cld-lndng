@@ -88,7 +88,7 @@ const Footer = () => {
               <Link href="mailto:Support@digicloud.com">
                 Support@digicloud.com
               </Link>
-              <Link href="tel:02161930777">021 - 61930777</Link>
+              <Link href="tel:02161930777">{t("footer.contact.phone")}</Link>
             </div>
           </Col>
         </Row>

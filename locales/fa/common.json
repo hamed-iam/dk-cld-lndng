@@ -38,7 +38,8 @@
     },
     "contact": {
       "title": "تماس با ما",
-      "presentation": "درخواست جلسه ارائه"
+      "presentation": "درخواست جلسه ارائه",
+      "phone":"۰۲۱-۶۱۹۳۰۷۷۷"
     },
     "copyright": {
       "text": "  تمامی حقوق محفوظ {{date}}",

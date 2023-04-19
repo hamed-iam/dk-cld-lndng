@@ -52,7 +52,7 @@ export default styled.div(
           &-social {
             display: flex;
             .icon {
-              width: 20px;
+              width: 24px;
               margin: 0 3px;
             }
           }
