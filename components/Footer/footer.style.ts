@@ -9,6 +9,7 @@ export default styled.div(
         DarkThemePrimary500Light,
         DarkBasicWhite,
         DarkTextLightLow,
+        DarkTextLightHigh,
       },
     },
   }: ThemeStyledProps) => {
@@ -58,19 +59,35 @@ export default styled.div(
         }
         &-products {
           &-title {
+            color: ${DarkTextLightLow};
+            font-weight: 600;
+            font-size: 14px;
           }
           &-links {
             display: flex;
             flex-direction: column;
+            a {
+              color: ${DarkTextLightHigh};
+              font-weight: 600;
+              font-size: 14px;
+            }
           }
         }
 
         &-contact {
           &-title {
+            color: ${DarkTextLightLow};
+            font-weight: 600;
+            font-size: 14px;
           }
           &-links {
             display: flex;
             flex-direction: column;
+            a {
+              color: ${DarkTextLightHigh};
+              font-weight: 600;
+              font-size: 14px;
+            }
           }
         }
       }

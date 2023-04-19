@@ -34,6 +34,7 @@ const lightTheme = {
     DarkThemePrimary500Light: "#2E518F",
     DarkBasicWhite: "#FFFFFF",
     DarkTextLightLow: "#83899F",
+    DarkTextLightHigh: "#EDEEF3",
 
     //
 
@@ -95,6 +96,7 @@ const darkTheme = {
     DarkThemePrimary500Light: "#2E518F",
     DarkBasicWhite: "#FFFFFF",
     DarkTextLightLow: "#83899F",
+    DarkTextLightHigh: "#EDEEF3",
 
     //
     primary: "#0070f3",

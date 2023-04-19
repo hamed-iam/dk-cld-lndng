@@ -46,8 +46,7 @@ const Footer = () => {
                 viewBox="0 0 146 32"
               />
               <p className="info-branding-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Commodi, quos!
+               {t('footer.brand-desc')}
               </p>
               <div className="info-branding-social">
                 <a href="#">
@@ -68,13 +67,15 @@ const Footer = () => {
             sm={{ span: 24 }}
             className="info-products"
           >
-            <p className="info-products-title">Products</p>
+            <p className="info-products-title">{t("footer.products.title")}</p>
             <div className="info-products-links">
               <Link href="/cloud-computing">
-                Cloud Computing as a Service (IaaS)
+                {t("footer.products.cloud-computing")}
               </Link>
-              <Link href="/oss">Object Storage as a Service (OSS)</Link>
-              <Link href="/edge-services">Edge Services</Link>
+              <Link href="/oss">{t("footer.products.oss")}</Link>
+              <Link href="/edge-services">
+                {t("footer.products.edge-services")}
+              </Link>
             </div>
           </Col>
           <Col
@@ -83,9 +84,9 @@ const Footer = () => {
             sm={{ span: 24 }}
             className="info-contact"
           >
-            <p className="info-contact-title">Contact Us</p>
+            <p className="info-contact-title">{t("footer.contact.title")}</p>
             <div className="info-contact-links">
-              <Link href="/about">Request for free trial demo</Link>
+              <Link href="/about"> {t("footer.contact.presentation")}</Link>
               <Link href="mailto:Support@digicloud.com">
                 Support@digicloud.com
               </Link>
