@@ -7,16 +7,6 @@ export default styled.aside(
       colors: { blue, background },
     },
   }: ThemeStyledProps) => {
-    return css`
-      .menu .ant-drawer-wrapper-body{
-        border: 2px solid red;
-        background-color: yellow;
-
-        .menu-container {
-          background-color: blue;
-          border: 2px solid red;
-        }
-      }
-    `;
+    return css``;
   }
 );

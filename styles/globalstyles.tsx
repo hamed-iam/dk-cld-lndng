@@ -30,7 +30,7 @@ const yekan = localFont({
 const GlobalStyle = createGlobalStyle(
   ({
     theme: {
-      colors: { background },
+      colors: { background, LightTextDarkLow },
     },
   }: ThemeStyledProps) => {
     return css`
@@ -94,8 +94,15 @@ const GlobalStyle = createGlobalStyle(
               .burger-menu-products {
                 background: transparent;
 
+                .ant-collapse-header {
+                  padding: 12px;
+                }
+
                 .ant-collapse-item .ant-collapse-header {
                   color: #73798f;
+                }
+                .ant-collapse-content {
+                  border-top: none;
                 }
                 margin: 8px 0;
                 .products-container {
@@ -104,6 +111,7 @@ const GlobalStyle = createGlobalStyle(
                   &:last-child {
                     margin: unset;
                   }
+
                   .ant-collapse-item .ant-collapse-header {
                     color: #73798f;
                     background-color: transparent;
@@ -112,6 +120,19 @@ const GlobalStyle = createGlobalStyle(
                 .product-btn {
                   all: unset;
                   cursor: pointer;
+                  width: 100%;
+                  .icon {
+                    width: 20px;
+                    margin: 0 10px;
+                    margin-top: 2px;
+                  }
+                  display: flex;
+                  align-items: center;
+                  &-link {
+                    color: ${LightTextDarkLow};
+                    font-weight: 400;
+                    font-size: 15px;
+                  }
                 }
               }
             }

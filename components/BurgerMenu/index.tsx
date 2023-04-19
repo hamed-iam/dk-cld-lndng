@@ -11,21 +11,28 @@ import SvgIcon from "../SvgIcon";
 const { Panel } = Collapse;
 
 const BurgerMenu = ({
-  toggleTheme,
-  theme,
+  // toggleTheme,
+  // theme,
   isMenuShow,
   onCloseSideMenu,
 }: any) => {
   const { t } = useTranslation("common");
   const productsLabel: string = t("header.products-label");
 
-
   const { locale } = useRouter();
 
   const options = [
-    { value: "cloud-computing", label: t("header.products.cloud-computing") },
-    { value: "oss", label: t("header.products.oss") },
-    { value: "edge-services", label: t("header.products.edge-services") },
+    {
+      value: "cloud-computing",
+      label: t("header.products.cloud-computing"),
+      icon: "cloudComputingIcon",
+    },
+    { value: "oss", label: t("header.products.oss"), icon: "ossIcon" },
+    {
+      value: "edge-services",
+      label: t("header.products.edge-services"),
+      icon: "edgeServicesIcon",
+    },
   ];
 
   const handleCurrentRoute = () => {
@@ -35,7 +42,7 @@ const BurgerMenu = ({
   return (
     <StyledWrapper>
       <Drawer
-        title={t('header.menu')}
+        title={t("header.menu")}
         placement={locale === "fa" ? "left" : "right"}
         onClose={onCloseSideMenu}
         className="burger-menu"
@@ -65,13 +72,16 @@ const BurgerMenu = ({
               <Panel header={productsLabel} key="1">
                 {options.map((product) => (
                   <div key={product.value} className="products-container">
-                    <button
-                      type="button"
-                      className="product-btn"
-                      onClick={handleCurrentRoute}
-                    >
-                      <Link href={product.value}>{product.label}</Link>
-                    </button>
+                    <Link className="product-btn-link" href={product.value}>
+                      <button
+                        type="button"
+                        className="product-btn"
+                        onClick={handleCurrentRoute}
+                      >
+                        <SvgIcon title={product.icon} viewBox="0 0 24 24" />
+                        {product.label}
+                      </button>
+                    </Link>
                   </div>
                 ))}
               </Panel>
