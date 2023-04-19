@@ -45,9 +45,7 @@ const Footer = () => {
                 }
                 viewBox="0 0 146 32"
               />
-              <p className="info-branding-desc">
-               {t('footer.brand-desc')}
-              </p>
+              <p className="info-branding-desc">{t("footer.brand-desc")}</p>
               <div className="info-branding-social">
                 <a href="#">
                   <SvgIcon title="socialInstagramIcon" viewBox="0 0 20 20" />
@@ -90,6 +88,7 @@ const Footer = () => {
               <Link href="mailto:Support@digicloud.com">
                 Support@digicloud.com
               </Link>
+              <Link href="tel:02161930777">021 - 61930777</Link>
             </div>
           </Col>
         </Row>
