@@ -14,7 +14,6 @@ export default styled.div(
         display: flex;
         align-items: center;
         max-height: 74px;
-        border: 1px solid red;
 
         .container {
           display: flex;

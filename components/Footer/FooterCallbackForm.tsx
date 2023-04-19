@@ -2,11 +2,12 @@ import { useTranslation } from "next-i18next";
 import { useForm } from "react-hook-form";
 import { Input } from "../DataEntry";
 import { FooterCallbackStyledWrapper } from "./footer.style";
+import { Button } from "antd";
 
 const FooterCallbackForm = () => {
   const { t } = useTranslation("common");
 
-  const { handleSubmit, control } = useForm({
+  const { handleSubmit, control, getFieldState } = useForm({
     defaultValues: {
       input: "",
     },
@@ -29,7 +30,14 @@ const FooterCallbackForm = () => {
           onChange={handleInputChange}
           name="input"
         />
-        <input type="submit" />
+
+        <Button
+          htmlType="submit"
+          type="primary"
+          disabled={!!getFieldState("input").error}
+        >
+          {t("footer.callback.submit")}
+        </Button>
       </form>
     </FooterCallbackStyledWrapper>
   );
