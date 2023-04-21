@@ -28,7 +28,7 @@ const HeroCmp = () => {
         </div>
 
         <div className="title-wrapper-actions">
-          <Button type="primary" className="create-account-btn">Create DigiCloud Account</Button>
+          <Button type="primary" className="create-account-btn">{t('hero.actions.create-account')}</Button>
           <Button type="default" className="play-btn">
             <SvgIcon title="playIcon" viewBox="0 0 32 32" />
           </Button>

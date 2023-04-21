@@ -3,7 +3,10 @@
   "hero": {
     "super-h1": "What is DigiCloud?",
     "h1": "Let’s Build a Better Infrastructure, together",
-    "sub-h1": "Safe, economical and according to your priorities"
+    "sub-h1": "Safe, economical and according to your priorities",
+    "actions":{
+      "create-account":"Create DigiCloud Account"
+    }
   },
   "products": {
     "super-h1": "Our Products",
