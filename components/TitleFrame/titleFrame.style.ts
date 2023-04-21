@@ -12,13 +12,14 @@ export default styled.div(
       padding: 4px;
       .icon {
         width: 9px;
+        height: 9px;
         position: absolute;
         &.icon-cornerTLIcon {
-          top: 0;
+          top: -10px;
           left: 0;
         }
         &.icon-cornerTRIcon {
-          top: 0;
+          top: -10px;
           right: 0;
         }
         &.icon-cornerBLIcon {

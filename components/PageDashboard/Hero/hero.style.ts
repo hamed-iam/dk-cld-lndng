@@ -154,8 +154,8 @@ export const StyledSloganEn = styled.div(
       }
 
       .icon-sparkleIcon {
-        position: relative;
         width: 56px;
+        position: relative;
       }
     `;
   }
