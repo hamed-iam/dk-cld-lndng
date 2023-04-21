@@ -39,7 +39,7 @@ export default styled.div(
 export const StyledSloganFa = styled.div(
   ({
     theme: {
-      colors: { LightNatural100, LightNatural400, LightThemePrimary600 },
+      colors: { LightThemeInfo20, LightNatural400, LightThemePrimary600 },
     },
   }: ThemeStyledProps) => {
     return css`
@@ -49,6 +49,24 @@ export const StyledSloganFa = styled.div(
         margin: 0;
         color: ${LightNatural400};
         font-size: calc(40px + (64 - 40) * ((100vw - 320px) / (1920 - 320)));
+      }
+
+      .better {
+        position: relative;
+        z-index: 1;
+        &-highlight {
+          color: pink;
+        }
+
+        ::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          bottom: 25%;
+          height: 50%;
+          z-index: -1;
+          background-color: ${LightThemeInfo20};
+        }
       }
 
       .sparkle {
@@ -66,7 +84,7 @@ export const StyledSloganFa = styled.div(
 export const StyledSloganEn = styled.div(
   ({
     theme: {
-      colors: { LightNatural100, LightNatural400, LightThemePrimary600 },
+      colors: { LightThemeInfo20, LightNatural400, LightThemePrimary600 },
     },
   }: ThemeStyledProps) => {
     return css`
@@ -76,6 +94,27 @@ export const StyledSloganEn = styled.div(
         margin: 0;
         color: ${LightNatural400};
         font-size: calc(40px + (64 - 40) * ((100vw - 320px) / (1920 - 320)));
+      }
+
+      .better {
+        position: relative;
+        z-index: 1;
+        &-highlight {
+          color: pink;
+        }
+        &-infrastructure{
+          color: ${LightThemePrimary600};
+        }
+
+        ::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          bottom: 25%;
+          height: 50%;
+          z-index: -1;
+          background-color: ${LightThemeInfo20};
+        }
       }
 
       .sparkle {

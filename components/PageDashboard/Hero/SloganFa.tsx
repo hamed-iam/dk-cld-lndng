@@ -15,7 +15,7 @@ export default function SloganFa() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          زیرساخت بهتری
+          زیرساخت <span className="better-highlight">بهتر</span> ی
         </motion.span>{" "}
         <motion.span
           initial={{ opacity: 0 }}

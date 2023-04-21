@@ -14,16 +14,16 @@ export default function SloganEn() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          a Better
+          a <span className="better-highlight">Better</span>
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="better-infrastructure"
+          >
+            Infrastructure
+          </motion.span>
         </motion.span>{" "}
-        <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="infrastructure"
-        >
-          Infrastructure
-        </motion.span>
         ,
         <br />
         <span className="sparkle">
