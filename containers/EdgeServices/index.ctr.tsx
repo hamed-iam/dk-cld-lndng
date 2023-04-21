@@ -12,7 +12,7 @@ const EdgeServicesCtr = () => {
 
   return (
     <StyledWrapper>
-      <ProductDefineSection />
+      <ProductDefineSection cards={[]}/>
       <EdgeFeaturesSection />
       <Solutions />
       <SuccessStory />

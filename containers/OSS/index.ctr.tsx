@@ -13,7 +13,7 @@ const OssCtr = () => {
 
   return (
     <StyledWrapper>
-      <ProductDefineSection />
+      <ProductDefineSection cards={[]} />
       <BenefitsSection />
       <Solutions />
       <SuccessStory />
