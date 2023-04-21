@@ -3,6 +3,7 @@ export { default as CaseStudy } from "./CaseStudy";
 export { default as Header } from "./Header";
 export { default as Footer } from "./Footer";
 export { default as Faq } from "./Faq";
+export { default as TitleFrame } from "./TitleFrame";
 export { default as Layout } from "./Layout";
 export { default as LocaleSwitcher } from "./LocaleSwitcher";
 export { default as InfoBox } from "./InfoBox";

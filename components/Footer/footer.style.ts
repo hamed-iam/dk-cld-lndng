@@ -32,7 +32,7 @@ export default styled.div(
           }
           p {
             margin: unset;
-            font-weight: 700;
+            font-weight: 600;
             font-size: 18px;
             color: ${DarkBasicWhite};
           }

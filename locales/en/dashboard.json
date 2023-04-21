@@ -48,9 +48,9 @@
     "edg-opt": "Edge Services",
     "oss-opt": "Object Storage"
   },
-  "share":{
-    "super-h1":"Download and share",
-    "h1":"Share with your team",
-    "desc":"Everything you need to know is provided in a PDF file and you can download and share it with your teammates"
+  "share": {
+    "super-h1": "Download and share",
+    "h1": "Share with your team",
+    "desc": "Everything you need to know is provided in a PDF file and you can download and share it with your teammates"
   }
 }

@@ -1,8 +1,14 @@
 import { useTranslation } from "next-i18next";
 import StyledWrapper from "./hero.style";
-import SvgIcon from "@/components/SvgIcon";
+import { motion } from "framer-motion";
+import { useRouter } from "next/router";
+import Image from "next/image";
+import TitleFrame from "@/components/TitleFrame";
+import SloganFa from "./SloganFa";
+import SloganEn from "./SloganEn";
 
 const HeroCmp = () => {
+  const { locale } = useRouter();
   const { t } = useTranslation("dashboard");
 
   return (
@@ -10,29 +16,26 @@ const HeroCmp = () => {
       <div className="title-wrapper">
         <p className="title-wrapper-super">{t("hero.super-h1")}</p>
         <div className="title-wrapper-slogan">
-          <SvgIcon title="cornerTLIcon" viewBox="0 0 10 10" />
-          <SvgIcon title="cornerTRIcon" viewBox="0 0 10 10" />
-          <section>
-            {/* <h1>{t("hero.h1")}</h1> */}
-            <h1>
-              Let&apos;s build
-              <br />a <span className="better">Better</span>{" "}
-              <span className="infrastructure">Infrastructure</span>,
-              <br />
-              <span className="sparkle">
-                together <SvgIcon title="sparkleIcon" viewBox="0 0 56 57" />
-              </span>
-            </h1>
-          </section>
-          <SvgIcon title="cornerBLIcon" viewBox="0 0 10 10" />
-          <SvgIcon title="cornerBRIcon" viewBox="0 0 10 10" />
+          <TitleFrame>
+            {locale === "fa" ? <SloganFa /> : <SloganEn />}
+          </TitleFrame>
         </div>
         <p className="title-wrapper-sub">{t("hero.sub-h1")}</p>
       </div>
 
-      <div className="image-wrapper">
-        <SvgIcon title="heroCloudIcon" viewBox="0 0 384 343" />
-      </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="image-wrapper"
+      >
+        <Image
+          src="/assets/hero-compute.png"
+          width="300"
+          height="300"
+          alt="cloud-compute"
+        />
+      </motion.div>
     </StyledWrapper>
   );
 };
