@@ -6,7 +6,7 @@ export default function SloganEn() {
   return (
     <StyledSloganEn>
       <h1>
-        Let&apos;s build
+        Let&apos;s build a
         <br />
         <motion.span
           className="better"
@@ -14,7 +14,7 @@ export default function SloganEn() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          a <span className="better-highlight">Better</span>
+          <span className="better-highlight">Better</span>
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -23,9 +23,8 @@ export default function SloganEn() {
           >
             Infrastructure
           </motion.span>
-        </motion.span>{" "}
-        ,
-        <br />
+        </motion.span>
+        , <br />
         <span className="sparkle">
           together <SvgIcon title="sparkleIcon" viewBox="0 0 56 57" />
         </span>
