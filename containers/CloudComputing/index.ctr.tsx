@@ -14,9 +14,33 @@ import {
 
 const CloudComputingCtr = () => {
   const { t } = useTranslation("cloud-computing");
+
+  const cloudComputingDefineCards = [
+    {
+      title: t("define.storage"),
+      desc: t("define.storage-desc"),
+    },
+    {
+      title: t("define.dns"),
+      desc: t("define.dns-desc"),
+    },
+    {
+      title:'test1',
+      desc: t("define.dns-desc"),
+    },
+    {
+      title: 'test2',
+      desc: t("define.dns-desc"),
+    },
+    {
+      title: 'test3',
+      desc: t("define.dns-desc"),
+    },
+  ];
+
   return (
     <StyledWrapper>
-      <ProductDefineSection />
+      <ProductDefineSection cards={cloudComputingDefineCards} />
       <CloudBenefitsSection />
       <Solutions />
       <SuccessStory />

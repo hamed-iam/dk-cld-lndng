@@ -1,4 +1,10 @@
 {
   "h1": "Cloud Computing",
-  "title": "Home | next-i18next"
+  "title": "DigiCloud | Cloud Computing",
+  "define": {
+    "storage": "Storage Classes",
+    "storage-desc": "You Can Choose Different Storage ClassesYou Can Choose Different Storage Classes You Can Choose Diffrent Storage Classes",
+    "dns": "DNS Record",
+    "dns-desc": "You Can Choose Different Storage ClassesYou Can Choose Different Storage Classes You Can Choose Diffrent Storage Classes"
+  }
 }
