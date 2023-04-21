@@ -20,9 +20,41 @@ export default styled.div(
           color: ${LightNatural100};
         }
         &-sub {
-          font-weight: 600;
-          font-size: 16px;
-          color: ${LightNatural100};
+          position: relative;
+          .icon {
+            width: 32px;
+            position: absolute;
+            left: -3rem;
+            top: -1rem;
+
+            @media (max-width: 600px) {
+              display: none;
+            }
+          }
+          p {
+            font-weight: 600;
+            font-size: 16px;
+            color: ${LightNatural100};
+          }
+        }
+        &-actions {
+          display: flex;
+          .icon {
+            width: 32px;
+            height: 32px;
+          }
+
+          .create-account-btn {
+            font-weight: 700;
+            font-size: 14px;
+          }
+
+          .play-btn {
+            display: flex;
+            align-items: center;
+            padding: unset;
+            margin-inline-start: 16px;
+          }
         }
       }
 
@@ -102,7 +134,7 @@ export const StyledSloganEn = styled.div(
         &-highlight {
           color: pink;
         }
-        &-infrastructure{
+        &-infrastructure {
           color: ${LightThemePrimary600};
         }
 

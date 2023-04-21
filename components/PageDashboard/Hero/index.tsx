@@ -3,9 +3,11 @@ import StyledWrapper from "./hero.style";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import TitleFrame from "@/components/TitleFrame";
+import SvgIcon from "../../SvgIcon";
+import TitleFrame from "../../TitleFrame";
 import SloganFa from "./SloganFa";
 import SloganEn from "./SloganEn";
+import { Button } from "antd";
 
 const HeroCmp = () => {
   const { locale } = useRouter();
@@ -20,7 +22,17 @@ const HeroCmp = () => {
             {locale === "fa" ? <SloganFa /> : <SloganEn />}
           </TitleFrame>
         </div>
-        <p className="title-wrapper-sub">{t("hero.sub-h1")}</p>
+        <div className="title-wrapper-sub">
+          <SvgIcon title="heroArrowIcon" viewBox="0 0 42 103" />
+          <p>{t("hero.sub-h1")}</p>
+        </div>
+
+        <div className="title-wrapper-actions">
+          <Button type="primary" className="create-account-btn">Create DigiCloud Account</Button>
+          <Button type="default" className="play-btn">
+            <SvgIcon title="playIcon" viewBox="0 0 32 32" />
+          </Button>
+        </div>
       </div>
 
       <motion.div
