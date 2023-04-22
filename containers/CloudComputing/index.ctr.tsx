@@ -25,22 +25,31 @@ const CloudComputingCtr = () => {
       desc: t("define.dns-desc"),
     },
     {
-      title:'test1',
+      title: "test1",
       desc: t("define.dns-desc"),
     },
     {
-      title: 'test2',
+      title: "test2",
       desc: t("define.dns-desc"),
     },
     {
-      title: 'test3',
+      title: "test3",
       desc: t("define.dns-desc"),
     },
   ];
 
   return (
     <StyledWrapper>
-      <ProductDefineSection cards={cloudComputingDefineCards} />
+      <ProductDefineSection
+        cards={cloudComputingDefineCards}
+        superTitle="Cloud Computing Product"
+        title="Cloud Computing"
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        icon={{
+          title: "cloudComputingPageIcon",
+          viewBox: "0 0 72 72",
+        }}
+      />
       <CloudBenefitsSection />
       <Solutions />
       <SuccessStory />

@@ -12,7 +12,17 @@ const EdgeServicesCtr = () => {
 
   return (
     <StyledWrapper>
-      <ProductDefineSection cards={[]}/>
+      <ProductDefineSection
+        cards={[]}
+        superTitle="Edge Services Product"
+        title="Edge Services"
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        icon={{
+          title: "edgeServicesPageIcon",
+          viewBox: "0 0 72 72",
+        }}
+      />
+
       <EdgeFeaturesSection />
       <Solutions />
       <SuccessStory />
