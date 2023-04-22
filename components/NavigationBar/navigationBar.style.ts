@@ -12,8 +12,14 @@ export default styled.nav(
         display: none;
       }
 
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-evenly;
+
       .nav {
-        margin: 0 40px;
+        /* margin: 0 40px; */
+
         color: ${LightTextDarkLow};
         font-weight: 400;
         font-size: 14px;

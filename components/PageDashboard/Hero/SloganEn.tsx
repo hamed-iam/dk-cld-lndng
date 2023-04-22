@@ -1,25 +1,36 @@
 import SvgIcon from "@/components/SvgIcon";
 import { motion } from "framer-motion";
 import { StyledSloganEn } from "./hero.style";
+import { useEffect, useState } from "react";
 
 export default function SloganEn() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // ! need to find a better solution for this. preferably with css only
+  useEffect(() => {
+    if (window.innerWidth <= 376) {
+      setIsMobile(true);
+    }
+  }, []);
+
   return (
     <StyledSloganEn>
       <h1>
         Let&apos;s build a
         <br />
         <motion.span
-          className="better"
+          className={!isMobile ? 'better' : ""}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="better-highlight">Better</span>
+          <span className="better-highlight">Better </span>
+          {isMobile && <br />}
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="better-infrastructure"
+            className={`better-infrastructure ${isMobile ? "better" : ""}`}
           >
             Infrastructure
           </motion.span>

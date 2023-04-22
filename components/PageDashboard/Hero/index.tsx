@@ -43,8 +43,8 @@ const HeroCmp = () => {
       >
         <Image
           src="/assets/hero-compute.png"
-          width="300"
-          height="300"
+          width="383"
+          height="343"
           alt="cloud-compute"
         />
       </motion.div>

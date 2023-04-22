@@ -9,9 +9,23 @@ export default styled.div(
   }: ThemeStyledProps) => {
     return css`
       min-height: 663px;
-      padding: calc(24px + ((130 - 24) * (100vw - 320px) / (1920 - 320)));
+
+      @media screen and (min-width: 320px) and (max-width: 480px) {
+        padding: 16px 24px;
+        justify-content: center;
+      }
+
+      @media screen and (min-width: 481px) and (max-width: 768px) {
+        padding: 16px 80px;
+        justify-content: center;
+      }
+
+      @media screen and (min-width: 768px) {
+        padding: 16px 130px;
+      }
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap-reverse;
       .title-wrapper {
         &-super {
@@ -60,8 +74,8 @@ export default styled.div(
 
       .image-wrapper {
         img {
-          max-width: 383px;
-          min-width: 290px;
+          max-width: 100%;
+          height: auto;
         }
       }
     `;
@@ -80,7 +94,20 @@ export const StyledSloganFa = styled.div(
         font-weight: 700;
         margin: 0;
         color: ${LightNatural400};
-        font-size: calc(40px + (64 - 40) * ((100vw - 320px) / (1920 - 320)));
+
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+          font-size: 40px;
+        }
+
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+          font-size: 50px;
+        }
+
+        @media screen and (min-width: 768px) {
+          font-size: 64px;
+        }
+
+        /* font-size: calc(40px + (64 - 40) * ((100vw - 320px) / (1920 - 320))); */
       }
 
       .better {
