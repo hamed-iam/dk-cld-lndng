@@ -38,12 +38,15 @@ export default styled.div(
           font-size: 14px;
           margin: unset;
         }
-        &-title {
+        &-heading {
           color: ${LightNatural400};
           font-weight: 700;
           /* responsive needed */
           font-size: 64px;
-          margin: 8px 0 16px 0;
+          margin: unset;
+          line-height: 1.5;
+
+          /* margin: 8px 0 16px 0;  */
 
           .icon {
             width: 72px;
@@ -53,6 +56,13 @@ export default styled.div(
           .title-icon {
             display: flex;
           }
+        }
+
+        &-subheading {
+          font-size: 48px;
+          margin: unset;
+          color: ${LightNatural400};
+
           .highlight {
             position: relative;
             z-index: 1;
@@ -73,18 +83,46 @@ export default styled.div(
             }
           }
         }
-        &-sub {
+        &-subdesc {
           color: ${DarkTextLightLow};
           font-weight: 400;
           font-size: 15px;
           margin: unset;
+        }
+
+        &-actions {
+          display: flex;
+          margin-top: 16px;
+
+          .icon {
+            width: 24px;
+            height: 24px;
+          }
+          .start-btn {
+            width: 185px;
+            height: 46px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            margin-inline-end: 8px;
+          }
+
+          .contact-btn {
+            display: flex;
+            align-items: center;
+            height: 46px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1;
+          }
         }
       }
 
       .cards {
         /* margin: 20% 0 0 50%;
         width: 60%; */
-        border: 2px solid blue;
+        /* border: 2px solid blue; */
         mask-image: gradient(
           linear,
           left top,
