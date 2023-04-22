@@ -8,7 +8,7 @@ export default function SloganEn() {
 
   // ! need to find a better solution for this. preferably with css only
   useEffect(() => {
-    if (window.innerWidth <= 376) {
+    if (window.innerWidth <= 400) {
       setIsMobile(true);
     }
   }, []);
