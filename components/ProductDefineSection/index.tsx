@@ -45,7 +45,8 @@ export default function DefineSection({
 
   return (
     <StyledWrapper>
-      <Row gutter={[40, 16]}>
+      {/* gutter={[40, 16]} */}
+      <Row  className="container">
         <Col
           xl={{ span: 12 }}
           lg={{ span: 24 }}
@@ -57,11 +58,15 @@ export default function DefineSection({
           <h1 className="product-desc-heading">
             <span className="title-icon">
               <SvgIcon title={icon.title} viewBox={icon.viewBox} />
-              {title}
+              <span>{title}</span>
             </span>
           </h1>
           <h2 className="product-desc-subheading">
-            For <span className="highlight">Companies</span>
+            For{" "}
+            <span className="highlight">
+              <span className="highlight-word">All-Sized </span>
+              Companies
+            </span>
           </h2>
           <p className="product-desc-subdesc">{desc}</p>
 

@@ -10,28 +10,9 @@ export default styled.div(
   }: ThemeStyledProps) => {
     return css`
       header {
-        /* 320px — 480px: Mobile devices.
-           481px — 768px: iPads, Tablets.
-           769px — 1024px: Small screens, laptops.
-           1025px — 1200px: Desktops, large screens. */
-        /* padding: 16px 24px; */
-        /* padding: 16px 130px; */
-        /* padding: calc(24px + (130 - 24) * ((100vw - 320px) / (1920 - 320))); */
-
-        /* padding: calc(24px + ((130 - 24) * (100vw - 320px) / (1920 - 320))); */
-        /* padding: calc(16px + ((130 - 16 * 2) * (100vw - 320px) / (1920 - 320))); */
-        @media screen and (min-width: 320px) and (max-width: 480px) {
-          padding: 16px 24px;
-        }
-
-        @media screen and (min-width: 481px) and (max-width: 768px) {
-          padding: 16px 80px;
-        }
-
-        @media screen and (min-width: 768px) {
-          padding: 16px 130px;
-        }
-
+        width: min(90%, 100rem);
+        padding: 16px 0;
+        margin-inline: auto;
         display: flex;
         align-items: center;
         max-height: 74px;
@@ -39,7 +20,7 @@ export default styled.div(
         .container {
           display: flex;
           justify-content: space-between;
-          align-items: flex-start;
+          align-items: center;
           width: 100%;
 
           &-logo {
@@ -49,6 +30,9 @@ export default styled.div(
             .icon {
               margin-inline-end: 12px;
               width: 146px;
+            }
+            .icon-brandingIcon {
+              height: 32px;
             }
           }
 

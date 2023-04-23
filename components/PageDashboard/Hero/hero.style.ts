@@ -8,23 +8,15 @@ export default styled.div(
     },
   }: ThemeStyledProps) => {
     return css`
-      min-height: 663px;
-
-      @media screen and (min-width: 320px) and (max-width: 480px) {
-        padding: 16px 24px;
-        justify-content: center;
-      }
-
-      @media screen and (min-width: 481px) and (max-width: 768px) {
-        padding: 16px 80px;
-        justify-content: center;
-      }
-
-      @media screen and (min-width: 768px) {
-        padding: 16px 130px;
-      }
+      height: min(663px);
+      width: min(90%, 74rem);
+      margin-inline: auto;
       display: flex;
       justify-content: space-between;
+
+      @media screen and (max-width: 768px) {
+        justify-content: center;
+      }
       align-items: center;
       flex-wrap: wrap-reverse;
       .title-wrapper {
@@ -94,20 +86,7 @@ export const StyledSloganFa = styled.div(
         font-weight: 700;
         margin: 0;
         color: ${LightNatural400};
-
-        @media screen and (min-width: 320px) and (max-width: 480px) {
-          font-size: 40px;
-        }
-
-        @media screen and (min-width: 481px) and (max-width: 768px) {
-          font-size: 50px;
-        }
-
-        @media screen and (min-width: 768px) {
-          font-size: 64px;
-        }
-
-        /* font-size: calc(40px + (64 - 40) * ((100vw - 320px) / (1920 - 320))); */
+        font-size: clamp(40px, 4.7vw, 64px);
       }
 
       .better {
@@ -151,8 +130,10 @@ export const StyledSloganEn = styled.div(
         font-style: normal;
         font-weight: 600;
         margin: 0;
+        line-height: 1.3;
         color: ${LightNatural400};
-        font-size: calc(40px + (64 - 40) * ((100vw - 320px) / (1920 - 320)));
+        font-size: clamp(40px, 4.7vw, 64px);
+        /* font-size: calc(40px + (64 - 40) * ((100vw - 320px) / (1920 - 320))); */
       }
 
       .better {

@@ -15,23 +15,33 @@ export default styled.div(
   }: ThemeStyledProps) => {
     return css`
       min-height: 530px;
-      border: 2px solid red;
+      max-height: 100%;
+      width: 100%;
+      overflow: hidden;
 
-      /* @media screen and (min-width: 320px) and (max-width: 480px) {
-        padding: 16px 24px;
-        justify-content: center;
-      } */
+      /* border: 2px solid red; */
 
-      /* @media screen and (min-width: 481px) and (max-width: 768px) {
-        padding: 16px 80px;
-        justify-content: center;
-      } */
+      .container {
+        margin-inline: auto;
+        width: min(90%, 100rem);
+        margin-top: calc(24px + (80 - 24) * ((100vw - 320px) / (1920 - 320)));
+        margin-bottom: calc(
+          24px + (80 - 24) * ((100vw - 320px) / (1920 - 320))
+        );
+      }
 
-      @media screen and (min-width: 768px) {
-        padding: 80px 0 80px 130px;
+      @media screen and (max-width: 1360px) {
+        .container {
+          width: 100%;
+          margin-inline: unset;
+          margin-inline-end: 0;
+          margin-inline-start: 5%;
+        }
       }
 
       .product-desc {
+        /* margin-inline-end: 50px; */
+
         &-super {
           color: ${LightNatural100};
           font-weight: 400;
@@ -39,18 +49,20 @@ export default styled.div(
           margin: unset;
         }
         &-heading {
+          display: flex;
+          align-items: center;
+          line-height: 1;
           color: ${LightNatural400};
           font-weight: 700;
-          /* responsive needed */
-          font-size: 64px;
+          /* font-size: clamp(35px, 4.7vw, 64px); */
+          font-size: clamp(30px, 4.7vw, 64px);
+
           margin: unset;
           line-height: 1.5;
 
-          /* margin: 8px 0 16px 0;  */
-
           .icon {
-            width: 72px;
-            height: 72px;
+            width: clamp(4vw, 72px, 10.2vw);
+            height: clamp(4vw, 72px, 10.2vw);
             margin-inline-end: 10px;
           }
           .title-icon {
@@ -59,15 +71,14 @@ export default styled.div(
         }
 
         &-subheading {
-          font-size: 48px;
+          font-size: clamp(24px, 3.5vw, 48px);
+
           margin: unset;
           color: ${LightNatural400};
 
           .highlight {
             position: relative;
             z-index: 1;
-            /* background-color: red; */
-
             &-word {
               color: ${LightThemePrimary600};
             }
@@ -86,8 +97,10 @@ export default styled.div(
         &-subdesc {
           color: ${DarkTextLightLow};
           font-weight: 400;
-          font-size: 15px;
-          margin: unset;
+          font-size: clamp(14px, 1.1vw, 15px);
+          margin-inline-end: 10px;
+          max-width: 567px;
+          /* margin-inline-end: 50px; */
         }
 
         &-actions {
@@ -120,9 +133,6 @@ export default styled.div(
       }
 
       .cards {
-        /* margin: 20% 0 0 50%;
-        width: 60%; */
-        /* border: 2px solid blue; */
         mask-image: gradient(
           linear,
           left top,
