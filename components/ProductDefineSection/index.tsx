@@ -2,8 +2,12 @@ import StyledWrapper from "./productDefineSection.style";
 import ProductDefineCard from "./ProductDefineCard";
 import { Button, Col, Row } from "antd";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
+
 import "swiper/css";
-import { useRef } from "react";
+import "swiper/css/pagination";
+
+import { useEffect, useRef, useState } from "react";
 import SvgIcon from "../SvgIcon";
 
 type Card = {
@@ -33,6 +37,15 @@ export default function DefineSection({
 }: DefineProductProps) {
   const swiperRef = useRef<any>();
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  // ! need to find a better solution for this. preferably with css only
+  useEffect(() => {
+    if (window.innerWidth <= 400) {
+      setIsMobile(true);
+    }
+  }, []);
+
   const handlePrevSlide = () => {
     swiperRef.current?.slidePrev();
     // console.log("swiperRef prev ===>", swiperRef);
@@ -43,10 +56,18 @@ export default function DefineSection({
     // console.log("swiperRef next ===>", swiperRef);
   };
 
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index: number, className: string) {
+      return '<span class="' + className + '">' + "</span>";
+    },
+  };
+
+  console.log("isMobile", isMobile);
   return (
     <StyledWrapper>
       {/* gutter={[40, 16]} */}
-      <Row  className="container">
+      <Row className="container">
         <Col
           xl={{ span: 12 }}
           lg={{ span: 24 }}
@@ -84,18 +105,25 @@ export default function DefineSection({
           lg={{ span: 12 }}
           md={{ span: 24 }}
           sm={{ span: 24 }}
-          className="cards"
+          className={`cards ${!isMobile ? "mobile" : ""}`}
         >
           <Swiper
             spaceBetween={16}
             onBeforeInit={(swiper) => {
               swiperRef.current = swiper;
             }}
-            slidesPerView={1.5}
+            slidesPerView={isMobile ? 1.2 : 1.5}
+            pagination={isMobile ? pagination : false}
+            modules={[Pagination]}
+            // {...(isMobile && { pagination, modules: [Pagination] })}
             centeredSlides={false}
           >
             {cards.map((card: Card, index) => (
-              <SwiperSlide key={card.title} virtualIndex={index}>
+              <SwiperSlide
+                key={card.title}
+                virtualIndex={index}
+                style={{ paddingBottom: "40px" }}
+              >
                 <ProductDefineCard
                   key={card.title}
                   title={card.title}
@@ -105,14 +133,16 @@ export default function DefineSection({
             ))}
           </Swiper>
 
-          <div className="actions">
-            <Button onClick={handlePrevSlide} className="slide-btn prev">
-              <SvgIcon title="leftArrowIcon" viewBox="0 0 18 19" />
-            </Button>
-            <Button onClick={handleNextSlide} className="slide-btn">
-              <SvgIcon title="rightArrowIcon" viewBox="0 0 18 19" />
-            </Button>
-          </div>
+          {!isMobile && (
+            <div className="actions">
+              <Button onClick={handlePrevSlide} className="slide-btn prev">
+                <SvgIcon title="leftArrowIcon" viewBox="0 0 18 19" />
+              </Button>
+              <Button onClick={handleNextSlide} className="slide-btn">
+                <SvgIcon title="rightArrowIcon" viewBox="0 0 18 19" />
+              </Button>
+            </div>
+          )}
         </Col>
       </Row>
     </StyledWrapper>

@@ -98,14 +98,13 @@ export default styled.div(
           color: ${DarkTextLightLow};
           font-weight: 400;
           font-size: clamp(14px, 1.1vw, 15px);
-          margin-inline-end: 10px;
+          margin-inline-end: 40px;
           max-width: 567px;
-          /* margin-inline-end: 50px; */
         }
 
         &-actions {
           display: flex;
-          margin-top: 16px;
+          margin: 16px 0;
 
           .icon {
             width: 24px;
@@ -133,20 +132,34 @@ export default styled.div(
       }
 
       .cards {
-        mask-image: gradient(
-          linear,
-          left top,
-          right top,
-          from(rgba(0, 0, 0, 1)),
-          to(rgba(0, 0, 0, 0))
-        );
-        -webkit-mask-image: -webkit-gradient(
-          linear,
-          left top,
-          right top,
-          from(rgba(0, 0, 0, 1)),
-          to(rgba(0, 0, 0, 0))
-        );
+        &.mobile {
+          mask-image: gradient(
+            linear,
+            left top,
+            right top,
+            from(rgba(0, 0, 0, 1)),
+            to(rgba(0, 0, 0, 0))
+          );
+          -webkit-mask-image: -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            from(rgba(0, 0, 0, 1)),
+            to(rgba(0, 0, 0, 0))
+          );
+        }
+        .swiper-pagination-bullet {
+          width: 24px;
+          height: 4px;
+          border-radius: 10px;
+          background: #a4a9bd;
+          opacity: 0.3;
+
+          &-active {
+            opacity: 1;
+            background: #a4a9bd;
+          }
+        }
 
         .actions {
           margin-top: 16px;
