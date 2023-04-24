@@ -28,18 +28,20 @@ const space = [
 const lightTheme = {
   colors: {
     LightTextDarkMid: "#36384A",
-    LightTextDarkHigh:"#171727",
+    LightTextDarkHigh: "#171727",
     LightTextDarkLow: "#73798F",
     LightThemePrimary600: "#3D88EB",
-    LightThemePrimary20:"#BBD5FF",
+    LightThemePrimary20: "#BBD5FF",
     LightThemeInfo20: "#B5EDF5",
-    LightNatural100:"#73798F",
-    LightNatural400:"#45485B",
+    LightNatural100: "#73798F",
+    LightNatural400: "#45485B",
+    DarkNatural100: "#83899F",
     DarkBGGrade15: "#101021",
     DarkThemePrimary500Light: "#2E518F",
     DarkBasicWhite: "#FFFFFF",
     DarkTextLightLow: "#83899F",
     DarkTextLightHigh: "#EDEEF3",
+    DarkTextLightMid: "#C7CAD9",
 
     //
 
@@ -95,18 +97,20 @@ const lightTheme = {
 const darkTheme = {
   colors: {
     LightTextDarkMid: "#36384A",
-    LightTextDarkHigh:"#171727",
+    LightTextDarkHigh: "#171727",
     LightTextDarkLow: "#73798F",
     LightThemePrimary600: "#3D88EB",
-    LightThemePrimary20:"#BBD5FF",
+    LightThemePrimary20: "#BBD5FF",
     LightThemeInfo20: "#B5EDF5",
-    LightNatural100:"#73798F",
-    LightNatural400:"#45485B",
+    LightNatural100: "#73798F",
+    LightNatural400: "#45485B",
+    DarkNatural100: "#83899F",
     DarkBGGrade15: "#101021",
     DarkThemePrimary500Light: "#2E518F",
     DarkBasicWhite: "#FFFFFF",
     DarkTextLightLow: "#83899F",
     DarkTextLightHigh: "#EDEEF3",
+    DarkTextLightMid: "#C7CAD9",
 
     //
     primary: "#0070f3",
