@@ -48,7 +48,7 @@ export default styled.div(
       .content {
         max-width: 450px;
         h2 {
-          line-height: 1;
+          line-height: 1.2;
         }
 
         &-super {
@@ -66,8 +66,18 @@ export default styled.div(
         &-subtitle {
           font-size: 40px;
           margin: unset;
-          /* needs to gradient */
+          display: flex;
+          /* ! needs to gradient */
           color: #cb5ff2;
+          .icon {
+            width: 48px;
+          }
+
+          @media (max-width: 500px) {
+            .icon {
+              display: none;
+            }
+          }
         }
         &-desc {
           margin-top: 16px;

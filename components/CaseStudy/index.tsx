@@ -1,9 +1,24 @@
 import { Collapse, theme } from "antd";
 import StyledWrapper from "./caseStudySection.style";
+import SvgIcon from "../SvgIcon";
 
 const { Panel } = Collapse;
 
-export default function CaseStudySection() {
+interface CaseStudyPropsType {
+  title: string;
+  desc: string;
+  panels: {
+    panelHeader: string;
+    panelContent: string;
+    key: string;
+  }[];
+}
+
+export default function CaseStudySection({
+  title,
+  desc,
+  panels,
+}: CaseStudyPropsType) {
   const { token } = theme.useToken();
 
   const panelStyle = {
@@ -12,12 +27,6 @@ export default function CaseStudySection() {
     border: "1px solid #36384A",
     color: "white",
   };
-
-  const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
 
   return (
     <StyledWrapper>
@@ -29,37 +38,30 @@ export default function CaseStudySection() {
             accordion
             className="collapses-item"
             expandIconPosition="end"
-            // expandIcon={({ isActive }) => (
-            //   <CaretRightOutlined rotate={isActive ? 90 : 0} />
-            // )}
-            // style={{ background: "transparent" }}
           >
-            <Panel header="This is panel header 1" key="1" style={panelStyle}>
-              <p>{text}</p>
-            </Panel>
-            <Panel header="This is panel header 2" key="2" style={panelStyle}>
-              <p>{text}</p>
-            </Panel>
-            <Panel header="This is panel header 3" key="3" style={panelStyle}>
-              <p>{text}</p>
-            </Panel>
-            <Panel header="This is panel header 4" key="4" style={panelStyle}>
-              <p>{text}</p>
-            </Panel>
+            {panels.map((panel) => (
+              <Panel
+                header={panel.panelHeader}
+                key={panel.key}
+                style={panelStyle}
+              >
+                <p>{panel.panelContent}</p>
+              </Panel>
+            ))}
           </Collapse>
         </div>
 
         <div className="content">
           <p className="content-super">Guidance</p>
           <h2 className="content-title">Use Cases In</h2>
-          <h2 className="content-subtitle">Edge Services</h2>
+          <h2 className="content-subtitle">
+            {title}{" "}
+            <span>
+              <SvgIcon title="telescopeIcon" viewBox="0 0 56 56" />
+            </span>
+          </h2>
 
-          <p className="content-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
+          <p className="content-desc">{desc}</p>
         </div>
       </div>
     </StyledWrapper>
