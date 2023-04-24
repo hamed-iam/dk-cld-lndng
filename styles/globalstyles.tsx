@@ -21,6 +21,10 @@ const yekan = localFont({
       weight: "600",
     },
     {
+      path: "../public/fonts/yekanbakh/700/YekanBakh-Bold.woff2",
+      weight: "700",
+    },
+    {
       path: "../public/fonts/yekanbakh/800/yekanbakh-800.woff2",
       weight: "800",
     },

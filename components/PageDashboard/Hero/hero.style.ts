@@ -128,7 +128,7 @@ export const StyledSloganEn = styled.div(
     return css`
       h1 {
         font-style: normal;
-        font-weight: 600;
+        font-weight: 700;
         margin: 0;
         line-height: 1.3;
         color: ${LightNatural400};
