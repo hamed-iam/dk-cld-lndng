@@ -58,6 +58,13 @@ const GlobalStyle = createGlobalStyle(
         font-family: var(--yekan-font);
       }
 
+      .d-f {
+        display: flex;
+      }
+      .align-c{
+        align-items: center;
+      }
+
       /* BURGER MENU */
 
       .burger-menu {
