@@ -178,7 +178,38 @@ export default styled.aside(
           margin-top: 80px;
           max-width: 1100px;
           /*  background animation */
-          --x: calc(var(--posX, 0) * 1px);
+          --x: calc(var(--posX, 0) * 0.5px);
+          --y: calc(var(--posY, 0) * 0.5px);
+          background-image: linear-gradient(115deg, rgb(203 95 242), rgb(0 0 0)),
+            radial-gradient(
+              90% 100% at calc(50% + var(--x)) calc(0% + var(--y)),
+              rgb(137 129 210),
+              rgb(022 000 045)
+            ),
+            radial-gradient(
+              100% 100% at calc(80% - var(--x)) calc(0% - var(--y)),
+              rgb(176 26 186),
+              rgb(036 000 000)
+            ),
+            radial-gradient(
+              150% 210% at calc(100% + var(--x)) calc(0% + var(--y)),
+              rgb(255 90 130),
+              rgb(000 010 255)
+            ),
+            radial-gradient(
+              100% 100% at calc(100% - var(--x)) calc(30% - var(--y)),
+              rgb(80 30 215),
+              rgb(000 200 255)
+            ),
+            linear-gradient(60deg, rgb(255 000 000), rgb(120 086 255));
+          background-blend-mode: overlay, overlay, difference, difference,
+            difference, normal;
+
+          /*  */
+
+          /* for ref, remove later */
+          /*  background animation */
+          /* --x: calc(var(--posX, 0) * 1px);
           --y: calc(var(--posY, 0) * 1px);
           background-image: linear-gradient(
               115deg,
@@ -207,7 +238,7 @@ export default styled.aside(
             ),
             linear-gradient(60deg, rgb(255 000 000), rgb(120 086 255));
           background-blend-mode: overlay, overlay, difference, difference,
-            difference, normal;
+            difference, normal; */
 
           /*  */
 
@@ -270,7 +301,7 @@ export default styled.aside(
           .anticon {
             margin-inline: 18px;
             margin-bottom: 3px;
-            svg{
+            svg {
               fill: ${LightThemePrimary600};
             }
           }
