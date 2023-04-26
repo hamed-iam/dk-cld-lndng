@@ -9,6 +9,8 @@ export default styled.aside(
         LightTextDarkLow,
         LightTextDarkMid,
         LightNatural400,
+        LightBGGrade15,
+        LightBGGrade3,
         LightThemePrimary600,
         DarkThemePrimary600,
         DarkTextLightHigh,
@@ -34,6 +36,7 @@ export default styled.aside(
           display: flex;
           justify-content: center;
           align-items: flex-start;
+          margin-bottom: 58px;
 
           &-icon {
             width: 100%;
@@ -87,12 +90,37 @@ export default styled.aside(
           }
         }
 
+        .faq-tabs {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 24px;
+
+          &-btns {
+            border-radius: 8px;
+            padding: 4px;
+            background-color: ${LightBGGrade15};
+
+            &-btn {
+              border: 0;
+              background: transparent;
+              color: ${LightTextDarkMid};
+              font-weight: 600;
+              font-size: 14px;
+
+              &.active {
+                background-color: ${LightBGGrade3};
+              }
+            }
+          }
+        }
+
         .content {
           width: 100%;
           display: flex;
           justify-content: center;
           flex-wrap: wrap;
-          margin-top: 58px;
+          /* margin-top: 58px; */
           margin-bottom: 30px;
           &-column {
             width: 100%;

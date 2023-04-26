@@ -28,7 +28,7 @@ const DashboardCtr = () => {
       <Security />
       <Cli />
       <Customers />
-      <Faq links={null} isNextStepShow={false} />
+      <Faq loc="dashboard" links={null} isNextStepShow={false} />
       <EasyAccess />
       <Share />
     </StyledWrapper>

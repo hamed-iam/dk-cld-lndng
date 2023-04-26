@@ -63,6 +63,7 @@ const EdgeServicesCtr = () => {
         aliquip ex ea commodo consequat."
       />
       <Faq
+        loc="edge-services"
         links={{
           next: { href: "/oss", text: "Object Storage?" },
           back: { href: "/cloud-computing", text: "Cloud Computing?" },

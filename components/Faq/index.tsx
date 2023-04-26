@@ -2,6 +2,7 @@ import { useTranslation } from "next-i18next";
 import StyledWrapper from "./faq.style";
 import SvgIcon from "../SvgIcon";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { ArrowRightOutlined, ArrowLeftOutlined } from "@ant-design/icons";
 import { Button, Col, Collapse, Row, theme } from "antd";
 import { PointerEvent, useState } from "react";
@@ -9,6 +10,7 @@ import Link from "next/link";
 
 type FaqPropsType = {
   isNextStepShow?: boolean;
+  loc: "cloud-computing" | "oss" | "edge-services" | "about" | "dashboard";
   links: {
     next: {
       href: string;
@@ -60,8 +62,11 @@ const defaultState = {
   },
 };
 
-const Faq = ({ links, isNextStepShow = true }: FaqPropsType) => {
+const Faq = ({ links, isNextStepShow = true, loc }: FaqPropsType) => {
   const { t } = useTranslation("common");
+  const [currentTab, setCurrentTab] = useState(
+    loc === "dashboard" ? "cloud-computing" : loc
+  );
   const [activePanel, setActivePanel] = useState(defaultState);
   const { token } = theme.useToken();
 
@@ -90,6 +95,11 @@ const Faq = ({ links, isNextStepShow = true }: FaqPropsType) => {
     el.style.setProperty("--posY", (y - t - h / 2).toString());
   };
 
+  // ! fix type later
+  const handleFaqProductTabChange = (tab: any) => {
+    setCurrentTab(tab);
+  };
+
   return (
     <StyledWrapper>
       <div className="container">
@@ -112,120 +122,499 @@ const Faq = ({ links, isNextStepShow = true }: FaqPropsType) => {
           </div>
         </div>
 
-        <div className="content">
-          <div className="content-column">
-            <Collapse
-              bordered={false}
-              defaultActiveKey={["0"]}
-              expandIconPosition="end"
-              onChange={handlePanelChange}
-              accordion
-              destroyInactivePanel
-            >
-              <Panel
-                header={
-                  <div className="panel-header">
-                    <h3>This is panel header 1</h3>
-                    {activePanel.panel1.isHeaderSumShow && <p>{text}</p>}
-                  </div>
-                }
-                key="1"
-                style={panelStyle}
+        {loc === "dashboard" && (
+          <div className="faq-tabs">
+            <div className="faq-tabs-btns">
+              <Button
+                onClick={() => handleFaqProductTabChange("cloud-computing")}
+                className={`faq-tabs-btns-btn ${
+                  currentTab === "cloud-computing" ? "active" : ""
+                }`}
               >
-                <p>{text}</p>
-              </Panel>
-              <Panel
-                header={
-                  <div className="panel-header">
-                    <h3>This is panel header 2</h3>
-                    {activePanel.panel2.isHeaderSumShow && <p>{text}</p>}
-                  </div>
-                }
-                key="2"
-                style={panelStyle}
+                Cloud Computing
+              </Button>
+              <Button
+                onClick={() => handleFaqProductTabChange("oss")}
+                className={`faq-tabs-btns-btn ${
+                  currentTab === "oss" ? "active" : ""
+                }`}
               >
-                <p>{text}</p>
-              </Panel>
-              <Panel
-                header={
-                  <div className="panel-header">
-                    <h3>This is panel header 3</h3>
-                    {activePanel.panel3.isHeaderSumShow && <p>{text}</p>}
-                  </div>
-                }
-                key="3"
-                style={panelStyle}
+                OSS Storage
+              </Button>
+              <Button
+                onClick={() => handleFaqProductTabChange("edge-services")}
+                className={`faq-tabs-btns-btn ${
+                  currentTab === "edge-services" ? "active" : ""
+                }`}
               >
-                <p>{text}</p>
-              </Panel>
-            </Collapse>
+                Edge Services
+              </Button>
+            </div>
           </div>
-          <div className="content-column">
-            <Collapse
-              bordered={false}
-              defaultActiveKey={["0"]}
-              onChange={handlePanelChange}
-              accordion
-              destroyInactivePanel
-              expandIconPosition="end"
-            >
-              <Panel
-                header={
-                  <div className="panel-header">
-                    <h3>This is panel header 4</h3>
-                    {activePanel.panel4.isHeaderSumShow && <p>{text}</p>}
-                  </div>
-                }
-                key="4"
-                style={panelStyle}
-              >
-                <p>{text}</p>
-              </Panel>
-              <Panel
-                header={
-                  <div className="panel-header">
-                    <h3>This is panel header 5</h3>
-                    {activePanel.panel5.isHeaderSumShow && <p>{text}</p>}
-                  </div>
-                }
-                key="5"
-                style={panelStyle}
-              >
-                <p>{text}</p>
-              </Panel>
-              <Panel
-                header={
-                  <div className="panel-header">
-                    <h3>This is panel header 6</h3>
-                    {activePanel.panel6.isHeaderSumShow && <p>{text}</p>}
-                  </div>
-                }
-                key="6"
-                style={panelStyle}
-              >
-                <p>{text}</p>
-              </Panel>
-              <Panel
-                header={
-                  <div className="panel-header">
-                    <h3>This is panel header 7</h3>
-                    {activePanel.panel7.isHeaderSumShow && <p>{text}</p>}
-                  </div>
-                }
-                key="7"
-                style={panelStyle}
-              >
-                <p>{text}</p>
-              </Panel>
-            </Collapse>
-          </div>
-        </div>
+        )}
 
-        <div className="faq-contact">
+        {currentTab === "cloud-computing" && (
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: "0" }}
+            transition={{ duration: 0.5 }}
+            className="content"
+          >
+            <div className="content-column">
+              <Collapse
+                bordered={false}
+                defaultActiveKey={["0"]}
+                expandIconPosition="end"
+                onChange={handlePanelChange}
+                accordion
+                destroyInactivePanel
+              >
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Cloud panel 1</h3>
+                      {activePanel.panel1.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="1"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Cloud panel 2</h3>
+                      {activePanel.panel2.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="2"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Cloud panel 3</h3>
+                      {activePanel.panel3.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="3"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+              </Collapse>
+            </div>
+            <div className="content-column">
+              <Collapse
+                bordered={false}
+                defaultActiveKey={["0"]}
+                onChange={handlePanelChange}
+                accordion
+                destroyInactivePanel
+                expandIconPosition="end"
+              >
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Cloud panel 4</h3>
+                      {activePanel.panel4.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="4"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Cloud panel 5</h3>
+                      {activePanel.panel5.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="5"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Cloud panel 6</h3>
+                      {activePanel.panel6.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="6"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Cloud panel 7</h3>
+                      {activePanel.panel7.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="7"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+              </Collapse>
+            </div>
+          </motion.div>
+        )}
+        {currentTab === "oss" && (
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: "0" }}
+            transition={{ duration: 0.5 }}
+            className="content"
+          >
+            <div className="content-column">
+              <Collapse
+                bordered={false}
+                defaultActiveKey={["0"]}
+                expandIconPosition="end"
+                onChange={handlePanelChange}
+                accordion
+                destroyInactivePanel
+              >
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Oss panel header 1</h3>
+                      {activePanel.panel1.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="1"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Oss panel header 2</h3>
+                      {activePanel.panel2.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="2"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Oss panel header 3</h3>
+                      {activePanel.panel3.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="3"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+              </Collapse>
+            </div>
+            <div className="content-column">
+              <Collapse
+                bordered={false}
+                defaultActiveKey={["0"]}
+                onChange={handlePanelChange}
+                accordion
+                destroyInactivePanel
+                expandIconPosition="end"
+              >
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Oss panel header 4</h3>
+                      {activePanel.panel4.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="4"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Oss panel header 5</h3>
+                      {activePanel.panel5.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="5"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Oss panel header 6</h3>
+                      {activePanel.panel6.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="6"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Oss panel header 7</h3>
+                      {activePanel.panel7.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="7"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+              </Collapse>
+            </div>
+          </motion.div>
+        )}
+        {currentTab === "edge-services" && (
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: "0" }}
+            transition={{ duration: 0.5 }}
+            className="content"
+          >
+            <div className="content-column">
+              <Collapse
+                bordered={false}
+                defaultActiveKey={["0"]}
+                expandIconPosition="end"
+                onChange={handlePanelChange}
+                accordion
+                destroyInactivePanel
+              >
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Edge Services 1</h3>
+                      {activePanel.panel1.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="1"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Edge Services 2</h3>
+                      {activePanel.panel2.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="2"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Edge Services 3</h3>
+                      {activePanel.panel3.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="3"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+              </Collapse>
+            </div>
+            <div className="content-column">
+              <Collapse
+                bordered={false}
+                defaultActiveKey={["0"]}
+                onChange={handlePanelChange}
+                accordion
+                destroyInactivePanel
+                expandIconPosition="end"
+              >
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Edge Services 4</h3>
+                      {activePanel.panel4.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="4"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Edge Services 5</h3>
+                      {activePanel.panel5.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="5"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Edge Services 6</h3>
+                      {activePanel.panel6.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="6"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>Edge Services 7</h3>
+                      {activePanel.panel7.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="7"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+              </Collapse>
+            </div>
+          </motion.div>
+        )}
+
+        {loc === "about" && (
+          <div className="content">
+            <div className="content-column">
+              <Collapse
+                bordered={false}
+                defaultActiveKey={["0"]}
+                expandIconPosition="end"
+                onChange={handlePanelChange}
+                accordion
+                destroyInactivePanel
+              >
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>About panel header 1</h3>
+                      {activePanel.panel1.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="1"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>About panel header 2</h3>
+                      {activePanel.panel2.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="2"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>About panel header 3</h3>
+                      {activePanel.panel3.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="3"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+              </Collapse>
+            </div>
+            <div className="content-column">
+              <Collapse
+                bordered={false}
+                defaultActiveKey={["0"]}
+                onChange={handlePanelChange}
+                accordion
+                destroyInactivePanel
+                expandIconPosition="end"
+              >
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>About panel header 4</h3>
+                      {activePanel.panel4.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="4"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>About panel header 5</h3>
+                      {activePanel.panel5.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="5"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>About panel header 6</h3>
+                      {activePanel.panel6.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="6"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+                <Panel
+                  header={
+                    <div className="panel-header">
+                      <h3>About panel header 7</h3>
+                      {activePanel.panel7.isHeaderSumShow && <p>{text}</p>}
+                    </div>
+                  }
+                  key="7"
+                  style={panelStyle}
+                >
+                  <p>{text}</p>
+                </Panel>
+              </Collapse>
+            </div>
+          </div>
+        )}
+
+        <motion.div className="faq-contact">
           <SvgIcon title="divingMaskIcon" viewBox="0 0 21 20" />
           <p>Have any other question?</p>
           <Link href="/about">Contact Us</Link>
-        </div>
+        </motion.div>
 
         {isNextStepShow && (
           <div className="faq-next-step" onPointerMove={handlePointerMove}>

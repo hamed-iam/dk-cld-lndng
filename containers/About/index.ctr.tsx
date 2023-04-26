@@ -17,7 +17,7 @@ const AboutCtr = ({}: any) => {
       <AboutUsSection />
       <CallbackSection />
       <AddressSection />
-      <Faq links={null} isNextStepShow={false}/>
+      <Faq loc='about' links={null} isNextStepShow={false}/>
     </StyledWrapper>
   );
 };

@@ -27,6 +27,7 @@ const OssCtr = () => {
       <Solutions />
       <SuccessStory />
       <Faq
+        loc="oss"
         links={{
           next: { href: "/edge-services", text: "Edge Services?" },
           back: { href: "/oss", text: "Object Storage?" },
