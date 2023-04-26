@@ -89,7 +89,12 @@ const CloudComputingCtr = () => {
         ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
         aliquip ex ea commodo consequat."
       />
-      <Faq />
+      <Faq
+        links={{
+          next: { href: "/oss", text: "Object Storage?" },
+          back: { href: "/edge-services", text: "Edge Services" },
+        }}
+      />
     </StyledWrapper>
   );
 };

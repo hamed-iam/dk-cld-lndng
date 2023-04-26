@@ -4,13 +4,13 @@ import { ThemeStyledProps } from "@/styles/themes";
 export default styled.nav(
   ({
     theme: {
-      colors: { blue, background },
+      colors: { LightBorderMid },
     },
   }: ThemeStyledProps) => {
     return css`
       display: flex;
       align-items: center;
-      border: 1px solid #dadced;
+      border: 1px solid ${LightBorderMid};
       border-radius: 8px;
       padding: 10px;
       width: 100%;

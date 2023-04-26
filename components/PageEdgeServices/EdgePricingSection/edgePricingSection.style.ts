@@ -4,11 +4,11 @@ import { ThemeStyledProps } from "@/styles/themes";
 export default styled.div(
   ({
     theme: {
-      colors: { blue, background },
+      colors: {},
     },
   }: ThemeStyledProps) => {
     return css`
-      min-height: 978px ;
+      min-height: 978px;
       border: 2px solid red;
     `;
   }

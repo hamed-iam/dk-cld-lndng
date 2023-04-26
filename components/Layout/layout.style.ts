@@ -4,7 +4,7 @@ import { ThemeStyledProps } from "@/styles/themes";
 export default styled.main(
   ({
     theme: {
-      colors: { blue, background },
+      colors: { DarkThemePrimary600, background },
     },
   }: ThemeStyledProps) => {
     return css`
@@ -12,7 +12,7 @@ export default styled.main(
       display: flex;
       flex-direction: column;
       background: ${background};
-      color: ${blue};
+      color: ${DarkThemePrimary600};
     `;
   }
 );

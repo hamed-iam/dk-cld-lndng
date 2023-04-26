@@ -8,8 +8,11 @@ export default styled.aside(
         DarkTextLightLow,
         LightTextDarkLow,
         LightTextDarkMid,
+        LightNatural400,
+        LightThemePrimary600,
         DarkThemePrimary600,
         DarkTextLightHigh,
+        DarkNatural300,
       },
     },
   }: ThemeStyledProps) => {
@@ -174,22 +177,39 @@ export default styled.aside(
           margin-inline: auto;
           margin-top: 80px;
           max-width: 1100px;
-          background: linear-gradient(70deg, #101021, #101021, #ff5a82);
-          background-size: 180% 180%;
-          border: 1px solid transparent;
-          animation: gradient-animation 5s ease infinite;
+          /*  background animation */
+          --x: calc(var(--posX, 0) * 1px);
+          --y: calc(var(--posY, 0) * 1px);
+          background-image: linear-gradient(
+              115deg,
+              rgb(211 255 215),
+              rgb(0 0 0)
+            ),
+            radial-gradient(
+              90% 100% at calc(50% + var(--x)) calc(0% + var(--y)),
+              rgb(200 200 200),
+              rgb(022 000 045)
+            ),
+            radial-gradient(
+              100% 100% at calc(80% - var(--x)) calc(0% - var(--y)),
+              rgb(250 255 000),
+              rgb(036 000 000)
+            ),
+            radial-gradient(
+              150% 210% at calc(100% + var(--x)) calc(0% + var(--y)),
+              rgb(020 175 125),
+              rgb(000 010 255)
+            ),
+            radial-gradient(
+              100% 100% at calc(100% - var(--x)) calc(30% - var(--y)),
+              rgb(255 077 000),
+              rgb(000 200 255)
+            ),
+            linear-gradient(60deg, rgb(255 000 000), rgb(120 086 255));
+          background-blend-mode: overlay, overlay, difference, difference,
+            difference, normal;
 
-          @keyframes gradient-animation {
-            0% {
-              background-position: 0% 10%;
-            }
-            50% {
-              background-position: 30% 10%;
-            }
-            100% {
-              background-position: 0% 10%;
-            }
-          }
+          /*  */
 
           min-height: 161px;
           border-radius: 16px;
@@ -201,7 +221,6 @@ export default styled.aside(
             h2 {
               color: ${DarkTextLightHigh};
               font-weight: 700;
-              /* font-size: 26px; */
               font-size: calc(
                 22px + (26 - 22) * ((100vw - 320px) / (1920 - 320))
               );
@@ -212,6 +231,47 @@ export default styled.aside(
               font-weight: 600;
               font-size: 15px;
               margin: unset;
+            }
+          }
+
+          .faq-actions {
+            &-tryout,
+            &-callback {
+              margin: 5px;
+              height: 36px;
+              min-width: 171px;
+              width: 100%;
+              font-weight: 700;
+              font-size: 12px;
+            }
+
+            &-callback {
+              background: transparent;
+              border: 1px solid #2b2c40;
+              color: ${DarkNatural300};
+            }
+          }
+        }
+
+        .faq-links {
+          display: flex;
+          justify-content: space-between;
+          margin-inline: auto;
+          margin-top: 52px;
+          max-width: 1100px;
+          a {
+            font-weight: 600;
+            font-size: 15px;
+            color: ${LightNatural400};
+            display: flex;
+            align-items: center;
+            line-height: 1;
+          }
+          .anticon {
+            margin-inline: 18px;
+            margin-bottom: 3px;
+            svg{
+              fill: ${LightThemePrimary600};
             }
           }
         }

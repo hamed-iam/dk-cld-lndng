@@ -26,7 +26,12 @@ const OssCtr = () => {
       <BenefitsSection />
       <Solutions />
       <SuccessStory />
-      <Faq />
+      <Faq
+        links={{
+          next: { href: "/edge-services", text: "Edge Services?" },
+          back: { href: "/oss", text: "Object Storage?" },
+        }}
+      />
     </StyledWrapper>
   );
 };

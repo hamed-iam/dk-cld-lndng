@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 export default styled.main(
   ({
     theme: {
-      colors: { blue },
+      colors: {},
     },
   }: ThemeStyledProps) => {
     return css`

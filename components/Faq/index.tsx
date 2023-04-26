@@ -2,10 +2,24 @@ import { useTranslation } from "next-i18next";
 import StyledWrapper from "./faq.style";
 import SvgIcon from "../SvgIcon";
 import Image from "next/image";
-import { CaretRightOutlined } from "@ant-design/icons";
+import { ArrowRightOutlined, ArrowLeftOutlined } from "@ant-design/icons";
 import { Button, Col, Collapse, Row, theme } from "antd";
-import { useState } from "react";
+import { PointerEvent, useState } from "react";
 import Link from "next/link";
+
+type FaqPropsType = {
+  isNextStepShow?: boolean;
+  links: {
+    next: {
+      href: string;
+      text: string;
+    };
+    back: {
+      href: string;
+      text: string;
+    };
+  } | null;
+};
 
 const { Panel } = Collapse;
 
@@ -46,10 +60,9 @@ const defaultState = {
   },
 };
 
-const Faq = () => {
+const Faq = ({ links, isNextStepShow = true }: FaqPropsType) => {
   const { t } = useTranslation("common");
   const [activePanel, setActivePanel] = useState(defaultState);
-
   const { token } = theme.useToken();
 
   const panelStyle = {
@@ -67,6 +80,14 @@ const Faq = () => {
       ...panel,
       [`panel${panelKey}`]: { key: panelKey, isHeaderSumShow: false },
     }));
+  };
+
+  // for handling background animation
+  const handlePointerMove = (e: PointerEvent<HTMLDivElement>) => {
+    const { currentTarget: el, clientX: x, clientY: y } = e;
+    const { top: t, left: l, width: w, height: h } = el.getBoundingClientRect();
+    el.style.setProperty("--posX", (x - l - w / 2).toString());
+    el.style.setProperty("--posY", (y - t - h / 2).toString());
   };
 
   return (
@@ -105,17 +126,7 @@ const Faq = () => {
                 header={
                   <div className="panel-header">
                     <h3>This is panel header 1</h3>
-                    {activePanel.panel1.isHeaderSumShow && (
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur.
-                      </p>
-                    )}
+                    {activePanel.panel1.isHeaderSumShow && <p>{text}</p>}
                   </div>
                 }
                 key="1"
@@ -127,17 +138,7 @@ const Faq = () => {
                 header={
                   <div className="panel-header">
                     <h3>This is panel header 2</h3>
-                    {activePanel.panel2.isHeaderSumShow && (
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur.
-                      </p>
-                    )}
+                    {activePanel.panel2.isHeaderSumShow && <p>{text}</p>}
                   </div>
                 }
                 key="2"
@@ -149,17 +150,7 @@ const Faq = () => {
                 header={
                   <div className="panel-header">
                     <h3>This is panel header 3</h3>
-                    {activePanel.panel3.isHeaderSumShow && (
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur.
-                      </p>
-                    )}
+                    {activePanel.panel3.isHeaderSumShow && <p>{text}</p>}
                   </div>
                 }
                 key="3"
@@ -182,17 +173,7 @@ const Faq = () => {
                 header={
                   <div className="panel-header">
                     <h3>This is panel header 4</h3>
-                    {activePanel.panel4.isHeaderSumShow && (
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur.
-                      </p>
-                    )}
+                    {activePanel.panel4.isHeaderSumShow && <p>{text}</p>}
                   </div>
                 }
                 key="4"
@@ -204,17 +185,7 @@ const Faq = () => {
                 header={
                   <div className="panel-header">
                     <h3>This is panel header 5</h3>
-                    {activePanel.panel5.isHeaderSumShow && (
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur.
-                      </p>
-                    )}
+                    {activePanel.panel5.isHeaderSumShow && <p>{text}</p>}
                   </div>
                 }
                 key="5"
@@ -226,17 +197,7 @@ const Faq = () => {
                 header={
                   <div className="panel-header">
                     <h3>This is panel header 6</h3>
-                    {activePanel.panel6.isHeaderSumShow && (
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur.
-                      </p>
-                    )}
+                    {activePanel.panel6.isHeaderSumShow && <p>{text}</p>}
                   </div>
                 }
                 key="6"
@@ -248,17 +209,7 @@ const Faq = () => {
                 header={
                   <div className="panel-header">
                     <h3>This is panel header 7</h3>
-                    {activePanel.panel7.isHeaderSumShow && (
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur.
-                      </p>
-                    )}
+                    {activePanel.panel7.isHeaderSumShow && <p>{text}</p>}
                   </div>
                 }
                 key="7"
@@ -276,24 +227,52 @@ const Faq = () => {
           <Link href="/about">Contact Us</Link>
         </div>
 
-        <div className="faq-next-step">
-          <Row>
-            <Col xs={24} sm={24} md={12} lg={12} xl={12} className="faq-next-step-title">
-              <div className="d-f align-c">
-                <h2>Do you know the next step?</h2>
-                <SvgIcon title="sirenIcon" viewBox="0 0 40 45" />
-              </div>
-              <p>
-                You Can Catch This Service Either Other Product of Digicloud In
-                1 Minutes
-              </p>
-            </Col>
-            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
-              <Button type="primary">Try Edge Services</Button>
-              <Button type="default">Request for Call Back</Button>
-            </Col>
-          </Row>
-        </div>
+        {isNextStepShow && (
+          <div className="faq-next-step" onPointerMove={handlePointerMove}>
+            <Row justify="space-between">
+              <Col
+                xs={24}
+                sm={24}
+                md={18}
+                lg={18}
+                xl={18}
+                className="faq-next-step-title"
+              >
+                <div className="d-f align-c">
+                  <h2>Do you know the next step?</h2>
+                  <SvgIcon title="sirenIcon" viewBox="0 0 40 45" />
+                </div>
+                <p>
+                  You Can Catch This Service Either Other Product of Digicloud
+                  In 1 Minutes
+                </p>
+              </Col>
+              <Col xs={24} sm={24} md={6} lg={6} xl={6}>
+                <div className="faq-actions">
+                  <Button type="primary" className="faq-actions-tryout">
+                    Try Edge Services
+                  </Button>
+                  <Button type="default" className="faq-actions-callback">
+                    Request for Call Back
+                  </Button>
+                </div>
+              </Col>
+            </Row>
+          </div>
+        )}
+
+        {links && (
+          <div className="faq-links">
+            <Link href={links.back.href}>
+              <ArrowLeftOutlined />
+              {links.back.text}
+            </Link>
+            <Link href={links.next.href}>
+              {links.next.text}
+              <ArrowRightOutlined />
+            </Link>
+          </div>
+        )}
       </div>
     </StyledWrapper>
   );
