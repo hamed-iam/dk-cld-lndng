@@ -154,13 +154,13 @@ const Faq = ({ links, isNextStepShow = true, loc }: FaqPropsType) => {
         )}
 
         {currentTab === "cloud-computing" && (
-          <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: "0" }}
-            transition={{ duration: 0.5 }}
-            className="content"
-          >
-            <div className="content-column">
+          <div className="content">
+            <motion.div
+              initial={{ x: "-100%", opacity: 0 }}
+              animate={{ x: "0", opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              className="content-column"
+            >
               <Collapse
                 bordered={false}
                 defaultActiveKey={["0"]}
@@ -206,8 +206,13 @@ const Faq = ({ links, isNextStepShow = true, loc }: FaqPropsType) => {
                   <p>{text}</p>
                 </Panel>
               </Collapse>
-            </div>
-            <div className="content-column">
+            </motion.div>
+            <motion.div
+              initial={{ x: "100%", opacity: 0 }}
+              animate={{ x: "0", opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              className="content-column"
+            >
               <Collapse
                 bordered={false}
                 defaultActiveKey={["0"]}
@@ -265,17 +270,17 @@ const Faq = ({ links, isNextStepShow = true, loc }: FaqPropsType) => {
                   <p>{text}</p>
                 </Panel>
               </Collapse>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         )}
         {currentTab === "oss" && (
-          <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: "0" }}
-            transition={{ duration: 0.5 }}
-            className="content"
-          >
-            <div className="content-column">
+          <div className="content">
+            <motion.div
+              initial={{ y: "-100%", opacity: 0 }}
+              animate={{ y: "0", opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              className="content-column"
+            >
               <Collapse
                 bordered={false}
                 defaultActiveKey={["0"]}
@@ -321,8 +326,13 @@ const Faq = ({ links, isNextStepShow = true, loc }: FaqPropsType) => {
                   <p>{text}</p>
                 </Panel>
               </Collapse>
-            </div>
-            <div className="content-column">
+            </motion.div>
+            <motion.div
+              initial={{ y: "100%", opacity: 0 }}
+              animate={{ y: "0", opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              className="content-column"
+            >
               <Collapse
                 bordered={false}
                 defaultActiveKey={["0"]}
@@ -380,14 +390,14 @@ const Faq = ({ links, isNextStepShow = true, loc }: FaqPropsType) => {
                   <p>{text}</p>
                 </Panel>
               </Collapse>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         )}
         {currentTab === "edge-services" && (
           <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: "0" }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0}}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
             className="content"
           >
             <div className="content-column">
@@ -610,11 +620,11 @@ const Faq = ({ links, isNextStepShow = true, loc }: FaqPropsType) => {
           </div>
         )}
 
-        <motion.div className="faq-contact">
+        <div className="faq-contact">
           <SvgIcon title="divingMaskIcon" viewBox="0 0 21 20" />
           <p>Have any other question?</p>
           <Link href="/about">Contact Us</Link>
-        </motion.div>
+        </div>
 
         {isNextStepShow && (
           <div className="faq-next-step" onPointerMove={handlePointerMove}>
