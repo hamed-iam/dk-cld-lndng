@@ -10,6 +10,6 @@ export { default as InfoBox } from "./InfoBox";
 export { default as PostList } from "./PostList";
 export { default as ProductDefineSection } from "./ProductDefineSection";
 export { default as SvgIcon } from "./SvgIcon";
-export { default as Solutions } from "./Solutions";
+export { default as SolutionsSection } from "./SolutionsSection";
 export { default as SuccessStory } from "./SuccessStory";
 export { default as NavigationBar } from "./NavigationBar";

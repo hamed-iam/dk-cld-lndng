@@ -5,10 +5,33 @@ import {
   EdgeFeaturesSection,
   EdgePricingSection,
 } from "@/components/PageEdgeServices";
-import { Solutions, ProductDefineSection } from "@/components";
+import { SolutionsSection, ProductDefineSection } from "@/components";
 
 const EdgeServicesCtr = () => {
   const { t } = useTranslation("edge-services");
+
+  const solutionsCards = [
+    {
+      title: "title1",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+    },
+    {
+      title: "title2",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+    },
+    {
+      title: "title3",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+    },
+    {
+      title: "title4",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+    },
+    {
+      title: "title5",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+    },
+  ];
 
   const caseStudyPanels = [
     {
@@ -51,7 +74,7 @@ const EdgeServicesCtr = () => {
       />
 
       <EdgeFeaturesSection />
-      <Solutions />
+      <SolutionsSection cards={solutionsCards} />
       <SuccessStory />
       <EdgePricingSection />
       <CaseStudy

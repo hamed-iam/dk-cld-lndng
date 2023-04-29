@@ -4,7 +4,7 @@ import {
   CaseStudy,
   Faq,
   ProductDefineSection,
-  Solutions,
+  SolutionsSection,
   SuccessStory,
 } from "@/components";
 import {
@@ -35,6 +35,29 @@ const CloudComputingCtr = () => {
     {
       title: "test3",
       desc: t("define.dns-desc"),
+    },
+  ];
+
+  const solutionsCards = [
+    {
+      title: "title1",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+    },
+    {
+      title: "title2",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+    },
+    {
+      title: "title3",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+    },
+    {
+      title: "title4",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+    },
+    {
+      title: "title5",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
     },
   ];
 
@@ -78,7 +101,7 @@ const CloudComputingCtr = () => {
         }}
       />
       <CloudBenefitsSection />
-      <Solutions />
+      <SolutionsSection cards={solutionsCards} />
       <SuccessStory />
       <CloudPricingSection />
       <CaseStudy

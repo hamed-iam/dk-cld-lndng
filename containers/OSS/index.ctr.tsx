@@ -4,12 +4,35 @@ import { BenefitsSection } from "@/components/PageOss";
 import {
   SuccessStory,
   Faq,
-  Solutions,
+  SolutionsSection,
   ProductDefineSection,
 } from "@/components";
 
 const OssCtr = () => {
   const { t } = useTranslation("oss");
+
+  const solutionsCards = [
+    {
+      title: "title1",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+    },
+    {
+      title: "title2",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+    },
+    {
+      title: "title3",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+    },
+    {
+      title: "title4",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+    },
+    {
+      title: "title5",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+    },
+  ];
 
   return (
     <StyledWrapper>
@@ -24,7 +47,7 @@ const OssCtr = () => {
         }}
       />
       <BenefitsSection />
-      <Solutions />
+      <SolutionsSection cards={solutionsCards} />
       <SuccessStory />
       <Faq
         loc="oss"

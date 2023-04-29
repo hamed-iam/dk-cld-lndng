@@ -12,7 +12,30 @@ import {
   Security,
   Share,
 } from "@/components/PageDashboard";
-import { Faq, Solutions } from "@/components";
+import { Faq, SolutionsSection } from "@/components";
+
+const solutionsCards = [
+  {
+    title: "title1",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+  },
+  {
+    title: "title2",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+  },
+  {
+    title: "title3",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+  },
+  {
+    title: "title4",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+  },
+  {
+    title: "title5",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+  },
+];
 
 const DashboardCtr = () => {
   const { t } = useTranslation("dashboard");
@@ -23,7 +46,8 @@ const DashboardCtr = () => {
       <ProductsFeatures />
       <AboutUs />
       <SaveMore />
-      <Solutions />
+      <SolutionsSection cards={solutionsCards} />
+
       <Scenarios />
       <Security />
       <Cli />
