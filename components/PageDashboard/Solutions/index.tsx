@@ -96,6 +96,9 @@ export default function DashboardSolutions() {
             />
           </div>
         </div>
+        <p className="dashboard-solutions-header-sub">
+        Safe, economical <span>and</span> according to your business
+        </p>
       </div>
 
       <div className="dashboard-solutions-tabs">

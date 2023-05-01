@@ -4,7 +4,12 @@ import { ThemeStyledProps } from "@/styles/themes";
 export default styled.div(
   ({
     theme: {
-      colors: { LightNatural100, LightNatural400, LightThemePrimary600 },
+      colors: {
+        LightNatural100,
+        LightNatural40,
+        LightNatural400,
+        LightThemePrimary600,
+      },
     },
   }: ThemeStyledProps) => {
     return css`
@@ -26,7 +31,6 @@ export default styled.div(
             h2 {
               max-width: 770px;
               margin: unset;
-              /* font-size: calc(36px + (12 * ((100vw - 320px) / 1000))); */
               font-size: calc(36px + (9 * ((100vw - 320px) / 1000)));
               color: ${LightNatural400};
               span {
@@ -67,10 +71,21 @@ export default styled.div(
             }
           }
         }
+        &-sub {
+          margin-inline-start: 10px;
+          font-weight: 700;
+          font-size: 16px;
+          color: ${LightNatural100};
+          span {
+            color: ${LightNatural40};
+          }
+        }
       }
 
       .dashboard-solutions-tabs {
-        /* border: 1px solid blue; */
+        /* .ant-tabs-tab{
+          padding: unset !important;
+        } */
         margin: 48px 0;
         .content {
           width: 100%;
