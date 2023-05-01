@@ -1,16 +1,16 @@
 import { useEffect, useRef, useState } from "react";
+import { Button } from "antd";
 import { useTranslation } from "next-i18next";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import TitleFrame from "../TitleFrame";
 import SvgIcon from "../SvgIcon";
+import SolutionCard from "./SolutionCard";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import StyledWrapper from "./solutions.style";
-import SolutionCard from "./SolutionCard";
-import { Button } from "antd";
 
+import StyledWrapper from "./solutions.style";
 interface SolutionsSectionPropsType {
   cards: { title: string; desc: string }[];
 }
@@ -95,6 +95,7 @@ const SolutionsSection = ({ cards }: SolutionsSectionPropsType) => {
             slidesPerView={1}
             pagination={isMobile ? pagination : false}
             modules={[Pagination]}
+            onTransitionEnd={(e) => setCurrentSlide(e.realIndex)}
             // {...(isMobile && { pagination, modules: [Pagination] })}
             centeredSlides={false}
           >
