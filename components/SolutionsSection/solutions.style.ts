@@ -14,9 +14,12 @@ export default styled.div(
     },
   }: ThemeStyledProps) => {
     return css`
-      border: 1px solid red;
-      min-height: 716px;
-      padding: 5% 5%;
+      min-height:500px;
+      margin-inline: auto;
+      width: min(90%, 100rem);
+      margin-top: calc(24px + (80 - 24) * ((100vw - 320px) / (1920 - 320)));
+      margin-bottom: calc(24px + (80 - 24) * ((100vw - 320px) / (1920 - 320)));
+      /* margin-bottom: calc(24px + (80 - 24) * ((100vw - 320px) / (1920 - 320))); */
 
       .solution-title-wrapper {
         margin-inline-end: 55px;

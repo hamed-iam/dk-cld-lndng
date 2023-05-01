@@ -31,7 +31,7 @@ const SolutionsSection = ({ cards }: SolutionsSectionPropsType) => {
 
   const pagination = {
     clickable: true,
-    renderBullet: function (index: number, className: string) {
+    renderBullet: function (_: number, className: string) {
       return '<span class="' + className + '">' + "</span>";
     },
   };
@@ -39,13 +39,11 @@ const SolutionsSection = ({ cards }: SolutionsSectionPropsType) => {
   const handlePrevSlide = () => {
     swiperRef.current?.slidePrev();
     setCurrentSlide(swiperRef.current.realIndex);
-    // console.log("swiperRef prev ===>", swiperRef);
   };
 
   const handleNextSlide = () => {
     swiperRef.current?.slideNext();
     setCurrentSlide(swiperRef.current.realIndex);
-    // console.log("swiperRef next ===>", swiperRef);
   };
 
   return (
@@ -96,7 +94,6 @@ const SolutionsSection = ({ cards }: SolutionsSectionPropsType) => {
             pagination={isMobile ? pagination : false}
             modules={[Pagination]}
             onTransitionEnd={(e) => setCurrentSlide(e.realIndex)}
-            // {...(isMobile && { pagination, modules: [Pagination] })}
             centeredSlides={false}
           >
             {cards.map((card, index: number) => (

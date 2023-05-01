@@ -27,6 +27,7 @@ const space = [
 
 const lightTheme = {
   colors: {
+    LightBrandingPrimary:"#3D88EB",
     LightTextDarkMid: "#36384A",
     LightTextDarkHigh: "#171727",
     LightTextDarkLow: "#73798F",
@@ -58,6 +59,7 @@ const lightTheme = {
 
 const darkTheme = {
   colors: {
+    LightBrandingPrimary:"#3D88EB",
     LightTextDarkMid: "#36384A",
     LightTextDarkHigh: "#171727",
     LightTextDarkLow: "#73798F",
