@@ -11,6 +11,7 @@ import {
   Scenarios,
   Security,
   Share,
+  Solutions,
 } from "@/components/PageDashboard";
 import { Faq, SolutionsSection } from "@/components";
 
@@ -46,8 +47,8 @@ const DashboardCtr = () => {
       <ProductsFeatures />
       <AboutUs />
       <SaveMore />
-      <SolutionsSection cards={solutionsCards} />
-
+      {/* <SolutionsSection cards={solutionsCards} /> */}
+      <Solutions />
       <Scenarios />
       <Security />
       <Cli />

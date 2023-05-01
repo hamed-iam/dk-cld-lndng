@@ -6,5 +6,6 @@ export { default as Hero } from "./Hero";
 export { default as ProductsFeatures } from "./ProductsFeatures";
 export { default as SaveMore } from "./SaveMore";
 export { default as Security } from "./Security";
+export { default as Solutions } from "./Solutions";
 export { default as Scenarios } from "./Scenarios";
 export { default as Share } from "./Share";

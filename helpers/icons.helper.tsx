@@ -4562,3 +4562,17 @@ export const officeEmojiIcon = (
     </defs>
   </g>
 );
+
+// viewBox="0 0 153 68"
+export const arrowDashboardSolutionsIcon = (
+  <g>
+    <path
+      d="M1.73759 27.3781C40.3679 61.1516 71.8131 49.0685 83.4856 26.5288C93.1124 7.93939 67.5511 -8.54559 55.1334 8.3079C47.4099 18.7904 47.651 33.9929 69.4998 53.0384C96.4886 76.5645 139.581 65.7099 151.47 44.8731M151.47 44.8731L139.172 51.1918M151.47 44.8731L148.318 62.8182"
+      stroke="#B5B9CB"
+      strokeWidth="1.5"
+      strokeLinecap="square"
+      strokeLinejoin="round"
+      strokeDasharray="4 5"
+    />
+  </g>
+);

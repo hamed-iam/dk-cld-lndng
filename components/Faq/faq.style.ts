@@ -133,7 +133,6 @@ export default styled.aside(
               margin-inline-start: 8px;
             }
             .ant-collapse {
-              background: transparent;
               max-width: 542px;
               background: transparent;
               &-header {
