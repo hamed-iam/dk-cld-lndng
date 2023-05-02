@@ -39,8 +39,8 @@ export default function SuccessStorySection() {
         >
           <Image
             src="/assets/hero-compute.png"
-            width="383"
-            height="343"
+            width="373"
+            height="333"
             alt="cloud-compute"
           />
         </motion.div>
