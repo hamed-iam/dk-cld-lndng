@@ -1,11 +1,57 @@
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-import StyleWrapper from "./successStory.style";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper";
 import Link from "next/link";
 import SvgIcon from "../SvgIcon";
+import SuccessStoryCard from "./SuccessStoryCard";
 
-export default function SuccessStorySection() {
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import StyleWrapper from "./successStory.style";
+
+type Card = {
+  title: string;
+  desc: string;
+  id: number;
+  logo: {
+    title: string;
+    viewBox: string;
+  };
+};
+
+interface SuccessStorySectionPropType {
+  cards: Card[];
+  mainTitle: string;
+  desc: string;
+  imageSrc: string;
+}
+
+export default function SuccessStorySection({
+  cards,
+  mainTitle,
+  desc,
+  imageSrc,
+}: SuccessStorySectionPropType) {
+  const swiperRef = useRef<any>();
+  const [isMobile, setIsMobile] = useState(false);
+
+  // ! better solution needed.
+  useEffect(() => {
+    if (window.innerWidth <= 400) {
+      setIsMobile(true);
+    }
+  }, []);
+
+  const pagination = {
+    clickable: true,
+    renderBullet: function (_: number, className: string) {
+      return '<span class="' + className + '">' + "</span>";
+    },
+  };
+
   return (
     <StyleWrapper>
       <div className="container">
@@ -16,15 +62,8 @@ export default function SuccessStorySection() {
           <h3 className="success-header-superMain">
             Know about Customers Using
           </h3>
-          <h2 className="success-header-main">Object Storage</h2>
-          <p className="success-header-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet,
-            consectetur
-          </p>
+          <h2 className="success-header-main">{mainTitle}</h2>
+          <p className="success-header-desc">{desc}</p>
           <Link href="/about">
             Request fo Call Back{" "}
             <SvgIcon title="contactArrowIcon" viewBox="0 0 24 24" />
@@ -38,14 +77,40 @@ export default function SuccessStorySection() {
           className="image-wrapper"
         >
           <Image
-            src="/assets/hero-compute.png"
+            src={imageSrc}
             width="373"
             height="333"
-            alt="cloud-compute"
+            alt=""
           />
         </motion.div>
       </div>
-      <div className="success-content"></div>
+      <div className="success-content">
+        <Swiper
+          spaceBetween={12}
+          navigation={!isMobile}
+          onBeforeInit={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          slidesPerView={isMobile ? 1.2 : 2.5}
+          pagination={isMobile ? pagination : false}
+          modules={[Pagination, Navigation]}
+          centeredSlides={false}
+        >
+          {cards.map((card: Card, index: number) => (
+            <SwiperSlide
+              key={card.title}
+              virtualIndex={index}
+              style={{ paddingBottom: "40px" }}
+            >
+              <SuccessStoryCard
+                title={card.title}
+                desc={card.desc}
+                logo={card.logo}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </StyleWrapper>
   );
 }

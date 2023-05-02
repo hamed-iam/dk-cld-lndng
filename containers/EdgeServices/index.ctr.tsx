@@ -60,6 +60,39 @@ const EdgeServicesCtr = () => {
     },
   ];
 
+  const successStoryCards = [
+    {
+      id: 1,
+      title: "eCommerce Solution",
+      desc: "Diginext uses Digicloud's edge services for their next generation eCommerce solutions.",
+      logo: { title: "diginextLogo", viewBox: "0 0 74 17" },
+    },
+    {
+      id: 2,
+      title: "eCommerce Solution",
+      desc: "Diginext uses Digicloud's edge services for their next generation eCommerce solutions.",
+      logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
+    },
+    {
+      id: 3,
+      title: "eCommerce Solution",
+      desc: "Diginext uses Digicloud's edge services for their next generation eCommerce solutions.",
+      logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
+    },
+    {
+      id: 4,
+      title: "eCommerce Solution",
+      desc: "Diginext uses Digicloud's edge services for their next generation eCommerce solutions.",
+      logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
+    },
+    {
+      id: 5,
+      title: "eCommerce Solution",
+      desc: "Diginext uses Digicloud's edge services for their next generation eCommerce solutions.",
+      logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
+    },
+  ];
+
   return (
     <StyledWrapper>
       <ProductDefineSection
@@ -75,7 +108,17 @@ const EdgeServicesCtr = () => {
 
       <EdgeFeaturesSection />
       <SolutionsSection cards={solutionsCards} />
-      <SuccessStory />
+      <SuccessStory
+        cards={successStoryCards}
+        imageSrc="/assets/edgeStoryHero.png"
+        mainTitle="Edge Services"
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet,
+        consectetur"
+      />
       <EdgePricingSection />
       <CaseStudy
         panels={caseStudyPanels}

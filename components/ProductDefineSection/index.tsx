@@ -1,14 +1,13 @@
-import StyledWrapper from "./productDefineSection.style";
 import ProductDefineCard from "./ProductDefineCard";
 import { Button, Col, Row } from "antd";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
+import { useEffect, useRef, useState } from "react";
+import SvgIcon from "../SvgIcon";
 
 import "swiper/css";
 import "swiper/css/pagination";
-
-import { useEffect, useRef, useState } from "react";
-import SvgIcon from "../SvgIcon";
+import StyledWrapper from "./productDefineSection.style";
 
 type Card = {
   title: string;
