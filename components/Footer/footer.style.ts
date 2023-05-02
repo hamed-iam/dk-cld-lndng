@@ -14,102 +14,106 @@ export default styled.div(
     },
   }: ThemeStyledProps) => {
     return css`
-      background-color: ${DarkBGGrade15};
       margin-top: auto;
-      padding: 40px 5%;
-      .callback {
-        padding: 24px 5%;
-        background-color: ${DarkThemePrimary500Light};
-        border-radius: 12px;
+      background-color: ${DarkBGGrade15};
+      .container {
+        padding: 40px 0;
+        margin-inline: auto;
+        width: min(90%, 100rem);
+        .callback {
+          padding: 24px 5%;
+          background-color: ${DarkThemePrimary500Light};
+          border-radius: 12px;
 
-        &-title {
-          width: 100%;
-          display: flex;
-          align-items: center;
+          &-title {
+            width: 100%;
+            display: flex;
+            align-items: center;
 
-          .icon {
-            width: 32px;
-          }
-          p {
-            margin: unset;
-            font-weight: 600;
-            font-size: 18px;
-            color: ${DarkBasicWhite};
+            .icon {
+              width: 32px;
+            }
+            p {
+              margin: unset;
+              font-weight: 600;
+              font-size: 18px;
+              color: ${DarkBasicWhite};
+            }
           }
         }
-      }
-      .info {
-        margin: 56px 0;
-        &-branding {
-          .icon {
-            width: 145px;
+        .info {
+          margin: 56px 0;
+          &-branding {
+            .icon {
+              width: 145px;
+            }
+            &-desc {
+              color: ${DarkTextLightLow};
+              font-weight: 400;
+              font-size: 12px;
+            }
+            &-social {
+              display: flex;
+              .icon {
+                width: 24px;
+                margin: 0 3px;
+              }
+            }
           }
+          &-products {
+            &-title {
+              color: ${DarkTextLightLow};
+              font-weight: 600;
+              font-size: 14px;
+            }
+            &-links {
+              display: flex;
+              flex-direction: column;
+              a {
+                color: ${DarkTextLightHigh};
+                font-weight: 600;
+                font-size: 14px;
+              }
+            }
+          }
+
+          &-contact {
+            &-title {
+              color: ${DarkTextLightLow};
+              font-weight: 600;
+              font-size: 14px;
+            }
+            &-links {
+              display: flex;
+              flex-direction: column;
+              a {
+                color: ${DarkTextLightHigh};
+                font-weight: 600;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        .copyright {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .icon {
+            width: 18px;
+            height: 23px;
+            margin: 0 3px;
+          }
+
           &-desc {
             color: ${DarkTextLightLow};
             font-weight: 400;
             font-size: 12px;
           }
-          &-social {
-            display: flex;
-            .icon {
-              width: 24px;
-              margin: 0 3px;
-            }
+          a {
+            font-weight: 400;
+            font-size: 12px;
+            margin: 0 2px;
           }
-        }
-        &-products {
-          &-title {
-            color: ${DarkTextLightLow};
-            font-weight: 600;
-            font-size: 14px;
-          }
-          &-links {
-            display: flex;
-            flex-direction: column;
-            a {
-              color: ${DarkTextLightHigh};
-              font-weight: 600;
-              font-size: 14px;
-            }
-          }
-        }
-
-        &-contact {
-          &-title {
-            color: ${DarkTextLightLow};
-            font-weight: 600;
-            font-size: 14px;
-          }
-          &-links {
-            display: flex;
-            flex-direction: column;
-            a {
-              color: ${DarkTextLightHigh};
-              font-weight: 600;
-              font-size: 14px;
-            }
-          }
-        }
-      }
-      .copyright {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .icon {
-          width: 18px;
-          height: 23px;
-          margin: 0 3px;
-        }
-
-        &-desc {
-          color: ${DarkTextLightLow};
-          font-weight: 400;
-          font-size: 12px;
-        }
-        a {
-          font-weight: 400;
-          font-size: 12px;
-          margin: 0 2px;
         }
       }
     `;
