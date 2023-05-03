@@ -64,6 +64,9 @@ const GlobalStyle = createGlobalStyle(
       .align-c{
         align-items: center;
       }
+      .w-100{
+        width: 100%;
+      }
 
       /* BURGER MENU */
 
