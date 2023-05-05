@@ -55,10 +55,13 @@ export default styled.aside(
               font-weight: 700;
               font-size: 48px;
               margin: unset;
-              /* needs to be gradient */
               display: flex;
-              color: #cb5ff2;
               width: 100%;
+
+              background: linear-gradient(to right, #cb5ff2, #ff5a82);
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
             }
             max-width: 908px;
             &-sub {

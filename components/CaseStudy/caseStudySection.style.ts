@@ -67,8 +67,11 @@ export default styled.div(
           font-size: 40px;
           margin: unset;
           display: flex;
-          /* ! needs to gradient */
-          color: #cb5ff2;
+
+          background: linear-gradient(to right, #cb5ff2, #ff5a82);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
           .icon {
             width: 48px;
           }
