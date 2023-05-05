@@ -100,6 +100,7 @@ export default styled.aside(
           margin-bottom: 24px;
 
           &-btns {
+            display: flex;
             border-radius: 8px;
             padding: 4px;
             background-color: ${LightBGGrade15};
