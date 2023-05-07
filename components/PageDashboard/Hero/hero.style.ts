@@ -93,7 +93,10 @@ export const StyledSloganFa = styled.div(
         position: relative;
         z-index: 1;
         &-highlight {
-          color: pink;
+          background: linear-gradient(to right, #cb5ff2, #ff5a82);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
 
         ::before {
@@ -140,7 +143,10 @@ export const StyledSloganEn = styled.div(
         position: relative;
         z-index: 1;
         &-highlight {
-          color: pink;
+          background: linear-gradient(to right, #cb5ff2, #ff5a82);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
         &-infrastructure {
           color: ${LightThemePrimary600};
