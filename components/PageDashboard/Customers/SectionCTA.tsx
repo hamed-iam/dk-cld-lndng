@@ -15,18 +15,14 @@ export default function SectionCTA() {
         commodo consequat.
       </p>
 
-      <Row className="action-row">
-        <Col xs={24} sm={24} md={12} lg={12} xl={12}>
-          <div className="cta-actions">
-            <Button className="cta-actions-account" type="primary">
-              Create Digicloud Account
-            </Button>
-            <Button className="cta-actions-more" type="default">
-              More About Us
-            </Button>
-          </div>
-        </Col>
-      </Row>
+      <div className="cta-actions">
+        <Button className="cta-actions-account" type="primary">
+          Create Digicloud Account
+        </Button>
+        <Button className="cta-actions-more" type="default">
+          More About Us
+        </Button>
+      </div>
     </SectionCTAStyledWrapper>
   );
 }

@@ -336,7 +336,7 @@ export const SectionCTAStyledWrapper = styled.div(
       margin-top: 5%;
       box-shadow: 0px 2px 16px -4px rgba(24, 39, 75, 0.2);
       border-radius: 24px;
-      padding: 2% 5%;
+      padding: 5%;
       display: flex;
       flex-direction: column;
 
@@ -359,6 +359,7 @@ export const SectionCTAStyledWrapper = styled.div(
         color: ${DarkTextLightHigh};
         font-size: 26px;
         margin: unset;
+        line-height: 1;
         span {
           font-size: 20px;
         }
@@ -370,24 +371,28 @@ export const SectionCTAStyledWrapper = styled.div(
         margin-bottom: 32px;
         color: ${DarkTextLightHigh};
       }
-      .action-row {
-        margin-top: auto;
-        .cta-actions {
-          &-account,
-          &-more {
-            margin: 5px;
-            height: 36px;
-            min-width: 189px;
-            /* width: 100%; */
-            font-weight: 700;
-            font-size: 12px;
-          }
 
-          &-more {
-            background: transparent;
-            border: 1px solid #2b2c40;
-            color: ${DarkNatural300};
+      .cta-actions {
+        margin-top: auto;
+        display: flex;
+        flex-wrap: wrap;
+        &-account,
+        &-more {
+          margin: 5px;
+          height: 36px;
+          min-width: 189px;
+          /* width: 100%; */
+          font-weight: 700;
+          font-size: 12px;
+          @media (max-width: 500px) {
+            width: 100%;
           }
+        }
+
+        &-more {
+          background: transparent;
+          border: 1px solid #2b2c40;
+          color: ${DarkNatural300};
         }
       }
     `;
