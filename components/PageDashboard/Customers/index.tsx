@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { Col, Row } from "antd";
 import SvgIcon from "@/components/SvgIcon";
+import SectionCTA from "./SectionCTA";
 
 const Customers = () => {
   const { t } = useTranslation("dashboard");
@@ -81,6 +82,8 @@ const Customers = () => {
             ))}
           </Col>
         </Row>
+
+        <SectionCTA />
       </div>
     </StyledWrapper>
   );

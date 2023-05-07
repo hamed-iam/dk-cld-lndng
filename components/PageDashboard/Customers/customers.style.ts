@@ -34,7 +34,7 @@ export default styled.div(
             color: ${LightNatural400};
             font-weight: 700;
             /* font-size: 64px; */
-            font-size: clamp(40px,4.7vw,64px);
+            font-size: clamp(40px, 4.7vw, 64px);
             margin: unset;
             line-height: 1;
             span {
@@ -50,7 +50,7 @@ export default styled.div(
             p {
               margin: unset;
               font-weight: 700;
-              font-size: clamp(24px,4.7vw,40px);
+              font-size: clamp(24px, 4.7vw, 40px);
               color: ${LightNatural400};
               span {
                 color: ${LightThemePrimary600};
@@ -58,7 +58,7 @@ export default styled.div(
             }
             .icon {
               margin-inline-start: 5px;
-              width: clamp(32px,4.7vw,48px);
+              width: clamp(32px, 4.7vw, 48px);
             }
           }
           &-desc {
@@ -73,12 +73,34 @@ export default styled.div(
 
           /* common */
           .drag-ctr {
+            /* @keyframes wiggle {
+              0% {
+                transform: rotate(0deg);
+              }
+              80% {
+                transform: rotate(0deg);
+              }
+              85% {
+                transform: rotate(5deg);
+              }
+              95% {
+                transform: rotate(-5deg);
+              }
+              100% {
+                transform: rotate(0deg);
+              }
+            } */
             position: relative;
             margin: 10px;
             .drag-item {
               background-position: center;
               background-repeat: no-repeat;
               background-size: cover;
+              display: inline-block;
+              /* animation: wiggle 2.5s;
+              &:hover {
+                animation: none;
+              } */
             }
             .drag-area {
               width: 120px;
@@ -296,6 +318,75 @@ export default styled.div(
                 height: 80px;
               }
             }
+          }
+        }
+      }
+    `;
+  }
+);
+
+export const SectionCTAStyledWrapper = styled.div(
+  ({
+    theme: {
+      colors: { DarkTextLightHigh, DarkNatural300 },
+    },
+  }: ThemeStyledProps) => {
+    return css`
+      min-height: 258px;
+      margin-top: 5%;
+      box-shadow: 0px 2px 16px -4px rgba(24, 39, 75, 0.2);
+      border-radius: 24px;
+      padding: 2% 5%;
+      display: flex;
+      flex-direction: column;
+
+      @keyframes animatedBackground {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: 100% 0;
+        }
+      }
+
+      background-image: url("/assets/bg-clouds.png");
+      background-position: 0px 0px;
+      background-size: cover;
+      background-repeat: repeat-x;
+      animation: animatedBackground 120s linear infinite;
+
+      h4 {
+        color: ${DarkTextLightHigh};
+        font-size: 26px;
+        margin: unset;
+        span {
+          font-size: 20px;
+        }
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        margin-bottom: 32px;
+        color: ${DarkTextLightHigh};
+      }
+      .action-row {
+        margin-top: auto;
+        .cta-actions {
+          &-account,
+          &-more {
+            margin: 5px;
+            height: 36px;
+            min-width: 189px;
+            /* width: 100%; */
+            font-weight: 700;
+            font-size: 12px;
+          }
+
+          &-more {
+            background: transparent;
+            border: 1px solid #2b2c40;
+            color: ${DarkNatural300};
           }
         }
       }
