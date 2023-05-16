@@ -1,4 +1,4 @@
-import { Button, Col, Row } from "antd";
+import { Button } from "antd";
 import { SectionCTAStyledWrapper } from "./customers.style";
 
 export default function SectionCTA() {

@@ -5,28 +5,28 @@ import localFont from "next/font/local";
 const yekan = localFont({
   src: [
     {
-      path: "../public/fonts/yekanbakh/300/yekanbakh-300.woff2",
-      weight: "300",
+      path: '../public/fonts/yekanbakh/300/YekanBakh-Light.woff2',
+      weight: '300',
     },
     {
-      path: "../public/fonts/yekanbakh/400/yekanbakh-400.woff2",
-      weight: "400",
+      path: '../public/fonts/yekanbakh/400/YekanBakh-Regular.woff2',
+      weight: '400',
     },
     {
-      path: "../public/fonts/yekanbakh/500/yekanbakh-500.woff2",
-      weight: "500",
+      path: '../public/fonts/yekanbakh/500/yekanbakh-500.woff2',
+      weight: '500',
     },
     {
-      path: "../public/fonts/yekanbakh/600/yekanbakh-600.woff2",
-      weight: "600",
+      path: '../public/fonts/yekanbakh/600/YekanBakh-SemiBold.woff2',
+      weight: '600',
     },
     {
-      path: "../public/fonts/yekanbakh/700/YekanBakh-Bold.woff2",
-      weight: "700",
+      path: '../public/fonts/yekanbakh/700/YekanBakh-Bold.woff2',
+      weight: '700',
     },
     {
-      path: "../public/fonts/yekanbakh/800/yekanbakh-800.woff2",
-      weight: "800",
+      path: '../public/fonts/yekanbakh/800/YekanBakh-ExtraBold.woff2',
+      weight: '800',
     },
   ],
 });
