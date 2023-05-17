@@ -1,33 +1,28 @@
 import { useTranslation } from "next-i18next";
-import { Button, Col, Row } from "antd";
+import { motion } from "framer-motion";
+import { Button, Col, Row, notification } from "antd";
 import TitleFrame from "@/components/TitleFrame";
 import SvgIcon from "@/components/SvgIcon";
 
 import StyledWrapper from "./cli.style";
 import { useState } from "react";
+import Link from "next/link";
 
-const cloudCode = `module.exports =
-            create(context) {
-              return {
-                ImportDeclaration(node) {
-                  const importedPath = node.source.value.split('/');
-                  let hasApiInPath = false;
-                  for (let i = 0; i < importedPath.length; i++) {
-                    if (importedPath[i] === 'api') {
-                        hasApiInPath = true;
-                    }
-                  }
-                }
-              }
-            }`;
+const cloudCode = `digicloud instance create test --instance-type test`;
 
-const edgeCode = `print("edge code here")`;
+const edgeCode = `digicloud edge domain create test`;
 
 const ossCode = `
                 function greet(name) {
                console.log('Hello, ' + name + '!');
                 }
                 greet('World');`;
+
+const codes: any = {
+  cloud: cloudCode,
+  edge: edgeCode,
+  oss: ossCode,
+};
 
 const cloudCodeLines = cloudCode.trim().split("\n");
 const cloudLineNumbers = Array.from(
@@ -52,14 +47,15 @@ const Cli = () => {
 
   const { t } = useTranslation("dashboard");
 
-  // const copyToClipboard = () => {
-  //   const textarea = document.createElement("textarea");
-  //   textarea.value = code;
-  //   document.body.appendChild(textarea);
-  //   textarea.select();
-  //   document.execCommand("copy");
-  //   document.body.removeChild(textarea);
-  // };
+  const copyToClipboard = (item: string) => {
+    const textarea = document.createElement("textarea");
+    textarea.value = item;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    notification.success({ message: "Copied To Clipboard" });
+  };
 
   return (
     <StyledWrapper>
@@ -126,29 +122,33 @@ const Cli = () => {
                   }`}
                   onClick={() => setActiveTab("cloud")}
                 >
-                  cloud computing
+                  Cloud Computing
                 </Button>
                 <Button
                   type="ghost"
                   className={`code-sample-tabs-btn ${
-                    activeTab ==='edge' ? "active" : ""
+                    activeTab === "edge" ? "active" : ""
                   }`}
                   onClick={() => setActiveTab("edge")}
                 >
-                  edge services
+                  Edge Services
                 </Button>
                 <Button
                   type="ghost"
                   className={`code-sample-tabs-btn ${
-                    activeTab ==='oss' ? "active" : ""
+                    activeTab === "oss" ? "active" : ""
                   }`}
                   onClick={() => setActiveTab("oss")}
                 >
-                  object storage
+                  Object Storage
                 </Button>
               </div>
               {activeTab === "cloud" && (
-                <pre>
+                <motion.pre
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
                   <code>
                     {cloudCodeLines.map((line, index) => (
                       <div key={index}>
@@ -159,10 +159,14 @@ const Cli = () => {
                       </div>
                     ))}
                   </code>
-                </pre>
+                </motion.pre>
               )}
               {activeTab === "edge" && (
-                <pre>
+                <motion.pre
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
                   <code>
                     {edgeCodeLines.map((line, index) => (
                       <div key={index}>
@@ -173,10 +177,14 @@ const Cli = () => {
                       </div>
                     ))}
                   </code>
-                </pre>
+                </motion.pre>
               )}
               {activeTab === "oss" && (
-                <pre>
+                <motion.pre
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
                   <code>
                     {ossCodeLines.map((line, index) => (
                       <div key={index}>
@@ -187,11 +195,24 @@ const Cli = () => {
                       </div>
                     ))}
                   </code>
-                </pre>
+                </motion.pre>
               )}
             </div>
 
-            {/* <Button onClick={copyToClipboard}>Copy to Clipboard</Button> */}
+            <div className="copy-section">
+              <Button
+                className="copy-section-btn"
+                onClick={() => copyToClipboard(codes[activeTab])}
+              >
+                <SvgIcon title="copyIcon" viewBox="0 0 20 20" />
+                Copy Starting CLI Code
+              </Button>
+
+              <p className="contact-us">
+                Have any questions?
+                <Link href="/about"> Contact Us</Link>
+              </p>
+            </div>
           </Col>
         </Row>
       </div>

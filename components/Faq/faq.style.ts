@@ -103,6 +103,7 @@ export default styled.aside(
             display: flex;
             border-radius: 8px;
             padding: 4px;
+            flex-wrap: wrap;
             background-color: ${LightBGGrade15};
 
             &-btn {
@@ -111,6 +112,16 @@ export default styled.aside(
               color: ${LightTextDarkMid};
               font-weight: 600;
               font-size: 14px;
+              @media (max-width: 408px) {
+                width: 110px;
+                font-size: 11px;
+              }
+
+              @media (max-width: 375px) {
+                width: 100px;
+                font-size: 11px;
+                padding: 0;
+              }
 
               &.active {
                 background-color: ${LightBGGrade3};

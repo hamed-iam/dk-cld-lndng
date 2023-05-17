@@ -26,9 +26,6 @@ const Customers = () => {
     { name: "digistyle", ref: digistyleConstraintsRef },
   ];
 
-  //
-
-  //
   return (
     <StyledWrapper>
       {/* <div>
@@ -71,8 +68,9 @@ const Customers = () => {
               <div key={logo.name} className={`${logo.name}-ctr drag-ctr`}>
                 <motion.div className="drag-area" ref={logo.ref}>
                   <motion.div
-                    initial={{ opacity: 0, y: "-10%" }}
+                    initial={{ opacity: 0, y: "-30%" }}
                     whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 2 }}
                     className="drag-item"
                     drag
                     dragConstraints={logo.ref}

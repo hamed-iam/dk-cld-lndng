@@ -14,6 +14,8 @@ export default styled.aside(
         DarkTextLow,
         DarkTextMid,
         DarkTextLightLow,
+        DarkThemePrimary10,
+        DarkThemePrimary600,
       },
     },
   }: ThemeStyledProps) => {
@@ -30,7 +32,6 @@ export default styled.aside(
         margin-top: 5%;
 
         .info {
-          border: 1px solid red;
           &-super {
             font-weight: 400;
             font-size: 14px;
@@ -72,6 +73,27 @@ export default styled.aside(
                 max-height: 140px;
               }
             }
+            @media (max-width: 780px) {
+              max-width: 40%;
+              h2 {
+                font-size: 134px;
+                max-height: 120px;
+              }
+            }
+            @media (max-width: 530px) {
+              max-width: 45%;
+              h2 {
+                font-size: 114px;
+                max-height: 100px;
+              }
+            }
+            @media (max-width: 400px) {
+              max-width: 80%;
+              h2 {
+                font-size: 154px;
+                max-height: 120px;
+              }
+            }
           }
           &-sub {
             margin-top: 25px;
@@ -93,6 +115,12 @@ export default styled.aside(
               width: 32px;
               height: 32px;
               margin-bottom: 10px;
+            }
+
+            @media (max-width: 400px) {
+              h4 {
+                font-size: 24px;
+              }
             }
           }
           &-desc {
@@ -121,12 +149,12 @@ export default styled.aside(
           }
         }
         .cli {
-          border: 1px solid purple;
-
           .code-sample {
             background-color: ${DarkBGGrade15};
             border: 1px solid #36384a;
             border-radius: 12px;
+            min-height: 318px;
+            margin-top: 40px;
 
             &-tabs {
               background-color: ${DarkBGGrade2};
@@ -136,9 +164,12 @@ export default styled.aside(
               justify-content: center;
               border-radius: 12px 12px 0 0;
               transition: all 1s ease-in-out;
+              display: flex;
+              flex-wrap: wrap;
               &-btn {
                 color: ${DarkTextLow};
                 font-size: 15px;
+
                 &.active {
                   color: ${DarkTextMid};
                   /* font-weight: 700; */
@@ -153,9 +184,10 @@ export default styled.aside(
               border-radius: 12px;
 
               code {
-                &:last-child {
+                white-space: pre-wrap;
+                div:last-child {
                   .line-number {
-                    border-radius: 0 0 0 12px;
+                    color: ${DarkTextMid};
                   }
                 }
               }
@@ -165,6 +197,38 @@ export default styled.aside(
                 background-color: ${DarkBGGrade2};
                 text-align: end;
                 padding-inline-end: 10px;
+              }
+            }
+          }
+          .copy-section {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 16px;
+            margin-bottom: 40px;
+            &-btn {
+              background-color: ${DarkThemePrimary10};
+              color: #ffffff;
+              font-weight: 700;
+              font-size: 14px;
+              border: unset;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 42px;
+              .icon {
+                width: 20px;
+                height: 20px;
+                margin-inline-end: 10px;
+              }
+            }
+            .contact-us {
+              margin-inline-start: 10px;
+              color: ${DarkTextLow};
+              font-weight: 400;
+              font-size: 14px;
+              a {
+                font-weight: 700;
+                color: ${DarkThemePrimary600};
               }
             }
           }
