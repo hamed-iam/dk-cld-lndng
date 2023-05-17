@@ -12,6 +12,7 @@ export default styled.aside(
         DarkBGGrade2,
         DarkNatural100,
         DarkTextLow,
+        DarkTextMid,
         DarkTextLightLow,
       },
     },
@@ -124,23 +125,42 @@ export default styled.aside(
 
           .code-sample {
             background-color: ${DarkBGGrade15};
+            border: 1px solid #36384a;
+            border-radius: 12px;
 
             &-tabs {
               background-color: ${DarkBGGrade2};
+              border-bottom: 1px solid #36384a;
               display: flex;
               align-items: center;
               justify-content: center;
-              &-btn{}
+              border-radius: 12px 12px 0 0;
+              transition: all 1s ease-in-out;
+              &-btn {
+                color: ${DarkTextLow};
+                font-size: 15px;
+                &.active {
+                  color: ${DarkTextMid};
+                  /* font-weight: 700; */
+                }
+              }
             }
 
             pre {
               font-size: 14px;
               margin: unset;
               color: ${DarkTextLow};
+              border-radius: 12px;
 
+              code {
+                &:last-child {
+                  .line-number {
+                    border-radius: 0 0 0 12px;
+                  }
+                }
+              }
               .line-number {
                 display: inline-block;
-
                 width: 50px;
                 background-color: ${DarkBGGrade2};
                 text-align: end;

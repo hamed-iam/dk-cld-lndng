@@ -6,7 +6,7 @@ import SvgIcon from "@/components/SvgIcon";
 import StyledWrapper from "./cli.style";
 import { useState } from "react";
 
-const code = `module.exports =
+const cloudCode = `module.exports =
             create(context) {
               return {
                 ImportDeclaration(node) {
@@ -21,15 +21,29 @@ const code = `module.exports =
               }
             }`;
 
-const test = `
+const edgeCode = `print("edge code here")`;
+
+const ossCode = `
                 function greet(name) {
                console.log('Hello, ' + name + '!');
                 }
                 greet('World');`;
 
-const codeLines = code.trim().split("\n");
-const lineNumbers = Array.from(
-  { length: codeLines.length },
+const cloudCodeLines = cloudCode.trim().split("\n");
+const cloudLineNumbers = Array.from(
+  { length: cloudCodeLines.length },
+  (_, index) => index + 1
+);
+
+const edgeCodeLines = edgeCode.trim().split("\n");
+const edgeLineNumbers = Array.from(
+  { length: edgeCodeLines.length },
+  (_, index) => index + 1
+);
+
+const ossCodeLines = ossCode.trim().split("\n");
+const ossLineNumbers = Array.from(
+  { length: ossCodeLines.length },
   (_, index) => index + 1
 );
 
@@ -38,14 +52,14 @@ const Cli = () => {
 
   const { t } = useTranslation("dashboard");
 
-  const copyToClipboard = () => {
-    const textarea = document.createElement("textarea");
-    textarea.value = code;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand("copy");
-    document.body.removeChild(textarea);
-  };
+  // const copyToClipboard = () => {
+  //   const textarea = document.createElement("textarea");
+  //   textarea.value = code;
+  //   document.body.appendChild(textarea);
+  //   textarea.select();
+  //   document.execCommand("copy");
+  //   document.body.removeChild(textarea);
+  // };
 
   return (
     <StyledWrapper>
@@ -108,7 +122,7 @@ const Cli = () => {
                 <Button
                   type="ghost"
                   className={`code-sample-tabs-btn ${
-                    activeTab ? "active" : ""
+                    activeTab === "cloud" ? "active" : ""
                   }`}
                   onClick={() => setActiveTab("cloud")}
                 >
@@ -117,7 +131,7 @@ const Cli = () => {
                 <Button
                   type="ghost"
                   className={`code-sample-tabs-btn ${
-                    activeTab ? "active" : ""
+                    activeTab ==='edge' ? "active" : ""
                   }`}
                   onClick={() => setActiveTab("edge")}
                 >
@@ -126,26 +140,58 @@ const Cli = () => {
                 <Button
                   type="ghost"
                   className={`code-sample-tabs-btn ${
-                    activeTab ? "active" : ""
+                    activeTab ==='oss' ? "active" : ""
                   }`}
                   onClick={() => setActiveTab("oss")}
                 >
                   object storage
                 </Button>
               </div>
-              <pre>
-                <code>
-                  {codeLines.map((line, index) => (
-                    <div key={index}>
-                      <span className="line-number">{lineNumbers[index]}</span>
-                      {line}
-                    </div>
-                  ))}
-                </code>
-              </pre>
+              {activeTab === "cloud" && (
+                <pre>
+                  <code>
+                    {cloudCodeLines.map((line, index) => (
+                      <div key={index}>
+                        <span className="line-number">
+                          {cloudLineNumbers[index]}
+                        </span>
+                        {line}
+                      </div>
+                    ))}
+                  </code>
+                </pre>
+              )}
+              {activeTab === "edge" && (
+                <pre>
+                  <code>
+                    {edgeCodeLines.map((line, index) => (
+                      <div key={index}>
+                        <span className="line-number">
+                          {edgeLineNumbers[index]}
+                        </span>
+                        {line}
+                      </div>
+                    ))}
+                  </code>
+                </pre>
+              )}
+              {activeTab === "oss" && (
+                <pre>
+                  <code>
+                    {ossCodeLines.map((line, index) => (
+                      <div key={index}>
+                        <span className="line-number">
+                          {ossLineNumbers[index]}
+                        </span>
+                        {line}
+                      </div>
+                    ))}
+                  </code>
+                </pre>
+              )}
             </div>
 
-            <Button onClick={copyToClipboard}>Copy to Clipboard</Button>
+            {/* <Button onClick={copyToClipboard}>Copy to Clipboard</Button> */}
           </Col>
         </Row>
       </div>
