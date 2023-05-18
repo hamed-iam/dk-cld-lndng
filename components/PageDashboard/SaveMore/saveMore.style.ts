@@ -25,6 +25,7 @@ export default styled.div(
       display: flex;
       align-items: center;
       .container {
+        margin: 5% 0;
         height: 100%;
         width: min(90%, 74rem);
         margin-inline: auto;

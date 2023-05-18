@@ -24,12 +24,15 @@ const Share = () => {
               <p className="info-section-title-super">{t("share.super-h1")}</p>
 
               <TitleFrame>
-                <h2>Share with your Team</h2>
+                <h2>
+                  <span className="highlight">Share </span>
+                  with your Team
+                </h2>
               </TitleFrame>
             </div>
             <div className="info-section-desc">
               <p>{t("share.desc")}</p>
-              <SvgIcon title="foldedHandsEmojiIcon" viewBox="0 0 32 32" />
+              {/* <SvgIcon title="foldedHandsEmojiIcon" viewBox="0 0 32 32" /> */}
             </div>
             <div className="info-section-action">
               <Button className="info-section-action-btn" type="primary">

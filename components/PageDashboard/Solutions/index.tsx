@@ -64,54 +64,59 @@ export default function DashboardSolutions() {
 
   return (
     <StyledWrapper>
-      <div className="dashboard-solutions-header">
-        <p className="dashboard-solutions-header-super">Our Solutions</p>
+      <div className="container">
+        <div className="dashboard-solutions-header">
+          <p className="dashboard-solutions-header-super">Our Solutions</p>
 
-        <div className="solution-title-container">
-          <TitleFrame>
-            {/* {t("solutions.h1")} */}
-            <div className="solution-title-wrapper">
-              <h2>
-                Answer Your Business Complexity with
-                <span> Our Solution</span>
-              </h2>
+          <div className="solution-title-container">
+            <TitleFrame>
+              {/* {t("solutions.h1")} */}
+              <div className="solution-title-wrapper">
+                <h2>
+                  Answer Your Business Complexity with
+                  <span> Our Solution</span>
+                </h2>
 
+                <Image
+                  src="/assets/crane.png"
+                  width={64}
+                  height={64}
+                  alt=""
+                  className="inner-crane"
+                />
+              </div>
+            </TitleFrame>
+            <div className="solution-title-icons">
+              <SvgIcon
+                title="arrowDashboardSolutionsIcon"
+                viewBox="0 0 153 68"
+              />
               <Image
                 src="/assets/crane.png"
-                width={64}
-                height={64}
+                width={168}
+                height={168}
                 alt=""
-                className="inner-crane"
+                className="outer-crane"
               />
             </div>
-          </TitleFrame>
-          <div className="solution-title-icons">
-            <SvgIcon title="arrowDashboardSolutionsIcon" viewBox="0 0 153 68" />
-            <Image
-              src="/assets/crane.png"
-              width={168}
-              height={168}
-              alt=""
-              className="outer-crane"
-            />
           </div>
+          <p className="dashboard-solutions-header-sub">
+            Safe, economical <span>and</span> according to your business
+          </p>
         </div>
-        <p className="dashboard-solutions-header-sub">
-        Safe, economical <span>and</span> according to your business
-        </p>
-      </div>
 
-      <div className="dashboard-solutions-tabs">
-        <Tabs
-          tabPosition={tabPosition}
-          items={tabData.map((tab) => {
-            return {
-              label: tab.label,
-              key: tab.key,
-              children: tab.children,
-            };
-          })}
-        />
+        <div className="dashboard-solutions-tabs">
+          <Tabs
+            tabPosition={tabPosition}
+            items={tabData.map((tab) => {
+              return {
+                label: tab.label,
+                key: tab.key,
+                children: tab.children,
+              };
+            })}
+          />
+        </div>
       </div>
     </StyledWrapper>
   );

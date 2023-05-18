@@ -4,14 +4,15 @@ import { ThemeStyledProps } from "@/styles/themes";
 export default styled.aside(
   ({
     theme: {
-      colors: { LightNatural100 },
+      colors: { LightNatural100, LightNatural400 },
     },
   }: ThemeStyledProps) => {
     return css`
-      min-height: 563px;
+      min-height: 400px;
       background: linear-gradient(89.94deg, #ffffff 40.64%, #f0f0f7 68.21%);
       display: flex;
       align-items: center;
+      margin: 5% 0;
       .container {
         height: 100%;
         width: min(90%, 74rem);
@@ -30,9 +31,16 @@ export default styled.aside(
             }
             h2 {
               font-size: 48px;
+              color: ${LightNatural400};
               margin: unset;
               line-height: 1;
               padding: 5px;
+              .highlight {
+                background: linear-gradient(to right, #cb5ff2, #ff5a82);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
             }
           }
 

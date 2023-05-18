@@ -13,11 +13,13 @@ export default styled.div(
     },
   }: ThemeStyledProps) => {
     return css`
-      width: min(90%, 74rem);
-      margin-inline: auto;
+    margin: 4% 0;
+      .container {
+        width: min(90%, 74rem);
+        margin-inline: auto;
+      }
 
       .dashboard-solutions-header {
-        /* border: 1px solid red; */
         &-super {
           color: ${LightNatural100};
           font-weight: 400;

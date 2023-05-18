@@ -4,21 +4,23 @@ import { ThemeStyledProps } from "@/styles/themes";
 export default styled.div(
   ({
     theme: {
-      colors: { LightNatural100, LightNatural400, LightThemePrimary600 },
+      colors: { LightNatural100 },
     },
   }: ThemeStyledProps) => {
     return css`
-      height: min(663px);
-      width: min(90%, 74rem);
-      margin-inline: auto;
-      display: flex;
-      justify-content: space-between;
-
-      @media screen and (max-width: 768px) {
-        justify-content: center;
+      margin: 5% 0;
+      .container {
+        height: min(663px);
+        width: min(90%, 74rem);
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 768px) {
+          justify-content: center;
+        }
+        align-items: center;
+        flex-wrap: wrap-reverse;
       }
-      align-items: center;
-      flex-wrap: wrap-reverse;
       .title-wrapper {
         &-super {
           font-weight: 400;
