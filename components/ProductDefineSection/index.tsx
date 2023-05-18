@@ -52,7 +52,6 @@ export default function DefineSection({
 
   const handleNextSlide = () => {
     swiperRef.current?.slideNext();
-    // console.log("swiperRef next ===>", swiperRef);
   };
 
   const pagination = {
@@ -62,7 +61,6 @@ export default function DefineSection({
     },
   };
 
-  console.log("isMobile", isMobile);
   return (
     <StyledWrapper>
       {/* gutter={[40, 16]} */}
