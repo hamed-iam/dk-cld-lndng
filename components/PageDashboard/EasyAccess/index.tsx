@@ -6,16 +6,21 @@ const EasyAccess = () => {
 
   return (
     <StyledWrapper>
-      <div>
-        <h1>{t("easy-acc.h1")}</h1>
+      <div className="container">
+        <h2>{t("easy-acc.h1")}</h2>
+        <div className="quick-access-wrapper">
+          <a href="#" className="quick-access-wrapper-product cloud">
+            {t("easy-acc.cld-opt")}
+          </a>
+          <a href="#" className="quick-access-wrapper-product edge">
+            {t("easy-acc.edg-opt")}
+          </a>
+          <a href="#" className="quick-access-wrapper-product oss">
+            {t("easy-acc.oss-opt")}
+          </a>
+        </div>
       </div>
-
-      <div>
-        <p>{t("easy-acc.cld-opt")}</p>
-        <p>{t("easy-acc.edg-opt")}</p>
-        <p>{t("easy-acc.oss-opt")}</p>
-      </div>
-    </StyledWrapper>  
+    </StyledWrapper>
   );
 };
 

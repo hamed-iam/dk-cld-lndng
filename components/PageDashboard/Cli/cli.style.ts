@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { ThemeStyledProps } from "@/styles/themes";
 
-export default styled.aside(
+export default styled.div(
   ({
     theme: {
       colors: {
@@ -30,6 +30,7 @@ export default styled.aside(
         width: min(90%, 74rem);
         margin-inline: auto;
         margin-top: 5%;
+        margin-bottom: 5%;
 
         .info {
           &-super {
