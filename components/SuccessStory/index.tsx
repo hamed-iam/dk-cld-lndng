@@ -98,7 +98,7 @@ export default function SuccessStorySection({
         >
           {cards.map((card: Card, index: number) => (
             <SwiperSlide
-              key={card.title}
+              key={card.id}
               virtualIndex={index}
               style={{ paddingBottom: "40px" }}
             >

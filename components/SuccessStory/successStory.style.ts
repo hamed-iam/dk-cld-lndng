@@ -129,12 +129,12 @@ export default styled.div(
           width: 24px;
           height: 4px;
           border-radius: 10px;
-          background: #54586C;
+          background: #54586c;
           opacity: 0.3;
 
           &-active {
             opacity: 1;
-            background: #54586C;
+            background: #54586c;
           }
         }
 
@@ -176,8 +176,9 @@ export const SuccessStoryCardStyledWrapper = styled.div(
       box-shadow: 0px 0px 8px rgba(24, 39, 75, 0.06),
         0px 2px 16px -2px rgba(24, 39, 75, 0.02);
 
-      padding: calc(max(24px, 2.2vw)) calc(max(20px, 4vw))
-        calc(max(24px, 2.2vw)) calc(max(20px, 4vw));
+      /* padding: calc(max(24px, 2.2vw)) calc(max(20px, 4vw))
+        calc(max(24px, 2.2vw)) calc(max(20px, 4vw)); */
+      padding: 5%;
       max-width: 421px;
       min-height: 209px;
       h3 {
