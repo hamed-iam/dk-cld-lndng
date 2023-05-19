@@ -47,30 +47,64 @@ export default styled.div(
           flex-wrap: wrap;
           width: 100%;
           justify-content: center;
-          position: relative;
           &-product {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             width: 100%;
             max-width: 377px;
             min-height: 60px;
             color: #ffffff;
-            padding: 16px;
+            padding: 16px 32px;
             font-weight: 700;
             font-size: 15px;
 
             box-shadow: 0px 0px 4px -2px rgba(24, 39, 75, 0.1),
               0px 4px 4px -2px rgba(24, 39, 75, 0.06);
-
+            span {
+              display: flex;
+              align-items: center;
+            }
+            .icon {
+              width: 24px;
+              height: 24px;
+              path {
+                fill: white;
+              }
+            }
             border-radius: 8px;
             &.cloud {
               background-color: ${LightThemePrimary600};
+              transform: translateX(10px);
+              z-index: 2;
+              .icon-cloudComputingPlainIcon {
+                margin-inline-end: 10px;
+              }
             }
             &.edge {
               background-color: ${LightThemePrimary800};
+              z-index: 1;
+              .icon-edgeServicesPlainIcon {
+                margin-inline-end: 10px;
+              }
             }
             &.oss {
               background-color: ${DarkThemePrimary700};
+              transform: translateX(-10px);
+              .icon-objectStoragePlainIcon {
+                margin-inline-end: 10px;
+              }
+            }
+
+            @media (max-width: 837px) {
+              &.cloud {
+                transform: translateX(0);
+                transform: translateY(10px);
+              }
+              &.oss {
+                transform: translateX(0);
+                transform: translateY(-10px);
+              }
             }
           }
         }
