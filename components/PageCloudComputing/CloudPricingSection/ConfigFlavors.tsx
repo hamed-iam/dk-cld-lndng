@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "antd";
+import SvgIcon from "@/components/SvgIcon";
 
 import { ConfigFlavorsStyledWrapper } from "./cloudPricingSection.style";
 
@@ -67,7 +68,9 @@ export default function ConfigFlavors() {
         </div>
 
         <div className="config-wrapper-info">
-          <Button>left</Button>
+          <Button className="config-wrapper-info-leftBtn">
+            <SvgIcon title="leftArrowIcon" viewBox="0 0 18 19" />
+          </Button>
           <div className="config-wrapper-info-desc">
             <div className="config-wrapper-info-desc-item">
               <p className="label">Name</p>
@@ -82,7 +85,9 @@ export default function ConfigFlavors() {
               <p className="value">{currentConfig.memory}</p>
             </div>
           </div>
-          <Button>right</Button>
+          <Button className="config-wrapper-info-rightBtn">
+            <SvgIcon title="rightArrowIcon" viewBox="0 0 18 19" />
+          </Button>
         </div>
       </div>
     </ConfigFlavorsStyledWrapper>

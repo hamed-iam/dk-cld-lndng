@@ -92,7 +92,7 @@ export const ConfigFlavorsStyledWrapper = styled.div(
 
       .config-wrapper {
         &-banner {
-          transition: all 1s ease-in-out;
+          transition: all .5s ease-in-out;
           &.general {
             background-image: url("/assets/config.png");
           }
@@ -141,17 +141,24 @@ export const ConfigFlavorsStyledWrapper = styled.div(
             &.active {
               background-color: ${LightBGGrade3};
             }
+
+            @media (max-width: 440px) {
+              font-size: 11px;
+              padding: 5px 3px;
+            }
           }
         }
 
         &-info {
           display: flex;
           align-items: center;
+          justify-content: space-around;
           &-desc {
             width: 100%;
             background-color: ${LightBGGrade15};
             border-radius: 12px;
             padding: 16px 32px;
+            /*  padding: 16px 12px; */
             margin: 0 16px;
 
             display: flex;
@@ -169,6 +176,18 @@ export const ConfigFlavorsStyledWrapper = styled.div(
                 font-size: 15px;
                 margin: unset;
               }
+            }
+
+            @media (max-width: 440px) {
+              padding: 16px 12px;
+            }
+          }
+          &-leftBtn,
+          &-rightBtn {
+            padding: 5px;
+            .icon {
+              width: 18px;
+              height: 18px;
             }
           }
         }
