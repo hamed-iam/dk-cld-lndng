@@ -18,7 +18,23 @@
   "about": {
     "super-h1": "The Team",
     "h1": "About Us",
-    "sub-h1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    "sub-h1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "action": "More About Us",
+    "link": [
+      {
+        "title": "Have any question?",
+        "link": "Contact Us"
+      },
+      {
+        "title": "Haven’t DigiCloud account?",
+        "link": "Sign Up"
+      },
+      {
+        "title": "Need to Assist?",
+        "link": "Request for Demo"
+      }
+    ],
+    "tag": ["FRIENDLY", "SUPPORTIVE", "PROFESSIONAL"]
   },
   "save": {
     "super-h1": "Our Solutions",
