@@ -1,4 +1,28 @@
 {
   "h1": "About Us",
-  "title": "DigiCloud | About us "
+  "title": "DigiCloud | About us ",
+  "aboutus": {
+    "header": {
+      "super": "The Team",
+      "title": "About Us",
+      "sub": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor."
+    },
+    "media": {
+      "link": [
+        {
+          "title": "Have any question?",
+          "label": "Contact Us"
+        },
+        {
+          "title": "Haven’t DigiCloud account?",
+          "label": "Sign Up"
+        },
+        {
+          "title": "Need to Assist?",
+          "label": "Request for Demo"
+        }
+      ],
+      "tag": ["FRIENDLY", "SUPPORTIVE", "PROFESSIONAL"]
+    }
+  }
 }
