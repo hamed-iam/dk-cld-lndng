@@ -1,4 +1,40 @@
 {
   "h1": "Edge Services",
-  "title": "DigiCloud | Edge Services"
+  "title": "DigiCloud | Edge Services",
+  "pricing": {
+    "super": "Pricing and Payment",
+    "title": {
+      "h1": "Pricing Packages",
+      "h1-blur": "Transparent",
+      "rest": "Your Business",
+      "subheading": "by Using",
+      "subheading-highlight": "Edge Services"
+    },
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "cards": [
+      {
+        "title": "#1 Bronze",
+        "subtitle": "Sub title of #1 Bronze",
+        "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore",
+        "item-title": ["12 DNS Record"]
+      },
+      {
+        "title": "#2 Silver",
+        "subtitle": "Sub title of #1 Bronze",
+        "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore",
+        "item-title": ["12 DNS Record"]
+      },
+      {
+        "title": "#3 Golden",
+        "subtitle": "Sub title of #1 Bronze",
+        "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore",
+        "item-title": ["12 DNS Record"]
+      }
+    ],
+    "action": {
+      "get-started": "Get Started",
+      "view-more": "View More",
+      "view-less": "View Less"
+    }
+  }
 }
