@@ -10936,3 +10936,29 @@ export const moreAboutUsArrowIcon = (
     />
   </g>
 );
+
+// viewBox="0 0 5 25"
+export const rectangleIcon = (
+  <g>
+    <rect
+      x="5"
+      width="25"
+      height="5"
+      transform="rotate(90 5 0)"
+      fill="url(#paint0_linear_307_19008)"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_307_19008"
+        x1="5"
+        y1="2.85379"
+        x2="29.995"
+        y2="2.28082"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#CB5FF2" />
+        <stop offset="0.848958" stopColor="#FF5A82" />
+      </linearGradient>
+    </defs>
+  </g>
+);
