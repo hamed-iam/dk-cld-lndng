@@ -45,7 +45,11 @@ export default styled.div(
 
         .title-wrapper {
           width: 100%;
-          padding-bottom: 30px;
+          padding-bottom: 50px;
+
+          @media screen and (max-width: 500px) {
+            padding-bottom: 5px;
+          }
 
           &-super {
             color: ${LightNatural100};
@@ -121,7 +125,6 @@ export default styled.div(
         gap: calc(400px + (40% - 50vw));
 
         .cards-wrapper {
-          position: absolute;
           position: relative;
           max-width: 1100px;
           display: flex;
@@ -137,6 +140,15 @@ export default styled.div(
             .help-emoji {
               max-width: 240px;
               height: auto;
+            }
+
+            @media screen and (max-width: 820px) {
+              right: 10px;
+              top: -12.5em;
+              .help-emoji {
+                max-width: 200px;
+                height: auto;
+              }
             }
           }
         }
