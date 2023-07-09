@@ -31,6 +31,7 @@ export default function EdgePricingCard({
       active={isActive}
     >
       <div className="container">
+      {/* TODO: It should be improved by removing checkbox and a sloution based on pure CSS */}
         <input
           type="checkbox"
           className="view-more-state"
@@ -45,7 +46,6 @@ export default function EdgePricingCard({
           <h4>{subtitle}</h4>
         </div>
         <div className="content">
-          {/* <div className={isActive ? "content expand" : "content collapse"}> */}
           {items.map((item, index) => {
             return (
               <div key={index} className="content-item">
