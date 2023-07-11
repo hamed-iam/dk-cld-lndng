@@ -53,12 +53,13 @@ export default styled.div(
           h1 {
             margin: unset;
             font-size: 64px;
-            background: -webkit-linear-gradient(
+            background: linear-gradient(
               214.56deg,
               #c4f1f7 28.58%,
               #3d88eb 82.41%
             );
             background-clip: text;
+            -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
         }
