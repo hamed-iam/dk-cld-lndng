@@ -47,8 +47,27 @@
   },
   "security": {
     "super-h1": "Security",
-    "h1": "Deploy Safely on digicloud",
-    "sub-h1": "Have any question about features?"
+    "h1": ["Deploy Safely", "on", "digicloud"],
+    "sub-h1": "Have any question about features?",
+    "link": "Contact Us",
+    "data": [
+      {
+        "title":"5 Bilion",
+        "sub":"Attack protection per day"
+      },
+      {
+        "title":"1 K",
+        "sub":"DDoS attack blocked per day"
+      },
+      {
+        "title":"770 K",
+        "sub":"SSL certificates worldwide"
+      },
+      {
+        "title":"1.56 M",
+        "sub":"Vulnerabilities fixed per day "
+      }
+    ]
   },
   "cli": {
     "super-h1": "Interfaces",

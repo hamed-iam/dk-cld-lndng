@@ -91,6 +91,7 @@ const darkTheme = {
     LightTextDarkHigh: "#171727",
     LightTextDarkLow: "#73798F",
     LightTextMid: "#36384A",
+    LightTextLightLow: "#EDEEF3",
     LightTextLow: "#73798F",
     LightThemePrimary600: "#3D88EB",
     LightThemePrimary800: "#2F50A3",
