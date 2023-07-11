@@ -11,6 +11,7 @@ export default styled.div(
         LightTextDarkMid,
         LightThemePrimary600,
       },
+      locale,
     },
   }: ThemeStyledProps) => {
     return css`
@@ -24,7 +25,7 @@ export default styled.div(
         flex-wrap: wrap;
         max-width: 1360px;
         margin-inline: auto;
-        width: min(90%, 100rem);
+        width: min(90%, 74rem);
         height: 100%;
         margin-top: calc(24px + (80 - 24) * ((100vw - 320px) / (1920 - 320)));
         margin-bottom: calc(
@@ -43,18 +44,15 @@ export default styled.div(
           display: flex;
           p {
             margin: unset;
-            font-size: clamp(20px, 3.7vw, 64px);
-            background: -webkit-linear-gradient(
-              89.74deg,
-              #cb5ff2 0.2%,
-              #ff5a82 84.73%
-            );
+            font-size: 64px;
+            background: linear-gradient(89.74deg, #cb5ff2 0.2%, #ff5a82 84.73%);
             background-clip: text;
+            -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
           h1 {
             margin: unset;
-            font-size: clamp(20px, 3.7vw, 64px);
+            font-size: 64px;
             background: -webkit-linear-gradient(
               214.56deg,
               #c4f1f7 28.58%,
@@ -78,9 +76,10 @@ export default styled.div(
           .icon {
             width: 21px;
             height: 20px;
+            transform: rotate(${locale === "fa" ? 180 : 0}deg);
           }
 
-          .contact-btn {
+          .more-btn {
             display: flex;
             align-items: center;
             height: 46px;
@@ -94,7 +93,7 @@ export default styled.div(
       }
       .about-content {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -116,6 +115,7 @@ export default styled.div(
           max-width: 557px;
           /* align-items: center; */
           width: 100%;
+          margin-bottom: 80px;
         }
         &-video {
           width: 447px;
@@ -143,6 +143,24 @@ export default styled.div(
           }
 
           .tag-frame-professional {
+            position: absolute;
+            top: 90%;
+            right: 30%;
+          }
+
+          .tag-frame-friendly-fa {
+            position: absolute;
+            top: 70%;
+            left: 15%;
+          }
+
+          .tag-frame-supportive-fa {
+            position: absolute;
+            top: 75%;
+            right: -12%;
+          }
+
+          .tag-frame-professional-fa {
             position: absolute;
             top: 90%;
             right: 30%;
