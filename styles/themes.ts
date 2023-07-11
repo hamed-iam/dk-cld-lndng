@@ -134,6 +134,7 @@ const darkTheme = {
     DarkTextLightLow: "#83899F",
     DarkTextLightHigh: "#EDEEF3",
     DarkTextLightMid: "#C7CAD9",
+    NeutralsN500: "#81858B",
     DarkBrandingNeon01: "#A9EE8A",
     background: "#fff",
   },
