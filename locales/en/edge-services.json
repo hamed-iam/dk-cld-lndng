@@ -1,6 +1,69 @@
 {
   "h1": "Edge Services",
   "title": "DigiCloud | Edge Services",
+  "feature-section": {
+    "super": "Solutions",
+    "title": {
+      "h1": "Protect",
+      "rest": "Your Business",
+      "subheading": "by Using",
+      "subheading-highlight": "Edge Services"
+    },
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+    "features": [
+      {
+        "name": "DNS record",
+        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
+        "bestFor": "This is detail of cell"
+      },
+      {
+        "name": "WAF",
+        "desc": "2 is detail of cell,This is detail of cell,This is detail of cell",
+        "bestFor": "2 is detail of cell"
+      },
+      {
+        "name": "Location",
+        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
+        "bestFor": "This is detail of cell"
+      },
+      {
+        "name": "Cluster",
+        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
+        "bestFor": "High Level Processing"
+      },
+      {
+        "name": "Image Processing",
+        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
+        "bestFor": "Performance"
+      },
+      {
+        "name": "SSL",
+        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
+        "bestFor": "This is detail of cell"
+      },
+      {
+        "name": "Firewall",
+        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
+        "bestFor": "Security"
+      },
+      {
+        "name": "Rate Limit Zones",
+        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
+        "bestFor": "This is detail of cell"
+      }
+    ],
+    "table": [
+      {
+        "title": "Feature"
+      },
+      {
+        "title": "Description"
+      },
+      {
+        "title": "Best for"
+      }
+    ]
+  },
   "pricing": {
     "super": "Pricing and Payment",
     "title": {

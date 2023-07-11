@@ -106,7 +106,10 @@ const EdgeServicesCtr = () => {
         }}
       />
 
-      <EdgeFeaturesSection />
+      <EdgeFeaturesSection
+        superTitle={t("feature-section.super")}
+        desc={t("feature-section.desc")}
+      />
       <SolutionsSection cards={solutionsCards} />
       <SuccessStory
         cards={successStoryCards}
