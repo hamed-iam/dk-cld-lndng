@@ -13,11 +13,17 @@ const AboutCtr = ({}: any) => {
 
   return (
     <StyledWrapper>
-      <HelpSection />
+      <HelpSection
+        superTitle={t("help.title.super")}
+        icon={{
+          title: "aboutHandIcon",
+          viewBox: "0 0 72 72",
+        }}
+      />
       <AboutUsSection />
       <CallbackSection />
       <AddressSection />
-      <Faq loc='about' links={null} isNextStepShow={false}/>
+      <Faq loc="about" links={null} isNextStepShow={false} />
     </StyledWrapper>
   );
 };
