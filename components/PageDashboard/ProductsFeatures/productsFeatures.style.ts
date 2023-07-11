@@ -30,7 +30,6 @@ export default styled.div(
 
       .triangle {
         width: 100%;
-        /* height: 150px; */
         border-bottom: solid 60px ${DarkBGGrade15};
         border-left: solid 50vw transparent;
         border-right: solid 50vw transparent;
