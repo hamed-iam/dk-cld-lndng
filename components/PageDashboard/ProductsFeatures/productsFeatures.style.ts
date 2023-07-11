@@ -25,6 +25,8 @@ export default styled.div(
       color: white;
       background: ${DarkBGGrade15};
       min-height: 892px;
+      margin-top: 80px;
+      padding-bottom: 1px;
 
       .triangle {
         width: 100%;
@@ -37,9 +39,8 @@ export default styled.div(
       }
       .triangle-base {
         width: 100%;
-        /* border-bottom: solid 15px ${DarkBGGrade15}; */
         transform: translateY(-70px);
-        height: 10px;
+        height: 15px;
         z-index: 1;
         color: red;
         background-color: ${DarkBGGrade15};
@@ -64,13 +65,22 @@ export default styled.div(
         }
       }
 
+      @media screen and (max-width: 500px) {
+        .triangle {
+          border-bottom: solid 40px ${DarkBGGrade15};
+          transform: translateY(-50px);
+        }
+        .triangle-base {
+          transform: translateY(-50px);
+          .icon {
+            top: -30px;
+          }
+        }
+      }
+
       .container {
         width: min(90%, 74rem);
-        /* margin-inline: auto; */
-        /* margin-top: 5%; */
-        /* margin-bottom: 5%; */
         height: 100%;
-        /* width: min(90%, 74rem); */
         margin-inline: auto;
         margin-top: 5%;
         margin-bottom: 5%;
@@ -153,7 +163,7 @@ export default styled.div(
               align-items: center;
               justify-content: center;
               height: 42px;
-              margin-inline-end: 10px;
+              margin: 5px;
 
               .icon {
                 width: 25px;
@@ -171,6 +181,8 @@ export default styled.div(
               align-items: center;
               justify-content: center;
               height: 42px;
+              margin: 5px;
+
               .icon {
                 width: 20px;
                 height: 20px;
@@ -239,11 +251,22 @@ export default styled.div(
             height: 300px;
           }
         }
+
         .animation-fa {
           transform: rotate(180deg) rotateX(180deg);
           img {
             width: 300px;
             height: 300px;
+          }
+        }
+
+        @media screen and (max-width: 1200px) {
+          justify-content: center;
+          .animation {
+            display: none;
+          }
+          .animation-fa {
+            display: none;
           }
         }
 
@@ -330,9 +353,60 @@ export default styled.div(
             }
           }
 
-          @media screen and (max-width: 500px) {
+          @media screen and (max-width: 1400px) {
             justify-content: center;
             .image-wrapper {
+              position: absolute;
+              right: -80px;
+              bottom: -150px;
+              img {
+                max-width: 200px;
+                height: auto;
+              }
+            }
+            .image-wrapper-fa {
+              display: none;
+            }
+          }
+
+          @media screen and (max-width: 1200px) {
+            justify-content: center;
+            .image-wrapper {
+              position: absolute;
+              right: -80px;
+              bottom: -200px;
+              img {
+                max-width: 236px;
+                height: auto;
+              }
+            }
+            .image-wrapper-fa {
+              display: none;
+            }
+          }
+
+          @media screen and (max-width: 1100px) {
+            justify-content: center;
+            .image-wrapper {
+              position: absolute;
+              right: -50px;
+              bottom: -70px;
+              img {
+                max-width: 236px;
+                height: auto;
+              }
+            }
+            .image-wrapper-fa {
+              display: none;
+            }
+          }
+
+          @media screen and (max-width: 600px) {
+            justify-content: center;
+            .image-wrapper {
+              display: none;
+            }
+            .image-wrapper-fa {
               display: none;
             }
           }

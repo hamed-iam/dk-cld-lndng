@@ -124,18 +124,18 @@ const ProductsFeatures = () => {
               accordion
             >
               <Panel
-                header={t("products.panels.0-header")}
+                header={t("products.panels.0.header")}
                 key="1"
                 className="panel"
               >
-                <p className="panel-desc">{t("products.panels.0-desc")}</p>
+                <p className="panel-desc">{t("products.panels.0.desc")}</p>
               </Panel>
               <Panel
-                header={t("products.panels.1-header")}
+                header={t("products.panels.1.header")}
                 key="2"
                 className="panel"
               >
-                <p className="panel-desc">{t("products.panels.1-desc")}</p>
+                <p className="panel-desc">{t("products.panels.1.desc")}</p>
               </Panel>
             </Collapse>
             <Collapse
@@ -145,18 +145,18 @@ const ProductsFeatures = () => {
               accordion
             >
               <Panel
-                header={t("products.panels.2-header")}
+                header={t("products.panels.2.header")}
                 key="1"
                 className="panel"
               >
-                <p className="panel-desc">{t("products.panels.2-desc")}</p>
+                <p className="panel-desc">{t("products.panels.2.desc")}</p>
               </Panel>
               <Panel
-                header={t("products.panels.3-header")}
+                header={t("products.panels.3.header")}
                 key="2"
                 className="panel"
               >
-                <p className="panel-desc">{t("products.panels.3-desc")}</p>
+                <p className="panel-desc">{t("products.panels.3.desc")}</p>
               </Panel>
             </Collapse>
             <Collapse
@@ -166,18 +166,18 @@ const ProductsFeatures = () => {
               accordion
             >
               <Panel
-                header={t("products.panels.4-header")}
+                header={t("products.panels.4.header")}
                 key="1"
                 className="panel"
               >
-                <p className="panel-desc">{t("products.panels.4-desc")}</p>
+                <p className="panel-desc">{t("products.panels.4.desc")}</p>
               </Panel>
               <Panel
-                header={t("products.panels.5-header")}
+                header={t("products.panels.5.header")}
                 key="2"
                 className="panel"
               >
-                <p className="panel-desc">{t("products.panels.5-desc")}</p>
+                <p className="panel-desc">{t("products.panels.5.desc")}</p>
               </Panel>
             </Collapse>
           </div>
