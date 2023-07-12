@@ -5,18 +5,20 @@ export default styled.div(
   ({
     theme: {
       colors: { DarkNatural100, LightTextLightLow },
+      locale,
     },
   }: ThemeStyledProps) => {
     return css`
+      display: flex;
       color: white;
+
       background: conic-gradient(
-        from 180deg at 38.57% 50%,
+        from 180deg at ${locale === "fa" ? 58.57 : 38.57}% 50%,
         #101021 0deg,
         #171727 82.5deg,
         #40435d 180deg,
         #bdd7ff 360deg
       );
-      display: flex;
 
       @media (max-width: 500px) {
         background: conic-gradient(
@@ -82,7 +84,6 @@ export default styled.div(
             font-weight: 400;
             line-height: 27px;
             letter-spacing: 0px;
-            text-align: left;
             padding-top: 20px;
           }
         }
