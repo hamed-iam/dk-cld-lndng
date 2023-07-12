@@ -12,16 +12,85 @@ export default styled.div(
         DarkTextMid,
         LightTextDarkLow,
       },
+      locale,
     },
   }: ThemeStyledProps) => {
     return css`
-      .callback {
-        background-color: ${LightBGGrade15};
-        height: 100%;
-        flex-direction: column;
+      .container {
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+        height: 100%;
+        margin-inline: auto;
+        position: relative;
+      }
+
+      .callback-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-        padding: 10%;
+        align-items: flex-end;
+        background-color: ${LightBGGrade15};
+
+        padding-top: calc(44px + (80 - 24) * ((100vw - 320px) / (1920 - 320)));
+        padding-bottom: calc(
+          44px + (80 - 24) * ((100vw - 320px) / (1920 - 320))
+        );
+        padding-left: min(5%, 130px);
+        padding-right: min(5%, 130px);
+
+        .icon-wrapper {
+          width: 72px;
+          position: absolute;
+          right: ${locale === "fa" ? "auto" : "-40px"};
+          left: ${locale === "fa" ? "-40px" : "auto"};
+          z-index: 1;
+          bottom: 200px;
+
+          &-up {
+            display: block;
+          }
+
+          &-down {
+            display: none;
+          }
+
+          @media screen and (max-width: 1200px) {
+            top: -40px;
+            left: 50%;
+
+            &-up {
+              display: none;
+            }
+
+            &-down {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .products-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: ${DarkThemePrimary10};
+
+        padding-top: calc(44px + (80 - 24) * ((100vw - 320px) / (1920 - 320)));
+        padding-bottom: calc(
+          44px + (80 - 24) * ((100vw - 320px) / (1920 - 320))
+        );
+        padding-left: min(10%, 130px);
+        padding-right: min(10%, 130px);
+      }
+
+      .callback {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        max-width: 430px;
 
         &-title {
           display: flex;
@@ -29,9 +98,8 @@ export default styled.div(
           h1 {
             margin: unset;
             line-height: 1;
-            margin-top: 7px;
             font-weight: 700;
-            font-size: 40px;
+            font-size: clamp(32px, 4.7vw, 40px);
             color: ${DarkThemePrimary20};
           }
         }
@@ -53,55 +121,19 @@ export default styled.div(
           color: ${LightTextDarkLow};
         }
       }
-      .seperator {
-        background-color: red;
-        background-image: -webkit-linear-gradient(
-          180deg,
-          ${DarkThemePrimary10} 50%,
-          ${LightBGGrade15} 50%
-        );
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        .icon-wrapper {
-          position: absolute;
-          z-index: 1;
-          width: 72px;
 
-          &-up {
-            display: block;
-          }
-
-          &-down {
-            display: none;
-          }
-
-          @media screen and (max-width: 500px) {
-            &-up {
-              display: none;
-            }
-
-            &-down {
-              display: block;
-            }
-          }
-        }
-      }
       .products {
         background-color: ${DarkThemePrimary10};
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        height: 100%;
-        padding: 10%;
+        justify-content: space-between;
+        max-width: 430px;
+        width: 100%;
 
         &-card {
           &-title {
             display: flex;
             align-items: center;
-            gap: 12px;
 
             .icon {
               width: 48px;
@@ -115,6 +147,10 @@ export default styled.div(
               font-size: 18px;
               color: white;
             }
+
+            h3 {
+              margin-inline-start: 12px;
+            }
           }
 
           &-seperator {
@@ -122,7 +158,7 @@ export default styled.div(
             align-items: center;
             justify-content: center;
             background: -webkit-linear-gradient(
-              89.74deg,
+              8deg,
               #cb5ff2 0.2%,
               #ff5a82 84.73%
             );
@@ -139,6 +175,20 @@ export default styled.div(
           font-weight: 400;
           font-size: 15px;
           width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 1200px) {
+        .products-wrapper {
+          align-items: center;
+          width: 100%;
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+        .callback-wrapper {
+          align-items: center;
+          padding-left: 5%;
+          padding-right: 5%;
         }
       }
     `;

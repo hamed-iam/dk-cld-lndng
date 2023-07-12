@@ -8,22 +8,25 @@ import StyleWrapper from "./callbackSection.style";
 
 export default function CallbackSection() {
   const { t } = useTranslation("about");
+  const titlePlaceholder = t("callback.form.title-placeholder");
+  const emailPlaceholder = t("callback.form.email-placeholder");
+  const numberPlaceholder = t("callback.form.call-number-placeholder");
 
   const items = [
     {
       icon: { name: "aboutCloudComutingIcon", viewBox: "0 0 48 48" },
-      title: t("aboutus.callback.items.0.title"),
-      desc: t("aboutus.callback.items.0.desc"),
+      title: t("callback.items.0.title"),
+      desc: t("callback.items.0.desc"),
     },
     {
       icon: { name: "aboutObjectStorageIcon", viewBox: "0 0 48 48" },
-      title: t("aboutus.callback.items.1.title"),
-      desc: t("aboutus.callback.items.1.desc"),
+      title: t("callback.items.1.title"),
+      desc: t("callback.items.1.desc"),
     },
     {
       icon: { name: "aboutEdgeServicesIcon", viewBox: "0 0 48 48" },
-      title: t("aboutus.callback.items.2.title"),
-      desc: t("aboutus.callback.items.2.desc"),
+      title: t("callback.items.2.title"),
+      desc: t("callback.items.2.desc"),
     },
   ];
 
@@ -43,85 +46,71 @@ export default function CallbackSection() {
 
   return (
     <StyleWrapper>
-      <Row>
+      <Row className="container">
         <Col
-          className="w-100"
+          className="w-100 callback-wrapper"
           xl={{ span: 12 }}
           lg={{ span: 24 }}
           md={{ span: 24 }}
           sm={{ span: 24 }}
         >
           <div className="callback">
-            <div className="callback-title">
-              <h1>{t("aboutus.callback.title")}</h1>
-            </div>
-            <p>{t("aboutus.callback.title-desc")}</p>
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="form-label">
-                {t("aboutus.callback.form.title")}
+            <div className="icon-wrapper">
+              <div className="icon-wrapper-up">
+                <SvgIcon title="callbackArrowUpIcon" viewBox="0 0 72 72" />
               </div>
+              <div className="icon-wrapper-down">
+                <SvgIcon title="callbackArrowDownIcon" viewBox="0 0 72 73" />
+              </div>
+            </div>
+            <div className="callback-title">
+              <h1>{t("callback.title")}</h1>
+            </div>
+            <p>{t("callback.title-desc")}</p>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="form-label">{t("callback.form.title")}</div>
               <Input
-                placeholder="example: digikala"
+                placeholder={titlePlaceholder}
                 control={control}
                 onChange={handleInputChange}
                 name="company"
               />
-              <div className="form-label">
-                {t("aboutus.callback.form.email")}
-              </div>
+              <div className="form-label">{t("callback.form.email")}</div>
               <Input
-                placeholder="example: o.askarian@difikala.com"
+                placeholder={emailPlaceholder}
                 control={control}
                 onChange={handleInputChange}
                 name="email"
               />
-              <div className="form-label">
-                {t("aboutus.callback.form.call-number")}
-              </div>
+              <div className="form-label">{t("callback.form.call-number")}</div>
               <Input
-                placeholder="Example: +989120001122"
+                placeholder={numberPlaceholder}
                 control={control}
                 onChange={handleInputChange}
                 name="number"
               />
-              <div className="form-label">
-                {t("aboutus.callback.form.desc")}
-              </div>
+              <div className="form-label">{t("callback.form.desc")}</div>
               <TextArea
                 control={control}
                 onChange={handleInputChange}
                 name="description"
               />
-              <Button
-                htmlType="submit"
-                type="primary"
-                disabled={!!getFieldState("input").error}
-                size="large"
-              >
-                {t("aboutus.callback.form.submit")}
-              </Button>
+              <div>
+                <Button
+                  htmlType="submit"
+                  type="primary"
+                  disabled={!!getFieldState("input").error}
+                  size="large"
+                >
+                  {t("callback.form.submit")}
+                </Button>
+              </div>
             </form>
           </div>
         </Col>
         <Col
-          xl={{ span: 1 }}
-          lg={{ span: 24 }}
-          md={{ span: 24 }}
-          sm={{ span: 24 }}
-          className="w-100 seperator"
-        >
-          <div className="icon-wrapper">
-            <div className="icon-wrapper-up">
-              <SvgIcon title="callbackArrowUpIcon" viewBox="0 0 72 72" />
-            </div>
-            <div className="icon-wrapper-down">
-              <SvgIcon title="callbackArrowDownIcon" viewBox="0 0 72 73" />
-            </div>
-          </div>
-        </Col>
-        <Col
-          className="w-100"
-          xl={{ span: 11 }}
+          className="w-100 products-wrapper"
+          xl={{ span: 12 }}
           lg={{ span: 24 }}
           md={{ span: 24 }}
           sm={{ span: 24 }}
