@@ -137,6 +137,7 @@ export default styled.div(
             margin: 0 50px 0 50px;
             right: 10px;
             top: -15em;
+
             .help-emoji {
               max-width: 240px;
               height: auto;
@@ -144,6 +145,27 @@ export default styled.div(
 
             @media screen and (max-width: 820px) {
               right: 10px;
+              top: -12.5em;
+              .help-emoji {
+                max-width: 200px;
+                height: auto;
+              }
+            }
+          }
+
+          .emoji-fa {
+            position: absolute;
+            margin: 0 50px 0 50px;
+            left: 10px;
+            top: -15em;
+
+            .help-emoji {
+              max-width: 240px;
+              height: auto;
+            }
+
+            @media screen and (max-width: 820px) {
+              left: 10px;
               top: -12.5em;
               .help-emoji {
                 max-width: 200px;
