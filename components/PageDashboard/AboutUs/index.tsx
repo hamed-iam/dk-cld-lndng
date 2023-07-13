@@ -41,33 +41,17 @@ const AboutUs = () => {
               />
               This browser does not support video tag.
             </video>
-            <div
-              className={
-                locale === "fa" ? "tag-frame-friendly-fa" : "tag-frame-friendly"
-              }
-            >
+            <div className="tag-frame-friendly">
               <TagFrame>
                 <span>{t("about.tag.0")}</span>
               </TagFrame>
             </div>
-            <div
-              className={
-                locale === "fa"
-                  ? "tag-frame-supportive-fa"
-                  : "tag-frame-supportive"
-              }
-            >
+            <div className="tag-frame-supportive">
               <TagFrame>
                 <span>{t("about.tag.1")}</span>
               </TagFrame>
             </div>
-            <div
-              className={
-                locale === "fa"
-                  ? "tag-frame-professional-fa"
-                  : "tag-frame-professional"
-              }
-            >
+            <div className="tag-frame-professional">
               <TagFrame>
                 <span>{t("about.tag.2")}</span>
               </TagFrame>

@@ -111,17 +111,12 @@ export default styled.div(
         &-header {
           display: flex;
           flex-direction: column;
-          /* justify-content: space-between; */
-          max-height: 289px;
           max-width: 557px;
-          /* align-items: center; */
           width: 100%;
-          margin-bottom: 80px;
         }
         &-video {
-          width: 447px;
+          max-width: 447px;
           height: 356px;
-          /* width: clamp(312px, 40vw, 447px); */
           background-color: black;
           position: relative;
           border-radius: 16px;
@@ -135,36 +130,19 @@ export default styled.div(
             position: absolute;
             top: 70%;
             right: 15%;
+            right: ${locale === "fa" ? "-12%" : "15%"};
           }
 
           .tag-frame-supportive {
             position: absolute;
-            top: 75%;
-            left: -12%;
+            bottom: 20%;
+            left: ${locale === "fa" ? "18%" : "-12%"};
           }
 
           .tag-frame-professional {
             position: absolute;
             top: 90%;
-            right: 30%;
-          }
-
-          .tag-frame-friendly-fa {
-            position: absolute;
-            top: 70%;
-            left: 15%;
-          }
-
-          .tag-frame-supportive-fa {
-            position: absolute;
-            top: 75%;
-            right: -12%;
-          }
-
-          .tag-frame-professional-fa {
-            position: absolute;
-            top: 90%;
-            right: 30%;
+            right: ${locale === "fa" ? "5%" : "40%"};
           }
 
           @media (max-width: 500px) {
@@ -183,13 +161,11 @@ export default styled.div(
       .about-links {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
         justify-content: space-between;
         width: 100%;
 
         .card-wrapper {
           display: flex;
-          flex-direction: row;
           align-items: center;
           justify-content: space-between;
           background: ${LightThemePrimary20};
