@@ -11,6 +11,7 @@ export default styled.div(
         LightTextDarkMid,
         LightThemePrimary600,
       },
+      locale,
     },
   }: ThemeStyledProps) => {
     return css`
@@ -24,7 +25,7 @@ export default styled.div(
         flex-wrap: wrap;
         max-width: 1360px;
         margin-inline: auto;
-        width: min(90%, 100rem);
+        width: min(90%, 74rem);
         height: 100%;
         margin-top: calc(24px + (80 - 24) * ((100vw - 320px) / (1920 - 320)));
         margin-bottom: calc(
@@ -43,24 +44,22 @@ export default styled.div(
           display: flex;
           p {
             margin: unset;
-            font-size: clamp(20px, 3.7vw, 64px);
-            background: -webkit-linear-gradient(
-              89.74deg,
-              #cb5ff2 0.2%,
-              #ff5a82 84.73%
-            );
+            font-size: 64px;
+            background: linear-gradient(89.74deg, #cb5ff2 0.2%, #ff5a82 84.73%);
             background-clip: text;
+            -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
           h1 {
             margin: unset;
-            font-size: clamp(20px, 3.7vw, 64px);
-            background: -webkit-linear-gradient(
+            font-size: 64px;
+            background: linear-gradient(
               214.56deg,
               #c4f1f7 28.58%,
               #3d88eb 82.41%
             );
             background-clip: text;
+            -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
         }
@@ -78,9 +77,10 @@ export default styled.div(
           .icon {
             width: 21px;
             height: 20px;
+            transform: rotate(${locale === "fa" ? 180 : 0}deg);
           }
 
-          .contact-btn {
+          .more-btn {
             display: flex;
             align-items: center;
             height: 46px;
@@ -94,7 +94,7 @@ export default styled.div(
       }
       .about-content {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -111,16 +111,12 @@ export default styled.div(
         &-header {
           display: flex;
           flex-direction: column;
-          /* justify-content: space-between; */
-          max-height: 289px;
           max-width: 557px;
-          /* align-items: center; */
           width: 100%;
         }
         &-video {
-          width: 447px;
+          max-width: 447px;
           height: 356px;
-          /* width: clamp(312px, 40vw, 447px); */
           background-color: black;
           position: relative;
           border-radius: 16px;
@@ -134,18 +130,19 @@ export default styled.div(
             position: absolute;
             top: 70%;
             right: 15%;
+            right: ${locale === "fa" ? "-12%" : "15%"};
           }
 
           .tag-frame-supportive {
             position: absolute;
-            top: 75%;
-            left: -12%;
+            bottom: 20%;
+            left: ${locale === "fa" ? "18%" : "-12%"};
           }
 
           .tag-frame-professional {
             position: absolute;
             top: 90%;
-            right: 30%;
+            right: ${locale === "fa" ? "5%" : "40%"};
           }
 
           @media (max-width: 500px) {
@@ -164,13 +161,11 @@ export default styled.div(
       .about-links {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
         justify-content: space-between;
         width: 100%;
 
         .card-wrapper {
           display: flex;
-          flex-direction: row;
           align-items: center;
           justify-content: space-between;
           background: ${LightThemePrimary20};

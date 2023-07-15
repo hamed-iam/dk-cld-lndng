@@ -3,11 +3,14 @@ import { Button } from "antd";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import StyledWrapper from "./aboutUs.style";
 import TagFrame from "./TagFrame";
 
 const AboutUs = () => {
   const { t } = useTranslation("dashboard");
+  const { locale } = useRouter();
+
   const cards = [
     {
       title: t("about.link.0.title"),
@@ -62,9 +65,9 @@ const AboutUs = () => {
             </div>
             <p className="about-header-sub">{t("about.sub-h1")}</p>
             <div className="about-header-action">
-              <Button className="contact-btn">
+              <Button className="more-btn">
                 {t("about.action")}
-                <SvgIcon title="moreAboutUsArrowIcon" viewBox="0 0 24 24" />
+                <SvgIcon title="moreAboutUsArrowIcon" viewBox="0 0 20 21" />
               </Button>
             </div>
           </div>
