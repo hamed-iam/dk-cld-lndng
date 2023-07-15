@@ -73,6 +73,33 @@ export default styled.div(
         margin-bottom: calc(
           24px + (80 - 24) * ((100vw - 320px) / (1920 - 320))
         );
+        position: relative;
+
+        ::before {
+          content: "";
+          background: #3d88eb;
+          position: absolute;
+          width: 500px;
+          height: 500px;
+          bottom: -250px;
+          right: -250px;
+          left: ${locale === "fa" ? "-250px" : "auto"};
+          right: ${locale === "fa" ? "auto" : "-250px"};
+          background: radial-gradient(
+            circle,
+            rgba(0, 185, 255, 1) 0%,
+            rgba(255, 0, 0, 0) 60%
+          );
+          opacity: 0.3;
+        }
+
+        @media screen and (max-width: 768px) {
+          ::before {
+            content: "";
+            width: 0;
+            height: 0;
+          }
+        }
 
         .product-tabs {
           position: absolute;
@@ -121,6 +148,12 @@ export default styled.div(
             width: 100px;
             top: 65px;
             transform: rotate(${locale === "fa" ? "180deg" : "0deg"});
+            /* background: linear-gradient(89.74deg, #cb5ff2 0.2%, #ff5a82 84.73%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; */
+            /* filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg)
+              brightness(119%) contrast(119%); */
           }
           .storage-curve {
             position: absolute;
