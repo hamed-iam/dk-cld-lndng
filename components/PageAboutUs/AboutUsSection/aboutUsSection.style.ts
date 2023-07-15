@@ -13,6 +13,7 @@ export default styled.div(
         LightThemePrimary600,
         DarkTextLightHigh,
       },
+      locale,
     },
   }: ThemeStyledProps) => {
     return css`
@@ -131,19 +132,22 @@ export default styled.div(
           .tag-frame-friendly {
             position: absolute;
             top: 50%;
-            right: 16%;
+            right: ${locale === "fa" ? "auto" : "16%"};
+            left: ${locale === "fa" ? "16%" : "auto"};
           }
 
           .tag-frame-supportive {
             position: absolute;
             top: 73%;
-            right: 13%;
+            right: ${locale === "fa" ? "auto" : "13%"};
+            left: ${locale === "fa" ? "13%" : "auto"};
           }
 
           .tag-frame-professional {
             position: absolute;
             top: 90%;
-            right: 50%;
+            right: ${locale === "fa" ? "auto" : "50%"};
+            left: ${locale === "fa" ? "50%" : "auto"};
           }
 
           @media (max-width: 500px) {
