@@ -10,6 +10,7 @@ export default styled.div(
     return css`
       color: white;
       background: ${DarkBGGrade15};
+      margin-top: calc(68px + (80 - 24) * ((100vw - 320px) / (1920 - 320)));
 
       .triangle {
         width: 100%;
@@ -170,6 +171,12 @@ export default styled.div(
           }
         }
 
+        @media screen and (max-width: 768px) {
+          .product-tabs {
+            display: none;
+          }
+        }
+
         .product-tabs-fa {
           position: absolute;
           margin-inline-start: -110px;
@@ -306,7 +313,6 @@ export default styled.div(
           bottom: -80px;
           width: 300px;
           height: 300px;
-          overflow: hidden;
         }
 
         img {
@@ -342,6 +348,16 @@ export default styled.div(
         .image-movement {
           animation: movement linear normal;
           animation-duration: 1s;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .product-image {
+          display: none;
+
+          img {
+            display: none;
+          }
         }
       }
     `;
