@@ -1,4 +1,32 @@
 {
   "h1": "درباره ما",
-  "title": "دیجی کلاد | درباره ما"
+  "title": "دیجی کلاد | درباره ما",
+  "callback": {
+    "title": "در همه مراحل همراه شما هستیم",
+    "title-desc": "همین حالا با کارشناسان فروش دیجی‌کلاد گفت‌وگو کنید.",
+    "form": {
+      "title": "نام سازمان",
+      "title-placeholder": "مثال: دیجیکالا",
+      "email": "پست الکترونیک",
+      "email-placeholder": "مثال: o.askarian@difikala.com",
+      "call-number": "شماره تماس (اختیاری)",
+      "call-number-placeholder": "شماره تماس (اختیاری)",
+      "desc": "توضیحات (اختیاری)",
+      "submit": "ثبت درخواست"
+    },
+    "items": [
+      {
+        "title": "CLOUD COMPUTING",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit, consectetur adipiscing elit,"
+      },
+      {
+        "title": "OBJECT STORAGE",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
+      },
+      {
+        "title": "EDGE SERVICES",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
+      }
+    ]
+  }
 }

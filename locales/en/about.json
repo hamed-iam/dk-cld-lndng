@@ -25,6 +25,34 @@
       "tag": ["FRIENDLY", "SUPPORTIVE", "PROFESSIONAL"]
     }
   },
+  "callback": {
+    "title": "Request for Call Back",
+    "title-desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+    "form": {
+      "title": "Company Name",
+      "title-placeholder": "example: digikala",
+      "email": "Email",
+      "email-placeholder": "example: o.askarian@difikala.com",
+      "call-number": "Call Number (optional)",
+      "call-number-placeholder": "Call Number (optional)",
+      "desc": "Description (optional)",
+      "submit": "Send Request"
+    },
+    "items": [
+      {
+        "title": "CLOUD COMPUTING",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit, consectetur adipiscing elit,"
+      },
+      {
+        "title": "OBJECT STORAGE",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
+      },
+      {
+        "title": "EDGE SERVICES",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
+      }
+    ]
+  },
   "help": {
     "title": {
       "super": "About and Contact Us",
