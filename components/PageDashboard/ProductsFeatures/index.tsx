@@ -46,18 +46,17 @@ const ProductsFeatures = () => {
             md={{ span: 24 }}
             sm={{ span: 24 }}
           >
-            <div
-              className={locale === "fa" ? "product-tabs-fa" : "product-tabs"}
-            >
-              <div className="cloud-icon">
+            <div className="product-tabs">
+              <div className="cloud-curve">
                 <SvgIcon title="cloudCoputingOrbitIcon" viewBox="0 0 152 186" />
               </div>
-              <div className="storage-icon">
+              <div className="storage-curve">
                 <SvgIcon title="cloudCoputingOrbitIcon" viewBox="0 0 152 186" />
               </div>
-              <div className="edge-icon">
+              <div className="edge-curve">
                 <SvgIcon title="cloudCoputingOrbitIcon" viewBox="0 0 152 186" />
               </div>
+              <div className="tab-line" />
               <div
                 className={
                   "cloud-pos tab-button " +

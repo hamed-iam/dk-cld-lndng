@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { ProductTabsStyledWrapper } from "./productsFeatures.style";
 import { Button, Collapse } from "antd";
 import { useRouter } from "next/router";
+import ProductCharts from "./ProductCharts";
 
 const { Panel } = Collapse;
 
@@ -55,38 +56,7 @@ export default function ProductTab({
             </Link>
           </div>
         </div>
-        <div className="charts-wrapper">
-          <div className={"chart " + (activate ? "chart-movement" : "")}>
-            <div className="chart-content">
-              <div className="chart-content-donut">
-                <SvgIcon title="donutChartIcon" viewBox="0 0 96 96" />
-              </div>
-              <div className="chart-content-info">
-                <div className="content-heading">
-                  <span className="content-heading-colored">
-                    {t("products.chart-donut-heading.0")}
-                  </span>
-                  /{t("products.chart-donut-heading.1")}
-                </div>
-                <div className="content-title">
-                  {t("products.chart-donut-info")}
-                </div>
-              </div>
-            </div>
-            <div className="chart-sub">{t("products.chart-donut-sub")}</div>
-          </div>
-          <div className={"chart " + (activate ? "chart-movement" : "")}>
-            <div className="chart-content">
-              <div className="chart-content-bar">
-                <SvgIcon title="barChartIcon" viewBox="0 0 96 96" />
-              </div>
-              <div className="chart-content-info">
-                <p>{t("products.chart-donut-info")}</p>
-              </div>
-            </div>
-            <div className="chart-sub">{t("products.chart-bar-sub")}</div>
-          </div>
-        </div>
+        <ProductCharts activate={activate} />
       </div>
     </ProductTabsStyledWrapper>
   );
