@@ -106,7 +106,10 @@ const EdgeServicesCtr = () => {
         }}
       />
 
-      <EdgeFeaturesSection />
+      <EdgeFeaturesSection
+        superTitle={t("feature-section.super")}
+        desc={t("feature-section.desc")}
+      />
       <SolutionsSection cards={solutionsCards} />
       <SuccessStory
         cards={successStoryCards}
@@ -119,7 +122,14 @@ const EdgeServicesCtr = () => {
         aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet,
         consectetur"
       />
-      <EdgePricingSection />
+      <EdgePricingSection
+        superTitle={t("pricing.super")}
+        desc={t("pricing.desc")}
+        icon={{
+          title: "ghostEmojiIcon",
+          viewBox: "0 0 40 40",
+        }}
+      />
       <CaseStudy
         panels={caseStudyPanels}
         title="Edge Services"

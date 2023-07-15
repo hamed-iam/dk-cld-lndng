@@ -52,5 +52,29 @@
         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
       }
     ]
+  },
+  "help": {
+    "title": {
+      "super": "About and Contact Us",
+      "heading": ["How Can", "We", "Help", ",Today?"],
+      "sub": ["Talk to a ","DigiCloud "," sales specialist"]
+    },
+    "cards":[
+      {
+        "title":"Email to Support Team",
+        "desc": "Send Email to  digiCloud Support team,available Saturday, 9 AM ET, through Wednesday, 7 PM ET.",
+        "footer": "Support@digicloud.com"
+      },
+      {
+        "title": "Call to Support Team",
+        "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore",
+        "footer": "Call +98 21 - 61930777"
+      },
+      {
+        "title": "Request for Call Back",
+        "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore",
+        "footer": "Request For Call"
+      }
+    ]
   }
 }
