@@ -1,6 +1,7 @@
 import SvgIcon from "@/components/SvgIcon";
 import { Button, Col, Row } from "antd";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 import HelpCard from "./HelpCard";
 import StyleWrapper from "./helpSection.style";
@@ -17,6 +18,7 @@ interface HelpSectionProps {
 
 export default function HelpSection({ superTitle, icon }: HelpSectionProps) {
   const { t } = useTranslation("about");
+  const { locale } = useRouter();
   const cards = [
     {
       icon: { name: "mailIcon", viewBox: "0 0 40 40" },
@@ -73,7 +75,7 @@ export default function HelpSection({ superTitle, icon }: HelpSectionProps) {
           </div>
         </div>
         <div className="cards-wrapper">
-          <div className="emoji">
+          <div className={locale === "fa" ? "emoji-fa" : "emoji"}>
             <Image
               src="/assets/emoji_astronaut-light.png"
               width={240}

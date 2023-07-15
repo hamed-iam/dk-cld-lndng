@@ -5,6 +5,7 @@ export default styled.div(
   ({
     theme: {
       colors: { LightNatural100, LightNatural400, LightThemePrimary5 },
+      locale,
     },
   }: ThemeStyledProps) => {
     return css`
@@ -61,6 +62,8 @@ export default styled.div(
             width: 80px;
             height: 60px;
             margin-inline-start: 50px;
+
+            transform: scaleX(${locale === "fa" ? "-1" : 1});
 
             @media (max-width: 850px) {
               display: none;

@@ -1,10 +1,13 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 import StyleWrapper from "./aboutUsSection.style";
 import TagFrame from "./TagFrame";
 
 export default function AboutUsSection() {
   const { t } = useTranslation("about");
+  const { locale } = useRouter();
+
   const links = [
     {
       title: t("aboutus.media.link.0.title"),
