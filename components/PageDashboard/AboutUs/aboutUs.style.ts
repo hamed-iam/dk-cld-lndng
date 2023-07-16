@@ -44,7 +44,7 @@ export default styled.div(
           display: flex;
           p {
             margin: unset;
-            font-size: 64px;
+            font-size: clamp(48px, 6.7vw, 64px);
             background: linear-gradient(89.74deg, #cb5ff2 0.2%, #ff5a82 84.73%);
             background-clip: text;
             -webkit-background-clip: text;
@@ -52,7 +52,7 @@ export default styled.div(
           }
           h1 {
             margin: unset;
-            font-size: 64px;
+            font-size: clamp(48px, 6.7vw, 64px);
             background: linear-gradient(
               214.56deg,
               #c4f1f7 28.58%,
@@ -130,13 +130,13 @@ export default styled.div(
             position: absolute;
             top: 70%;
             right: 15%;
-            right: ${locale === "fa" ? "-12%" : "15%"};
+            right: ${locale === "fa" ? "-6%" : "15%"};
           }
 
           .tag-frame-supportive {
             position: absolute;
             bottom: 20%;
-            left: ${locale === "fa" ? "18%" : "-12%"};
+            left: ${locale === "fa" ? "18%" : "-6%"};
           }
 
           .tag-frame-professional {
@@ -145,7 +145,7 @@ export default styled.div(
             right: ${locale === "fa" ? "5%" : "40%"};
           }
 
-          @media (max-width: 500px) {
+          @media (max-width: 600px) {
             .tag-frame-friendly {
               display: none;
             }
@@ -198,7 +198,8 @@ export const TagFrameStyleWrapper = styled.div(
     return css`
       position: absolute;
       padding: 12px 24px 12px 24px;
-      /* width: max-content; */
+      width: max-content;
+      min-width: 110px;
       background: linear-gradient(
         89.74deg,
         rgba(203, 95, 242, 0.4) 0.2%,
