@@ -2,10 +2,10 @@
   "title": "دیجی کلاد",
   "hero": {
     "super-h1": "دیجی‌کلاد چیست؟",
-    "h1": "بیایید با هم زیرساخت بهتری بسازیم",
-    "sub-h1": "امن، اقتصادی و منطبق بر الویت‌های شما",
+    "h1": "زیرساخت یکپارچه ابری دیجی‌کلاد",
+    "sub-h1": "فناوری ابری امن‌تر - سریع‌تر - ارزران‌تر - در دسترس‌تر - پایدارتر از همیشه!",
     "actions": {
-      "create-account": "ساخت حساب کاربری دیجی‌کلاد"
+      "create-account": "عضو دیجی‌کلاد شوید"
     }
   },
   "products": {
@@ -13,12 +13,69 @@
     "h1-cloud-c": "پردازش ابری",
     "h1-cloud-e": "سرویس‌های Edge",
     "h1-cloud-o": "فضای ذخیره‌سازی",
-    "sub-h1": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد."
+    "sub-h1-c": "می‌خواهید تنها در چند دقیقه یک سرور ابری بسازید؟ با کمک فناوری پیشرفته دیجی‌کلاد می‌توانید تنها با چند کلیک، تمام نیازهای زیرساختی کسب‌و‌کار خود شامل سرور، IP تنظیمات شبکه و فایروال را راه‌اندازی کرده و در لحظه از آن استفاده کنید.",
+    "sub-h1-e": "سرویس شبکه توزیع محتوای دیجی‌کلاد (CDN) این امکان را در اختیارتان می‌گذارد تا خدمات و محتوای کسب‌و‌کارتان را در هر شرایطی، با سرعت و در امنیت کامل به دست کاربران‌تان در هر نقطه‌ای از جهان برسانید و کیفیت خدمات خود را بهبود ببخشید.",
+    "sub-h1-o": "با سرویس Object Storage دیجی‌کلاد می‌توانید اطلاعات متنوع وب‌سایت، داده‌های حجیم و بدون ساختار، فایل‌های آرشیوی مانند تصویر و فیلم و اسناد چندرسانه‌ای خود را در محیطی نامحدود، ایمن و منعطف ذخیره کنید و به اشتراک بگذارید.",
+    "info-action-create": "عضو دیجی‌کلاد شوید",
+    "info-action-details":"بیشتر بدانید",
+    "info-sub": "سوال دارید؟",
+    "info-sub-link": "تماس با ما",
+    "chart-donut-heading": ["4", "5"],
+    "chart-donut-info":"content of customer",
+    "chart-donut-sub":"sub content",
+    "chart-bar-info":"Comparing Retail Rate in Last 2 Season",
+    "chart-bar-sub":"sub content",
+    "features-title": "Features",
+    "tab-c":"پردازش ابری",
+    "tab-e":"فضای ذخیره‌سازی",
+    "tab-o":"سرویس‌های EDGE",
+    "panels": [
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
+    ]
   },
   "about": {
-    "super-h1": "تیم دیجی‌کلاد",
-    "h1": "درباره ما",
-    "sub-h1": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد."
+    "super-h1": "تیم ما",
+    "h1": "درباره دیجی‌کلاد",
+    "sub-h1": "دیجی‌کلاد، به عنوان یکی از شرکت‌های زیرمجموعه دیجی‌کالا، در سال ۱۳۹۹ و با هدف رفع نیازمندی‌های زیرساختی و ارائه پلتفرم ابری به دیجی‌کالا و شرکت‌های زیرمجموعه این هلدینگ تاسیس شد. از آن زمان تا امروز، دیجی‌کلاد ماموریت دارد تا در مسیر رشد و توسعه خود نیازهای سایر مشتریان در حوزه‌های زیرساخت یکپارچه ابری را رفع کند.",
+    "action": "بیشتر بدانید",
+    "link": [
+      {
+        "title": "نیاز به مشاوره دارید؟",
+        "link": "با ما تماس بگیرید"
+      },
+      {
+        "title": "اشتراک دیجی‌کلاد ندارید؟",
+        "link": "ثبت نام کنید"
+      },
+      {
+        "title": "درخواست مشاهده دمو دارید؟",
+        "link": "درخواست‌ دهید"
+      }
+    ],
+    "tag": ["دوستانه", "حامی", "حرفه ای"]
   },
   "save": {
     "super-h1": "راه‌حل‌های ما",

@@ -12,6 +12,12 @@ export default styled.div(
       color: white;
       background: ${DarkBGGrade15};
       margin-top: calc(68px + (80 - 24) * ((100vw - 320px) / (1920 - 320)));
+      /* overflow: hidden; */
+
+      .triangle-wrapper {
+        z-index: 99;
+        position: absolute;
+      }
 
       .triangle {
         width: 100%;
@@ -19,14 +25,13 @@ export default styled.div(
         border-left: solid 50vw transparent;
         border-right: solid 50vw transparent;
         transform: translateY(-70px);
-        z-index: 1;
       }
       .triangle-base {
+        z-index: 99;
+        position: absolute;
         width: 100%;
         transform: translateY(-70px);
         height: 15px;
-        z-index: 1;
-        color: red;
         background-color: ${DarkBGGrade15};
         display: flex;
         flex-direction: column;
@@ -75,7 +80,7 @@ export default styled.div(
         );
         position: relative;
 
-        ::before {
+        /* ::before {
           content: "";
           background: #3d88eb;
           position: absolute;
@@ -91,7 +96,7 @@ export default styled.div(
             rgba(255, 0, 0, 0) 60%
           );
           opacity: 0.3;
-        }
+        } */
 
         @media screen and (max-width: 768px) {
           ::before {
@@ -101,11 +106,19 @@ export default styled.div(
           }
         }
 
+        .tabs-col {
+          min-height: 320px;
+          display: flex;
+          justify-content: center;
+        }
+
         .product-tabs {
           position: absolute;
-          margin-inline-start: -110px;
+          margin-inline-start: -50px;
+          max-width: 500px;
+          width: 100%;
 
-          .tab-icon {
+          &-icon {
             border-radius: 50%;
             margin-inline-end: 7px;
             font-size: 15px;
@@ -113,6 +126,7 @@ export default styled.div(
 
           .active {
             div {
+              z-index: 1;
               width: 12px;
               height: 12px;
               box-shadow: 0px 3px 24px 3px #ff64b8bf;
@@ -123,14 +137,15 @@ export default styled.div(
               );
             }
             span {
-              transform: scale(1.5) translate(20px);
-              background: -webkit-linear-gradient(
+              transform: scale(1.5)
+                translate(${locale === "fa" ? "-20px" : "20px"});
+              background: linear-gradient(
                 89.74deg,
                 #cb5ff2 0.2%,
                 #ff5a82 84.73%
               );
-
               background-clip: text;
+              -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
             }
           }
@@ -148,12 +163,6 @@ export default styled.div(
             width: 100px;
             top: 65px;
             transform: rotate(${locale === "fa" ? "180deg" : "0deg"});
-            /* background: linear-gradient(89.74deg, #cb5ff2 0.2%, #ff5a82 84.73%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent; */
-            /* filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg)
-              brightness(119%) contrast(119%); */
           }
           .storage-curve {
             position: absolute;
@@ -176,11 +185,6 @@ export default styled.div(
             background: ${DarkBGGrade15};
             border-radius: 40px;
             padding: 2px 5px;
-
-            .icon {
-              width: 66px;
-              height: 66px;
-            }
           }
           .tab-button:hover {
             cursor: pointer;
@@ -206,9 +210,13 @@ export default styled.div(
         }
 
         @media screen and (max-width: 768px) {
+          .tabs-col {
+            min-height: unset;
+          }
           .product-tabs {
             position: relative;
-            margin-inline-start: auto;
+            margin-inline-start: unset;
+            height: min-content;
 
             .tab-icon {
               border-radius: 50%;
@@ -218,26 +226,29 @@ export default styled.div(
 
             .tab-line {
               position: absolute;
-              border-left: 1px solid #2b2c40;
-              height: 130px;
-              top: 12px;
-              left: ${locale === "fa" ? "auto" : "13px"};
-              right: ${locale === "fa" ? "13px" : "auto"};
+              border: 0;
+              border-right: ${locale === "fa" ? "2px" : "0"};
+              border-left: ${locale === "fa" ? "0" : "2px"};
+              border-color: #2b2c40;
+              border-style: solid;
+              height: 133px;
+              top: 18px;
               z-index: 0;
             }
 
             .active {
               span {
                 transform: scale(1) translate(-5px);
-                background: -webkit-linear-gradient(
+                font-size: 20px;
+
+                background: linear-gradient(
                   89.74deg,
                   #cb5ff2 0.2%,
                   #ff5a82 84.73%
                 );
-
                 background-clip: text;
+                -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                font-size: 20px;
               }
             }
 
@@ -251,18 +262,17 @@ export default styled.div(
             }
 
             .tab-button {
+              position: absolute;
               position: unset;
               display: flex;
               justify-content: flex-start;
               align-items: baseline;
               border-radius: 40px;
-              padding: 0 10px 40px 10px;
-
-              .icon {
-                width: 66px;
-                height: 66px;
-              }
+              padding: 10px;
+              margin-bottom: 20px;
+              margin-inline-start: -13px;
             }
+
             .tab-button:hover {
               cursor: pointer;
             }
@@ -307,18 +317,36 @@ export default styled.div(
         align-items: center;
         height: 10px;
         right: 0;
+        width: 100%;
+
+        ::before {
+          content: "";
+          background: #3d88eb;
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          bottom: -150px;
+          left: ${locale === "fa" ? "-70px" : "auto"};
+          right: ${locale === "fa" ? "auto" : "-70px"};
+          background: radial-gradient(
+            circle,
+            rgba(0, 185, 255, 1) 0%,
+            rgba(255, 0, 0, 0) 60%
+          );
+          opacity: 0.3;
+        }
 
         .image-wrapper {
           position: absolute;
-          right: -150px;
+          right: -60px;
           bottom: -80px;
-          width: 300px;
-          height: 300px;
+          right: ${locale === "fa" ? "auto" : "-60px"};
+          left: ${locale === "fa" ? "-60px" : "auto"};
         }
 
         img {
-          width: 300px;
-          height: 300px;
+          width: 270px;
+          height: 270px;
         }
 
         .image-active {
@@ -329,25 +357,19 @@ export default styled.div(
           display: none;
         }
 
-        .image-wrapper-fa {
-          position: absolute;
-          left: -150px;
-          bottom: -80px;
-        }
-
         @keyframes imovement {
           from {
-            transform: translateX(10vmin);
+            transform: translateY(5vmin);
             opacity: 0;
           }
           to {
-            transform: translateX(0vmin);
+            transform: translateY(0vmin);
             opacity: 1;
           }
         }
 
         .image-movement {
-          animation: movement linear normal;
+          animation: imovement linear normal;
           animation-duration: 0.2s;
         }
       }
@@ -367,12 +389,13 @@ export default styled.div(
             position: absolute;
             border-left: 1px solid #2b2c40;
             height: 130px;
-            top: 12px;
+            top: 18px;
             right: 13px;
             z-index: 0;
           }
 
           .active {
+            z-index: 1;
             div {
               width: 12px;
               height: 12px;
@@ -382,20 +405,20 @@ export default styled.div(
                 #cb5ff2 0.2%,
                 #ff5a82 84.73%
               );
-              z-index: 1;
               transform: translate(-2px);
             }
             span {
               transform: scale(1) translate(-5px);
-              background: -webkit-linear-gradient(
+              font-size: 20px;
+
+              background: linear-gradient(
                 89.74deg,
                 #cb5ff2 0.2%,
                 #ff5a82 84.73%
               );
-
               background-clip: text;
+              -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
-              font-size: 20px;
             }
           }
 
@@ -580,7 +603,7 @@ export const ProductChartsStyledWrapper = styled.div(
 
       .bar-graph-vertical .bar-container {
         position: relative;
-        float: inline-start;
+        float: ${locale === "fa" ? "right" : "left"};
         margin-inline-end: 10px;
         height: 100px;
         width: 50px;
@@ -666,17 +689,6 @@ export const ProductTabsStyledWrapper = styled.div(
     },
   }: ThemeStyledProps) => {
     return css`
-      .container {
-        width: 100%;
-        height: 100%;
-        margin-inline: auto;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
       .tab {
         display: flex;
         flex-wrap: wrap;
@@ -698,7 +710,6 @@ export const ProductTabsStyledWrapper = styled.div(
         &-title {
           width: fit-content;
           h2 {
-            color: red;
             line-height: 0.9;
             margin: unset;
             font-weight: 700;
@@ -776,6 +787,7 @@ export const ProductTabsStyledWrapper = styled.div(
               width: 20px;
               height: 20px;
               margin-inline-end: 10px;
+              transform: rotate(${locale === "fa" ? "180deg" : "0deg"});
             }
           }
         }

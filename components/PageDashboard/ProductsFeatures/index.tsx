@@ -34,13 +34,13 @@ const ProductsFeatures = () => {
         <div className="triangle"></div>
         <div className="triangle-base">
           <SvgIcon title="dashboardUpArrowIcon" viewBox="0 0 20 21" />
-          <div className="triangle-text">{t("products.super-section")}</div>
+          <div className="triangle-text">{t("products.super-h1")}</div>
         </div>
       </div>
       <div className="container">
         <Row gutter={[32, 32]}>
           <Col
-            className="w-100 "
+            className="w-100 tabs-col"
             xl={{ span: 6 }}
             lg={{ span: 24 }}
             md={{ span: 24 }}
@@ -56,16 +56,15 @@ const ProductsFeatures = () => {
               <div className="edge-curve">
                 <SvgIcon title="cloudCoputingOrbitIcon" viewBox="0 0 152 186" />
               </div>
-              <div className="tab-line" />
               <div
                 className={
-                  "cloud-pos tab-button " +
+                  "tab-button cloud-pos " +
                   (activeTab === 0 ? "active" : "inactive")
                 }
                 onClick={() => setActiveTab(0)}
               >
-                <div className="tab-icon" />
-                <span className="title">CLOUD COMPUTING</span>
+                <div className="product-tabs-icon" />
+                <span>{t("products.tab-c")}</span>
               </div>
               <div
                 className={
@@ -74,8 +73,8 @@ const ProductsFeatures = () => {
                 }
                 onClick={() => setActiveTab(1)}
               >
-                <div className="tab-icon" />
-                <span>OBJECT STORAGE</span>
+                <div className="product-tabs-icon" />
+                <span>{t("products.tab-o")}</span>
               </div>
               <div
                 className={
@@ -84,9 +83,10 @@ const ProductsFeatures = () => {
                 }
                 onClick={() => setActiveTab(2)}
               >
-                <div className="tab-icon" />
-                <span>EDGE SERVICES</span>
+                <div className="product-tabs-icon" />
+                <span>{t("products.tab-e")}</span>
               </div>
+              <div className="tab-line" />
             </div>
           </Col>
           <Col
@@ -116,7 +116,7 @@ const ProductsFeatures = () => {
             <div
               key={index}
               className={
-                (locale === "fa" ? "image-wrapper-fa" : "image-wrapper") +
+                "image-wrapper" +
                 (activeTab === entry.key
                   ? " image-active image-movement"
                   : " image-inactive")
@@ -125,8 +125,8 @@ const ProductsFeatures = () => {
               <Image
                 key={index}
                 src={"/assets/" + entry.name}
-                width="383"
-                height="343"
+                width="350"
+                height="350"
                 alt="cloud-compute"
               />
             </div>
