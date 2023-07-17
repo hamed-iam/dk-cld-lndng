@@ -10,7 +10,6 @@ import ProductCharts from "./ProductCharts";
 const { Panel } = Collapse;
 
 interface ProductTabPropTypes {
-  superTitle: string;
   title: string;
   desc: string;
   sub: string;
@@ -19,7 +18,6 @@ interface ProductTabPropTypes {
 }
 
 export default function ProductTab({
-  superTitle,
   title,
   desc,
   sub,
@@ -33,7 +31,7 @@ export default function ProductTab({
     <ProductTabsStyledWrapper>
       <div className="tab">
         <div className="tab-intro">
-          <p className="tab-super">{superTitle}</p>
+          <p className="tab-super">{t("products.super-h1")}</p>
           <div className="tab-title">
             <TitleFrame>
               <h2>{title}</h2>
