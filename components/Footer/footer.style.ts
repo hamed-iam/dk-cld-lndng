@@ -128,9 +128,14 @@ export const FooterCallbackStyledWrapper = styled.div(
   }: ThemeStyledProps) => {
     return css`
       width: 100%;
+
       form {
         display: flex;
         align-items: center;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10px;
       }
     `;
   }

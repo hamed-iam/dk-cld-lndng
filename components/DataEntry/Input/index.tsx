@@ -11,13 +11,12 @@ interface RHFInputFieldProps {
 
 const RHFInputField = (props: RHFInputFieldProps) => {
   const { t } = useTranslation("common");
-  const errorMsg = t("form.error");
   return (
     <Controller
       control={props.control}
       name={props.name}
       rules={{
-        required: errorMsg,
+        required: t("form.error") as string,
       }}
       render={({ field, fieldState }) => {
         return (
