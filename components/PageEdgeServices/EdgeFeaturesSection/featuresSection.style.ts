@@ -152,7 +152,7 @@ export const EdgeFeaturesTableStyledWrapper = styled.div(
         }
       }
 
-      @media (max-width: 530px) {
+      @media (max-width: 701px) {
         .table-wrapper {
           background-color: red;
           display: none;
@@ -250,7 +250,7 @@ export const EdgeFeaturesTableMobileStyledWrapper = styled.div(
         margin: 20px 0 5px 0;
       }
 
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 700px) {
         display: block;
       }
     `;

@@ -145,7 +145,7 @@ export default styled.div(
             right: ${locale === "fa" ? "5%" : "40%"};
           }
 
-          @media (max-width: 600px) {
+          @media (max-width: 700px) {
             .tag-frame-friendly {
               display: none;
             }
