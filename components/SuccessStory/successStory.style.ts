@@ -125,6 +125,7 @@ export default styled.div(
           background-color: ${DarkBGGrade1};
           border-radius: 8px;
           border: 1px solid ${DarkBorderMid};
+          transform: rotate(${locale === "fa" ? "180deg" : "0deg"});
         }
 
         .swiper-pagination-bullet {
@@ -139,21 +140,6 @@ export default styled.div(
             background: #54586c;
           }
         }
-
-        /* mask-image: gradient(
-          linear,
-          left top,
-          right top,
-          from(rgba(0, 0, 0, 1)),
-          to(rgba(0, 0, 0, 0))
-        );
-        -webkit-mask-image: -webkit-gradient(
-          linear,
-          left top,
-          right top,
-          from(rgba(0, 0, 0, 1)),
-          to(rgba(0, 0, 0, 0))
-        ); */
       }
     `;
   }
@@ -177,9 +163,6 @@ export const SuccessStoryCardStyledWrapper = styled.div(
       border: 1px solid ${DarkBorderHigh};
       box-shadow: 0px 0px 8px rgba(24, 39, 75, 0.06),
         0px 2px 16px -2px rgba(24, 39, 75, 0.02);
-
-      /* padding: calc(max(24px, 2.2vw)) calc(max(20px, 4vw))
-        calc(max(24px, 2.2vw)) calc(max(20px, 4vw)); */
       padding: 5%;
       max-width: 421px;
       min-height: 209px;

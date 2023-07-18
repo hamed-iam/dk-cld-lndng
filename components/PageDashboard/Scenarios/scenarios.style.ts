@@ -5,6 +5,7 @@ export default styled.div(
   ({
     theme: {
       colors: { LightNatural400 },
+      locale,
     },
   }: ThemeStyledProps) => {
     return css`
@@ -16,7 +17,10 @@ export default styled.div(
         margin-inline: auto;
         margin-top: 5%;
       }
-
+      .swiper-button-next,
+      .swiper-button-prev {
+        transform: rotate(${locale === "fa" ? "180deg" : "0deg"});
+      }
       .scenarios-header {
         h2 {
           font-size: clamp(32px, 4.7vw, 64px);
