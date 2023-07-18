@@ -2,10 +2,28 @@
   "h1": "Cloud Computing",
   "title": "DigiCloud | Cloud Computing",
   "define": {
-    "storage": "Storage Classes",
-    "storage-desc": "You Can Choose Different Storage ClassesYou Can Choose Different Storage Classes You Can Choose Diffrent Storage Classes",
-    "dns": "DNS Record",
-    "dns-desc": "You Can Choose Different Storage ClassesYou Can Choose Different Storage Classes You Can Choose Diffrent Storage Classes"
+    "super-h1": "",
+    "h1": "Cloud Computing",
+    "sub-h1": ["For", " All-Sized ", "Companies"],
+    "desc": "You Can Choose Different Storage ClassesYou Can Choose Different Storage Classes You Can Choose Diffrent Storage Classes",
+    "cards": [
+      {
+        "title": "Easy to use",
+        "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore"
+      },
+      {
+        "title": "Flexible",
+        "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore"
+      },
+      {
+        "title": "Efficient",
+        "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore"
+      },
+      {
+        "title": "Scalable and high performance",
+        "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore"
+      }
+    ]
   },
   "benefits": {
     "super-h3": "Benefits and Solutions",
