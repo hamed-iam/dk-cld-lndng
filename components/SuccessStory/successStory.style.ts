@@ -11,6 +11,7 @@ export default styled.div(
         DarkBGGrade1,
         LightBrandingPrimary,
       },
+      locale,
     },
   }: ThemeStyledProps) => {
     return css`
@@ -83,6 +84,7 @@ export default styled.div(
               svg g path {
                 fill: #3d88eb;
               }
+              transform: rotate(${locale === "fa" ? "270deg" : "0deg"});
             }
           }
         }

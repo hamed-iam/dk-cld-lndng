@@ -10,10 +10,11 @@ export default styled.div(
         LightNatural400,
         LightThemePrimary600,
       },
+      locale,
     },
   }: ThemeStyledProps) => {
     return css`
-    margin: 4% 0;
+      margin: 4% 0;
       .container {
         width: min(90%, 74rem);
         margin-inline: auto;
@@ -62,7 +63,7 @@ export default styled.div(
             .icon-arrowDashboardSolutionsIcon {
               width: 147px;
               height: 72px;
-              /* transform: rotate(-45deg); */
+              transform: rotate(${locale === "fa" ? "180deg" : "0deg"});
             }
 
             @media only screen and (max-width: 485px) {

@@ -31,18 +31,14 @@ export default function EdgeFeaturesSection({
           <p className="title-wrapper-super">{superTitle}</p>
           <div style={{ display: "flex", flex: 1 }}>
             <div className="title-wrapper-title">
-              <h1>{t("feature-section.title.h1")}</h1>
-              <span className="title-rest">
-                {t("feature-section.title.rest")}
-              </span>
+              <h1>{t("protect.h1-bold")}</h1>
+              <span className="title-rest">{t("protect.h1")}</span>
             </div>
           </div>
           <h2 className="title-wrapper-subheading">
-            {t("feature-section.title.subheading")}{" "}
+            {t("protect.h2")}{" "}
             <span className="highlight">
-              <span className="highlight-word">
-                {t("feature-section.title.subheading-highlight")}
-              </span>
+              <span className="highlight-word">{t("protect.h2-colored")}</span>
             </span>
           </h2>
           <div className="title-wrapper-sub">

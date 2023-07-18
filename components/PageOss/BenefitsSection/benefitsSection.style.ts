@@ -10,6 +10,7 @@ export default styled.div(
         LightNatural100,
         LightThemePrimary600,
       },
+      locale,
     },
   }: ThemeStyledProps) => {
     return css`
@@ -57,6 +58,7 @@ export default styled.div(
               width: 80px;
               height: 50px;
               margin-inline-start: 50px;
+              transform: rotateY(${locale === "fa" ? "180deg" : "0deg"});
 
               @media (max-width: 850px) {
                 display: none;

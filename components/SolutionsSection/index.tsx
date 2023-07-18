@@ -56,10 +56,12 @@ const SolutionsSection = ({ cards }: SolutionsSectionPropsType) => {
           <TitleFrame>
             {/* {t("solutions.h1")} */}
             <div className="solution-title-wrapper-title">
-              <h1>Solutions</h1>
+              <h1>{t("solutions.h1-start")}</h1>
               <span className="title-rest">
-                for
-                <span className="title-rest_industry">Industry</span>
+                {t("solutions.h1")}
+                <span className="title-rest_industry">
+                  {t("solutions.h1-end")}
+                </span>
                 <div className="icon-wrapper">
                   <SvgIcon title="keyEmojiIcon" viewBox="0 0 40 40" />
                 </div>
@@ -70,7 +72,8 @@ const SolutionsSection = ({ cards }: SolutionsSectionPropsType) => {
         </div>
 
         <p className="solution-title-wrapper-sub">
-          Economical <span>and</span> Professional
+          {t("solutions.sub-start")} <span>{t("solutions.sub")}</span>
+          {t("solutions.sub-end")}
         </p>
       </div>
 
@@ -135,12 +138,12 @@ const SolutionsSection = ({ cards }: SolutionsSectionPropsType) => {
         </div>
         <div className="solution-content-wrapper-related">
           <SvgIcon title="officeEmojiIcon" viewBox="0 0 64 64" />
-          <h3 className="title">Related Industry</h3>
+          <h3 className="title">{t("solutions.industries.title")}</h3>
           <ul>
-            <li>Banking </li>
-            <li> Education </li>
-            <li> Media and Intertainment </li>
-            <li> Retail</li>
+            <li>{t("solutions.industries.name.0")} </li>
+            <li> {t("solutions.industries.name.1")} </li>
+            <li> {t("solutions.industries.name.2")} </li>
+            <li> {t("solutions.industries.name.3")}</li>
           </ul>
         </div>
       </div>

@@ -80,12 +80,13 @@ export default styled.div(
             position: relative;
             z-index: 1;
             &-word {
-              background: -webkit-linear-gradient(
+              background: linear-gradient(
                 89.74deg,
                 #cb5ff2 0.2%,
                 #ff5a82 84.73%
               );
               background-clip: text;
+              -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
             }
           }

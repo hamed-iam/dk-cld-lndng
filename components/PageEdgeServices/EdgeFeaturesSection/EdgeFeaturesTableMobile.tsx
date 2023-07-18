@@ -35,7 +35,7 @@ export default function EdgeFeaturesTableMobile({
           >
             <h3>{record.name}</h3>
             <div>{record.desc}</div>
-            <h4>{t("feature-section.table.2.title")}</h4>
+            <h4>{t("define.table.2.title")}</h4>
             <div>{record.bestFor}</div>
           </Card>
         ))}

@@ -1,4 +1,5 @@
 import { Collapse } from "antd";
+import { useTranslation } from "react-i18next";
 
 interface AboutContentPropsType {
   onPanelChange: (panel: string[] | string) => void;
@@ -25,6 +26,7 @@ export default function AboutContent({
   onPanelChange,
   activePanel,
 }: AboutContentPropsType) {
+  const { t } = useTranslation("common");
   return (
     <div className="content">
       <div className="content-column">
@@ -39,38 +41,40 @@ export default function AboutContent({
           <Panel
             header={
               <div className="panel-header">
-                <h3>About panel header 1</h3>
+                <h3>{t("faq.tabs.about.questions.0.problem")}</h3>
                 {activePanel.panel1.isHeaderSumShow && <p>{text}</p>}
               </div>
             }
             key="1"
             style={panelStyle}
           >
-            <p>{text}</p>
+            <p>{t("faq.tabs.about.questions.0.solution")}</p>
           </Panel>
           <Panel
             header={
               <div className="panel-header">
-                <h3>About panel header 2</h3>
+                <h3>{t("faq.tabs.about.questions.1.problem")}</h3>
                 {activePanel.panel2.isHeaderSumShow && <p>{text}</p>}
               </div>
             }
             key="2"
             style={panelStyle}
           >
-            <p>{text}</p>
+            <p>{t("faq.tabs.about.questions.1.solution")}</p>
           </Panel>
           <Panel
             header={
               <div className="panel-header">
-                <h3>About panel header 3</h3>
-                {activePanel.panel3.isHeaderSumShow && <p>{text}</p>}
+                <h3>{t("faq.tabs.about.questions.2.problem")}</h3>
+                {activePanel.panel3.isHeaderSumShow && (
+                  <p>{t("faq.tabs.about.questions.2.solution")}</p>
+                )}
               </div>
             }
             key="3"
             style={panelStyle}
           >
-            <p>{text}</p>
+            <p>{t("faq.tabs.about.questions.2.solution")}</p>
           </Panel>
         </Collapse>
       </div>
@@ -86,50 +90,30 @@ export default function AboutContent({
           <Panel
             header={
               <div className="panel-header">
-                <h3>About panel header 4</h3>
-                {activePanel.panel4.isHeaderSumShow && <p>{text}</p>}
+                <h3>{t("faq.tabs.about.questions.3.problem")}</h3>
+                {activePanel.panel4.isHeaderSumShow && (
+                  <p>{t("faq.tabs.about.questions.3.solution")}</p>
+                )}
               </div>
             }
             key="4"
             style={panelStyle}
           >
-            <p>{text}</p>
+            <p>{t("faq.tabs.about.questions.3.solution")}</p>
           </Panel>
           <Panel
             header={
               <div className="panel-header">
-                <h3>About panel header 5</h3>
-                {activePanel.panel5.isHeaderSumShow && <p>{text}</p>}
+                <h3>{t("faq.tabs.about.questions.4.problem")}</h3>
+                {activePanel.panel5.isHeaderSumShow && (
+                  <p>{t("faq.tabs.about.questions.4.solution")}</p>
+                )}
               </div>
             }
             key="5"
             style={panelStyle}
           >
-            <p>{text}</p>
-          </Panel>
-          <Panel
-            header={
-              <div className="panel-header">
-                <h3>About panel header 6</h3>
-                {activePanel.panel6.isHeaderSumShow && <p>{text}</p>}
-              </div>
-            }
-            key="6"
-            style={panelStyle}
-          >
-            <p>{text}</p>
-          </Panel>
-          <Panel
-            header={
-              <div className="panel-header">
-                <h3>About panel header 7</h3>
-                {activePanel.panel7.isHeaderSumShow && <p>{text}</p>}
-              </div>
-            }
-            key="7"
-            style={panelStyle}
-          >
-            <p>{text}</p>
+            <p>{t("faq.tabs.about.questions.4.solution")}</p>
           </Panel>
         </Collapse>
       </div>

@@ -1,38 +1,30 @@
 import SvgIcon from "@/components/SvgIcon";
 import StyledWrapper from "./cloudBenefitsSection.style";
 import CloudBenefitCard from "./CloudBenefitCard";
+import { useTranslation } from "react-i18next";
 
 export default function CloudBenefitsSection() {
+  const { t } = useTranslation("cloud-computing");
   const cards = [
     {
       icon: { name: "spaceshipEmojiIcon", viewBox: "0 0 48 48" },
-      title: "Easy to use",
-      desc: "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      title: t("benefits.cards.0.title"),
+      desc: t("benefits.cards.0.desc"),
     },
     {
       icon: { name: "playgroundIcon", viewBox: "0 0 33 32" },
-      title: "Flexible",
-      desc: "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      title: t("benefits.cards.1.title"),
+      desc: t("benefits.cards.1.desc"),
     },
     {
       icon: { name: "trophyIcon", viewBox: "0 0 33 32" },
-      title: "Efficient",
-      desc: "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      title: t("benefits.cards.2.title"),
+      desc: t("benefits.cards.2.desc"),
     },
     {
       icon: { name: "robotIcon", viewBox: "0 0 32 32" },
-      title: "Scalable and high performance",
-      desc: "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore",
-    },
-    {
-      icon: { name: "swordsIcon", viewBox: "0 0 33 32" },
-      title: "Security",
-      desc: "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore",
-    },
-    {
-      icon: { name: "flashlightIcon", viewBox: "0 0 33 32" },
-      title: "Reliable",
-      desc: "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      title: t("benefits.cards.3.title"),
+      desc: t("benefits.cards.3.desc"),
     },
   ];
 
@@ -40,17 +32,14 @@ export default function CloudBenefitsSection() {
     <StyledWrapper>
       <div className="container">
         <div className="title-wrapper">
-          <p className="title-wrapper-super">Benefits and Solutions</p>
+          <p className="title-wrapper-super">{t("benefits.h3")}</p>
           <h3>
-            <span>Benefits</span> of Cloud Computing
+            <span>{t("benefits.h3-colored")}</span> {t("benefits.h3")}
           </h3>
-          <h2>for Business</h2>
+          <h2>{t("benefits.h2")}</h2>
 
           <div className="title-wrapper-sub">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et
-            </p>
+            <p>{t("benefits.sub")}</p>
             <SvgIcon title="arrowCloudBenefitsIcon" viewBox="0 0 70 78" />
           </div>
         </div>

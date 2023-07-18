@@ -1,27 +1,24 @@
 import { Button } from "antd";
+import { useTranslation } from "react-i18next";
 import { SectionCTAStyledWrapper } from "./customers.style";
 
 export default function SectionCTA() {
+  const { t } = useTranslation("dashboard");
   return (
     <SectionCTAStyledWrapper>
       <div className="cta-container">
         <h4>
-          Focus on running your business,
-          <span> rather than maintenance your infrastructure</span>
+          {t("customers.cta.h4")}
+          <span>{t("customers.cta.h4-span")}</span>
         </h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
+        <p>{t("customers.cta.desc")}</p>
 
         <div className="cta-actions">
           <Button className="cta-actions-account" type="primary">
-            Create Digicloud Account
+            {t("customers.cta.action-account")}
           </Button>
           <Button className="cta-actions-more" type="default">
-            More About Us
+            {t("customers.cta.action-more")}
           </Button>
         </div>
       </div>

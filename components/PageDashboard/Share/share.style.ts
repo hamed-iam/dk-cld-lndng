@@ -5,6 +5,7 @@ export default styled.div(
   ({
     theme: {
       colors: { LightNatural100, LightNatural400 },
+      locale,
     },
   }: ThemeStyledProps) => {
     return css`
@@ -63,7 +64,8 @@ export default styled.div(
             display: flex;
             align-items: center;
             .icon-arrowDashboardSolutionsIcon {
-              transform: rotate(-20deg) scaleX(-1);
+              transform: rotate(${locale === "fa" ? "20deg" : "-20deg"})
+                rotateY(${locale === "fa" ? "180deg" : "0deg"}) scaleX(-1);
               width: 100px;
               margin-inline-start: 10px;
             }

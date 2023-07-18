@@ -1,5 +1,6 @@
 import { Collapse } from "antd";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 interface CloudComputingContentPropsType {
   onPanelChange: (panel: string[] | string) => void;
@@ -26,6 +27,7 @@ export default function CloudComputingContent({
   onPanelChange,
   activePanel,
 }: CloudComputingContentPropsType) {
+  const { t } = useTranslation("common");
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -45,8 +47,10 @@ export default function CloudComputingContent({
           <Panel
             header={
               <div className="panel-header">
-                <h3>Cloud panel 1</h3>
-                {activePanel.panel1.isHeaderSumShow && <p>{text}</p>}
+                <h3>{t("faq.tabs.cloud.questions.0.problem")}</h3>
+                {activePanel.panel1.isHeaderSumShow && (
+                  <p>{t("faq.tabs.cloud.questions.0.solution")}</p>
+                )}
               </div>
             }
             key="1"
@@ -57,8 +61,10 @@ export default function CloudComputingContent({
           <Panel
             header={
               <div className="panel-header">
-                <h3>Cloud panel 2</h3>
-                {activePanel.panel2.isHeaderSumShow && <p>{text}</p>}
+                <h3>{t("faq.tabs.cloud.questions.1.problem")}</h3>
+                {activePanel.panel2.isHeaderSumShow && (
+                  <p>{t("faq.tabs.cloud.questions.1.solution")}</p>
+                )}
               </div>
             }
             key="2"

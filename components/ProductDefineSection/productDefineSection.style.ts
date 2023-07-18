@@ -11,6 +11,7 @@ export default styled.div(
         LightThemePrimary600,
         DarkTextLightLow,
       },
+      locale,
     },
   }: ThemeStyledProps) => {
     return css`
@@ -109,6 +110,7 @@ export default styled.div(
           .icon {
             width: 24px;
             height: 24px;
+            transform: rotate(${locale === "fa" ? "270deg" : "0deg"});
           }
           .start-btn {
             width: 185px;

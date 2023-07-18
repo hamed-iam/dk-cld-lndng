@@ -25,8 +25,8 @@ const Share = () => {
 
               <TitleFrame>
                 <h2>
-                  <span className="highlight">Share </span>
-                  with your Team
+                  <span className="highlight">{t("share.h1-start")} </span>
+                  {t("share.h1")}
                 </h2>
               </TitleFrame>
             </div>
@@ -37,7 +37,7 @@ const Share = () => {
             <div className="info-section-action">
               <Button className="info-section-action-btn" type="primary">
                 <SvgIcon title="downloadIcon" viewBox="0 0 24 24" />
-                Download PDF File
+                {t("share.action")}
               </Button>
               <SvgIcon
                 title="arrowDashboardSolutionsIcon"

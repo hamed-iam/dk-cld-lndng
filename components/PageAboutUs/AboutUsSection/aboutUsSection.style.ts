@@ -148,6 +148,7 @@ export default styled.div(
             top: 90%;
             right: ${locale === "fa" ? "auto" : "50%"};
             left: ${locale === "fa" ? "50%" : "auto"};
+            min-width: 150px;
           }
 
           @media (max-width: 500px) {
