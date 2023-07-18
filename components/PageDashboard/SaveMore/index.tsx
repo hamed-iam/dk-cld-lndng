@@ -44,15 +44,15 @@ const SaveMore = () => {
               <Panel header={payAsYouGoHeader} key="1" className="panel">
                 <p className="panel-desc">{t("save.panel.0.desc")}</p>
                 <div className="panel-tags">
-                  <span>{t("save.panel.0.tag.0")}</span>
-                  <span>{t("save.panel.0.tag.1")}</span>
+                  <span>{t("save.panel.0.tags.0")}</span>
+                  <span>{t("save.panel.0.tags.1")}</span>
                 </div>
               </Panel>
               <Panel header={packagesHeader} key="2" className="panel">
                 <p className="panel-desc">{t("save.panel.1.desc")}</p>
                 <div className="panel-tags">
-                  <span>{t("save.panel.1.tag.0")}</span>
-                  <span>{t("save.panel.1.tag.1")}</span>
+                  <span>{t("save.panel.1.tags.0")}</span>
+                  <span>{t("save.panel.1.tags.1")}</span>
                 </div>
               </Panel>
             </Collapse>
