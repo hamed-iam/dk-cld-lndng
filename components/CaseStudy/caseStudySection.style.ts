@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import { ThemeStyledProps } from "@/styles/themes";
-const something = () => {};
 
 export default styled.div(
   ({
