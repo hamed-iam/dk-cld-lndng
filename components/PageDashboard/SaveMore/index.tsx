@@ -13,14 +13,14 @@ const SaveMore = () => {
   const payAsYouGoHeader = (
     <div className="panel-header payAsGo">
       <SvgIcon title="payAsYouGoIcon" viewBox="0 0 32 32" />
-      <p>Pay as you go</p>
+      <p>{t("save.panel.0.header")}</p>
     </div>
   );
 
   const packagesHeader = (
     <div className="panel-header packages">
       <SvgIcon title="packagesIcon" viewBox="0 0 32 32" />
-      <p>Packages</p>
+      <p>{t("save.panel.1.header")}</p>
     </div>
   );
 
@@ -42,31 +42,17 @@ const SaveMore = () => {
               accordion
             >
               <Panel header={payAsYouGoHeader} key="1" className="panel">
-                <p className="panel-desc">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur.
-                </p>
+                <p className="panel-desc">{t("save.panel.0.desc")}</p>
                 <div className="panel-tags">
-                  <span>Object Storage</span>
-                  <span>Cloud Computing</span>
+                  <span>{t("save.panel.0.tag.0")}</span>
+                  <span>{t("save.panel.0.tag.1")}</span>
                 </div>
               </Panel>
               <Panel header={packagesHeader} key="2" className="panel">
-                <p className="panel-desc">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur.
-                </p>
+                <p className="panel-desc">{t("save.panel.1.desc")}</p>
                 <div className="panel-tags">
-                  <span>Object Storage</span>
-                  <span>Cloud Computing</span>
+                  <span>{t("save.panel.1.tag.0")}</span>
+                  <span>{t("save.panel.1.tag.1")}</span>
                 </div>
               </Panel>
             </Collapse>
@@ -86,7 +72,8 @@ const SaveMore = () => {
             </div>
             <p className="save-info-desc">{t("save.desc")}</p>
             <p className="save-info-contact">
-              Have any question? <Link href="/about">Contact Us</Link>
+              {t("save.contact")}
+              <Link href="/about">{t("save.contact-link")}</Link>
             </p>
           </Col>
         </Row>

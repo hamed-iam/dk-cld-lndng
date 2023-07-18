@@ -156,6 +156,7 @@ export default styled.div(
             border-radius: 12px;
             min-height: 318px;
             margin-top: 40px;
+            direction: ltr;
 
             &-tabs {
               background-color: ${DarkBGGrade2};

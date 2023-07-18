@@ -2,8 +2,10 @@ import { Col, Row } from "antd";
 import GoogleMaps from "./GoogleMaps";
 import StyleWrapper from "./addressSection.style";
 import SvgIcon from "@/components/SvgIcon";
+import { useTranslation } from "react-i18next";
 
 export default function AddressSection() {
+  const { t } = useTranslation("about");
   return (
     <StyleWrapper>
       <Row>
@@ -26,12 +28,9 @@ export default function AddressSection() {
           <div className="address">
             <div className="address-title">
               <SvgIcon title="addressMarkerIcon" viewBox="0 0 32 32" />
-              <h3>Address</h3>
+              <h3>{t("address.title")}</h3>
             </div>
-            <p>
-              Tehran District 3. 31, Vanak Plaza Building, Shadi Alley, Khoddami
-              St.
-            </p>
+            <p>{t("address.desc")}</p>
           </div>
         </Col>
       </Row>

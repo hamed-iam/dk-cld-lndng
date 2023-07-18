@@ -46,12 +46,13 @@ const Customers = () => {
             <p className="info-super">{t("customers.super-h1")}</p>
 
             <h3>
-              <span>Speed up</span> your infrastructure
+              <span>{t("customers.h1-start")}</span>
+              {t("customers.h1-a")}
             </h3>
             <div className="info-sub">
               <p>
-                with
-                <span> digicloud </span>
+                {t("customers.h1-b")}
+                <span> {t("customers.h1-end")} </span>
               </p>
               <SvgIcon title="spaceshipEmojiIcon" viewBox="0 0 48 48" />
             </div>

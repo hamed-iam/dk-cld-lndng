@@ -11,58 +11,89 @@ import {
 const OssCtr = () => {
   const { t } = useTranslation("oss");
 
+  const ossDefineCards = [
+    {
+      title: t("define.features.0.title"),
+      desc: t("define.features.0.desc"),
+    },
+    {
+      title: t("define.features.1.title"),
+      desc: t("define.features.1.desc"),
+    },
+    {
+      title: t("define.features.2.title"),
+      desc: t("define.features.2.desc"),
+    },
+    {
+      title: t("define.features.3.title"),
+      desc: t("define.features.3.desc"),
+    },
+    {
+      title: t("define.features.4.title"),
+      desc: t("define.features.4.desc"),
+    },
+  ];
+
   const solutionsCards = [
     {
-      title: "title1",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+      title: t("solutions.cards.0.title"),
+      desc: t("solutions.cards.0.desc"),
     },
     {
-      title: "title2",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+      title: t("solutions.cards.1.title"),
+      desc: t("solutions.cards.1.desc"),
     },
     {
-      title: "title3",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+      title: t("solutions.cards.2.title"),
+      desc: t("solutions.cards.2.desc"),
     },
     {
-      title: "title4",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
-    },
-    {
-      title: "title5",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+      title: t("solutions.cards.3.title"),
+      desc: t("solutions.cards.3.desc"),
     },
   ];
 
   const successStoryCards = [
     {
       id: 1,
-      title: "eCommerce Solution",
-      desc: "Diginext uses Digicloud's edge services for their next generation eCommerce solutions.",
+      title: t("success-story.cards.0.title"),
+      desc: t("success-story.cards.0.desc"),
       logo: { title: "diginextLogo", viewBox: "0 0 74 17" },
     },
     {
       id: 2,
-      title: "eCommerce Solution",
-      desc: "Diginext uses Digicloud's edge services for their next generation eCommerce solutions.",
+      title: t("success-story.cards.1.title"),
+      desc: t("success-story.cards.1.desc"),
       logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
     },
     {
       id: 3,
-      title: "eCommerce Solution",
-      desc: "Diginext uses Digicloud's edge services for their next generation eCommerce solutions.",
+      title: t("success-story.cards.2.title"),
+      desc: t("success-story.cards.2.desc"),
       logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
     },
     {
       id: 4,
-      title: "eCommerce Solution",
-      desc: "Diginext uses Digicloud's edge services for their next generation eCommerce solutions.",
+      title: t("success-story.cards.3.title"),
+      desc: t("success-story.cards.3.desc"),
       logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
     },
     {
       id: 5,
-      title: "eCommerce Solution",
-      desc: "Diginext uses Digicloud's edge services for their next generation eCommerce solutions.",
+      title: t("success-story.cards.4.title"),
+      desc: t("success-story.cards.4.desc"),
+      logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
+    },
+    {
+      id: 6,
+      title: t("success-story.cards.5.title"),
+      desc: t("success-story.cards.5.desc"),
+      logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
+    },
+    {
+      id: 7,
+      title: t("success-story.cards.6.title"),
+      desc: t("success-story.cards.6.desc"),
       logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
     },
   ];
@@ -70,10 +101,10 @@ const OssCtr = () => {
   return (
     <StyledWrapper>
       <ProductDefineSection
-        cards={[]}
-        superTitle="Object Storage Product"
-        title="Object Storage"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        cards={ossDefineCards}
+        superTitle={t("define.super-h1")}
+        title={t("define.h1")}
+        desc={t("define.desc")}
         icon={{
           title: "ossPageIcon",
           viewBox: "0 0 72 72",
@@ -84,13 +115,8 @@ const OssCtr = () => {
       <SuccessStory
         cards={successStoryCards}
         imageSrc="/assets/hero-compute.png"
-        mainTitle="Object Storage"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                  ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet,
-                  consectetur"
+        mainTitle={t("success-story.h2")}
+        desc={t("success-story.desc")}
       />
       <Faq
         loc="oss"

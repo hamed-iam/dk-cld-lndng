@@ -16,13 +16,106 @@
     "menu": "Menu"
   },
   "solutions": {
-    "super-h1": "Our Solutions",
-    "h1": "Answer Your Business Complexity with Our Solution",
-    "sub-h1": "Safe, economical and according to your business"
+    "super-h1": "Benefits and Solutions",
+    "h1-start": "Industry",
+    "h1": " for ",
+    "h1-end": "Solutions",
+    "sub-start": "Economical",
+    "sub": " and ",
+    "sub-end": "Professional",
+    "industries": {
+      "title": "Related Industry",
+      "name": ["Banking", "Education", "Media and Intertainment", "Retail"]
+    },
+    "cards":[
+      {
+        "title": "title1",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
+      },
+      {
+        "title": "title1",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
+      },
+      {
+        "title": "title1",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
+      },
+      {
+        "title": "title1",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
+      }
+    ]
   },
   "faq": {
     "h1": "FAQ",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "tabs": {
+      "cloud": {
+        "title": "Cloud Computing",
+        "questions": [
+          {
+            "problem": "Cloud panel 1",
+            "solution": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "problem": "Cloud panel 2",
+            "solution": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          }
+        ]
+      },
+      "oss": {
+        "title": "Object Storage",
+        "questions": [
+          {
+            "problem": "Oss panel header 1",
+            "solution": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "problem": "Oss panel header 2",
+            "solution": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          }
+        ]
+      },
+      "edge": {
+        "title": "Edge Services",
+        "questions": [
+          {
+            "problem": "Edge Services 1",
+            "solution": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "problem": "Edge Services 2",
+            "solution": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          }
+        ]
+      },
+      "about": {
+        "questions": [
+          {
+            "problem": "About panel header 1",
+            "solution": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "problem": "About panel header 2",
+            "solution": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "problem": "About panel header 3",
+            "solution": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "problem": "About panel header 4",
+            "solution": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "problem": "About panel header 5",
+            "solution": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          }
+        ]
+      }
+    },
+    "contact": "Have any other question?",
+    "contact-link":"Contact Us"
   },
   "footer": {
     "brand-desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",

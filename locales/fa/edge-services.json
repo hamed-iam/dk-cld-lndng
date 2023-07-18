@@ -1,4 +1,100 @@
 {
-  "h1": "سرویس های ادج",
-  "title": "دیجی کلاد | سرویس های ادج"
+  "define": {
+    "super-h1": "",
+    "h1": "شبکه توزیع محتوای دیجی‌کلاد؛",
+    "subheading": "ارتباطی امن،",
+    "subheading-highlight": " ارزان و سریع ",
+    "subheading-highlight-word": "با سراسر جهان",
+    "desc": "سرویس شبکه توزیع محتوای دیجی‌کلاد (CDN) این امکان را در اختیارتان می‌گذارد تا خدمات و محتوای کسب‌و‌کارتان را در هر شرایطی، با سرعت و در امنیت بالا به دست کاربران‌تان در هر نقطه‌ای از جهان برسانید و کیفیت خدمات خود را بهبود ببخشید.",
+    "action-start": "عضو دیجی‌کلاد شوید",
+    "action-contact": "با ما تماس بگیرید",
+    "features": [
+      {
+        "title": "امنیت ابری بالا",
+        "desc": "دیجی‌کلاد با بهره گرفتن از راهکارهای امنیتی مانند Rate limit، فایروال، WAF و DDoS Mitigation از داده‌های شما در برابر انواع حملات سنتی و پیشرفته جلوگیری می‌کند."
+      },
+      {
+        "title": "خدمات EDGE CDN",
+        "desc": "دیجی‌کلاد با ارائه سرویس‌هایی مانند Proxy Core، Cache Purge، Redirection، Custom Host Header و … پکیج کاملی از خدمات Edge CDN در اختیارتان می‌گذارد."
+      },
+      {
+        "title": "مانیتورینگ و ارائه آمار کاربران",
+        "desc": "با امکاناتی نظیر Log Forwarding، Audit Log، DNR و DNS سرویس و … به راحتی می‌توانید داده‌های خود را مانیتور و بررسی کنید و در لحظه از آن‌ها گزارش تهیه کنید."
+      },
+      {
+        "title": "بهینه‌سازی وب‌سایت",
+        "desc": "با وجود ابزارهای Image Resize، Watermark و فشارده‌ساز کدهای CSS/HTML/JavaScript می‌توانید محتوای وب‌سایت خود را برای موتورهای جستجو بهینه‌سازی کنید و وضعیت SEO وب‌سایت خود را بهبود ببخشید."
+      },
+      {
+        "title": "DNS ابری",
+        "desc": "با استفاده از خدمات DNS ابری دیجی‌کلاد شما می‌توانید به راحتی رکوردهای DNS دامنه‌ها و زیردامنه‌هایتان را به محیط امن منتقل کنید و با روشی مقرون به‌صرفه در DNS گلوبال به اشتراک بگذارید."
+      }
+    ]
+  },
+  "protect": {
+    "super-h1": "Solutions",
+    "h1-bold": "Solutions",
+    "h1": "Solutions",
+    "h2": "Solutions",
+    "h2-colored": "Solutions",
+    "sub": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+    "features": [
+      {
+        "name": "DNS record",
+        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
+        "bestFor": "This is detail of cell"
+      },
+      {
+        "name": "WAF",
+        "desc": "2 is detail of cell,This is detail of cell,This is detail of cell",
+        "bestFor": "2 is detail of cell"
+      },
+      {
+        "name": "Location",
+        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
+        "bestFor": "This is detail of cell"
+      },
+      {
+        "name": "Cluster",
+        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
+        "bestFor": "High Level Processing"
+      },
+      {
+        "name": "Image Processing",
+        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
+        "bestFor": "Performance"
+      },
+      {
+        "name": "SSL",
+        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
+        "bestFor": "This is detail of cell"
+      },
+      {
+        "name": "Firewall",
+        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
+        "bestFor": "Security"
+      },
+      {
+        "name": "Rate Limit Zones",
+        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
+        "bestFor": "This is detail of cell"
+      }
+    ],
+    "table": [
+      {
+        "title": "Feature"
+      },
+      {
+        "title": "Description"
+      },
+      {
+        "title": "Best for"
+      }
+    ]
+  },
+  "usecases":{
+    "super-h1": "Guidance",
+    "h1": "Use Cases In",
+    "h2": "Edge Services"
+  }
 }

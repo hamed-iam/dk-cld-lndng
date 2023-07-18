@@ -6,5 +6,30 @@
     "storage-desc": "You Can Choose Different Storage ClassesYou Can Choose Different Storage Classes You Can Choose Diffrent Storage Classes",
     "dns": "DNS Record",
     "dns-desc": "You Can Choose Different Storage ClassesYou Can Choose Different Storage Classes You Can Choose Diffrent Storage Classes"
+  },
+  "benefits": {
+    "super-h3": "Benefits and Solutions",
+    "h3-colored": "Benefits",
+    "h3": "of Cloud Computing",
+    "h2": "for Business",
+    "sub": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+    "cards": [
+      {
+        "title": "Easy to use",
+        "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore"
+      },
+      {
+        "title": "Flexible",
+        "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore"
+      },
+      {
+        "title": "Efficient",
+        "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore"
+      },
+      {
+        "title": "Scalable and high performance",
+        "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore"
+      }
+    ]
   }
 }

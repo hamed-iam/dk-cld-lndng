@@ -13,10 +13,12 @@ import SvgIcon from "@/components/SvgIcon";
 import { useRouter } from "next/router";
 
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 type TabPosition = "left" | "right" | "top" | "bottom";
 
 export default function DashboardSolutions() {
+  const { t } = useTranslation("dashboard");
   const { locale } = useRouter();
   const [tabPosition, setTabPosition] = useState<TabPosition>(
     locale === "en" ? "left" : "right"
@@ -31,32 +33,32 @@ export default function DashboardSolutions() {
 
   const tabData = [
     {
-      label: `Retail`,
+      label: t("solutions.tabs.retail.label"),
       key: "1",
       children: <RetailTab />,
     },
     {
-      label: `Financial Services`,
+      label: t("solutions.tabs.finance.label"),
       key: "2",
       children: <FinancialServicesTab />,
     },
     {
-      label: `Media and Entertainment`,
+      label: t("solutions.tabs.media.label"),
       key: "3",
       children: <MediaTab />,
     },
     {
-      label: `Education`,
+      label: t("solutions.tabs.education.label"),
       key: "4",
       children: <EducationTab />,
     },
     {
-      label: `Health and Medical`,
+      label: t("solutions.tabs.health.label"),
       key: "5",
       children: <HealthTab />,
     },
     {
-      label: `All Solutions`,
+      label: t("solutions.tabs.others.label"),
       key: "6",
       children: <AllSolutionsTab />,
     },
@@ -66,15 +68,16 @@ export default function DashboardSolutions() {
     <StyledWrapper>
       <div className="container">
         <div className="dashboard-solutions-header">
-          <p className="dashboard-solutions-header-super">Our Solutions</p>
+          <p className="dashboard-solutions-header-super">
+            {t("solutions.super-h2")}
+          </p>
 
           <div className="solution-title-container">
             <TitleFrame>
-              {/* {t("solutions.h1")} */}
               <div className="solution-title-wrapper">
                 <h2>
-                  Answer Your Business Complexity with
-                  <span> Our Solution</span>
+                  {t("solutions.h2")}
+                  <span> {t("solutions.h2-colored")}</span>
                 </h2>
 
                 <Image
@@ -101,7 +104,8 @@ export default function DashboardSolutions() {
             </div>
           </div>
           <p className="dashboard-solutions-header-sub">
-            Safe, economical <span>and</span> according to your business
+            {t("solutions.sub-start")} <span>{t("solutions.sub")}</span>{" "}
+            {t("solutions.sub-end")}
           </p>
         </div>
 

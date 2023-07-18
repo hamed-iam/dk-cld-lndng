@@ -8,6 +8,7 @@ import SvgIcon from "../SvgIcon";
 import "swiper/css";
 import "swiper/css/pagination";
 import StyledWrapper from "./productDefineSection.style";
+import { useTranslation } from "react-i18next";
 
 type Card = {
   title: string;
@@ -35,6 +36,7 @@ export default function DefineSection({
   desc,
 }: DefineProductProps) {
   const swiperRef = useRef<any>();
+  const { t } = useTranslation("edge-services");
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -80,20 +82,22 @@ export default function DefineSection({
             </span>
           </h1>
           <h2 className="product-desc-subheading">
-            For{" "}
+            {t("define.subheading")}{" "}
             <span className="highlight">
-              <span className="highlight-word">All-Sized </span>
-              Companies
+              <span className="highlight-word">
+                {t("define.subheading-highlight")}{" "}
+              </span>
+              {t("define.subheading-highlight-word")}
             </span>
           </h2>
           <p className="product-desc-subdesc">{desc}</p>
 
           <div className="product-desc-actions">
             <Button type="primary" className="start-btn">
-              Get Started
+              {t("define.action-start")}
             </Button>
             <Button className="contact-btn">
-              Contact Us
+              {t("define.action-contact")}
               <SvgIcon title="contactArrowIcon" viewBox="0 0 24 24" />
             </Button>
           </div>

@@ -12,8 +12,8 @@
     "super-section": "Our Products",
     "super-h1": "Our Products",
     "h1-cloud-c": "CLOUD COMPUTING",
-    "h1-cloud-e": "Edge Services",
-    "h1-cloud-o": "Object Storage",
+    "h1-cloud-e": "EDGE SERVICES",
+    "h1-cloud-o": "OBJECT STORAGE",
     "sub-h1-c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "sub-h1-e": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "sub-h1-o": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -27,6 +27,9 @@
     "chart-bar-info":"Comparing Retail Rate in Last 2 Season",
     "chart-bar-sub":"sub content",
     "features-title": "Features",
+    "tab-c":"CLOUD COMPUTING",
+    "tab-e":"OBJECT STORAGE",
+    "tab-o":"EDGE SERVICES",
     "panels": [
       {
         "header": "header",
@@ -53,7 +56,6 @@
         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       }
     ]
-
   },
   "about": {
     "super-h1": "The Team",
@@ -80,7 +82,109 @@
     "super-h1": "Our Solutions",
     "h1": "Save More",
     "sub-h1": "Economic and Reliable",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "contact":"Have any question?",
+    "contact-link":"Contact Us",
+    "panel":[
+      {
+        "header": "Pay as you go",
+        "desc": "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "tags": ["Object Storage", "Cloud Computing"]
+      },
+      {
+        "header": "Packages",
+        "desc": "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "tags": ["Object Storage", "Cloud Computing"]
+      }
+    ]
+  },
+  "solutions": {
+    "super-h2":"Our Solutions",
+    "h2-normal": "Answer Your Business Complexity with",
+    "h2-colored": "Our Solution",
+    "sub-start": "Safe, economical",
+    "sub": "and",
+    "sub-end": "according to your business",
+    "tabs": {
+      "retail": {
+        "label": "Retail",
+        "panel": [
+          {
+            "h3": "Retail Panel 1",
+            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "Retail Panel 2",
+            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          }
+        ]
+      },
+      "finance": {
+        "label": "Financial Services",
+        "panel": [
+          {
+            "h3": "Financial Services Panel 1",
+            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "Financial Services Panel 2",
+            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          }
+        ]
+      },
+      "media": {
+        "label": "Media and Entertainment",
+        "panel": [
+          {
+            "h3": "Media Panel 1",
+            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "Media Panel 2",
+            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          }
+        ]
+      },
+      "education": {
+        "label": "Education",
+        "panel": [
+          {
+            "h3": "Education Panel 1",
+            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "Education Panel 2",
+            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          }
+        ]
+      },
+      "health": {
+        "label": "Health and Medical",
+        "panel": [
+          {
+            "h3": "Health and Medical Panel 1",
+            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "Health and Medical Panel 2",
+            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          }
+        ]
+      },
+      "others": {
+        "label": "All Solutions",
+        "panel": [
+          {
+            "h3": "All Solutions Panel 1",
+            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "All Solutions Panel 2",
+            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          }
+        ]
+      }
+    }
   },
   "scenarios": {
     "h1": "Top 5 business scenarios for Digicloud"
@@ -117,8 +221,18 @@
   },
   "customers": {
     "super-h1": "Fabulous Clients",
-    "h1": "Speed up your infrastructure with digiclould",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    "h1-start": "Speed up ",
+    "h1-a": " with ",
+    "h1-b": " your infrastructure with ",
+    "h1-end": "digiclould",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "cta": {
+      "h4": "Focus on running your business, ",
+      "h4-span": "rather than maintenance your infrastructure",
+      "desc":"Desc",
+      "action-account": "Create Digicloud Account",
+      "action-more": "More About Us"
+    }
   },
   "easy-acc": {
     "h1": "Easy Access To All Products",
@@ -128,7 +242,9 @@
   },
   "share": {
     "super-h1": "Download and share",
-    "h1": "Share with your team",
-    "desc": "Everything you need to know is provided in a PDF file and you can download and share it with your teammates"
+    "h1-start": "Share ",
+    "h1": " with your team",
+    "desc": "Everything you need to know is provided in a PDF file and you can download and share it with your teammates",
+    "action": "Download PDF File"
   }
 }

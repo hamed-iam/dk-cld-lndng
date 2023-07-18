@@ -157,12 +157,9 @@ export default styled.div(
             display: flex;
             align-items: center;
             justify-content: center;
-            background: -webkit-linear-gradient(
-              8deg,
-              #cb5ff2 0.2%,
-              #ff5a82 84.73%
-            );
+            background: linear-gradient(8deg, #cb5ff2 0.2%, #ff5a82 84.73%);
             background-clip: text;
+            -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             padding: 6px 0 10px 0;
             font-weight: 400;

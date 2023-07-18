@@ -1,5 +1,6 @@
 import { Collapse } from "antd";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 interface EdgeServicesContentPropsType {
   onPanelChange: (panel: string[] | string) => void;
@@ -26,6 +27,7 @@ export default function EdgeServicesContent({
   onPanelChange,
   activePanel,
 }: EdgeServicesContentPropsType) {
+  const { t } = useTranslation("common");
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -45,38 +47,44 @@ export default function EdgeServicesContent({
           <Panel
             header={
               <div className="panel-header">
-                <h3>Edge Services 1</h3>
-                {activePanel.panel1.isHeaderSumShow && <p>{text}</p>}
+                <h3>{t("faq.tabs.edge.questions.0.problem")}</h3>
+                {activePanel.panel1.isHeaderSumShow && (
+                  <p>{t("faq.tabs.edge.questions.0.solution")}</p>
+                )}
               </div>
             }
             key="1"
             style={panelStyle}
           >
-            <p>{text}</p>
+            <p>{t("faq.tabs.edge.questions.0.solution")}</p>
           </Panel>
           <Panel
             header={
               <div className="panel-header">
-                <h3>Edge Services 2</h3>
-                {activePanel.panel2.isHeaderSumShow && <p>{text}</p>}
+                <h3>{t("faq.tabs.edge.questions.1.problem")}</h3>
+                {activePanel.panel2.isHeaderSumShow && (
+                  <p>{t("faq.tabs.edge.questions.1.solution")}</p>
+                )}
               </div>
             }
             key="2"
             style={panelStyle}
           >
-            <p>{text}</p>
+            <p>{t("faq.tabs.edge.questions.1.solution")}</p>
           </Panel>
           <Panel
             header={
               <div className="panel-header">
-                <h3>Edge Services 3</h3>
-                {activePanel.panel3.isHeaderSumShow && <p>{text}</p>}
+                <h3>{t("faq.tabs.edge.questions.2.problem")}</h3>
+                {activePanel.panel3.isHeaderSumShow && (
+                  <p>{t("faq.tabs.edge.questions.2.solution")}</p>
+                )}
               </div>
             }
             key="3"
             style={panelStyle}
           >
-            <p>{text}</p>
+            <p>{t("faq.tabs.edge.questions.2.solution")}</p>
           </Panel>
         </Collapse>
       </div>
@@ -92,50 +100,44 @@ export default function EdgeServicesContent({
           <Panel
             header={
               <div className="panel-header">
-                <h3>Edge Services 4</h3>
-                {activePanel.panel4.isHeaderSumShow && <p>{text}</p>}
+                <h3>{t("faq.tabs.edge.questions.3.problem")}</h3>
+                {activePanel.panel4.isHeaderSumShow && (
+                  <p>{t("faq.tabs.edge.questions.3.solution")}</p>
+                )}
               </div>
             }
             key="4"
             style={panelStyle}
           >
-            <p>{text}</p>
+            <p>{t("faq.tabs.edge.questions.3.solution")}</p>
           </Panel>
           <Panel
             header={
               <div className="panel-header">
-                <h3>Edge Services 5</h3>
-                {activePanel.panel5.isHeaderSumShow && <p>{text}</p>}
+                <h3>{t("faq.tabs.edge.questions.4.problem")}</h3>
+                {activePanel.panel5.isHeaderSumShow && (
+                  <p>{t("faq.tabs.edge.questions.4.solution")}</p>
+                )}
               </div>
             }
             key="5"
             style={panelStyle}
           >
-            <p>{text}</p>
+            <p>{t("faq.tabs.edge.questions.4.solution")}</p>
           </Panel>
           <Panel
             header={
               <div className="panel-header">
-                <h3>Edge Services 6</h3>
-                {activePanel.panel6.isHeaderSumShow && <p>{text}</p>}
+                <h3>{t("faq.tabs.edge.questions.5.problem")}</h3>
+                {activePanel.panel6.isHeaderSumShow && (
+                  <p>{t("faq.tabs.edge.questions.5.solution")}</p>
+                )}
               </div>
             }
             key="6"
             style={panelStyle}
           >
-            <p>{text}</p>
-          </Panel>
-          <Panel
-            header={
-              <div className="panel-header">
-                <h3>Edge Services 7</h3>
-                {activePanel.panel7.isHeaderSumShow && <p>{text}</p>}
-              </div>
-            }
-            key="7"
-            style={panelStyle}
-          >
-            <p>{text}</p>
+            <p>{t("faq.tabs.edge.questions.5.solution")}</p>
           </Panel>
         </Collapse>
       </div>

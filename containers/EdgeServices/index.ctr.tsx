@@ -10,6 +10,29 @@ import { SolutionsSection, ProductDefineSection } from "@/components";
 const EdgeServicesCtr = () => {
   const { t } = useTranslation("edge-services");
 
+  const edgeDefineCards = [
+    {
+      title: t("define.features.0.title"),
+      desc: t("define.features.0.desc"),
+    },
+    {
+      title: t("define.features.1.title"),
+      desc: t("define.features.1.desc"),
+    },
+    {
+      title: t("define.features.2.title"),
+      desc: t("define.features.2.desc"),
+    },
+    {
+      title: t("define.features.3.title"),
+      desc: t("define.features.3.desc"),
+    },
+    {
+      title: t("define.features.4.title"),
+      desc: t("define.features.4.desc"),
+    },
+  ];
+
   const solutionsCards = [
     {
       title: "title1",
@@ -96,10 +119,10 @@ const EdgeServicesCtr = () => {
   return (
     <StyledWrapper>
       <ProductDefineSection
-        cards={[]}
-        superTitle="Edge Services Product"
-        title="Edge Services"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        cards={edgeDefineCards}
+        superTitle={t("define.super-h1")}
+        title={t("define.h1")}
+        desc={t("define.desc")}
         icon={{
           title: "edgeServicesPageIcon",
           viewBox: "0 0 72 72",
@@ -107,8 +130,8 @@ const EdgeServicesCtr = () => {
       />
 
       <EdgeFeaturesSection
-        superTitle={t("feature-section.super")}
-        desc={t("feature-section.desc")}
+        superTitle={t("protect.super-h1")}
+        desc={t("protect.sub")}
       />
       <SolutionsSection cards={solutionsCards} />
       <SuccessStory

@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import StyleWrapper from "./successStory.style";
+import { useTranslation } from "react-i18next";
 
 type Card = {
   title: string;
@@ -37,6 +38,7 @@ export default function SuccessStorySection({
 }: SuccessStorySectionPropType) {
   const swiperRef = useRef<any>();
   const [isMobile, setIsMobile] = useState(false);
+  const { t } = useTranslation("oss");
 
   // ! better solution needed.
   useEffect(() => {
@@ -57,15 +59,13 @@ export default function SuccessStorySection({
       <div className="container">
         <div className="success-header">
           <div className="success-header-super">
-            <p>Did You Know?</p>
+            <p>{t("success-story.super-h3")}</p>
           </div>
-          <h3 className="success-header-superMain">
-            Know about Customers Using
-          </h3>
+          <h3 className="success-header-superMain">{t("success-story.h3")}</h3>
           <h2 className="success-header-main">{mainTitle}</h2>
           <p className="success-header-desc">{desc}</p>
           <Link href="/about">
-            Request fo Call Back{" "}
+            {t("success-story.link")}{" "}
             <SvgIcon title="contactArrowIcon" viewBox="0 0 24 24" />
           </Link>
         </div>
@@ -76,12 +76,7 @@ export default function SuccessStorySection({
           transition={{ duration: 0.5 }}
           className="image-wrapper"
         >
-          <Image
-            src={imageSrc}
-            width="373"
-            height="333"
-            alt=""
-          />
+          <Image src={imageSrc} width="373" height="333" alt="" />
         </motion.div>
       </div>
       <div className="success-content">

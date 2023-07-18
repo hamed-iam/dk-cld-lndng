@@ -22,23 +22,23 @@ export default function HelpSection({ superTitle, icon }: HelpSectionProps) {
   const cards = [
     {
       icon: { name: "mailIcon", viewBox: "0 0 40 40" },
-      title: t("help.cards.0.title"),
-      desc: t("help.cards.0.desc"),
-      footer: t("help.cards.0.footer"),
+      title: t("define.cards.0.title"),
+      desc: t("define.cards.0.desc"),
+      footer: t("define.cards.0.footer"),
       className: "card-first-bg",
     },
     {
       icon: { name: "phoneIcon", viewBox: "0 0 41 40" },
-      title: t("help.cards.1.title"),
-      desc: t("help.cards.1.desc"),
-      footer: t("help.cards.1.footer"),
+      title: t("define.cards.1.title"),
+      desc: t("define.cards.1.desc"),
+      footer: t("define.cards.1.footer"),
       className: "card-second-bg",
     },
     {
       icon: { name: "dateIcon", viewBox: "0 0 41 40" },
-      title: t("help.cards.2.title"),
-      desc: t("help.cards.2.desc"),
-      footer: t("help.cards.2.footer"),
+      title: t("define.cards.2.title"),
+      desc: t("define.cards.2.desc"),
+      footer: t("define.cards.2.footer"),
       className: "card-third-bg",
     },
   ];
@@ -49,25 +49,25 @@ export default function HelpSection({ superTitle, icon }: HelpSectionProps) {
         <div className="title-wrapper">
           <p className="title-wrapper-super">{superTitle}</p>
           <div className="title-wrapper-heading">
-            <span>{t("help.title.heading.0")}</span>
+            <span>{t("define.title.heading.0")}</span>
             <span className="title-icon">
               <SvgIcon title={icon.title} viewBox={icon.viewBox} />
             </span>
           </div>
           <h1>
-            {t("help.title.heading.1")}{" "}
+            {t("define.title.heading.1")}{" "}
             <span className="highlight">
               <span className="highlight-word">
-                {t("help.title.heading.2")}
+                {t("define.title.heading.2")}
               </span>
-              {t("help.title.heading.3")}
+              {t("define.title.heading.3")}
             </span>
           </h1>
           <div className="title-wrapper-sub">
             <span className="highlight">
-              {t("help.title.sub.0")}
-              <span className="highlight-word">{t("help.title.sub.1")}</span>
-              {t("help.title.sub.2")}
+              {t("define.title.sub.0")}
+              <span className="highlight-word">{t("define.title.sub.1")}</span>
+              {t("define.title.sub.2")}
             </span>
             <span>
               <SvgIcon title="medalIcon" viewBox="0 0 16 16" />

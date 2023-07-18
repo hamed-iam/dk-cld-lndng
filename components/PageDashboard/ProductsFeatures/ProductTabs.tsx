@@ -18,7 +18,6 @@ export default function ProductTabs({ activeTab }: ProductTabsPropTypes) {
   const config = [
     {
       key: 0,
-      superTitle: t("products.super-h1"),
       title: t("products.h1-cloud-c"),
       desc: t("products.sub-h1-c"),
       sub: t("products.info-sub"),
@@ -26,16 +25,14 @@ export default function ProductTabs({ activeTab }: ProductTabsPropTypes) {
     },
     {
       key: 1,
-      superTitle: "Test",
-      title: "Title",
+      title: t("products.h1-cloud-e"),
       desc: t("products.sub-h1-e"),
       sub: t("products.info-sub"),
       detailUrl: "",
     },
     {
       key: 2,
-      superTitle: "Test2",
-      title: "Title",
+      title: t("products.h1-cloud-o"),
       desc: t("products.sub-h1-o"),
       sub: t("products.info-sub"),
       detailUrl: "",
@@ -51,7 +48,6 @@ export default function ProductTabs({ activeTab }: ProductTabsPropTypes) {
             .map((entry, index) => (
               <div key={index}>
                 <ProductTab
-                  superTitle={entry.superTitle}
                   title={entry.title}
                   desc={entry.desc}
                   sub={entry.sub}

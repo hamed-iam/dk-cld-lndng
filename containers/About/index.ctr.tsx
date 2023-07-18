@@ -14,7 +14,7 @@ const AboutCtr = ({}: any) => {
   return (
     <StyledWrapper>
       <HelpSection
-        superTitle={t("help.title.super")}
+        superTitle={t("define.title.super")}
         icon={{
           title: "aboutHandIcon",
           viewBox: "0 0 72 72",

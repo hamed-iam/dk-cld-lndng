@@ -1,6 +1,7 @@
 import { Collapse } from "antd";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const { Panel } = Collapse;
 
@@ -49,6 +50,7 @@ const defaultState = {
 };
 
 export default function RetailTab() {
+  const { t } = useTranslation("dashboard");
   const [activePanel, setActivePanel] = useState(defaultState);
   const [openPanel, setOpenPanel] = useState<string[] | string>([]);
 
@@ -82,8 +84,10 @@ export default function RetailTab() {
           <Panel
             header={
               <div className="panel-header">
-                <h3>Retail Panel 1</h3>
-                {activePanel.panel1.isHeaderSumShow && <p>{text}</p>}
+                <h3>{t("solutions.tabs.retail.panel.0.h3")}</h3>
+                {activePanel.panel1.isHeaderSumShow && (
+                  <p>{t("solutions.tabs.retail.panel.0.text")}</p>
+                )}
               </div>
             }
             key="1"
@@ -94,8 +98,10 @@ export default function RetailTab() {
           <Panel
             header={
               <div className="panel-header">
-                <h3>Retail Panel 2</h3>
-                {activePanel.panel2.isHeaderSumShow && <p>{text}</p>}
+                <h3>{t("solutions.tabs.retail.panel.1.h3")}</h3>
+                {activePanel.panel2.isHeaderSumShow && (
+                  <p>{t("solutions.tabs.retail.panel.1.text")}</p>
+                )}
               </div>
             }
             key="2"

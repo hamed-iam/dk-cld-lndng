@@ -118,7 +118,7 @@ const Faq = ({ links, isNextStepShow = true, loc }: FaqPropsType) => {
                   currentTab === "cloud-computing" ? "active" : ""
                 }`}
               >
-                Cloud Computing
+                {t("faq.tabs.cloud.title")}
               </Button>
               <Button
                 onClick={() => handleFaqProductTabChange("oss")}
@@ -126,7 +126,7 @@ const Faq = ({ links, isNextStepShow = true, loc }: FaqPropsType) => {
                   currentTab === "oss" ? "active" : ""
                 }`}
               >
-                OSS Storage
+                {t("faq.tabs.oss.title")}
               </Button>
               <Button
                 onClick={() => handleFaqProductTabChange("edge-services")}
@@ -134,7 +134,7 @@ const Faq = ({ links, isNextStepShow = true, loc }: FaqPropsType) => {
                   currentTab === "edge-services" ? "active" : ""
                 }`}
               >
-                Edge Services
+                {t("faq.tabs.edge.title")}
               </Button>
             </div>
           </div>
@@ -168,8 +168,8 @@ const Faq = ({ links, isNextStepShow = true, loc }: FaqPropsType) => {
 
         <div className="faq-contact">
           <SvgIcon title="divingMaskIcon" viewBox="0 0 21 20" />
-          <p>Have any other question?</p>
-          <Link href="/about">Contact Us</Link>
+          <p>{t("faq.contact")}</p>
+          <Link href="/about">{t("faq.contact-link")}</Link>
         </div>
 
         {isNextStepShow && <NextStep onPointerMove={handlePointerMove} />}

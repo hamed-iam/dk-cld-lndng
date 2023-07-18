@@ -2,10 +2,10 @@
   "title": "دیجی کلاد",
   "hero": {
     "super-h1": "دیجی‌کلاد چیست؟",
-    "h1": "بیایید با هم زیرساخت بهتری بسازیم",
-    "sub-h1": "امن، اقتصادی و منطبق بر الویت‌های شما",
+    "h1": "زیرساخت یکپارچه ابری دیجی‌کلاد",
+    "sub-h1": "فناوری ابری امن‌تر - سریع‌تر - ارزران‌تر - در دسترس‌تر - پایدارتر از همیشه!",
     "actions": {
-      "create-account": "ساخت حساب کاربری دیجی‌کلاد"
+      "create-account": "عضو دیجی‌کلاد شوید"
     }
   },
   "products": {
@@ -13,26 +13,165 @@
     "h1-cloud-c": "پردازش ابری",
     "h1-cloud-e": "سرویس‌های Edge",
     "h1-cloud-o": "فضای ذخیره‌سازی",
-    "sub-h1": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد."
+    "sub-h1-c": "می‌خواهید تنها در چند دقیقه یک سرور ابری بسازید؟ با کمک فناوری پیشرفته دیجی‌کلاد می‌توانید تنها با چند کلیک، تمام نیازهای زیرساختی کسب‌و‌کار خود شامل سرور، IP تنظیمات شبکه و فایروال را راه‌اندازی کرده و در لحظه از آن استفاده کنید.",
+    "sub-h1-e": "سرویس شبکه توزیع محتوای دیجی‌کلاد (CDN) این امکان را در اختیارتان می‌گذارد تا خدمات و محتوای کسب‌و‌کارتان را در هر شرایطی، با سرعت و در امنیت کامل به دست کاربران‌تان در هر نقطه‌ای از جهان برسانید و کیفیت خدمات خود را بهبود ببخشید.",
+    "sub-h1-o": "با سرویس Object Storage دیجی‌کلاد می‌توانید اطلاعات متنوع وب‌سایت، داده‌های حجیم و بدون ساختار، فایل‌های آرشیوی مانند تصویر و فیلم و اسناد چندرسانه‌ای خود را در محیطی نامحدود، ایمن و منعطف ذخیره کنید و به اشتراک بگذارید.",
+    "info-action-create": "عضو دیجی‌کلاد شوید",
+    "info-action-details":"بیشتر بدانید",
+    "info-sub": "سوال دارید؟",
+    "info-sub-link": "تماس با ما",
+    "chart-donut-heading": ["4", "5"],
+    "chart-donut-info":"content of customer",
+    "chart-donut-sub":"sub content",
+    "chart-bar-info":"Comparing Retail Rate in Last 2 Season",
+    "chart-bar-sub":"sub content",
+    "features-title": "Features",
+    "tab-c":"پردازش ابری",
+    "tab-e":"فضای ذخیره‌سازی",
+    "tab-o":"سرویس‌های EDGE",
+    "panels": [
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
+    ]
   },
   "about": {
-    "super-h1": "تیم دیجی‌کلاد",
-    "h1": "درباره ما",
-    "sub-h1": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد."
+    "super-h1": "تیم ما",
+    "h1": "درباره دیجی‌کلاد",
+    "sub-h1": "دیجی‌کلاد، به عنوان یکی از شرکت‌های زیرمجموعه دیجی‌کالا، در سال ۱۳۹۹ و با هدف رفع نیازمندی‌های زیرساختی و ارائه پلتفرم ابری به دیجی‌کالا و شرکت‌های زیرمجموعه این هلدینگ تاسیس شد. از آن زمان تا امروز، دیجی‌کلاد ماموریت دارد تا در مسیر رشد و توسعه خود نیازهای سایر مشتریان در حوزه‌های زیرساخت یکپارچه ابری را رفع کند.",
+    "action": "بیشتر بدانید",
+    "link": [
+      {
+        "title": "نیاز به مشاوره دارید؟",
+        "link": "با ما تماس بگیرید"
+      },
+      {
+        "title": "اشتراک دیجی‌کلاد ندارید؟",
+        "link": "ثبت نام کنید"
+      },
+      {
+        "title": "درخواست مشاهده دمو دارید؟",
+        "link": "درخواست‌ دهید"
+      }
+    ],
+    "tag": ["دوستانه", "حامی", "حرفه ای"]
   },
   "save": {
-    "super-h1": "راه‌حل‌های ما",
-    "h1": "بیشتر پس‌انداز کنید",
+    "super-h1": "راهکارهای ما",
+    "h1": "به سرویس اختصاصی نیاز دارید؟",
     "sub-h1": "قابل اعتماد و اقتصادی",
-    "desc": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است."
+    "desc": "شما می‌توانید با ثبت درخواست در دیجی‌کلاد، سرویس‌هایی سفارشی‌سازی شده و متناسب با سازمان خود دریافت کنید.",
+    "contact":"به سرویس سفارشی‌سازی شده نیاز دارید؟",
+    "contact-link":"درخواست خود را ثبت کنید",
+    "panel":[
+      {
+        "header": "تنها به اندازه مصرف‌تان پرداخت کنید",
+        "desc": "یکی از مهم‌ترین مزایای استفاده از خدمات دیجی‌کلاد، امکان استفاده از سرویس‌های سفارشی‌سازی شده است که منطبق بر نیاز کسب‌وکار شما طراحی می‌شوند. به این ترتیب، شما تنها بر اساس نیاز و اندازه کسب‌وکارتان هزینه می‌کنید.",
+        "tags": ["Object Storage", "Cloud Computing"]
+      },
+      {
+        "header": "بسته‌ها و خدمات",
+        "desc": "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "tags": ["Object Storage", "Cloud Computing"]
+      }
+    ]
+  },
+  "solutions": {
+    "super-h2":"راهکارهای ابری دیجی‌کلاد",
+    "h2": "ارائه راه‌حل‌های پیشرفته برای",
+    "h2-colored": "انواع کسب‌وکار",
+    "sub-start": "Safe, economical",
+    "sub": "and",
+    "sub-end": "according to your business",
+    "tabs": {
+      "industry": {
+        "label": "Retail",
+        "panel": [
+          {
+            "h3": "Retail Panel 1",
+            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "Retail Panel 2",
+            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          }
+        ]
+      },
+      "application": {
+        "label": "Financial Services",
+        "panel": [
+          {
+            "h3": "Financial Services Panel 1",
+            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "Financial Services Panel 2",
+            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          }
+        ]
+      },
+      "scale": {
+        "label": "Media and Entertainment",
+        "panel": [
+          {
+            "h3": "Media Panel 1",
+            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "Media Panel 2",
+            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          }
+        ]
+      }
+    }
   },
   "scenarios": {
     "h1": "۵ تا از بهترین سناریو‌های کسب‌و‌کار برای دیجی‌کلاد"
   },
   "security": {
     "super-h1": "امنیت",
-    "h1": " در دیجی‌کلاد ایمن دیپلوی کنید",
-    "sub-h1": "در مورد ویژگی‌ها سوالی دارید؟"
+    "h1": "با خیال راحت ابری شوید",
+    "sub-h1": "درباره امکانات دیجی‌کلاد سوال دارید؟",
+    "link": "با ما تماس بگیرید",
+    "data": [
+      {
+        "title":"۵ میلیون",
+        "sub":"درخواست در دقیقه"
+      },
+      {
+        "title":"1 K",
+        "sub":"DDoS attack blocked per day"
+      },
+      {
+        "title":"770 K",
+        "sub":"SSL certificates worldwide"
+      },
+      {
+        "title":"1.56 M",
+        "sub":"Vulnerabilities fixed per day "
+      }
+    ]
   },
   "cli": {
     "super-h1": "رابط‌های کاربری",
@@ -42,8 +181,18 @@
   },
   "customers": {
     "super-h1": "مشتریان شگفت‌انگیز",
-    "h1": "به زیرساخت خود سرعت ببخشید با دیجی‌کلاد",
-    "desc": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد."
+    "h1-start": " شرکت‌های بزرگی ",
+    "h1-a": "که به",
+    "h1-b": "دیجی‌کلاد",
+    "h1-end": "اعتماد کرده‌اند",
+    "desc": "افتخار داریم که تا امروز میزبان تعدادی از کسب‌وکارهای بزرگ و خوش‌نام ایرانی بوده‌ایم و در کنارشان رشد و پیشرفت را تجربه کردیم.",
+    "cta": {
+      "h4": "یک کلیک تا ابری شدن",
+      "h4-span": "",
+      "desc": "متخصصان و کارشناسان دیجی‌کلاد جهت پاسخگویی به پرسش‌های شما، در هر مرحله از راه‌اندازی و استفاده از زیرساخت ابری در کنارتان هستند.",
+      "action-account": "عضو دیجی‌کلاد شوید",
+      "action-more": "بیشتر بدانید"
+    }
   },
   "easy-acc": {
     "h1": "دسترسی سریع به محصولات",
@@ -52,8 +201,10 @@
     "oss-opt": "فضای ذخیره‌سازی"
   },
   "share": {
-    "super-h1": "Download and share",
-    "h1": "با اعضای تیم به اشتراک بگذارید",
-    "desc": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون."
+    "super-h1": "مستندات دیجی‌کلاد",
+    "h1-start": "در دسترس ",
+    "h1": "همه اعضای تیم",
+    "desc": "مجموعه مستندات دیجی‌کلاد به شما کمک می‌کند تا با شیوه کار هر محصول از ابتدا تا انتها آشنا شوید تا بتوانید بدون دغدغه کسب‌وکار خود را مدیریت کنید.",
+    "action": "مستندات فنی"
   }
 }

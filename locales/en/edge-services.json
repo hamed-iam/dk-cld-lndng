@@ -1,15 +1,39 @@
 {
-  "h1": "Edge Services",
-  "title": "DigiCloud | Edge Services",
-  "feature-section": {
-    "super": "Solutions",
-    "title": {
-      "h1": "Protect",
-      "rest": "Your Business",
-      "subheading": "by Using",
-      "subheading-highlight": "Edge Services"
-    },
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+  "define": {
+    "super-h1": "Edge Service Product",
+    "h1": "Edge Services",
+    "subheading": "For",
+    "subheading-highlight": "All-Sized",
+    "subheading-highlight-word": "Companies",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "action-start": "Get Started",
+    "action-contact": "Contact Us",
+    "features": [
+      {
+        "title": "DNS record",
+        "desc": "This is detail of cell,This is detail of cell,This is detail of cell"
+      },
+      {
+        "title": "WAF",
+        "desc": "2 is detail of cell,This is detail of cell,This is detail of cell"
+      },
+      {
+        "title": "Location",
+        "desc": "This is detail of cell,This is detail of cell,This is detail of cell"
+      },
+      {
+        "title": "Cluster",
+        "desc": "This is detail of cell,This is detail of cell,This is detail of cell"
+      }
+    ]
+  },
+  "protect": {
+    "super-h1": "Solutions",
+    "h1-bold": "Solutions",
+    "h1": "Solutions",
+    "h2": "Solutions",
+    "h2-colored": "Solutions",
+    "sub": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
     "features": [
       {
         "name": "DNS record",
@@ -99,5 +123,11 @@
       "view-more": "View More",
       "view-less": "View Less"
     }
+  },
+  "usecases":{
+    "super-h1": "Guidance",
+    "h1": "Use Cases In",
+    "h2": "Edge Services",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   }
 }

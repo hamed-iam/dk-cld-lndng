@@ -1,28 +1,40 @@
 import SvgIcon from "@/components/SvgIcon";
+import { useTranslation } from "react-i18next";
 import StyledWrapper from "./benefitsSection.style";
 import OssBenefitCard from "./OssBenefitsCard";
 
 export default function OssBenefitsSection() {
+  const { t } = useTranslation("oss");
   const cards = [
     {
       icon: { name: "spaceshipEmojiIcon", viewBox: "0 0 48 48" },
-      title: "Excellent Performance",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      title: t("benefits.cards.0.title"),
+      desc: t("benefits.cards.0.desc"),
     },
     {
       icon: { name: "flyingSaucerEmojiIcon", viewBox: "0 0 48 48" },
-      title: "Valid Referrer",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      title: t("benefits.cards.1.title"),
+      desc: t("benefits.cards.1.desc"),
     },
     {
       icon: { name: "diamondEmojiIcon", viewBox: "0 0 48 48" },
-      title: "CORS (Cross Origin Resource)",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      title: t("benefits.cards.2.title"),
+      desc: t("benefits.cards.2.desc"),
     },
     {
       icon: { name: "robotIcon", viewBox: "0 0 32 32" },
-      title: "Diffrent Storage Classes",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      title: t("benefits.cards.3.title"),
+      desc: t("benefits.cards.3.desc"),
+    },
+    {
+      icon: { name: "diamondEmojiIcon", viewBox: "0 0 48 48" },
+      title: t("benefits.cards.4.title"),
+      desc: t("benefits.cards.4.desc"),
+    },
+    {
+      icon: { name: "robotIcon", viewBox: "0 0 32 32" },
+      title: t("benefits.cards.5.title"),
+      desc: t("benefits.cards.5.desc"),
     },
   ];
 
@@ -30,17 +42,14 @@ export default function OssBenefitsSection() {
     <StyledWrapper>
       <div className="container">
         <div className="title-wrapper">
-          <p className="title-wrapper-super">Benefits and Solutions</p>
+          <p className="title-wrapper-super">{t("benefits.super-h3")}</p>
           <h3>
-            <span>Benefits</span> of Object Storage
+            <span>{t("benefits.h3-colored")}</span> {t("benefits.h3")}
           </h3>
-          <h2>for Business</h2>
+          <h2>{t("benefits.h2")}</h2>
 
           <div className="title-wrapper-sub">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et
-            </p>
+            <p>{t("benefits.sub")}</p>
             <SvgIcon title="arrowCloudBenefitsIcon" viewBox="0 0 70 78" />
           </div>
         </div>

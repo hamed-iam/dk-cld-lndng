@@ -20,7 +20,7 @@ export default function EdgeFeaturesTable() {
   const columns: ColumnsType<EdgeFeatureProps> = [
     {
       key: "feature",
-      title: <div className="">{t("feature-section.table.0.title")}</div>,
+      title: <div className="">{t("define.table.0.title")}</div>,
       dataIndex: "name",
       width: "219px",
       render: (text: string, record: any, index: number) => {
@@ -34,7 +34,7 @@ export default function EdgeFeaturesTable() {
     },
     {
       key: "desc",
-      title: t("feature-section.table.1.title"),
+      title: t("define.table.1.title"),
       dataIndex: "desc",
       width: "670px",
       render: (text: string, record: any, index: number) => {
@@ -48,7 +48,7 @@ export default function EdgeFeaturesTable() {
     },
     {
       key: "bestFor",
-      title: t("feature-section.table.2.title"),
+      title: t("define.table.2.title"),
       dataIndex: "bestFor",
       width: "211px",
       render: (text: string, record: any, index: number) => {
@@ -65,51 +65,51 @@ export default function EdgeFeaturesTable() {
   const records: EdgeFeatureProps[] = [
     {
       key: 0,
-      name: t("feature-section.features.0.name"),
-      desc: t("feature-section.features.0.desc"),
-      bestFor: t("feature-section.features.0.bestFor"),
+      name: t("define.features.0.name"),
+      desc: t("define.features.0.desc"),
+      bestFor: t("define.features.0.bestFor"),
     },
     {
       key: 1,
-      name: t("feature-section.features.1.name"),
-      desc: t("feature-section.features.1.desc"),
-      bestFor: t("feature-section.features.1.bestFor"),
+      name: t("define.features.1.name"),
+      desc: t("define.features.1.desc"),
+      bestFor: t("define.features.1.bestFor"),
     },
     {
       key: 2,
-      name: t("feature-section.features.2.name"),
-      desc: t("feature-section.features.2.desc"),
-      bestFor: t("feature-section.features.2.bestFor"),
+      name: t("define.features.2.name"),
+      desc: t("define.features.2.desc"),
+      bestFor: t("define.features.2.bestFor"),
     },
     {
       key: 3,
-      name: t("feature-section.features.3.name"),
-      desc: t("feature-section.features.3.desc"),
-      bestFor: t("feature-section.features.3.bestFor"),
+      name: t("define.features.3.name"),
+      desc: t("define.features.3.desc"),
+      bestFor: t("define.features.3.bestFor"),
     },
     {
       key: 4,
-      name: t("feature-section.features.4.name"),
-      desc: t("feature-section.features.4.desc"),
-      bestFor: t("feature-section.features.4.bestFor"),
+      name: t("define.features.4.name"),
+      desc: t("define.features.4.desc"),
+      bestFor: t("define.features.4.bestFor"),
     },
     {
       key: 5,
-      name: t("feature-section.features.5.name"),
-      desc: t("feature-section.features.5.desc"),
-      bestFor: t("feature-section.features.5.bestFor"),
+      name: t("define.features.5.name"),
+      desc: t("define.features.5.desc"),
+      bestFor: t("define.features.5.bestFor"),
     },
     {
       key: 6,
-      name: t("feature-section.features.6.name"),
-      desc: t("feature-section.features.6.desc"),
-      bestFor: t("feature-section.features.6.bestFor"),
+      name: t("define.features.6.name"),
+      desc: t("define.features.6.desc"),
+      bestFor: t("define.features.6.bestFor"),
     },
     {
       key: 7,
-      name: t("feature-section.features.7.name"),
-      desc: t("feature-section.features.7.desc"),
-      bestFor: t("feature-section.features.7.bestFor"),
+      name: t("define.features.7.name"),
+      desc: t("define.features.7.desc"),
+      bestFor: t("define.features.7.bestFor"),
     },
   ];
 
