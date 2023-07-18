@@ -1,5 +1,6 @@
 import { Control, Controller } from "react-hook-form";
 import { Input } from "antd";
+import { useTranslation } from "react-i18next";
 
 interface RHFInputFieldProps {
   control: Control<any>;
@@ -9,12 +10,14 @@ interface RHFInputFieldProps {
 }
 
 const RHFInputField = (props: RHFInputFieldProps) => {
+  const { t } = useTranslation("common");
+  const errorMsg = t("form.error");
   return (
     <Controller
       control={props.control}
       name={props.name}
       rules={{
-        required: "This field is required",
+        required: errorMsg,
       }}
       render={({ field, fieldState }) => {
         return (
@@ -37,8 +40,12 @@ const RHFInputField = (props: RHFInputFieldProps) => {
 
             <br />
             {fieldState.error ? (
-              <span style={{ color: "red" }}>{fieldState.error?.message}</span>
+              <span style={{ color: "red", minWidth: "120px" }}>
+                {fieldState.error?.message}
+                <br />
+              </span>
             ) : null}
+            <br />
           </>
         );
       }}

@@ -1,11 +1,11 @@
 {
   "h1": "Cloud Computing",
   "title": "DigiCloud | Cloud Computing",
+  "desc" : "You Can Choose Different Storage ClassesYou Can Choose Different Storage Classes You Can Choose Diffrent Storage Classes",
   "define": {
-    "super-h1": "",
-    "h1": "Cloud Computing",
-    "sub-h1": ["For", " All-Sized ", "Companies"],
     "desc": "You Can Choose Different Storage ClassesYou Can Choose Different Storage Classes You Can Choose Diffrent Storage Classes",
+    "action-contact": "Contact Us",
+    "action-start": "Get Start",
     "cards": [
       {
         "title": "Easy to use",
@@ -49,5 +49,44 @@
         "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore"
       }
     ]
+  },
+  "success": {
+    "h2": "Object Storage",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+    "cards":[
+      {
+        "title": "eCommerce Solution",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
+      },
+      {
+        "title": "eCommerce Solution",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
+      },
+      {
+        "title": "eCommerce Solution",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
+      },
+      {
+        "title": "eCommerce Solution",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
+      },
+      {
+        "title": "eCommerce Solution",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
+      },
+      {
+        "title": "eCommerce Solution",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
+      },
+      {
+        "title": "eCommerce Solution",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
+      }
+    ]
+  },
+  "usecases":{
+    "super-h1": "Guidance",
+    "h1": "Use Cases In",
+    "h2": "Edge Services"
   }
 }

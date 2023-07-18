@@ -20,7 +20,7 @@ export default styled.div(
       border: 1px solid #09091a;
       .container {
         margin-inline: auto;
-        width: min(90%, 100rem);
+        width: min(90%, 74rem);
         margin-top: calc(24px + (80 - 24) * ((100vw - 320px) / (1920 - 320)));
         margin-bottom: calc(
           24px + (80 - 24) * ((100vw - 320px) / (1920 - 320))
@@ -97,7 +97,7 @@ export default styled.div(
         }
       }
       .success-content {
-        width: min(90%, 100rem);
+        width: min(90%, 74rem);
         margin-inline: auto;
 
         .swiper-button-prev {
@@ -183,6 +183,10 @@ export const SuccessStoryCardStyledWrapper = styled.div(
       padding: 5%;
       max-width: 421px;
       min-height: 209px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       h3 {
         color: ${DarkTextLightHighest};
         font-weight: 700;

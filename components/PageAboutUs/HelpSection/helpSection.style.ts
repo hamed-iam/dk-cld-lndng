@@ -24,7 +24,7 @@ export default styled.div(
 
       .container {
         margin-inline: auto;
-        width: min(90%, 100rem);
+        width: min(90%, 74rem);
         margin-top: calc(24px + (80 - 24) * ((100vw - 320px) / (1920 - 320)));
         margin-bottom: calc(
           24px + (80 - 24) * ((100vw - 320px) / (1920 - 320))

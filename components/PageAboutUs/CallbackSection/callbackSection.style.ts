@@ -110,11 +110,9 @@ export default styled.div(
           width: 100%;
         }
         Input {
-          margin-bottom: 20px;
           padding: 8px, 16px, 8px, 16px;
         }
         TextArea {
-          margin-bottom: 20px;
           padding: 8px, 16px, 8px, 16px;
         }
         .form-label {

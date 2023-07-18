@@ -5,6 +5,7 @@ export default styled.div(
   ({
     theme: {
       colors: { LightNatural100 },
+      locale,
     },
   }: ThemeStyledProps) => {
     return css`
@@ -50,6 +51,7 @@ export default styled.div(
           .icon {
             width: 32px;
             height: 32px;
+            transform: rotate(${locale === "fa" ? "180deg" : "0deg"});
           }
 
           .create-account-btn {

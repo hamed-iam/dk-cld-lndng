@@ -38,7 +38,7 @@ export default function SuccessStorySection({
 }: SuccessStorySectionPropType) {
   const swiperRef = useRef<any>();
   const [isMobile, setIsMobile] = useState(false);
-  const { t } = useTranslation("oss");
+  const { t } = useTranslation("common");
 
   // ! better solution needed.
   useEffect(() => {

@@ -1,8 +1,6 @@
 import styled, { css } from "styled-components";
 import { ThemeStyledProps } from "@/styles/themes";
-const something = () =>{
-
-}
+const something = () => {};
 
 export default styled.div(
   ({
@@ -37,7 +35,7 @@ export default styled.div(
 
       .container {
         margin-inline: auto;
-        width: min(90%, 100rem);
+        width: min(90%, 74rem);
         display: flex;
         flex-wrap: wrap-reverse;
         justify-content: space-between;

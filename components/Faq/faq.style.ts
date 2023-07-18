@@ -16,6 +16,7 @@ export default styled.div(
         DarkTextLightHigh,
         DarkNatural300,
       },
+      locale,
     },
   }: ThemeStyledProps) => {
     return css`
@@ -346,6 +347,7 @@ export default styled.div(
             svg {
               fill: ${LightThemePrimary600};
             }
+            transform: rotate(${locale === "fa" ? "180deg" : "0deg"});
           }
         }
       }

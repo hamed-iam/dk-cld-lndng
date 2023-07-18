@@ -12,6 +12,7 @@ export default styled.div(
         LightThemeSuccess800,
         DarkTextLow,
       },
+      locale,
     },
   }: ThemeStyledProps) => {
     return css`
@@ -20,7 +21,7 @@ export default styled.div(
       align-items: center;
       margin: 24px 0;
       .container {
-        width: min(90%, 100rem);
+        width: min(90%, 74rem);
         height: 100%;
         margin-inline: auto;
 
@@ -81,6 +82,7 @@ export const ConfigFlavorsStyledWrapper = styled.div(
         LightBGGrade3,
         LightThemePrimary800,
       },
+      locale,
     },
   }: ThemeStyledProps) => {
     return css`
@@ -92,7 +94,7 @@ export const ConfigFlavorsStyledWrapper = styled.div(
 
       .config-wrapper {
         &-banner {
-          transition: all .5s ease-in-out;
+          transition: all 0.5s ease-in-out;
           &.general {
             background-image: url("/assets/config.png");
           }
@@ -188,6 +190,7 @@ export const ConfigFlavorsStyledWrapper = styled.div(
             .icon {
               width: 18px;
               height: 18px;
+              transform: rotate(${locale === "fa" ? "180deg" : "0deg"});
             }
           }
         }

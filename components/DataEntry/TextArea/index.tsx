@@ -1,5 +1,6 @@
 import { Control, Controller } from "react-hook-form";
 import { Input } from "antd";
+import { useTranslation } from "react-i18next";
 
 interface RHFTextAreaProps {
   control: Control<any>;
@@ -11,12 +12,14 @@ interface RHFTextAreaProps {
 const { TextArea } = Input;
 
 const RHFTextArea = (props: RHFTextAreaProps) => {
+  const { t } = useTranslation("common");
+  const errorMsg = t("form.error");
   return (
     <Controller
       control={props.control}
       name={props.name}
       rules={{
-        required: "This field is required",
+        required: errorMsg,
       }}
       render={({ field, fieldState }) => {
         return (
@@ -41,7 +44,10 @@ const RHFTextArea = (props: RHFTextAreaProps) => {
 
             <br />
             {fieldState.error ? (
-              <span style={{ color: "red" }}>{fieldState.error?.message}</span>
+              <span style={{ color: "red" }}>
+                {fieldState.error?.message}
+                <br />
+              </span>
             ) : null}
           </>
         );

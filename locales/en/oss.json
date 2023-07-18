@@ -99,12 +99,9 @@
       }
     ]
   },
-  "success-story": {
-    "super-h3": "Did You Know?",
-    "h3": "Know about Customers Using",
+  "success": {
     "h2": "Object Storage",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-    "link": "Request fo Call Back",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
     "cards":[
       {
         "title": "eCommerce Solution",

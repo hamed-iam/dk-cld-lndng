@@ -137,13 +137,8 @@ const EdgeServicesCtr = () => {
       <SuccessStory
         cards={successStoryCards}
         imageSrc="/assets/edgeStoryHero.png"
-        mainTitle="Edge Services"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-        ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing
-        elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet,
-        consectetur"
+        mainTitle={t("success.h2")}
+        desc={t("success.desc")}
       />
       <EdgePricingSection
         superTitle={t("pricing.super")}

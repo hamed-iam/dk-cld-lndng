@@ -54,13 +54,12 @@ const SolutionsSection = ({ cards }: SolutionsSectionPropsType) => {
         </p>
         <div style={{ display: "flex", flex: 1 }}>
           <TitleFrame>
-            {/* {t("solutions.h1")} */}
             <div className="solution-title-wrapper-title">
-              <h1>{t("solutions.h1-start")}</h1>
+              <h1>{t("solutions.h1.0")}</h1>
               <span className="title-rest">
-                {t("solutions.h1")}
+                {t("solutions.h1.1")}
                 <span className="title-rest_industry">
-                  {t("solutions.h1-end")}
+                  {t("solutions.h1.2")}
                 </span>
                 <div className="icon-wrapper">
                   <SvgIcon title="keyEmojiIcon" viewBox="0 0 40 40" />
@@ -72,8 +71,8 @@ const SolutionsSection = ({ cards }: SolutionsSectionPropsType) => {
         </div>
 
         <p className="solution-title-wrapper-sub">
-          {t("solutions.sub-start")} <span>{t("solutions.sub")}</span>
-          {t("solutions.sub-end")}
+          {t("solutions.sub.0")} <span>{t("solutions.sub.1")} </span>
+          {t("solutions.sub.2")}
         </p>
       </div>
 
@@ -124,7 +123,8 @@ const SolutionsSection = ({ cards }: SolutionsSectionPropsType) => {
                 <SvgIcon title="leftArrowIcon" viewBox="0 0 18 19" />
               </Button>
               <p className="position">
-                {currentSlide + 1} of {cards.length}
+                {currentSlide + 1} {t("solutions.actions-position")}{" "}
+                {cards.length}
               </p>
               <Button
                 onClick={handleNextSlide}
