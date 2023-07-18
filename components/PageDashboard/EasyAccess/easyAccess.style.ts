@@ -9,6 +9,7 @@ export default styled.div(
         DarkThemePrimary700,
         LightThemePrimary800,
       },
+      locale,
     },
   }: ThemeStyledProps) => {
     return css`
@@ -72,10 +73,13 @@ export default styled.div(
                 fill: white;
               }
             }
+            .icon-contactArrowIcon {
+              transform: rotate(${locale === "fa" ? "270deg" : "0deg"});
+            }
             border-radius: 8px;
             &.cloud {
               background-color: ${LightThemePrimary600};
-              transform: translateX(10px);
+              transform: translateX(${locale === "fa" ? "-10px" : "10px"});
               z-index: 2;
               .icon-cloudComputingPlainIcon {
                 margin-inline-end: 10px;
@@ -90,7 +94,7 @@ export default styled.div(
             }
             &.oss {
               background-color: ${DarkThemePrimary700};
-              transform: translateX(-10px);
+              transform: translateX(${locale === "fa" ? "10px" : "-10px"});
               .icon-objectStoragePlainIcon {
                 margin-inline-end: 10px;
               }
