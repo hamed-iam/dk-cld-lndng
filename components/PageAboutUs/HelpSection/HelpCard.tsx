@@ -1,5 +1,4 @@
 import SvgIcon from "@/components/SvgIcon";
-import { AnyRecord } from "dns";
 import Link from "next/link";
 import { HelpCardStyledWrapper } from "./helpSection.style";
 
