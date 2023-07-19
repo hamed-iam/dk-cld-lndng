@@ -17,8 +17,8 @@ export default styled.div(
       .triangle {
         width: 100%;
         border-bottom: solid 60px ${DarkBGGrade15};
-        border-left: solid 50vw transparent;
-        border-right: solid 50vw transparent;
+        border-left: solid 49.5vw transparent;
+        border-right: solid 49.5vw transparent;
         transform: translateY(-70px);
       }
       .triangle-base {

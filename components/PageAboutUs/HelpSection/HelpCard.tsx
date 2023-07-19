@@ -8,7 +8,7 @@ interface HelpCardPropTypes {
     viewBox: string;
   };
   title: string;
-  footer: string;
+  footer: any;
   desc: string;
   zIndex: number;
   className: string;
@@ -31,9 +31,7 @@ export default function HelpCard({
         <div className="card-content">
           <h5>{title}</h5>
           <p className="card-content-desc">{desc}</p>
-          <Link href="/" className="card-content-link">
-            {footer}
-          </Link>
+          <div className="card-content-footer">{footer}</div>
         </div>
       </div>
     </HelpCardStyledWrapper>

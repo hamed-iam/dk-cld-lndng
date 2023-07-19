@@ -138,7 +138,7 @@ const CloudComputingCtr = () => {
       <SuccessStory
         imageSrc="/assets/cloudStoryHero.png"
         cards={successStoryCards}
-        mainTitle={t("success.h1")}
+        mainTitle={t("success.h2")}
         desc={t("success.desc")}
       />
       <CloudPricingSection />
@@ -150,8 +150,8 @@ const CloudComputingCtr = () => {
       <Faq
         loc="cloud-computing"
         links={{
-          next: { href: "/oss", text: "Object Storage?" },
-          back: { href: "/edge-services", text: "Edge Services" },
+          next: { href: "/oss", text: t("faq.links.next") },
+          back: { href: "/edge-services", text: t("faq.links.back") },
         }}
       />
     </StyledWrapper>

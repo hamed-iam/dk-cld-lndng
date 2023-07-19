@@ -53,7 +53,8 @@
     ]
   },
   "success": {
-    "h2": "آبجکت استوریج استفاده می‌کنند؟",
+    "h1": "رایانش ابری",
+    "h2": "رایانش ابری استفاده می‌کنند؟",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
     "cards":[
       {
@@ -90,5 +91,11 @@
     "super-h1": "Guidance",
     "h1": "Use Cases In",
     "h2": "Edge Services"
+  },
+  "faq": {
+    "links": {
+      "next": "آبجکت استوریج",
+      "back": "شبکه توزیع محتوا"
+    }
   }
 }

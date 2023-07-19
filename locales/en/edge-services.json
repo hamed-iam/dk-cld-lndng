@@ -89,6 +89,7 @@
     ]
   },
   "success": {
+    "h1": "Edge Services",
     "h2": "Edge Services",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
     "cards":[
@@ -163,5 +164,11 @@
     "h1": "Use Cases In",
     "h2": "Edge Services",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  "faq": {
+    "links": {
+      "next": "Object Storage",
+      "back": "Cloud Computing"
+    }
   }
 }

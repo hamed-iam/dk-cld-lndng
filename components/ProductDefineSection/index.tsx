@@ -9,6 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import StyledWrapper from "./productDefineSection.style";
 import { useTranslation } from "react-i18next";
+import { useRouter } from "next/router";
 
 type Card = {
   title: string;
@@ -39,6 +40,7 @@ export default function DefineSection({
   const { t } = useTranslation("common");
 
   const [isMobile, setIsMobile] = useState(false);
+  const { locale } = useRouter();
 
   // ! need to find a better solution for this. preferably with css only
   useEffect(() => {
@@ -91,10 +93,21 @@ export default function DefineSection({
           <p className="product-desc-subdesc">{desc}</p>
 
           <div className="product-desc-actions">
-            <Button type="primary" className="start-btn">
+            <Button
+              type="primary"
+              className="start-btn"
+              href={
+                locale === "fa" ? "/fa/about#callback" : "/en/about#callback"
+              }
+            >
               {t("define.action-start")}
             </Button>
-            <Button className="contact-btn">
+            <Button
+              className="contact-btn"
+              href={
+                locale === "fa" ? "/fa/about#callback" : "/en/about#callback"
+              }
+            >
               {t("define.action-contact")}
               <SvgIcon title="contactArrowIcon" viewBox="0 0 24 24" />
             </Button>

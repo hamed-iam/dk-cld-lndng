@@ -183,7 +183,6 @@ export const HelpCardStyledWrapper = styled.div(
   ({
     theme: {
       colors: {
-        background,
         DarkBrandingNeon01,
         DarkTextHigh,
         LightThemePrimary800,
@@ -249,7 +248,7 @@ export const HelpCardStyledWrapper = styled.div(
             font-size: 13px;
             color: ${DarkTextHigh};
           }
-          &-link {
+          &-footer {
             font-weight: 700;
             font-size: 14px;
             line-height: 28px;

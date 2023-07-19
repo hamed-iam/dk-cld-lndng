@@ -10,6 +10,14 @@ export default styled.div(
     return css`
       min-height: 297px;
       background-color: ${LightBGGrade3};
+      .map {
+        width: 100%;
+        height: 100%;
+        background-image: url("/assets/map.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
       .address {
         height: 100%;
         flex-direction: column;

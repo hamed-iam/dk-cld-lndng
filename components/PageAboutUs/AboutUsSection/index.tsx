@@ -1,28 +1,26 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 import StyleWrapper from "./aboutUsSection.style";
 import TagFrame from "./TagFrame";
 
 export default function AboutUsSection() {
   const { t } = useTranslation("about");
-  const { locale } = useRouter();
 
   const links = [
     {
       title: t("aboutus.media.link.0.title"),
       label: t("aboutus.media.link.0.label"),
-      url: "#",
+      url: "#callback",
     },
     {
       title: t("aboutus.media.link.1.title"),
       label: t("aboutus.media.link.1.label"),
-      url: "#",
+      url: "#callback",
     },
     {
       title: t("aboutus.media.link.2.title"),
       label: t("aboutus.media.link.2.label"),
-      url: "#",
+      url: "#callback",
     },
   ];
 
@@ -40,7 +38,12 @@ export default function AboutUsSection() {
           <div className="about-media-cards">
             {links.map((link, index) => {
               return (
-                <Link className="card-wrapper" key={index} href={link.url}>
+                <Link
+                  className="card-wrapper"
+                  key={index}
+                  href={link.url}
+                  scroll={false}
+                >
                   <p className="card-wrapper-title">{link.title}</p>
                   <p className="card-wrapper-link">{link.label}</p>
                 </Link>

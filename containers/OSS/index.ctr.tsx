@@ -121,8 +121,8 @@ const OssCtr = () => {
       <Faq
         loc="oss"
         links={{
-          next: { href: "/edge-services", text: "Edge Services?" },
-          back: { href: "/oss", text: "Object Storage?" },
+          next: { href: "/edge-services", text: t("faq.links.next") },
+          back: { href: "/cloud-computing", text: t("faq.links.back") },
         }}
       />
     </StyledWrapper>
