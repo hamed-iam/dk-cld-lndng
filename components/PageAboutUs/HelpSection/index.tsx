@@ -1,6 +1,7 @@
 import SvgIcon from "@/components/SvgIcon";
 import { Button, Col, Row } from "antd";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 import HelpCard from "./HelpCard";
@@ -24,21 +25,27 @@ export default function HelpSection({ superTitle, icon }: HelpSectionProps) {
       icon: { name: "mailIcon", viewBox: "0 0 40 40" },
       title: t("define.cards.0.title"),
       desc: t("define.cards.0.desc"),
-      footer: t("define.cards.0.footer"),
+      footer: (
+        <Link href="mailto:Support@digicloud.com">Support@digicloud.com</Link>
+      ),
       className: "card-first-bg",
     },
     {
       icon: { name: "phoneIcon", viewBox: "0 0 41 40" },
       title: t("define.cards.1.title"),
       desc: t("define.cards.1.desc"),
-      footer: t("define.cards.1.footer"),
+      footer: <Link href="tel:02161930777">{t("define.cards.1.footer")}</Link>,
       className: "card-second-bg",
     },
     {
       icon: { name: "dateIcon", viewBox: "0 0 41 40" },
       title: t("define.cards.2.title"),
       desc: t("define.cards.2.desc"),
-      footer: t("define.cards.2.footer"),
+      footer: (
+        <Link href="#callback" scroll={false}>
+          {t("define.cards.2.footer")}
+        </Link>
+      ),
       className: "card-third-bg",
     },
   ];
