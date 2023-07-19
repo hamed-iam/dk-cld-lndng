@@ -91,5 +91,11 @@
     "super-h1": "Guidance",
     "h1": "Use Cases In",
     "h2": "Edge Services"
+  },
+  "faq": {
+    "links": {
+      "next": "آبجکت استوریج",
+      "back": "شبکه توزیع محتوا"
+    }
   }
 }

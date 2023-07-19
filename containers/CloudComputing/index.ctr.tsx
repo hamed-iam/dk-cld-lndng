@@ -150,8 +150,8 @@ const CloudComputingCtr = () => {
       <Faq
         loc="cloud-computing"
         links={{
-          next: { href: "/oss", text: "Object Storage?" },
-          back: { href: "/edge-services", text: "Edge Services" },
+          next: { href: "/oss", text: t("faq.links.next") },
+          back: { href: "/edge-services", text: t("faq.links.back") },
         }}
       />
     </StyledWrapper>

@@ -133,5 +133,11 @@
         "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
       }
     ]
+  },
+  "faq": {
+    "links": {
+      "next": "Edge Services",
+      "back": "Cloud Computing"
+    }
   }
 }

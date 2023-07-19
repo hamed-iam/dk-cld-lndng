@@ -89,5 +89,11 @@
     "super-h1": "Guidance",
     "h1": "Use Cases In",
     "h2": "Edge Services"
+  },
+  "faq": {
+    "links": {
+      "next": "Object Storage",
+      "back": "Edge Services"
+    }
   }
 }
