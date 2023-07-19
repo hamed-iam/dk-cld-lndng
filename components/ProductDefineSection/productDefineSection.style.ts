@@ -24,7 +24,7 @@ export default styled.div(
 
       .container {
         margin-inline: auto;
-        width: min(90%, 100rem);
+        width: min(90%, 74rem);
         margin-top: calc(24px + (80 - 24) * ((100vw - 320px) / (1920 - 320)));
         margin-bottom: calc(
           24px + (80 - 24) * ((100vw - 320px) / (1920 - 320))
@@ -144,8 +144,8 @@ export default styled.div(
           );
           -webkit-mask-image: -webkit-gradient(
             linear,
-            left top,
-            right top,
+            ${locale === "fa" ? "right" : "left"} top,
+            ${locale === "fa" ? "left" : "right"} top,
             from(rgba(0, 0, 0, 1)),
             to(rgba(0, 0, 0, 0))
           );
@@ -169,6 +169,7 @@ export default styled.div(
           .icon {
             width: 18px;
             height: 18px;
+            transform: rotate(${locale === "fa" ? "180deg" : "0deg"});
           }
           .slide-btn {
             padding: 10px;

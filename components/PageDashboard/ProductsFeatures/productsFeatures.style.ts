@@ -14,11 +14,6 @@ export default styled.div(
       margin-top: calc(68px + (80 - 24) * ((100vw - 320px) / (1920 - 320)));
       /* overflow: hidden; */
 
-      .triangle-wrapper {
-        z-index: 99;
-        position: absolute;
-      }
-
       .triangle {
         width: 100%;
         border-bottom: solid 60px ${DarkBGGrade15};

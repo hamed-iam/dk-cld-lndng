@@ -56,44 +56,44 @@ const OssCtr = () => {
   const successStoryCards = [
     {
       id: 1,
-      title: t("success-story.cards.0.title"),
-      desc: t("success-story.cards.0.desc"),
+      title: t("success.cards.0.title"),
+      desc: t("success.cards.0.desc"),
       logo: { title: "diginextLogo", viewBox: "0 0 74 17" },
     },
     {
       id: 2,
-      title: t("success-story.cards.1.title"),
-      desc: t("success-story.cards.1.desc"),
+      title: t("success.cards.1.title"),
+      desc: t("success.cards.1.desc"),
       logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
     },
     {
       id: 3,
-      title: t("success-story.cards.2.title"),
-      desc: t("success-story.cards.2.desc"),
+      title: t("success.cards.2.title"),
+      desc: t("success.cards.2.desc"),
       logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
     },
     {
       id: 4,
-      title: t("success-story.cards.3.title"),
-      desc: t("success-story.cards.3.desc"),
+      title: t("success.cards.3.title"),
+      desc: t("success.cards.3.desc"),
       logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
     },
     {
       id: 5,
-      title: t("success-story.cards.4.title"),
-      desc: t("success-story.cards.4.desc"),
+      title: t("success.cards.4.title"),
+      desc: t("success.cards.4.desc"),
       logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
     },
     {
       id: 6,
-      title: t("success-story.cards.5.title"),
-      desc: t("success-story.cards.5.desc"),
+      title: t("success.cards.5.title"),
+      desc: t("success.cards.5.desc"),
       logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
     },
     {
       id: 7,
-      title: t("success-story.cards.6.title"),
-      desc: t("success-story.cards.6.desc"),
+      title: t("success.cards.6.title"),
+      desc: t("success.cards.6.desc"),
       logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
     },
   ];
@@ -115,8 +115,8 @@ const OssCtr = () => {
       <SuccessStory
         cards={successStoryCards}
         imageSrc="/assets/hero-compute.png"
-        mainTitle={t("success-story.h2")}
-        desc={t("success-story.desc")}
+        mainTitle={t("success.h2")}
+        desc={t("success.desc")}
       />
       <Faq
         loc="oss"

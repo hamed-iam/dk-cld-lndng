@@ -123,14 +123,19 @@ export default styled.div(
 export const FooterCallbackStyledWrapper = styled.div(
   ({
     theme: {
-      colors: { DarkThemePrimary500Light },
+      colors: {},
+      locale,
     },
   }: ThemeStyledProps) => {
     return css`
       width: 100%;
+
       form {
         display: flex;
-        align-items: center;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: ${locale === "fa" ? "left" : "right"};
+        gap: 10px;
       }
     `;
   }

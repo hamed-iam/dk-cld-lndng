@@ -6,18 +6,21 @@ import { ConfigFlavorsStyledWrapper } from "./cloudPricingSection.style";
 
 const configs: any = {
   generalPurpose: {
+    key: 0,
     id: "general",
     name: "g1.micro",
     cpu: "1 vCPU",
     memory: "0.5GB",
   },
   memoryOptimized: {
+    key: 1,
     id: "memory",
     name: "g2.micro",
     cpu: "2 vCPU",
     memory: "1GB",
   },
   computeOptimized: {
+    key: 2,
     id: "compute",
     name: "g3.micro",
     cpu: "3 vCPU",
@@ -27,9 +30,26 @@ const configs: any = {
 
 export default function ConfigFlavors() {
   const [currentConfig, setCurrentConfig] = useState(configs.generalPurpose);
+  const configsOrder = [
+    "generalPurpose",
+    "memoryOptimized",
+    "computeOptimized",
+  ];
 
   const handleCurrentConfig = (config: any) => {
     setCurrentConfig(configs[config]);
+  };
+
+  const handleRightConfig = (config: any) => {
+    let item = config.key - 1;
+    if (item < 0) item = 2;
+    setCurrentConfig(configs[configsOrder[item]]);
+  };
+
+  const handleLeftConfig = (config: any) => {
+    let item = config.key + 1;
+    if (item > 2) item = 0;
+    setCurrentConfig(configs[configsOrder[item]]);
   };
 
   return (
@@ -68,7 +88,10 @@ export default function ConfigFlavors() {
         </div>
 
         <div className="config-wrapper-info">
-          <Button className="config-wrapper-info-leftBtn">
+          <Button
+            className="config-wrapper-info-leftBtn"
+            onClick={() => handleRightConfig(currentConfig)}
+          >
             <SvgIcon title="leftArrowIcon" viewBox="0 0 18 19" />
           </Button>
           <div className="config-wrapper-info-desc">
@@ -85,7 +108,10 @@ export default function ConfigFlavors() {
               <p className="value">{currentConfig.memory}</p>
             </div>
           </div>
-          <Button className="config-wrapper-info-rightBtn">
+          <Button
+            className="config-wrapper-info-rightBtn"
+            onClick={() => handleLeftConfig(currentConfig)}
+          >
             <SvgIcon title="rightArrowIcon" viewBox="0 0 18 19" />
           </Button>
         </div>

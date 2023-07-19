@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ProductFeaturesStyledWrapper } from "./productsFeatures.style";
 import { Collapse } from "antd";
-import { useRouter } from "next/router";
 
 const { Panel } = Collapse;
 

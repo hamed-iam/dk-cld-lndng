@@ -20,7 +20,7 @@ export default styled.div(
       border: 1px solid #09091a;
       .container {
         margin-inline: auto;
-        width: min(90%, 100rem);
+        width: min(90%, 74rem);
         margin-top: calc(24px + (80 - 24) * ((100vw - 320px) / (1920 - 320)));
         margin-bottom: calc(
           24px + (80 - 24) * ((100vw - 320px) / (1920 - 320))
@@ -97,7 +97,7 @@ export default styled.div(
         }
       }
       .success-content {
-        width: min(90%, 100rem);
+        width: min(90%, 74rem);
         margin-inline: auto;
 
         .swiper-button-prev {
@@ -125,6 +125,7 @@ export default styled.div(
           background-color: ${DarkBGGrade1};
           border-radius: 8px;
           border: 1px solid ${DarkBorderMid};
+          transform: rotate(${locale === "fa" ? "180deg" : "0deg"});
         }
 
         .swiper-pagination-bullet {
@@ -139,21 +140,6 @@ export default styled.div(
             background: #54586c;
           }
         }
-
-        /* mask-image: gradient(
-          linear,
-          left top,
-          right top,
-          from(rgba(0, 0, 0, 1)),
-          to(rgba(0, 0, 0, 0))
-        );
-        -webkit-mask-image: -webkit-gradient(
-          linear,
-          left top,
-          right top,
-          from(rgba(0, 0, 0, 1)),
-          to(rgba(0, 0, 0, 0))
-        ); */
       }
     `;
   }
@@ -177,12 +163,13 @@ export const SuccessStoryCardStyledWrapper = styled.div(
       border: 1px solid ${DarkBorderHigh};
       box-shadow: 0px 0px 8px rgba(24, 39, 75, 0.06),
         0px 2px 16px -2px rgba(24, 39, 75, 0.02);
-
-      /* padding: calc(max(24px, 2.2vw)) calc(max(20px, 4vw))
-        calc(max(24px, 2.2vw)) calc(max(20px, 4vw)); */
       padding: 5%;
       max-width: 421px;
       min-height: 209px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       h3 {
         color: ${DarkTextLightHighest};
         font-weight: 700;

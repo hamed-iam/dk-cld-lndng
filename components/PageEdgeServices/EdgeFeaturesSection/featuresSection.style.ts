@@ -95,7 +95,7 @@ export default styled.div(
 
       .container {
         margin-inline: auto;
-        width: min(90%, 100rem);
+        width: min(90%, 74rem);
         margin-top: calc(24px + (80 - 24) * ((100vw - 320px) / (1920 - 320)));
         margin-bottom: calc(
           24px + (80 - 24) * ((100vw - 320px) / (1920 - 320))
@@ -152,7 +152,7 @@ export const EdgeFeaturesTableStyledWrapper = styled.div(
         }
       }
 
-      @media (max-width: 530px) {
+      @media (max-width: 701px) {
         .table-wrapper {
           background-color: red;
           display: none;
@@ -250,7 +250,7 @@ export const EdgeFeaturesTableMobileStyledWrapper = styled.div(
         margin: 20px 0 5px 0;
       }
 
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 700px) {
         display: block;
       }
     `;

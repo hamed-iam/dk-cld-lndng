@@ -88,6 +88,40 @@
       }
     ]
   },
+  "success": {
+    "h2": "Edge Services",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+    "cards":[
+      {
+        "title": "eCommerce Solution",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
+      },
+      {
+        "title": "eCommerce Solution",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
+      },
+      {
+        "title": "eCommerce Solution",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
+      },
+      {
+        "title": "eCommerce Solution",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
+      },
+      {
+        "title": "eCommerce Solution",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
+      },
+      {
+        "title": "eCommerce Solution",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
+      },
+      {
+        "title": "eCommerce Solution",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
+      }
+    ]
+  },
   "pricing": {
     "super": "Pricing and Payment",
     "title": {

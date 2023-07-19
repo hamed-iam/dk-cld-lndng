@@ -36,7 +36,7 @@ export default function DefineSection({
   desc,
 }: DefineProductProps) {
   const swiperRef = useRef<any>();
-  const { t } = useTranslation("edge-services");
+  const { t } = useTranslation("common");
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -82,12 +82,10 @@ export default function DefineSection({
             </span>
           </h1>
           <h2 className="product-desc-subheading">
-            {t("define.subheading")}{" "}
+            {t("define.sub-h1.0")}{" "}
             <span className="highlight">
-              <span className="highlight-word">
-                {t("define.subheading-highlight")}{" "}
-              </span>
-              {t("define.subheading-highlight-word")}
+              <span className="highlight-word">{t("define.sub-h1.1")} </span>
+              {t("define.sub-h1.2")}
             </span>
           </h2>
           <p className="product-desc-subdesc">{desc}</p>

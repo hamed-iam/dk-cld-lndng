@@ -145,7 +145,7 @@ export default styled.div(
             right: ${locale === "fa" ? "5%" : "40%"};
           }
 
-          @media (max-width: 600px) {
+          @media (max-width: 700px) {
             .tag-frame-friendly {
               display: none;
             }
@@ -210,7 +210,6 @@ export const TagFrameStyleWrapper = styled.div(
       backdrop-filter: blur(5px);
       box-shadow: -4px 8px 40px 0px #de5ebc4d;
       border-radius: 4px;
-      width: 300px;
 
       .icon {
         &.icon-cornerTLIcon {

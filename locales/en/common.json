@@ -15,18 +15,22 @@
     },
     "menu": "Menu"
   },
+  "define": {
+    "super-h1": "",
+    "h1": "Cloud Computing",
+    "sub-h1": ["For", " All-Sized ", "Companies"],
+    "action-start": "عضو دیجی‌کلاد شوید",
+    "action-contact": "با ما تماس بگیرید"
+  },
   "solutions": {
     "super-h1": "Benefits and Solutions",
-    "h1-start": "Industry",
-    "h1": " for ",
-    "h1-end": "Solutions",
-    "sub-start": "Economical",
-    "sub": " and ",
-    "sub-end": "Professional",
+    "h1": ["Industry", " for ", "Solutions"],
+    "sub": ["Economical", " and ", "Professional"],
     "industries": {
       "title": "Related Industry",
       "name": ["Banking", "Education", "Media and Intertainment", "Retail"]
     },
+    "actions-position": "of",    
     "cards":[
       {
         "title": "title1",
@@ -45,6 +49,12 @@
         "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam."
       }
     ]
+  },
+  "success-story": {
+    "super-h3": "Did You Know?",
+    "h3": "Know about Customers Using",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    "link": "Request fo Call Back"
   },
   "faq": {
     "h1": "FAQ",
@@ -138,5 +148,8 @@
       "text": "All rights reserved by ",
       "link": " DIGICLOUD "
     }
+  },
+  "form": {
+    "error": "This field is required"
   }
 }

@@ -17,24 +17,24 @@ const CloudComputingCtr = () => {
 
   const cloudComputingDefineCards = [
     {
-      title: t("define.storage"),
-      desc: t("define.storage-desc"),
+      title: t("define.cards.0.title"),
+      desc: t("define.cards.0.desc"),
     },
     {
-      title: t("define.dns"),
-      desc: t("define.dns-desc"),
+      title: t("define.cards.1.title"),
+      desc: t("define.cards.1.desc"),
     },
     {
-      title: "test1",
-      desc: t("define.dns-desc"),
+      title: t("define.cards.2.title"),
+      desc: t("define.cards.2.desc"),
     },
     {
-      title: "test2",
-      desc: t("define.dns-desc"),
+      title: t("define.cards.3.title"),
+      desc: t("define.cards.3.desc"),
     },
     {
-      title: "test3",
-      desc: t("define.dns-desc"),
+      title: t("define.cards.4.title"),
+      desc: t("define.cards.4.desc"),
     },
   ];
 
@@ -125,9 +125,9 @@ const CloudComputingCtr = () => {
     <StyledWrapper>
       <ProductDefineSection
         cards={cloudComputingDefineCards}
-        superTitle="Cloud Computing Product"
-        title="Cloud Computing"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        superTitle={t("define.super-h1")}
+        title={t("define.h1")}
+        desc={t("define.desc")}
         icon={{
           title: "cloudComputingPageIcon",
           viewBox: "0 0 72 72",
@@ -138,22 +138,14 @@ const CloudComputingCtr = () => {
       <SuccessStory
         imageSrc="/assets/cloudStoryHero.png"
         cards={successStoryCards}
-        mainTitle="Cloud Computing"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet,
-            consectetur"
+        mainTitle={t("success.h1")}
+        desc={t("success.desc")}
       />
       <CloudPricingSection />
       <CaseStudy
-        title="Cloud Computing"
+        title={t("usecases.h1")}
         panels={caseStudyPanels}
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat."
+        desc={t("usecases.desc")}
       />
       <Faq
         loc="cloud-computing"

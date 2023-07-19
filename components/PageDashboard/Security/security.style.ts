@@ -20,7 +20,7 @@ export default styled.div(
         #bdd7ff 360deg
       );
 
-      @media (max-width: 500px) {
+      @media (max-width: 600px) {
         background: conic-gradient(
           from 270deg at 38.57% 36%,
           #101021 0deg,

@@ -24,7 +24,7 @@ export default styled.div(
 
       .container {
         margin-inline: auto;
-        width: min(90%, 100rem);
+        width: min(90%, 74rem);
         margin-top: calc(24px + (80 - 24) * ((100vw - 320px) / (1920 - 320)));
         margin-bottom: calc(
           24px + (80 - 24) * ((100vw - 320px) / (1920 - 320))
@@ -81,7 +81,7 @@ export default styled.div(
           }
 
           h1 {
-            font-size: clamp(24px, 9vw, 96px);
+            font-size: clamp(24px, 7vw, 96px);
             line-height: 1;
 
             margin: unset;
@@ -106,7 +106,7 @@ export default styled.div(
             align-items: center;
             color: ${DarkTextLightLow};
             font-weight: 400;
-            font-size: clamp(16px, 1.1vw, 15px);
+            font-size: clamp(13px, 1.2vw, 15px);
             margin-inline-end: 40px;
             max-width: 567px;
             line-height: 2;
