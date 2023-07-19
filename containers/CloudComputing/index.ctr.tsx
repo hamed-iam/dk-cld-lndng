@@ -138,7 +138,7 @@ const CloudComputingCtr = () => {
       <SuccessStory
         imageSrc="/assets/cloudStoryHero.png"
         cards={successStoryCards}
-        mainTitle={t("success.h1")}
+        mainTitle={t("success.h2")}
         desc={t("success.desc")}
       />
       <CloudPricingSection />

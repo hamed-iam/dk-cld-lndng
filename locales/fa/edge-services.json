@@ -93,6 +93,7 @@
     ]
   },
   "success": {
+    "h1": "شبکه توزیع محتوا",
     "h2": "سرویس های CDN استفاده می‌کنند؟",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
     "cards":[
