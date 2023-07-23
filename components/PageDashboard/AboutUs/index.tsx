@@ -35,17 +35,17 @@ const AboutUs = ({ videoRef }: AboutUsPropType) => {
     {
       title: t("about.link.0.title"),
       link: t("about.link.0.link"),
-      url: "#",
+      url: "/about#callback",
     },
     {
       title: t("about.link.1.title"),
       link: t("about.link.1.link"),
-      url: "#",
+      url: "/about#callback",
     },
     {
       title: t("about.link.2.title"),
       link: t("about.link.2.link"),
-      url: "#",
+      url: "/about#callback",
     },
   ];
 
