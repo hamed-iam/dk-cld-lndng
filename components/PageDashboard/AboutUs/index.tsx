@@ -79,7 +79,10 @@ const AboutUs = ({ videoRef }: AboutUsPropType) => {
             </div>
             <p className="about-header-sub">{t("about.sub-h1")}</p>
             <div className="about-header-action">
-              <Button className="more-btn">
+              <Button
+                className="more-btn"
+                href={locale === "fa" ? "/fa/about" : "/en/about"}
+              >
                 {t("about.action")}
                 <SvgIcon title="moreAboutUsArrowIcon" viewBox="0 0 20 21" />
               </Button>
