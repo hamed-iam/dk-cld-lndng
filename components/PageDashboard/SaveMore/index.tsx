@@ -73,7 +73,7 @@ const SaveMore = () => {
             <p className="save-info-desc">{t("save.desc")}</p>
             <p className="save-info-contact">
               {t("save.contact")}
-              <Link href="/about">{t("save.contact-link")}</Link>
+              <Link href="/about#callback">{t("save.contact-link")}</Link>
             </p>
           </Col>
         </Row>
