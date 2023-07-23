@@ -12,7 +12,6 @@ export default styled.div(
       color: white;
       background: ${DarkBGGrade15};
       margin-top: calc(68px + (80 - 24) * ((100vw - 320px) / (1920 - 320)));
-      /* overflow: hidden; */
 
       .triangle {
         width: 100%;

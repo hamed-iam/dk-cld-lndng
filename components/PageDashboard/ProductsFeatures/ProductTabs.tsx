@@ -21,21 +21,21 @@ export default function ProductTabs({ activeTab }: ProductTabsPropTypes) {
       title: t("products.h1-cloud-c"),
       desc: t("products.sub-h1-c"),
       sub: t("products.info-sub"),
-      detailUrl: "",
+      detailsUrl: "cloud-computing",
     },
     {
       key: 1,
       title: t("products.h1-cloud-e"),
       desc: t("products.sub-h1-e"),
       sub: t("products.info-sub"),
-      detailUrl: "",
+      detailsUrl: "oss",
     },
     {
       key: 2,
       title: t("products.h1-cloud-o"),
       desc: t("products.sub-h1-o"),
       sub: t("products.info-sub"),
-      detailUrl: "",
+      detailsUrl: "edge-services",
     },
   ];
 
@@ -51,7 +51,7 @@ export default function ProductTabs({ activeTab }: ProductTabsPropTypes) {
                   title={entry.title}
                   desc={entry.desc}
                   sub={entry.sub}
-                  detailUrl={entry.detailUrl}
+                  detailsUrl={entry.detailsUrl}
                   activate={currentTab === entry.key}
                 />
               </div>
