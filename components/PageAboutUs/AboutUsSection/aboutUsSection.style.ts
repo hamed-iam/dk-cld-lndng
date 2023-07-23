@@ -125,7 +125,9 @@ export default styled.div(
           max-width: 676px;
           max-height: 356px;
           width: clamp(676px, 40vw, 676px);
+          background-color: black;
           position: relative;
+          border-radius: 16px;
 
           video {
             border-radius: 12px;
