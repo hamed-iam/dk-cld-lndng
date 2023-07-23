@@ -8,8 +8,13 @@ import TitleFrame from "../../TitleFrame";
 import SloganFa from "./SloganFa";
 import SloganEn from "./SloganEn";
 import { Button } from "antd";
+import { useRef } from "react";
 
-const HeroCmp = () => {
+interface HeroCmpPropTypes {
+  videoHandler: () => void;
+}
+
+const HeroCmp = ({ videoHandler }: HeroCmpPropTypes) => {
   const { locale } = useRouter();
   const { t } = useTranslation("dashboard");
 
@@ -29,10 +34,21 @@ const HeroCmp = () => {
           </div>
 
           <div className="title-wrapper-actions">
-            <Button type="primary" className="create-account-btn">
+            <Button
+              type="primary"
+              className="create-account-btn"
+              href={
+                locale === "fa" ? "/fa/about#callback" : "/en/about#callback"
+              }
+            >
               {t("hero.actions.create-account")}
             </Button>
-            <Button type="default" className="play-btn">
+            <Button
+              type="default"
+              className="play-btn"
+              href="#media"
+              onClick={videoHandler}
+            >
               <SvgIcon title="playIcon" viewBox="0 0 32 32" />
             </Button>
           </div>

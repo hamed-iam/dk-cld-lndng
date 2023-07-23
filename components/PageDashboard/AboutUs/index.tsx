@@ -4,10 +4,30 @@ import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import React, { createRef, forwardRef, Ref, useRef } from "react";
 import StyledWrapper from "./aboutUs.style";
 import TagFrame from "./TagFrame";
 
-const AboutUs = () => {
+interface AboutUsPropType {
+  videoRef: React.Ref<HTMLVideoElement>;
+}
+
+const VideoWrapper = forwardRef(function Input(
+  props,
+  ref: Ref<HTMLVideoElement>
+) {
+  return (
+    <video width="100%" height="100%" controls ref={ref}>
+      <source
+        src="http://media.w3.org/2010/05/sintel/trailer.mp4"
+        type="video/mp4"
+      />
+      This browser does not support video tag.
+    </video>
+  );
+});
+
+const AboutUs = ({ videoRef }: AboutUsPropType) => {
   const { t } = useTranslation("dashboard");
   const { locale } = useRouter();
 
@@ -31,16 +51,10 @@ const AboutUs = () => {
 
   return (
     <StyledWrapper>
-      <div className="container">
+      <div className="container" id="media">
         <div className="about-content">
           <div className="about-content-video">
-            <video width="100%" height="100%" controls>
-              <source
-                src="http://media.w3.org/2010/05/sintel/trailer.mp4"
-                type="video/mp4"
-              />
-              This browser does not support video tag.
-            </video>
+            <VideoWrapper ref={videoRef} />
             <div className="tag-frame-friendly">
               <TagFrame>
                 <span>{t("about.tag.0")}</span>

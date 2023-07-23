@@ -14,6 +14,7 @@ import {
   Solutions,
 } from "@/components/PageDashboard";
 import { Faq, SolutionsSection } from "@/components";
+import { useRef } from "react";
 
 const solutionsCards = [
   {
@@ -40,12 +41,16 @@ const solutionsCards = [
 
 const DashboardCtr = () => {
   const { t } = useTranslation("dashboard");
-
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const handlePlay = () => {
+    videoRef?.current?.play();
+  };
   return (
     <StyledWrapper>
-      <Hero />
+      <Hero videoHandler={handlePlay} />
       <ProductsFeatures />
-      <AboutUs />
+      <button onClick={handlePlay}>Play</button>
+      <AboutUs videoRef={videoRef} />
       <SaveMore />
       {/* <SolutionsSection cards={solutionsCards} /> */}
       <Solutions />
