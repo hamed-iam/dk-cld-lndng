@@ -10,21 +10,24 @@ const EasyAccess = () => {
       <div className="container">
         <h2>{t("easy-acc.h1")}</h2>
         <div className="quick-access-wrapper">
-          <a href="#" className="quick-access-wrapper-product cloud">
+          <a
+            href="/cloud-computing"
+            className="quick-access-wrapper-product cloud"
+          >
             <span>
               <SvgIcon title="cloudComputingPlainIcon" viewBox="0 0 24 24" />
               {t("easy-acc.cld-opt")}
             </span>
             <SvgIcon title="contactArrowIcon" viewBox="0 0 24 24" />
           </a>
-          <a href="#" className="quick-access-wrapper-product edge">
+          <a href="/oss" className="quick-access-wrapper-product edge">
             <span>
               <SvgIcon title="edgeServicesPlainIcon" viewBox="0 0 25 24" />
               {t("easy-acc.edg-opt")}
             </span>
             <SvgIcon title="contactArrowIcon" viewBox="0 0 24 24" />
           </a>
-          <a href="#" className="quick-access-wrapper-product oss">
+          <a href="/edge-services" className="quick-access-wrapper-product oss">
             <span>
               <SvgIcon title="objectStoragePlainIcon" viewBox="0 0 25 24" />
               {t("easy-acc.oss-opt")}
