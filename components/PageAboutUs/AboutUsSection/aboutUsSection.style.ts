@@ -12,6 +12,7 @@ export default styled.div(
         DarkBGGrade3,
         LightThemePrimary600,
         DarkTextLightHigh,
+        blackBackground,
       },
       locale,
     },
@@ -125,7 +126,7 @@ export default styled.div(
           max-width: 676px;
           max-height: 356px;
           width: clamp(676px, 40vw, 676px);
-          background-color: black;
+          background-color: ${blackBackground};
           position: relative;
           border-radius: 16px;
 
