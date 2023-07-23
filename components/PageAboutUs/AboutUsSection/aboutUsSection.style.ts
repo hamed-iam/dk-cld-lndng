@@ -110,6 +110,8 @@ export default styled.div(
             padding: 0 20px 0 20px;
             border-radius: 12px;
             width: 100%;
+            font-size: 14px;
+            font-weight: 400;
 
             &-title {
               color: ${DarkTextLightHigh};

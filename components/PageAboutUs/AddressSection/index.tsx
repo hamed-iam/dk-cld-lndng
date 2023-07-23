@@ -3,6 +3,7 @@ import GoogleMaps from "./GoogleMaps";
 import StyleWrapper from "./addressSection.style";
 import SvgIcon from "@/components/SvgIcon";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 export default function AddressSection() {
   const { t } = useTranslation("about");
@@ -16,7 +17,10 @@ export default function AddressSection() {
           md={{ span: 24 }}
           sm={{ span: 24 }}
         >
-          <GoogleMaps />
+          {/* <GoogleMaps /> */}
+
+          {/* <Image src="/assets/map.png" width={400} height={300} alt="" /> */}
+          <div className="map"></div>
         </Col>
         <Col
           className="w-100"
