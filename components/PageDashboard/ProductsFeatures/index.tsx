@@ -22,10 +22,16 @@ const tabImages = [
     name: "dns.png",
   },
 ];
+const panelStyle = {
+  marginBottom: 18,
+  background: "#FFFFFF",
+  maxWidth: "542px",
+  borderRadius: 12,
+  border: "1px solid #DADCED",
+};
 
 const ProductsFeatures = () => {
   const { t } = useTranslation("dashboard");
-  const { locale } = useRouter();
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -34,7 +40,7 @@ const ProductsFeatures = () => {
         <div className="triangle"></div>
         <div className="triangle-base">
           <SvgIcon title="dashboardUpArrowIcon" viewBox="0 0 20 21" />
-          <div className="triangle-text">{t("products.super-h1")}</div>
+          <div className="triangle-text">{t("products.super-section")}</div>
         </div>
       </div>
       <div className="container">
@@ -109,7 +115,7 @@ const ProductsFeatures = () => {
               alt="cloud-compute"
             />
           </div>
-          <ProductFeatures />
+          <ProductFeatures activeTab={activeTab} />
         </div>
         <div className="product-image">
           {tabImages.map((entry, index) => (

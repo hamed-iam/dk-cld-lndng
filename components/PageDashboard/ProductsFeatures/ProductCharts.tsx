@@ -16,7 +16,7 @@ export default function ProductCharts({ activate }: ProductChartsPropTypes) {
           <div className="chart-content-donut">
             <div className="flex-wrapper">
               <div className="single-chart">
-                <svg viewBox="-3 -3 42 42" className="circular-chart orange">
+                <svg viewBox="-3 -3 42 42" className="circular-chart stroke">
                   <path
                     className="circle-bg"
                     d="M18 2.0845
