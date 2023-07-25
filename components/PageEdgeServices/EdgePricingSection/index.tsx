@@ -33,6 +33,22 @@ export default function EdgePricingSection({
           title: t("pricing.cards.0.item-title.0"),
           status: true,
         },
+        {
+          title: t("pricing.cards.0.item-title.1"),
+          status: false,
+        },
+        {
+          title: t("pricing.cards.0.item-title.2"),
+          status: false,
+        },
+        {
+          title: t("pricing.cards.0.item-title.3"),
+          status: true,
+        },
+        {
+          title: t("pricing.cards.0.item-title.4"),
+          status: true,
+        },
       ],
     },
     {
@@ -45,6 +61,22 @@ export default function EdgePricingSection({
           title: t("pricing.cards.1.item-title.0"),
           status: false,
         },
+        {
+          title: t("pricing.cards.1.item-title.1"),
+          status: true,
+        },
+        {
+          title: t("pricing.cards.1.item-title.2"),
+          status: true,
+        },
+        {
+          title: t("pricing.cards.1.item-title.3"),
+          status: false,
+        },
+        {
+          title: t("pricing.cards.1.item-title.4"),
+          status: false,
+        },
       ],
     },
     {
@@ -55,7 +87,23 @@ export default function EdgePricingSection({
       items: [
         {
           title: t("pricing.cards.2.item-title.0"),
+          status: true,
+        },
+        {
+          title: t("pricing.cards.2.item-title.1"),
           status: false,
+        },
+        {
+          title: t("pricing.cards.2.item-title.2"),
+          status: false,
+        },
+        {
+          title: t("pricing.cards.2.item-title.3"),
+          status: true,
+        },
+        {
+          title: t("pricing.cards.2.item-title.4"),
+          status: true,
         },
       ],
     },

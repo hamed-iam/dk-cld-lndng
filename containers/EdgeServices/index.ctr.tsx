@@ -59,27 +59,27 @@ const EdgeServicesCtr = () => {
   const caseStudyPanels = [
     {
       key: "1",
-      panelHeader: "This is edge services panel header 1",
+      panelHeader: "ارتقای امنیت وب‌سایت و افزایش سرعت بارگذاری",
       panelContent:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, dolores!",
+        "با استفاده از شبکه توزیع محتوای دیجی‌کلاد و استفاده از خدمات رایانش ابری، رمزگذاری و فشرده‌سازی فایل‌ها می‌توانید در کسری از ثانیه به میلیون‌ها مخاطب در سراسر جهان دسترسی داشته باشید.",
     },
     {
       key: "2",
-      panelHeader: "This is edge services panel header 2",
+      panelHeader: "تسریع فرایند توزیع محتوا و API",
       panelContent:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sequi consequatur et, minima modi sit?",
+        "با کمک زیرساخت پیشرفته و پرقابلیت دیجی‌کلاد می‌توانید فرایند توزیع و تحویل محتوای وب‌سایت خود را بهینه‌سازی کنید و با سرعت بالا در اختیار کاربران‌تان قرار دهید.",
     },
     {
       key: "3",
-      panelHeader: "This is edge services panel header 3",
+      panelHeader: "پخش زنده و استریم ویدیو",
       panelContent:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis dolor non, iure quo similique ab soluta dolorum reiciendis exercitationem sunt.",
+        "شبکه توزیع محتوای دیجی‌کلاد این امکان را در اختیارتان می‌گذارد تا در هر زمان که بخواهید پخش زنده ویدیویی داشته باشید، محتوای ویدیویی خود را به صورت پایدار پخش کنید و به دست مخاطبان خود برسانید.",
     },
     {
       key: "4",
-      panelHeader: "This is edge services panel header 4",
+      panelHeader: "توزیع پچ‌های امنیتی و بروزرسانی‌های نرم‌افزاری",
       panelContent:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, suscipit minus. Adipisci blanditiis aut cumque impedit laborum sunt provident nisi fuga doloremque reprehenderit nulla a, quibusdam culpa quas fugiat numquam.",
+        "استفاده از شبکه توزیع محتوای دیجی‌کلاد به شما اجازه می‌دهد تا در هر زمان که بخواهید پچ‌های امنیتی و بروزرسانی‌های نرم‌افزاری خود را در مقیاس",
     },
   ];
 
@@ -130,8 +130,8 @@ const EdgeServicesCtr = () => {
       />
 
       <EdgeFeaturesSection
-        superTitle={t("protect.super-h1")}
-        desc={t("protect.sub")}
+        superTitle={t("approach.super-h1")}
+        desc={t("approach.sub")}
       />
       <SolutionsSection cards={solutionsCards} />
       <SuccessStory
@@ -150,11 +150,8 @@ const EdgeServicesCtr = () => {
       />
       <CaseStudy
         panels={caseStudyPanels}
-        title="Edge Services"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat."
+        title={t("usecase.h2")}
+        desc={t("usecase.desc")}
       />
       <Faq
         loc="edge-services"

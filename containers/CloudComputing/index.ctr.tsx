@@ -64,59 +64,67 @@ const CloudComputingCtr = () => {
   const caseStudyPanels = [
     {
       key: "1",
-      panelHeader: "This is cloud panel header 1",
-      panelContent:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, dolores!",
+      panelHeader: t("usecase.cards.0.title"),
+      panelContent: t("usecase.cards.0.desc"),
     },
     {
       key: "2",
-      panelHeader: "This is cloud panel header 2",
-      panelContent:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sequi consequatur et, minima modi sit?",
+      panelHeader: t("usecase.cards.1.title"),
+      panelContent: t("usecase.cards.1.desc"),
     },
     {
       key: "3",
-      panelHeader: "This is cloud panel header 3",
-      panelContent:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis dolor non, iure quo similique ab soluta dolorum reiciendis exercitationem sunt.",
+      panelHeader: t("usecase.cards.2.title"),
+      panelContent: t("usecase.cards.2.desc"),
     },
     {
       key: "4",
-      panelHeader: "This is cloud panel header 4",
-      panelContent:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, suscipit minus. Adipisci blanditiis aut cumque impedit laborum sunt provident nisi fuga doloremque reprehenderit nulla a, quibusdam culpa quas fugiat numquam.",
+      panelHeader: t("usecase.cards.3.title"),
+      panelContent: t("usecase.cards.3.desc"),
     },
   ];
 
   const successStoryCards = [
     {
       id: 1,
-      title: "eCommerce Solution",
-      desc: "Diginext uses Digicloud's edge services for their next generation eCommerce solutions.",
+      title: t("success.cards.0.title"),
+      desc: t("success.cards.0.desc"),
       logo: { title: "diginextLogo", viewBox: "0 0 74 17" },
     },
     {
       id: 2,
-      title: "eCommerce Solution",
-      desc: "Diginext uses Digicloud's edge services for their next generation eCommerce solutions.",
+      title: t("success.cards.1.title"),
+      desc: t("success.cards.1.desc"),
       logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
     },
     {
       id: 3,
-      title: "eCommerce Solution",
-      desc: "Diginext uses Digicloud's edge services for their next generation eCommerce solutions.",
+      title: t("success.cards.2.title"),
+      desc: t("success.cards.2.desc"),
       logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
     },
     {
       id: 4,
-      title: "eCommerce Solution",
-      desc: "Diginext uses Digicloud's edge services for their next generation eCommerce solutions.",
+      title: t("success.cards.3.title"),
+      desc: t("success.cards.3.desc"),
       logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
     },
     {
       id: 5,
-      title: "eCommerce Solution",
-      desc: "Diginext uses Digicloud's edge services for their next generation eCommerce solutions.",
+      title: t("success.cards.4.title"),
+      desc: t("success.cards.4.desc"),
+      logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
+    },
+    {
+      id: 6,
+      title: t("success.cards.5.title"),
+      desc: t("success.cards.5.desc"),
+      logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
+    },
+    {
+      id: 7,
+      title: t("success.cards.6.title"),
+      desc: t("success.cards.6.desc"),
       logo: { title: "digikalaLogo", viewBox: "0 0 68 16" },
     },
   ];

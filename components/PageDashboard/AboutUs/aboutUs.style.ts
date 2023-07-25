@@ -15,10 +15,8 @@ export default styled.div(
     },
   }: ThemeStyledProps) => {
     return css`
-      border: 2px solid red;
       min-height: 720px;
       width: 100%;
-      border: 1px solid transparent;
 
       .container {
         display: flex;

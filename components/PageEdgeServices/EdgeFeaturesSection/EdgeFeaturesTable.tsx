@@ -20,7 +20,7 @@ export default function EdgeFeaturesTable() {
   const columns: ColumnsType<EdgeFeatureProps> = [
     {
       key: "feature",
-      title: <div className="">{t("define.table.0.title")}</div>,
+      title: <div className="">{t("approach.features-col.name")}</div>,
       dataIndex: "name",
       width: "219px",
       render: (text: string, record: any, index: number) => {
@@ -34,9 +34,9 @@ export default function EdgeFeaturesTable() {
     },
     {
       key: "desc",
-      title: t("define.table.1.title"),
+      title: t("approach.features-col.desc"),
       dataIndex: "desc",
-      width: "670px",
+      width: "650px",
       render: (text: string, record: any, index: number) => {
         return (
           <div>
@@ -48,9 +48,9 @@ export default function EdgeFeaturesTable() {
     },
     {
       key: "bestFor",
-      title: t("define.table.2.title"),
+      title: t("approach.features-col.bestFor"),
       dataIndex: "bestFor",
-      width: "211px",
+      width: "230px",
       render: (text: string, record: any, index: number) => {
         return (
           <div className="bold-column">
@@ -65,51 +65,21 @@ export default function EdgeFeaturesTable() {
   const records: EdgeFeatureProps[] = [
     {
       key: 0,
-      name: t("define.features.0.title"),
-      desc: t("define.features.0.desc"),
-      bestFor: t("define.features.0.bestFor"),
+      name: t("approach.features.0.name"),
+      desc: t("approach.features.0.desc"),
+      bestFor: t("approach.features.0.bestFor"),
     },
     {
       key: 1,
-      name: t("define.features.1.title"),
-      desc: t("define.features.1.desc"),
-      bestFor: t("define.features.1.bestFor"),
+      name: t("approach.features.1.name"),
+      desc: t("approach.features.1.desc"),
+      bestFor: t("approach.features.1.bestFor"),
     },
     {
       key: 2,
-      name: t("define.features.2.title"),
-      desc: t("define.features.2.desc"),
-      bestFor: t("define.features.2.bestFor"),
-    },
-    {
-      key: 3,
-      name: t("define.features.3.title"),
-      desc: t("define.features.3.desc"),
-      bestFor: t("define.features.3.bestFor"),
-    },
-    {
-      key: 4,
-      name: t("define.features.4.title"),
-      desc: t("define.features.4.desc"),
-      bestFor: t("define.features.4.bestFor"),
-    },
-    {
-      key: 5,
-      name: t("define.features.5.title"),
-      desc: t("define.features.5.desc"),
-      bestFor: t("define.features.5.bestFor"),
-    },
-    {
-      key: 6,
-      name: t("define.features.6.title"),
-      desc: t("define.features.6.desc"),
-      bestFor: t("define.features.6.bestFor"),
-    },
-    {
-      key: 7,
-      name: t("define.features.7.title"),
-      desc: t("define.features.7.desc"),
-      bestFor: t("define.features.7.bestFor"),
+      name: t("approach.features.2.name"),
+      desc: t("approach.features.2.desc"),
+      bestFor: t("approach.features.2.bestFor"),
     },
   ];
 

@@ -61,7 +61,6 @@ const defaultState = {
 
 const Faq = ({ links, isNextStepShow = true, loc }: FaqPropsType) => {
   const { t } = useTranslation("common");
-  const { locale } = useRouter();
 
   const [currentTab, setCurrentTab] = useState(
     loc === "dashboard" ? "cloud-computing" : loc
@@ -172,11 +171,7 @@ const Faq = ({ links, isNextStepShow = true, loc }: FaqPropsType) => {
         <div className="faq-contact">
           <SvgIcon title="divingMaskIcon" viewBox="0 0 21 20" />
           <p>{t("faq.contact")}</p>
-          <Link
-            href={locale === "fa" ? "/fa/about#callback" : "/en/about#callback"}
-          >
-            {t("faq.contact-link")}
-          </Link>
+          <Link href="/about#callback">{t("faq.contact-link")}</Link>
         </div>
 
         {isNextStepShow && <NextStep onPointerMove={handlePointerMove} />}

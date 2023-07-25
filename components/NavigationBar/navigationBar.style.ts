@@ -58,7 +58,7 @@ export default styled.nav(
             /* display: inline-block; */
             width: 6px;
             height: 6px;
-            bottom: 0;
+            bottom: -5px;
             left: 40%;
             background-color: ${LightThemePrimary600};
             border-radius: 50%;

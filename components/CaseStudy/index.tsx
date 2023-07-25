@@ -1,6 +1,7 @@
 import { Collapse, theme } from "antd";
 import StyledWrapper from "./caseStudySection.style";
 import SvgIcon from "../SvgIcon";
+import { useTranslation } from "react-i18next";
 
 const { Panel } = Collapse;
 
@@ -20,6 +21,7 @@ export default function CaseStudySection({
   panels,
 }: CaseStudyPropsType) {
   const { token } = theme.useToken();
+  const { t } = useTranslation("edge-services");
 
   const panelStyle = {
     marginBottom: 16,
@@ -52,8 +54,8 @@ export default function CaseStudySection({
         </div>
 
         <div className="content">
-          <p className="content-super">Guidance</p>
-          <h2 className="content-title">Use Cases In</h2>
+          <p className="content-super">{t("usecase.super-h1")}</p>
+          <h2 className="content-title">{t("usecase.h1")}</h2>
           <h2 className="content-subtitle">
             {title}{" "}
             <span>

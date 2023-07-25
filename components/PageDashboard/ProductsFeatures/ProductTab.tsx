@@ -57,7 +57,7 @@ export default function ProductTab({
           </div>
           <div className="tab-sub">
             <span>{t("products.info-sub")}</span>{" "}
-            <Link href="/" className="products.info-sub-link">
+            <Link href="/about#callback" className="products.info-sub-link">
               {t("products.info-sub-link")}
             </Link>
           </div>

@@ -11103,6 +11103,18 @@ export const dateIcon = (
 );
 
 // viewBox="0 0 18 18"
+export const okIcon = (
+  <g>
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M14.9242 6.04335L8.63132 12.3362C8.00648 12.9611 6.99342 12.9611 6.36858 12.3362L3.07568 9.04335L3.92421 8.19482L7.21711 11.4877C7.37331 11.6439 7.62658 11.6439 7.78279 11.4877L14.0757 5.19482L14.9242 6.04335Z"
+      fill="#4CAF50"
+    />
+  </g>
+);
+
+// viewBox="0 0 18 18"
 export const notOkIcon = (
   <g>
     <path
