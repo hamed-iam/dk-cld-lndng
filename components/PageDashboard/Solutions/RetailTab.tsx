@@ -127,7 +127,7 @@ export default function RetailTab() {
                 )}
               </div>
             }
-            key="5"
+            key="4"
             style={panelStyle}
           >
             <p>{t("solutions.tabs.industry.panel.3.desc")}</p>
@@ -153,7 +153,7 @@ export default function RetailTab() {
                 )}
               </div>
             }
-            key="4"
+            key="5"
             style={panelStyle}
           >
             <p>{t("solutions.tabs.industry.panel.4.desc")}</p>
@@ -167,7 +167,7 @@ export default function RetailTab() {
                 )}
               </div>
             }
-            key="5"
+            key="6"
             style={panelStyle}
           >
             <p>{t("solutions.tabs.industry.panel.5.desc")}</p>
@@ -181,7 +181,7 @@ export default function RetailTab() {
                 )}
               </div>
             }
-            key="5"
+            key="7"
             style={panelStyle}
           >
             <p>{t("solutions.tabs.industry.panel.6.desc")}</p>
