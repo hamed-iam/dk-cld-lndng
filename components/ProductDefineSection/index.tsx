@@ -8,7 +8,7 @@ import SvgIcon from "../SvgIcon";
 import "swiper/css";
 import "swiper/css/pagination";
 import StyledWrapper from "./productDefineSection.style";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 
 type Card = {

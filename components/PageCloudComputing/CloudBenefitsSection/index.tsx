@@ -1,7 +1,7 @@
 import SvgIcon from "@/components/SvgIcon";
 import StyledWrapper from "./cloudBenefitsSection.style";
 import CloudBenefitCard from "./CloudBenefitCard";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 export default function CloudBenefitsSection() {
   const { t } = useTranslation("cloud-computing");

@@ -1,6 +1,6 @@
 import SvgIcon from "@/components/SvgIcon";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { EdgePricingCardStyledWrapper } from "./edgePricingSection.style";
 
 export type Item = {
@@ -31,7 +31,7 @@ export default function EdgePricingCard({
       active={isActive}
     >
       <div className="container">
-      {/* TODO: It should be improved by removing checkbox and a sloution based on pure CSS */}
+        {/* TODO: It should be improved by removing checkbox and a sloution based on pure CSS */}
         <input
           type="checkbox"
           className="view-more-state"

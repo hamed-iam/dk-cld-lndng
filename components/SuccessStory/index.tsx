@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import StyleWrapper from "./successStory.style";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 type Card = {
   title: string;

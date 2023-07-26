@@ -1,6 +1,6 @@
 import SvgIcon from "@/components/SvgIcon";
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { StyledSloganFa } from "./hero.style";
 
 export default function SloganFa() {

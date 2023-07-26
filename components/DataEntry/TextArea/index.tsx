@@ -1,6 +1,6 @@
 import { Control, Controller } from "react-hook-form";
 import { Input } from "antd";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 interface RHFTextAreaProps {
   control: Control<any>;

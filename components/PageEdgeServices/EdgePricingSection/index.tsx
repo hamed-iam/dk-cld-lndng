@@ -2,7 +2,7 @@ import { Button, Col, Row } from "antd";
 import StyledWrapper from "./edgePricingSection.style";
 import SvgIcon from "../../SvgIcon";
 import EdgePricingCard from "./EdgePricingCard";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 type Icon = {
   title: string;

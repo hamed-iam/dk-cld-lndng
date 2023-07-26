@@ -1,6 +1,6 @@
 import { Collapse } from "antd";
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 interface CloudComputingContentPropsType {
   onPanelChange: (panel: string[] | string) => void;

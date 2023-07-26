@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { ProductTabsStyledWrapper } from "./productsFeatures.style";
 import ProductTab from "./ProductTab";
 

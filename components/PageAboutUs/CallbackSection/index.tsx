@@ -4,7 +4,7 @@ import { Col, Row } from "antd";
 import { Button } from "antd";
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import StyleWrapper from "./callbackSection.style";
 
 export default function CallbackSection() {

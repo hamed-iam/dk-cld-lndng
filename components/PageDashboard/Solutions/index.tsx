@@ -5,15 +5,12 @@ import StyledWrapper from "./solutions.style";
 import RetailTab from "./RetailTab";
 import FinancialServicesTab from "./FinancialServicesTab";
 import MediaTab from "./MediaTab";
-import EducationTab from "./EducationTab";
-import HealthTab from "./HealthTab";
-import AllSolutionsTab from "./AllSolutionsTab";
 import TitleFrame from "@/components/TitleFrame";
 import SvgIcon from "@/components/SvgIcon";
 import { useRouter } from "next/router";
 
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 type TabPosition = "left" | "right" | "top" | "bottom";
 

@@ -2,7 +2,7 @@ import SvgIcon from "@/components/SvgIcon";
 import { Table } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import React, { ReactNode, useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import EdgeFeaturesTableMobile from "./EdgeFeaturesTableMobile";
 
 import { EdgeFeaturesTableStyledWrapper } from "./featuresSection.style";

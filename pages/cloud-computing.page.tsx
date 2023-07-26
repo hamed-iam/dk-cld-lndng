@@ -1,7 +1,7 @@
 import { Layout } from "@/components";
 import { CloudComputingCTR } from "@/containers";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import Head from "next/head";
 
 interface PageProps {

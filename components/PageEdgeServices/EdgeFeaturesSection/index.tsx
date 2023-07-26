@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import StyledWrapper from "./featuresSection.style";
 import EdgeFeaturesTable from "./EdgeFeaturesTable";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 interface DefineFeaturesProps {
   superTitle: string;

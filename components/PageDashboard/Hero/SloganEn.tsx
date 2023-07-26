@@ -2,7 +2,7 @@ import SvgIcon from "@/components/SvgIcon";
 import { motion } from "framer-motion";
 import { StyledSloganEn } from "./hero.style";
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 export default function SloganEn() {
   const [isMobile, setIsMobile] = useState(false);

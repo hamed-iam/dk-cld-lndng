@@ -1,6 +1,6 @@
 import React, { ReactNode, useState } from "react";
 import { Card } from "antd";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 import { EdgeFeaturesTableMobileStyledWrapper } from "./featuresSection.style";
 import SvgIcon from "@/components/SvgIcon";

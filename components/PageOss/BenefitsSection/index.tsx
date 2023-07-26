@@ -1,5 +1,5 @@
 import SvgIcon from "@/components/SvgIcon";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import StyledWrapper from "./benefitsSection.style";
 import OssBenefitCard from "./OssBenefitsCard";
 

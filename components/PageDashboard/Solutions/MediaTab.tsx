@@ -1,7 +1,7 @@
 import { Collapse } from "antd";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 const { Panel } = Collapse;
 

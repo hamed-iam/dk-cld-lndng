@@ -1,7 +1,7 @@
 import { Collapse, theme } from "antd";
 import StyledWrapper from "./caseStudySection.style";
 import SvgIcon from "../SvgIcon";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 const { Panel } = Collapse;
 

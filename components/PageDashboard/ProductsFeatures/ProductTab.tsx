@@ -1,7 +1,7 @@
 import SvgIcon from "@/components/SvgIcon";
 import TitleFrame from "@/components/TitleFrame";
 import Link from "next/link";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { ProductTabsStyledWrapper } from "./productsFeatures.style";
 import { Button, Collapse } from "antd";
 import { useRouter } from "next/router";

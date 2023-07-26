@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { ProductFeaturesStyledWrapper } from "./productsFeatures.style";
 import { Collapse } from "antd";
 const { Panel } = Collapse;
