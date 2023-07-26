@@ -1,11 +1,13 @@
 import { Control, Controller } from "react-hook-form";
 import { Input } from "antd";
 import { useTranslation } from "next-i18next";
+import { InputStyleWrapper } from "../dataEntry.style";
 
 interface RHFTextAreaProps {
   control: Control<any>;
   name: string;
   placeholder?: string;
+  required?: boolean;
   onChange?: (value: string) => void;
 }
 
@@ -18,11 +20,11 @@ const RHFTextArea = (props: RHFTextAreaProps) => {
       control={props.control}
       name={props.name}
       rules={{
-        required: t("form.error") as string,
+        required: props.required ? (t("form.error") as string) : false,
       }}
       render={({ field, fieldState }) => {
         return (
-          <>
+          <InputStyleWrapper>
             <TextArea
               rows={4}
               placeholder={props.placeholder}
@@ -38,7 +40,7 @@ const RHFTextArea = (props: RHFTextAreaProps) => {
                   props.onChange(e.target.value);
                 }
               }}
-              style={{ resize: "none" }}
+              className="text-area"
             />
 
             <br />
@@ -48,7 +50,7 @@ const RHFTextArea = (props: RHFTextAreaProps) => {
                 <br />
               </span>
             ) : null}
-          </>
+          </InputStyleWrapper>
         );
       }}
     />

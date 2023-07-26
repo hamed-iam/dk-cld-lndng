@@ -11,8 +11,13 @@ export const InputStyleWrapper = styled.div(
       display: flex;
       flex-direction: column;
       justify-content: center;
+
       span {
         color: red;
+      }
+
+      .text-area {
+        resize: none;
       }
     `;
   }

@@ -1,11 +1,13 @@
 import { Control, Controller } from "react-hook-form";
 import { Input } from "antd";
 import { useTranslation } from "next-i18next";
+import { InputStyleWrapper } from "../dataEntry.style";
 
 interface RHFInputFieldProps {
   control: Control<any>;
   name: string;
   placeholder?: string;
+  required?: boolean;
   onChange?: (value: string) => void;
 }
 
@@ -16,11 +18,11 @@ const RHFInputField = (props: RHFInputFieldProps) => {
       control={props.control}
       name={props.name}
       rules={{
-        required: t("form.error") as string,
+        required: props.required ? (t("form.error") as string) : false,
       }}
       render={({ field, fieldState }) => {
         return (
-          <>
+          <InputStyleWrapper>
             <Input
               placeholder={props.placeholder}
               status={fieldState.error ? "error" : undefined}
@@ -37,15 +39,8 @@ const RHFInputField = (props: RHFInputFieldProps) => {
               }}
             />
 
-            <br />
-            {fieldState.error ? (
-              <span style={{ color: "red", minWidth: "120px" }}>
-                {fieldState.error?.message}
-                <br />
-              </span>
-            ) : null}
-            <br />
-          </>
+            {fieldState.error ? <span>{fieldState.error?.message}</span> : null}
+          </InputStyleWrapper>
         );
       }}
     />

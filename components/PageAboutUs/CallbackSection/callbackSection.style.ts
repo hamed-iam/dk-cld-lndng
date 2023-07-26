@@ -117,6 +117,7 @@ export default styled.div(
         }
         .form-label {
           color: ${LightTextDarkLow};
+          padding-top: 5px;
         }
       }
 
