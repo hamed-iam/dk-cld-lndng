@@ -1,11 +1,11 @@
 import { Input, TextArea } from "@/components/DataEntry";
 import SvgIcon from "@/components/SvgIcon";
 import { Col, Row } from "antd";
-import { Button } from "antd";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "next-i18next";
 import StyleWrapper from "./callbackSection.style";
+import { Button, message } from "antd";
 
 export default function CallbackSection() {
   const { t } = useTranslation("about");
@@ -44,10 +44,10 @@ export default function CallbackSection() {
     axios
       .post("https://api.digicloud.dev/v1/early-access-request", data)
       .then(function (response) {
-        console.log(response);
+        message.success(t("callback.form.success-msg"));
       })
       .catch(function (error) {
-        console.log(error);
+        message.error(error.message);
       });
   };
 
