@@ -1,4 +1,6 @@
 {
+  "h1": "Content delivery network",
+  "title": "DigiCloud | CDN",
   "define": {
     "super-h1": "Edge Service Product",
     "h1": "Edge Services",
@@ -9,6 +11,10 @@
     "action-start": "Get Started",
     "action-contact": "Contact Us",
     "features": [
+      {
+        "title": "DNS record",
+        "desc": "This is detail of cell,This is detail of cell,This is detail of cell"
+      },
       {
         "title": "DNS record",
         "desc": "This is detail of cell,This is detail of cell,This is detail of cell"
@@ -27,13 +33,18 @@
       }
     ]
   },
-  "protect": {
+  "approach": {
     "super-h1": "Solutions",
     "h1-bold": "Solutions",
     "h1": "Solutions",
     "h2": "Solutions",
     "h2-colored": "Solutions",
     "sub": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+    "features-col": {
+      "name": "Name",
+      "desc": "Description",
+      "bestFor": "Best For"
+    },
     "features": [
       {
         "name": "DNS record",
@@ -49,42 +60,6 @@
         "name": "Location",
         "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
         "bestFor": "This is detail of cell"
-      },
-      {
-        "name": "Cluster",
-        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
-        "bestFor": "High Level Processing"
-      },
-      {
-        "name": "Image Processing",
-        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
-        "bestFor": "Performance"
-      },
-      {
-        "name": "SSL",
-        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
-        "bestFor": "This is detail of cell"
-      },
-      {
-        "name": "Firewall",
-        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
-        "bestFor": "Security"
-      },
-      {
-        "name": "Rate Limit Zones",
-        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
-        "bestFor": "This is detail of cell"
-      }
-    ],
-    "table": [
-      {
-        "title": "Feature"
-      },
-      {
-        "title": "Description"
-      },
-      {
-        "title": "Best for"
       }
     ]
   },
@@ -138,19 +113,19 @@
         "title": "#1 Bronze",
         "subtitle": "Sub title of #1 Bronze",
         "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        "item-title": ["12 DNS Record"]
+        "item-title": ["Record 1", "Record 2", "Record 3", "Record 4", "Record 5"]
       },
       {
         "title": "#2 Silver",
-        "subtitle": "Sub title of #1 Bronze",
+        "subtitle": "Sub title of #2 Silver",
         "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        "item-title": ["12 DNS Record"]
+        "item-title": ["Record 1", "Record 2", "Record 3", "Record 4", "Record 5"]
       },
       {
         "title": "#3 Golden",
-        "subtitle": "Sub title of #1 Bronze",
+        "subtitle": "Sub title of #3 Golden",
         "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        "item-title": ["12 DNS Record"]
+        "item-title": ["Record 1", "Record 2", "Record 3", "Record 4", "Record 5"]
       }
     ],
     "action": {
@@ -159,11 +134,29 @@
       "view-less": "View Less"
     }
   },
-  "usecases":{
+  "usecase":{
     "super-h1": "Guidance",
     "h1": "Use Cases In",
     "h2": "Edge Services",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "cards":[
+      {
+        "title": "Usecase 1",
+        "desc": "Usecase 1 Desc"
+      },
+      {
+        "title": "Usecase 2",
+        "desc": "Usecase 2 Desc"
+      },
+      {
+        "title": "Usecase 3",
+        "desc": "Usecase 3 Desc"
+      },
+      {
+        "title": "Usecase 4",
+        "desc": "Usecase 4 Desc"
+      }
+    ]
   },
   "faq": {
     "links": {

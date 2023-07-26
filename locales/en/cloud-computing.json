@@ -1,8 +1,10 @@
 {
   "h1": "Cloud Computing",
   "title": "DigiCloud | Cloud Computing",
-  "desc" : "You Can Choose Different Storage ClassesYou Can Choose Different Storage Classes You Can Choose Diffrent Storage Classes",
   "define": {
+    "super-h1": "Edge Service Product",
+    "h1": "Cloud Computing",
+    "sub-h1": ["For", " All-Sized ", "Companies"],
     "desc": "You Can Choose Different Storage ClassesYou Can Choose Different Storage Classes You Can Choose Diffrent Storage Classes",
     "action-contact": "Contact Us",
     "action-start": "Get Start",
@@ -85,10 +87,35 @@
       }
     ]
   },
-  "usecases":{
+  "pricing": {
+    "super-h1": "Pricing and Payment",
+    "h1": "Pricing Packages",
+    "sub": "Your Business",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  "usecase":{
     "super-h1": "Guidance",
     "h1": "Use Cases In",
-    "h2": "Edge Services"
+    "h2": "Edge Services",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam.",
+    "cards":[
+      {
+        "title": "Usecase 1",
+        "desc": "Usecase 1 Desc"
+      },
+      {
+        "title": "Usecase 2",
+        "desc": "Usecase 2 Desc"
+      },
+      {
+        "title": "Usecase 3",
+        "desc": "Usecase 3 Desc"
+      },
+      {
+        "title": "Usecase 4",
+        "desc": "Usecase 4 Desc"
+      }
+    ]
   },
   "faq": {
     "links": {

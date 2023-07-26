@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { Input } from "../DataEntry";
 import { FooterCallbackStyledWrapper } from "./footer.style";
 import { Button } from "antd";
+import axios from "axios";
 
 const FooterCallbackForm = () => {
   const { t } = useTranslation("common");
@@ -14,7 +15,14 @@ const FooterCallbackForm = () => {
   });
 
   const onSubmit = (data: any) => {
-    console.log(data);
+    axios
+      .post("https://api.digicloud.dev/v1/early-access-request", data)
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   const handleInputChange = (value: string) => {

@@ -1,14 +1,16 @@
 {
-  "title": "دیجی کلاد",
+  "title": "دیجی‌کلاد",
   "hero": {
     "super-h1": "دیجی‌کلاد چیست؟",
     "h1": "زیرساخت یکپارچه ابری دیجی‌کلاد",
     "sub-h1": "فناوری ابری امن‌تر - سریع‌تر - ارزران‌تر - در دسترس‌تر - پایدارتر از همیشه!",
+    "slogan": ["بیایید با هم", "زیرساخت", "بهتری", "بسازیم"],
     "actions": {
       "create-account": "عضو دیجی‌کلاد شوید"
     }
   },
   "products": {
+    "super-section": "محصول ما",
     "super-h1": "محصول ما",
     "h1-cloud-c": "پردازش ابری",
     "h1-cloud-e": "سرویس‌های Edge",
@@ -25,34 +27,74 @@
     "chart-donut-sub":"sub content",
     "chart-bar-info":"Comparing Retail Rate in Last 2 Season",
     "chart-bar-sub":"sub content",
-    "features-title": "Features",
+    "features-title": "ویژگی‌ها",
     "tab-c":"پردازش ابری",
     "tab-e":"فضای ذخیره‌سازی",
-    "tab-o":"سرویس‌های EDGE",
-    "panels": [
+    "tab-o":"شبکه توزیع محتوا",
+    "panels-c": [
       {
-        "header": "header",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "header": "پردازش ابری",
+        "desc": "با وجود ویژگی‌های اسنپ‌شات و Instance در سرویس رایانش ابری دیجی‌کلاد، شما می‌توانید با سرعت بسیار بالا یک سرور جدید راه‌اندازی کنید تا در صورت بروز مشکل یا عدم نیاز به تغییرات آن را فراخوانی کنید."
       },
       {
-        "header": "header",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "header": "امنیت بالا",
+        "desc": "یکی از مزایای خدمات رایانش ابری دیجی‌کلاد امنیت بالای سرویس‌های آن است. دیجی‌کلاد با بهره‌گرفتن از جدیدترین تکنولوژی‌ها و همکاری کارشناسان خبره IT امنیت داده‌های شما را تامین می‌کند."
       },
       {
-        "header": "header",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "header": "پیکره‌بندی شبکه (VPC)",
+        "desc": "ایجاد یک VPC یا اتصال چندین سرور مجازی در یک شبکه خصوصی از قابلیت‌های خدمات رایانش ابری دیجی‌کلاد است. به این ترتیب، در زمان ساخت سرور ابری می‌توانید نوع شبکه را (عمومی یا خصوصی) بر اساس نیاز خود شخصی‌سازی کنید."
       },
       {
-        "header": "header",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "header": "توزیع بار (LBaas)",
+        "desc": "قابلیت توزیع بار (یا LBaas) دیجی‌کلاد درخواست‌های کاربرانتان را به صورت خودکار بین سرورها توزیع می‌کند و سلامت سرورها را به صورت لحظه‌ای می‌سنجد."
+      }
+    ],
+    "panels-e": [
+      {
+        "header": "امنیت ابری بالا",
+        "desc": "دیجی‌کلاد با بهره گرفتن از راهکارهای امنیتی مانند Rate limit، فایروال، WAF و DDoS Mitigation از داده‌های شما در برابر انواع حملات سنتی و پیشرفته جلوگیری می‌کند."
       },
       {
-        "header": "header",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "header": "خدمات EDGE CDN",
+        "desc": "دیجی‌کلاد با ارائه سرویس‌هایی مانند Proxy Core، Cache Purge، Redirection، Custom Host Header و … پکیج کاملی از خدمات Edge CDN در اختیارتان می‌گذارد."
       },
       {
-        "header": "header",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "header": "مانیتورینگ و ارائه آمار کاربران",
+        "desc": "با امکاناتی نظیر Log Forwarding، Audit Log، DNR و DNS سرویس و … به راحتی می‌توانید داده‌های خود را مانیتور و بررسی کنید و در لحظه از آن‌ها گزارش تهیه کنید."
+      },
+      {
+        "header": "بهینه‌سازی وب‌سایت",
+        "desc": "با وجود ابزارهای Image Resize، Watermark و فشارده‌ساز کدهای CSS/HTML/JavaScript می‌توانید محتوای وب‌سایت خود را برای موتورهای جستجو بهینه‌سازی کنید و وضعیت SEO وب‌سایت خود را بهبود ببخشید."
+      },
+      {
+        "header": "DNS ابری",
+        "desc": "با استفاده از خدمات DNS ابری دیجی‌کلاد شما می‌توانید به راحتی رکوردهای DNS دامنه‌ها و زیردامنه‌هایتان را به محیط امن منتقل کنید و با روشی مقرون به‌صرفه در DNS گلوبال به اشتراک بگذارید."
+      }
+    ],
+    "panels-o": [
+      {
+        "header": "Monitoring",
+        "desc": "مانیتورینگ ویژگی مهم و اساسی در آبجکت استوریج دیجی‌کلاد است که به کاربران اجازه می‌دهد تا منابع و داده‌های خود را به‌طور پیوسته مشاهده کنند و از آن گزارش بگیرند."
+      },
+      {
+        "header": "Buckets",
+        "desc": "باکت‌ها کانتینرهای منطقی هستند که در رایانش ابری آبجکت استوریج برای ذخیره کردن داده‌ها استفاده می‌شوند. این ویژگی دیجی‌کلاد به شما کمک می‌کند تا به‌ سرعت به فایل‌های خود دست پیدا کنید."
+      },
+      {
+        "header": "CORS",
+        "desc": "ویژگی امنیتی اشتراک منابع متقابل یا همان Cross-origin Resource Sharing در دیجی‌کلاد به شما کمک می‌کند تا داده‌های درون باکت‌ها را کنترل کرده و از نشت اطلاعات جلوگیری کنید."
+      },
+      {
+        "header": "Anti-Leach",
+        "desc": "قابلیت Anti-Leach دیجی‌کلاد به شما امکان می‌دهد تا از دانلود و کپی غیرقانونی باکت‌ها جلوگیری کنید. با کمک این ویژگی می‌توانید دسترسی‌ها را کنترل و فرآیندها را بررسی کنید."
+      },
+      {
+        "header": "CNAME",
+        "desc": "ویژگی نام مستعار یا CNAME در دیجی‌کلاد به شما اجازه می‌دهد تا به جای استفاده از URLهای سیستمی، دامنه اختصاصی برند خودتان را به آبجکت استوریج خود وصل کنید."
+      },
+      {
+        "header": "Valid Referrer",
+        "desc": "منبع معتبر یا Valid Referrer یکی دیگر از امکانات آبجکت استوریج دیجی‌کلاد است که به شما امکان می‌دهد تا تنها به درخواست‌هایی که از دامنه‌های مورد تاییدتان می‌آیند مجوز دهید."
       }
     ]
   },
@@ -101,46 +143,92 @@
     "super-h2":"راهکارهای ابری دیجی‌کلاد",
     "h2": "ارائه راه‌حل‌های پیشرفته برای",
     "h2-colored": "انواع کسب‌وکار",
-    "sub-start": "Safe, economical",
-    "sub": "and",
-    "sub-end": "according to your business",
+    "sub": ["Safe, economical", "and", "according to your business"],
     "tabs": {
       "industry": {
-        "label": "Retail",
+        "label": "بر اساس صنعت",
         "panel": [
           {
-            "h3": "Retail Panel 1",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+            "h3": "فروشگاه آنلاین",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
           },
           {
-            "h3": "Retail Panel 2",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+            "h3": "ارز دیجیتال",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "خدمات مالی",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "آموزش آنلاین",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "بازی و سرگرمی",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "سلامت و پزشکی",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "تبلیغات و بازاریابی",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
           }
         ]
       },
       "application": {
-        "label": "Financial Services",
+        "label": "بر اساس کاربرد",
         "panel": [
           {
-            "h3": "Financial Services Panel 1",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+            "h3": "امنیت ابری",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
           },
           {
-            "h3": "Financial Services Panel 2",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+            "h3": "ابر خصوصی",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "CDN بانکی",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "بازیابی از بحران ",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "بلاک‌چین",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "مهاجرت ابری",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "ایکامرس",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
           }
         ]
       },
       "scale": {
-        "label": "Media and Entertainment",
+        "label": "بر اساس اندازه کسب‌وکار",
         "panel": [
           {
-            "h3": "Media Panel 1",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+            "h3": "استارتاپ‌ها",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
           },
           {
-            "h3": "Media Panel 2",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+            "h3": "شرکت‌های متوسط",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "سازمان‌های بزرگ",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "بخش دولتی",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
           }
         ]
       }
@@ -150,8 +238,8 @@
     "h1": "۵ تا از بهترین سناریو‌های کسب‌و‌کار برای دیجی‌کلاد"
   },
   "security": {
-    "super-h1": "امنیت",
-    "h1": "با خیال راحت ابری شوید",
+    "super-h1": "",
+    "h1": ["با خیال راحت", "ابری", "شوید"],
     "sub-h1": "درباره امکانات دیجی‌کلاد سوال دارید؟",
     "link": "با ما تماس بگیرید",
     "data": [
@@ -160,12 +248,12 @@
         "sub":"درخواست در دقیقه"
       },
       {
-        "title":"1 K",
-        "sub":"DDoS attack blocked per day"
+        "title":"۳۳",
+        "sub":"پاپ سایت در جهان"
       },
       {
-        "title":"770 K",
-        "sub":"SSL certificates worldwide"
+        "title":"۹۹.۹۹٪",
+        "sub":"آپ تایم"
       },
       {
         "title":"1.56 M",
@@ -197,7 +285,7 @@
   "easy-acc": {
     "h1": "دسترسی سریع به محصولات",
     "cld-opt": "پردازش ابری",
-    "edg-opt": "سرویس‌های Edge",
+    "edg-opt": "شبکه توزیع محتوای",
     "oss-opt": "فضای ذخیره‌سازی"
   },
   "share": {

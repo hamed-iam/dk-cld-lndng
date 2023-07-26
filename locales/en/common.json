@@ -16,11 +16,10 @@
     "menu": "Menu"
   },
   "define": {
-    "super-h1": "",
     "h1": "Cloud Computing",
     "sub-h1": ["For", " All-Sized ", "Companies"],
-    "action-start": "عضو دیجی‌کلاد شوید",
-    "action-contact": "با ما تماس بگیرید"
+    "action-start": "Get Started",
+    "action-contact": "Contact Us"
   },
   "solutions": {
     "super-h1": "Benefits and Solutions",
@@ -30,7 +29,7 @@
       "title": "Related Industry",
       "name": ["Banking", "Education", "Media and Intertainment", "Retail"]
     },
-    "actions-position": "of",    
+    "actions-position": "of",
     "cards":[
       {
         "title": "title1",
@@ -126,6 +125,14 @@
     },
     "contact": "Have any other question?",
     "contact-link":"Contact Us"
+  },
+  "next-step": {
+    "h2": "Do you know the next step?",
+    "sub": "You Can Catch This Service Either Other Product of Digicloud In 1 Minutes",
+    "action": {
+      "action-start": "Get Started",
+      "action-contact": "Contact Us"
+    }
   },
   "footer": {
     "brand-desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",

@@ -2,6 +2,7 @@ import { Input, TextArea } from "@/components/DataEntry";
 import SvgIcon from "@/components/SvgIcon";
 import { Col, Row } from "antd";
 import { Button } from "antd";
+import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import StyleWrapper from "./callbackSection.style";
@@ -32,12 +33,22 @@ export default function CallbackSection() {
 
   const { handleSubmit, control, getFieldState } = useForm({
     defaultValues: {
-      input: "",
+      name: "",
+      email: "",
+      phone: "",
+      description: "",
     },
   });
 
   const onSubmit = (data: any) => {
-    console.log(data);
+    axios
+      .post("https://api.digicloud.dev/v1/early-access-request", data)
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   const handleInputChange = (value: string) => {
@@ -73,7 +84,7 @@ export default function CallbackSection() {
                 placeholder={titlePlaceholder}
                 control={control}
                 onChange={handleInputChange}
-                name="company"
+                name="name"
               />
               <div className="form-label">{t("callback.form.email")}</div>
               <Input
@@ -87,7 +98,7 @@ export default function CallbackSection() {
                 placeholder={numberPlaceholder}
                 control={control}
                 onChange={handleInputChange}
-                name="number"
+                name="phone"
               />
               <div className="form-label">{t("callback.form.desc")}</div>
               <TextArea
@@ -99,7 +110,7 @@ export default function CallbackSection() {
                 <Button
                   htmlType="submit"
                   type="primary"
-                  disabled={!!getFieldState("input").error}
+                  disabled={!!getFieldState("name").error}
                   size="large"
                 >
                   {t("callback.form.submit")}

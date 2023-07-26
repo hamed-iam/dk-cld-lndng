@@ -4,6 +4,7 @@
     "super-h1": "What is DigiCloud?",
     "h1": "Let’s Build a Better Infrastructure, together",
     "sub-h1": "Safe, economical and according to your priorities",
+    "slogan": ["Let's build a", "Better", "Infrastructure", "together"],
     "actions":{
       "create-account":"Create DigiCloud Account"
     }
@@ -30,7 +31,47 @@
     "tab-c":"CLOUD COMPUTING",
     "tab-e":"OBJECT STORAGE",
     "tab-o":"EDGE SERVICES",
-    "panels": [
+    "panels-c": [
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
+    ],
+    "panels-e": [
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "header": "header",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
+    ],
+    "panels-o": [
       {
         "header": "header",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -100,87 +141,94 @@
   },
   "solutions": {
     "super-h2":"Our Solutions",
-    "h2-normal": "Answer Your Business Complexity with",
+    "h2": "Answer Your Business Complexity with",
     "h2-colored": "Our Solution",
-    "sub-start": "Safe, economical",
-    "sub": "and",
-    "sub-end": "according to your business",
+    "sub": ["Safe, economical", "and", "according to your business"],
     "tabs": {
-      "retail": {
-        "label": "Retail",
+      "industry": {
+        "label": "Industry",
         "panel": [
           {
-            "h3": "Retail Panel 1",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+            "h3": "Industry Panel 1",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
           },
           {
-            "h3": "Retail Panel 2",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+            "h3": "Industry Panel 2",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "Industry Panel 3",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "Industry Panel 4",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "Industry Panel 5",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "Industry Panel 6",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "Industry Panel 7",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
           }
         ]
       },
-      "finance": {
-        "label": "Financial Services",
+      "application": {
+        "label": "Application",
         "panel": [
           {
-            "h3": "Financial Services Panel 1",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+            "h3": "Application Panel 1",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
           },
           {
-            "h3": "Financial Services Panel 2",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+            "h3": "Application Panel 2",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "Application Panel 2",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "Application Panel 2",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "Application Panel 2",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "Application Panel 2",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+          },
+          {
+            "h3": "Application Panel 2",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
           }
         ]
       },
-      "media": {
-        "label": "Media and Entertainment",
+      "scale": {
+        "label": "Scale",
         "panel": [
           {
-            "h3": "Media Panel 1",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+            "h3": "Scale Panel 1",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
           },
           {
-            "h3": "Media Panel 2",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
-          }
-        ]
-      },
-      "education": {
-        "label": "Education",
-        "panel": [
-          {
-            "h3": "Education Panel 1",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+            "h3": "Scale Panel 2",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
           },
           {
-            "h3": "Education Panel 2",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
-          }
-        ]
-      },
-      "health": {
-        "label": "Health and Medical",
-        "panel": [
-          {
-            "h3": "Health and Medical Panel 1",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+            "h3": "Scale Panel 1",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
           },
           {
-            "h3": "Health and Medical Panel 2",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
-          }
-        ]
-      },
-      "others": {
-        "label": "All Solutions",
-        "panel": [
-          {
-            "h3": "All Solutions Panel 1",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
-          },
-          {
-            "h3": "All Solutions Panel 2",
-            "text": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
+            "h3": "Scale Panel 2",
+            "desc": "A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world."
           }
         ]
       }
