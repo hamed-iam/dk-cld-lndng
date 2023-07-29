@@ -8,6 +8,7 @@ interface RHFInputFieldProps {
   name: string;
   placeholder?: string;
   required?: boolean;
+  rules?: object;
   onChange?: (value: string) => void;
 }
 
@@ -19,6 +20,7 @@ const RHFInputField = (props: RHFInputFieldProps) => {
       name={props.name}
       rules={{
         required: props.required ? (t("form.error") as string) : false,
+        ...props.rules,
       }}
       render={({ field, fieldState }) => {
         return (

@@ -85,6 +85,7 @@ export default function CallbackSection() {
                 control={control}
                 onChange={handleInputChange}
                 name="name"
+                required
               />
               <div className="form-label">{t("callback.form.email")}</div>
               <Input
@@ -92,6 +93,17 @@ export default function CallbackSection() {
                 control={control}
                 onChange={handleInputChange}
                 name="email"
+                required
+                rules={{
+                  validate: {
+                    maxLength: (v: any) =>
+                      v.length <= 50 ||
+                      (t("callback.form.validation.maxLength") as string),
+                    matchPattern: (v: any) =>
+                      /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(v) ||
+                      (t("callback.form.validation.mailPattern") as string),
+                  },
+                }}
               />
               <div className="form-label">{t("callback.form.call-number")}</div>
               <Input

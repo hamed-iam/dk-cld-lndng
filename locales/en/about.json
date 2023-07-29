@@ -60,7 +60,12 @@
       "call-number": "Call Number (optional)",
       "call-number-placeholder": "Call Number (optional)",
       "desc": "Description (optional)",
-      "submit": "Send Request"
+      "submit": "Send Request",
+      "success-msg": "success message",
+      "validation": {
+        "maxLength": "Input exceeds maximum allowed length.",
+        "mailPattern": "Please enter a valid email address."
+      }
     },
     "items": [
       {
