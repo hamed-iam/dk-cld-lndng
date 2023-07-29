@@ -135,8 +135,6 @@
     }
   },
   "usecase":{
-    "super-h1": "Guidance",
-    "h1": "Use Cases In",
     "h2": "Edge Services",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "cards":[

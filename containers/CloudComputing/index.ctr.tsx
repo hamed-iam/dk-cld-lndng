@@ -151,9 +151,9 @@ const CloudComputingCtr = () => {
       />
       <CloudPricingSection />
       <CaseStudy
-        title={t("usecases.h1")}
+        title={t("usecase.h2")}
+        desc={t("usecase.desc")}
         panels={caseStudyPanels}
-        desc={t("usecases.desc")}
       />
       <Faq
         loc="cloud-computing"
