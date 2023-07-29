@@ -5,15 +5,12 @@ import StyledWrapper from "./solutions.style";
 import RetailTab from "./RetailTab";
 import FinancialServicesTab from "./FinancialServicesTab";
 import MediaTab from "./MediaTab";
-import EducationTab from "./EducationTab";
-import HealthTab from "./HealthTab";
-import AllSolutionsTab from "./AllSolutionsTab";
 import TitleFrame from "@/components/TitleFrame";
 import SvgIcon from "@/components/SvgIcon";
 import { useRouter } from "next/router";
 
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 type TabPosition = "left" | "right" | "top" | "bottom";
 
@@ -33,34 +30,19 @@ export default function DashboardSolutions() {
 
   const tabData = [
     {
-      label: t("solutions.tabs.retail.label"),
+      label: t("solutions.tabs.industry.label"),
       key: "1",
       children: <RetailTab />,
     },
     {
-      label: t("solutions.tabs.finance.label"),
+      label: t("solutions.tabs.application.label"),
       key: "2",
       children: <FinancialServicesTab />,
     },
     {
-      label: t("solutions.tabs.media.label"),
+      label: t("solutions.tabs.scale.label"),
       key: "3",
       children: <MediaTab />,
-    },
-    {
-      label: t("solutions.tabs.education.label"),
-      key: "4",
-      children: <EducationTab />,
-    },
-    {
-      label: t("solutions.tabs.health.label"),
-      key: "5",
-      children: <HealthTab />,
-    },
-    {
-      label: t("solutions.tabs.others.label"),
-      key: "6",
-      children: <AllSolutionsTab />,
     },
   ];
 
@@ -104,8 +86,8 @@ export default function DashboardSolutions() {
             </div>
           </div>
           <p className="dashboard-solutions-header-sub">
-            {t("solutions.sub-start")} <span>{t("solutions.sub")}</span>{" "}
-            {t("solutions.sub-end")}
+            {t("solutions.sub.0")} <span>{t("solutions.sub.1")}</span>{" "}
+            {t("solutions.sub.2")}
           </p>
         </div>
 

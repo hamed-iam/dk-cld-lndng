@@ -1,13 +1,17 @@
 import SvgIcon from "@/components/SvgIcon";
 import { motion } from "framer-motion";
+import { useTranslation } from "next-i18next";
 import { StyledSloganFa } from "./hero.style";
 
 export default function SloganFa() {
+  const { t } = useTranslation("dashboard");
+
   return (
     <StyledSloganFa>
       <h1>
         <span className="sparkle">
-          بیایید با هم <SvgIcon title="sparkleIcon" viewBox="0 0 56 57" />
+          {t("hero.slogan.0")}
+          <SvgIcon title="sparkleIcon" viewBox="0 0 56 57" />
         </span>
         <motion.span
           className="better"
@@ -15,7 +19,8 @@ export default function SloganFa() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          زیرساخت <span className="better-highlight">بهتر</span> ی
+          {t("hero.slogan.1")}{" "}
+          <span className="better-highlight">{t("hero.slogan.2")} </span>
         </motion.span>{" "}
         <motion.span
           initial={{ opacity: 0 }}
@@ -23,7 +28,7 @@ export default function SloganFa() {
           transition={{ duration: 0.5 }}
           className="infrastructure"
         >
-          بسازیم
+          {t("hero.slogan.3")}
         </motion.span>
       </h1>
     </StyledSloganFa>

@@ -1,6 +1,6 @@
 {
   "h1": "شبکه توزیع محتوای",
-  "title": "دیجی کلاد | شبکه توزیع محتوای",
+  "title": "دیجی‌کلاد | شبکه توزیع محتوای",
   "define": {
     "super-h1": "",
     "h1": "شبکه توزیع محتوای دیجی‌کلاد",
@@ -33,64 +33,33 @@
       }
     ]
   },
-  "protect": {
+  "approach": {
     "super-h1": "Solutions",
     "h1-bold": "Solutions",
     "h1": "Solutions",
     "h2": "Solutions",
     "h2-colored": "Solutions",
     "sub": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+    "features-col": {
+      "name": "حوزه",
+      "desc": "توضیح",
+      "bestFor": "ایده‌ال برای"
+    },
     "features": [
       {
-        "name": "DNS record",
-        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
-        "bestFor": "This is detail of cell"
+        "name": "سازمان‌های بزرگ",
+        "desc": "اگر کسب‌وکاری بزرگ دارید با استفاده از CDN دیجی‌کلاد می‌توانید از در دسترس بودن همیشگی سرویس‌های خود مطمئن شوید و بالاترین میزان آپ‌تایم را تجربه کنید. همچنین، با فعال‌سازی قابلیت‌هایی مانند فایروال، SSL و WAF می‌توانید از حملات سایبری در امان بمانید.",
+        "bestFor": "مناسب بانک‌ها، فروشگاه‌های بزرگ آنلاین، پلتفرم‌های سرگرمی و وب‌سایت‌های آموزشی"
       },
       {
-        "name": "WAF",
-        "desc": "2 is detail of cell,This is detail of cell,This is detail of cell",
-        "bestFor": "2 is detail of cell"
+        "name": "کسب‌وکارهای کوچک",
+        "desc": "اگر صاحب استارتاپ یا کسب‌وکار کوچکی هستید، با کمک شبکه توزیع محتوای دیجی‌کلاد می‌توانید محتوای وب‌سایت خود را با بالاترین سرعت در اختیار کاربران‌تان قرار دهید. این ویژگی به شما کمک می‌کند تا به مرور رتبه‌های بالاتری در نتایج گوگل کسب کنید.",
+        "bestFor": "فروشگاه‌های آنلاین کوچک، استارتاپ‌های حوزه تکنولوژی، کسب‌وکارهای آنلاین محلی، وبلاگ‌ها و سایت‌های خبری، شرکت‌های نرم‌افزاری"
       },
       {
-        "name": "Location",
-        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
-        "bestFor": "This is detail of cell"
-      },
-      {
-        "name": "Cluster",
-        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
-        "bestFor": "High Level Processing"
-      },
-      {
-        "name": "Image Processing",
-        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
-        "bestFor": "Performance"
-      },
-      {
-        "name": "SSL",
-        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
-        "bestFor": "This is detail of cell"
-      },
-      {
-        "name": "Firewall",
-        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
-        "bestFor": "Security"
-      },
-      {
-        "name": "Rate Limit Zones",
-        "desc": "This is detail of cell,This is detail of cell,This is detail of cell",
-        "bestFor": "This is detail of cell"
-      }
-    ],
-    "table": [
-      {
-        "title": "Feature"
-      },
-      {
-        "title": "Description"
-      },
-      {
-        "title": "Best for"
+        "name": "مدیران فنی",
+        "desc": "اگر توسعه‌دهنده وب یا مدیر فنی هستید امنیت، یکپارچگی، پایداری و توسعه‌پذیری ویژگی‌های مهمی است که از یک CDN انتظار دارید. شبکه توزیع محتوای دیجی‌کلاد علاوه بر موارد مذکور به شما این امکان را می‌دهد تا با نصب و راه‌اندازی سریع به صورت لحظه‌ای ترافیک کاربران‌تان را رصد کنید.",
+        "bestFor": "مدیران فنی وب‌سایت‌های تجارت الکترونیکی، مدیران فنی شرکت‌های بازی‌های آنلاین، مدیران فنی در سازمان‌های دولتی و غیرانتفاعی"
       }
     ]
   },
@@ -129,10 +98,47 @@
       }
     ]
   },
-  "usecases":{
+  "pricing": {
+    "super": "Pricing and Payment",
+    "title": {
+      "h1": "Pricing Packages",
+      "h1-blur": "Transparent",
+      "rest": "Your Business",
+      "subheading": "by Using",
+      "subheading-highlight": "Edge Services"
+    },
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "cards": [
+      {
+        "title": "#1 Bronze",
+        "subtitle": "Sub title of #1 Bronze",
+        "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore",
+        "item-title": ["Record 1", "Record 2", "Record 3", "Record 4", "Record 5"]
+      },
+      {
+        "title": "#2 Silver",
+        "subtitle": "Sub title of #2 Silver",
+        "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore",
+        "item-title": ["Record 1", "Record 2", "Record 3", "Record 4", "Record 5"]
+      },
+      {
+        "title": "#3 Golden",
+        "subtitle": "Sub title of #3 Golden",
+        "desc": "Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempor incididunt ut labore",
+        "item-title": ["Record 1", "Record 2", "Record 3", "Record 4", "Record 5"]
+      }
+    ],
+    "action": {
+      "get-started": "Get Started",
+      "view-more": "View More",
+      "view-less": "View Less"
+    }
+  },
+  "usecase":{
     "super-h1": "موارد استفاده",
-    "h1": "کاربردهای مختلف CDN دیجی‌کلاد",
-    "h2": "Edge Services",
+    "h1": "کاربردهای مختلف",
+    "h2": "شبکه توزیع محتوای دیجی‌کلاد",
+    "desc": "",
     "cards":[
       {
         "title": "ارتقای امنیت وب‌سایت و افزایش سرعت بارگذاری",
@@ -144,23 +150,11 @@
       },
       {
         "title": "پخش زنده و استریم ویدیو",
-        "desc": "شبکه توزیع محتوای دیجی‌کلاد این امکان را در اختیارتان می‌گذارد تا در هر زمان که بخواهید پخش زنده ویدیویی داشته باشید، محتوای ویدیویی خود را به صورت پایدار پخش کنید و به دست مخاطبان خود برسانید.."
+        "desc": "شبکه توزیع محتوای دیجی‌کلاد این امکان را در اختیارتان می‌گذارد تا در هر زمان که بخواهید پخش زنده ویدیویی داشته باشید، محتوای ویدیویی خود را به صورت پایدار پخش کنید و به دست مخاطبان خود برسانید."
       },
       {
         "title": "توزیع پچ‌های امنیتی و بروزرسانی‌های نرم‌افزاری",
         "desc": "استفاده از شبکه توزیع محتوای دیجی‌کلاد به شما اجازه می‌دهد تا در هر زمان که بخواهید پچ‌های امنیتی و بروزرسانی‌های نرم‌افزاری خود را در مقیاس بزرگ در دسترس کاربران‌تان قرار دهید."
-      },
-      {
-        "title": "آموزش",
-        "desc": "آموزشگاه‌ها و فعالان حوزه آموزش می‌توانند با کمک خدمات دیجی‌کلاد فضای آموزشی خود را مدرن و ایمن کنند و با به‌کارگیری داده‌های موجود نرخ موفقیت دانش‌آموزان را افزایش دهند."
-      },
-      {
-        "title": "سلامت و درمان",
-        "desc": "زیرساخت یکپارچه ابری دیجی‌کلاد این امکان را در اختیار شرکت‌های فعال در حوزه سلامت قرار می‌دهد تا راهکارها و ابزارهای هوشمندی را در این زمینه توسعه دهند."
-      },
-      {
-        "title": "زنجیره تامین و لجستیک",
-        "desc": "یکی دیگر از موارد استفاده از خدمات ابری دیجی‌کلاد در شرکت‌های لجستیک و زنجیره تامین است که به آن‌ها کمک می‌کند تا فرآیندی کارآمد، انعطاف‌پذیر و پایدار ایجاد کنند."
       }
     ]
   },

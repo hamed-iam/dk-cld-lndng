@@ -11,14 +11,15 @@
     "products": {
       "cloud-computing": "رایانش ابری",
       "oss": "ابجکت استوریج",
-      "edge-services": "سرویس های ادج"
+      "edge-services": "شبکه توزیع محتوا"
     },
     "menu": "منو"
   },
   "define": {
-    "super-h1": "",
     "h1": "Cloud Computing",
-    "sub-h1": ["For", " All-Sized ", "Companies"]
+    "sub-h1": ["", "", ""],
+    "action-start": "عضو دیجی‌کلاد شوید",
+    "action-contact": "با ما تماس بگیرید"
   },
   "solutions": {
     "super-h1": "Benefits and Solutions",
@@ -149,6 +150,14 @@
     },
     "contact": "درباره خدمات دیجی‌کلاد سوال دارید؟",
     "contact-link":"با ما تماس بگیرید"
+  },
+  "next-step": {
+    "h2": "Do you know the next step?",
+    "sub": "You Can Catch This Service Either Other Product of Digicloud In 1 Minutes",
+    "actions": {
+      "start": "عضو دیجی‌کلاد شوید",
+      "contact": "با ما تماس بگیرید"
+    }
   },
   "footer": {
     "brand-desc": "دیجی‌کلاد، به عنوان یکی از شرکت‌های زیرمجموعه دیجی‌کالا، ماموریت دارد تا در مسیر رشد و توسعه خود نیازهای سایر مشتریان در حوزه فناوری ابری را رفع کند.",

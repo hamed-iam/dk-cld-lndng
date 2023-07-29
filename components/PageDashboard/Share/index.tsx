@@ -35,7 +35,13 @@ const Share = () => {
               {/* <SvgIcon title="foldedHandsEmojiIcon" viewBox="0 0 32 32" /> */}
             </div>
             <div className="info-section-action">
-              <Button className="info-section-action-btn" type="primary">
+              <Button
+                className="info-section-action-btn"
+                type="primary"
+                href="http://172.16.140.100:8080/digicloud-stage-public/documents/digicloud_Intro.pdf"
+                download
+                target="_blank"
+              >
                 <SvgIcon title="downloadIcon" viewBox="0 0 24 24" />
                 {t("share.action")}
               </Button>

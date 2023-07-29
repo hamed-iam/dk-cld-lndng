@@ -1,6 +1,8 @@
 import { InfoBox, Layout, PostList } from "@/components";
 import { EdgeServicesCTR } from "@/containers";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+import Head from "next/head";
 
 interface PageProps {
   theme: string | (() => void);
@@ -8,10 +10,17 @@ interface PageProps {
 }
 
 const EdgeServicesPage = ({ toggleTheme, theme }: PageProps) => {
+  const { t } = useTranslation("edge-services");
+
   return (
-    <Layout toggleTheme={toggleTheme} theme={theme}>
-      <EdgeServicesCTR />
-    </Layout>
+    <>
+      <Head>
+        <title>{t("title")}</title>
+      </Head>
+      <Layout toggleTheme={toggleTheme} theme={theme}>
+        <EdgeServicesCTR />
+      </Layout>
+    </>
   );
 };
 

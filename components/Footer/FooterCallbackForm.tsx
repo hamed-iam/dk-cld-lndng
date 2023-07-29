@@ -2,7 +2,8 @@ import { useTranslation } from "next-i18next";
 import { useForm } from "react-hook-form";
 import { Input } from "../DataEntry";
 import { FooterCallbackStyledWrapper } from "./footer.style";
-import { Button } from "antd";
+import axios from "axios";
+import { Button, message } from "antd";
 
 const FooterCallbackForm = () => {
   const { t } = useTranslation("common");
@@ -14,7 +15,14 @@ const FooterCallbackForm = () => {
   });
 
   const onSubmit = (data: any) => {
-    console.log(data);
+    axios
+      .post("https://api.digicloud.dev/v1/early-access-request", data)
+      .then(function (response) {
+        message.success(t("callback.form.success-msg"));
+      })
+      .catch(function (error) {
+        message.error(error.message);
+      });
   };
 
   const handleInputChange = (value: string) => {

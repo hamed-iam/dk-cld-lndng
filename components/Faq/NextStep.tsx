@@ -1,4 +1,6 @@
 import { Button, Col, Row } from "antd";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 import SvgIcon from "../SvgIcon";
 
 interface NextStepPropTypes {
@@ -6,6 +8,9 @@ interface NextStepPropTypes {
 }
 
 export default function NextStep({ onPointerMove }: NextStepPropTypes) {
+  const { t } = useTranslation("common");
+  const { locale } = useRouter();
+
   return (
     <div className="faq-next-step" onPointerMove={onPointerMove}>
       <Row justify="space-between">
@@ -18,21 +23,30 @@ export default function NextStep({ onPointerMove }: NextStepPropTypes) {
           className="faq-next-step-title"
         >
           <div className="d-f align-c">
-            <h2>Do you know the next step?</h2>
+            <h2>{t("next-step.h2")}</h2>
             <SvgIcon title="sirenIcon" viewBox="0 0 40 45" />
           </div>
-          <p>
-            You Can Catch This Service Either Other Product of Digicloud In 1
-            Minutes
-          </p>
+          <p>{t("next-step.sub")}</p>
         </Col>
         <Col xs={24} sm={24} md={6} lg={6} xl={6}>
           <div className="faq-actions">
-            <Button type="primary" className="faq-actions-tryout">
-              Try Edge Services
+            <Button
+              type="primary"
+              className="faq-actions-tryout"
+              href={
+                locale === "fa" ? "/fa/about#callback" : "/en/about#callback"
+              }
+            >
+              {t("next-step.actions.start")}
             </Button>
-            <Button type="default" className="faq-actions-callback">
-              Request for Call Back
+            <Button
+              type="default"
+              className="faq-actions-callback"
+              href={
+                locale === "fa" ? "/fa/about#callback" : "/en/about#callback"
+              }
+            >
+              {t("next-step.actions.contact")}
             </Button>
           </div>
         </Col>

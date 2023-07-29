@@ -2,7 +2,7 @@ import { Col, Row } from "antd";
 import GoogleMaps from "./GoogleMaps";
 import StyleWrapper from "./addressSection.style";
 import SvgIcon from "@/components/SvgIcon";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import Image from "next/image";
 
 export default function AddressSection() {

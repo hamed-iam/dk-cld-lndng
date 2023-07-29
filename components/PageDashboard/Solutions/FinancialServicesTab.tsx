@@ -1,14 +1,10 @@
 import { Collapse } from "antd";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslation } from "next-i18next";
 
 const { Panel } = Collapse;
 
-const text = `
-    A dog is a type of domesticated animal.
-    Known for its loyalty and faithfulness,
-    it can be found as a welcome guest in many households across the world.
-  `;
 const panelStyle = {
   marginBottom: 18,
   background: "#FFFFFF",
@@ -49,6 +45,8 @@ const defaultState = {
 };
 
 export default function FinancialServicesTab() {
+  const { t } = useTranslation("dashboard");
+
   const [activePanel, setActivePanel] = useState(defaultState);
   const [openPanel, setOpenPanel] = useState<string[] | string>([]);
 
@@ -82,38 +80,58 @@ export default function FinancialServicesTab() {
           <Panel
             header={
               <div className="panel-header">
-                <h3>Financial Services Panel 1</h3>
-                {activePanel.panel1.isHeaderSumShow && <p>{text}</p>}
+                <h3>{t("solutions.tabs.application.panel.0.h3")}</h3>
+                {activePanel.panel1.isHeaderSumShow && (
+                  <p>{t("solutions.tabs.application.panel.0.desc")}</p>
+                )}
               </div>
             }
             key="1"
             style={panelStyle}
           >
-            <p>{text}</p>
+            <p>{t("solutions.tabs.application.panel.0.desc")}</p>
           </Panel>
           <Panel
             header={
               <div className="panel-header">
-                <h3>Financial Services Panel 2</h3>
-                {activePanel.panel2.isHeaderSumShow && <p>{text}</p>}
+                <h3>{t("solutions.tabs.application.panel.1.h3")}</h3>
+                {activePanel.panel2.isHeaderSumShow && (
+                  <p>{t("solutions.tabs.application.panel.1.desc")}</p>
+                )}
               </div>
             }
             key="2"
             style={panelStyle}
           >
-            <p>{text}</p>
+            <p>{t("solutions.tabs.application.panel.1.desc")}</p>
           </Panel>
           <Panel
             header={
               <div className="panel-header">
-                <h3>Financial Services Panel 3</h3>
-                {activePanel.panel3.isHeaderSumShow && <p>{text}</p>}
+                <h3>{t("solutions.tabs.application.panel.2.h3")}</h3>
+                {activePanel.panel3.isHeaderSumShow && (
+                  <p>{t("solutions.tabs.application.panel.2.desc")}</p>
+                )}
               </div>
             }
             key="3"
             style={panelStyle}
           >
-            <p>{text}</p>
+            <p>{t("solutions.tabs.application.panel.2.desc")}</p>
+          </Panel>
+          <Panel
+            header={
+              <div className="panel-header">
+                <h3>{t("solutions.tabs.application.panel.3.h3")}</h3>
+                {activePanel.panel4.isHeaderSumShow && (
+                  <p>{t("solutions.tabs.application.panel.3.desc")}</p>
+                )}
+              </div>
+            }
+            key="4"
+            style={panelStyle}
+          >
+            <p>{t("solutions.tabs.application.panel.3.desc")}</p>
           </Panel>
         </Collapse>
       </div>
@@ -130,26 +148,44 @@ export default function FinancialServicesTab() {
           <Panel
             header={
               <div className="panel-header">
-                <h3>Financial Services Panel 4</h3>
-                {activePanel.panel4.isHeaderSumShow && <p>{text}</p>}
+                <h3>{t("solutions.tabs.application.panel.4.h3")}</h3>
+                {activePanel.panel4.isHeaderSumShow && (
+                  <p>{t("solutions.tabs.application.panel.4.desc")}</p>
+                )}
               </div>
             }
             key="4"
             style={panelStyle}
           >
-            <p>{text}</p>
+            <p>{t("solutions.tabs.application.panel.4.desc")}</p>
           </Panel>
           <Panel
             header={
               <div className="panel-header">
-                <h3>Financial Services Panel 5</h3>
-                {activePanel.panel5.isHeaderSumShow && <p>{text}</p>}
+                <h3>{t("solutions.tabs.application.panel.5.h3")}</h3>
+                {activePanel.panel5.isHeaderSumShow && (
+                  <p>{t("solutions.tabs.application.panel.5.desc")}</p>
+                )}
               </div>
             }
             key="5"
             style={panelStyle}
           >
-            <p>{text}</p>
+            <p>{t("solutions.tabs.application.panel.5.desc")}</p>
+          </Panel>
+          <Panel
+            header={
+              <div className="panel-header">
+                <h3>{t("solutions.tabs.application.panel.6.h3")}</h3>
+                {activePanel.panel5.isHeaderSumShow && (
+                  <p>{t("solutions.tabs.application.panel.6.desc")}</p>
+                )}
+              </div>
+            }
+            key="5"
+            style={panelStyle}
+          >
+            <p>{t("solutions.tabs.application.panel.6.desc")}</p>
           </Panel>
         </Collapse>
       </div>

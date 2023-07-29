@@ -1,10 +1,11 @@
 import { Input, TextArea } from "@/components/DataEntry";
 import SvgIcon from "@/components/SvgIcon";
 import { Col, Row } from "antd";
-import { Button } from "antd";
+import axios from "axios";
 import { useForm } from "react-hook-form";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import StyleWrapper from "./callbackSection.style";
+import { Button, message } from "antd";
 
 export default function CallbackSection() {
   const { t } = useTranslation("about");
@@ -32,12 +33,22 @@ export default function CallbackSection() {
 
   const { handleSubmit, control, getFieldState } = useForm({
     defaultValues: {
-      input: "",
+      name: "",
+      email: "",
+      phone: "",
+      description: "",
     },
   });
 
   const onSubmit = (data: any) => {
-    console.log(data);
+    axios
+      .post("https://api.digicloud.dev/v1/early-access-request", data)
+      .then(function (response) {
+        message.success(t("callback.form.success-msg"));
+      })
+      .catch(function (error) {
+        message.error(error.message);
+      });
   };
 
   const handleInputChange = (value: string) => {
@@ -73,7 +84,8 @@ export default function CallbackSection() {
                 placeholder={titlePlaceholder}
                 control={control}
                 onChange={handleInputChange}
-                name="company"
+                name="name"
+                required
               />
               <div className="form-label">{t("callback.form.email")}</div>
               <Input
@@ -81,13 +93,24 @@ export default function CallbackSection() {
                 control={control}
                 onChange={handleInputChange}
                 name="email"
+                required
+                rules={{
+                  validate: {
+                    maxLength: (v: any) =>
+                      v.length <= 50 ||
+                      (t("callback.form.validation.maxLength") as string),
+                    matchPattern: (v: any) =>
+                      /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(v) ||
+                      (t("callback.form.validation.mailPattern") as string),
+                  },
+                }}
               />
               <div className="form-label">{t("callback.form.call-number")}</div>
               <Input
                 placeholder={numberPlaceholder}
                 control={control}
                 onChange={handleInputChange}
-                name="number"
+                name="phone"
               />
               <div className="form-label">{t("callback.form.desc")}</div>
               <TextArea
@@ -99,7 +122,7 @@ export default function CallbackSection() {
                 <Button
                   htmlType="submit"
                   type="primary"
-                  disabled={!!getFieldState("input").error}
+                  disabled={!!getFieldState("name").error}
                   size="large"
                 >
                   {t("callback.form.submit")}

@@ -8,7 +8,6 @@ import TitleFrame from "../../TitleFrame";
 import SloganFa from "./SloganFa";
 import SloganEn from "./SloganEn";
 import { Button } from "antd";
-import { useRef } from "react";
 
 interface HeroCmpPropTypes {
   videoHandler: () => void;

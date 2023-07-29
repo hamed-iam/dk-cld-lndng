@@ -1,7 +1,7 @@
 import SvgIcon from "@/components/SvgIcon";
 import TitleFrame from "@/components/TitleFrame";
 import Link from "next/link";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { ProductTabsStyledWrapper } from "./productsFeatures.style";
 import { Button, Collapse } from "antd";
 import { useRouter } from "next/router";
@@ -13,7 +13,7 @@ interface ProductTabPropTypes {
   title: string;
   desc: string;
   sub: string;
-  detailUrl: string;
+  detailsUrl: string;
   activate: boolean;
 }
 
@@ -21,7 +21,7 @@ export default function ProductTab({
   title,
   desc,
   sub,
-  detailUrl,
+  detailsUrl,
   activate,
 }: ProductTabPropTypes) {
   const { t } = useTranslation("dashboard");
@@ -39,17 +39,25 @@ export default function ProductTab({
           </div>
           <p className="tab-desc">{desc}</p>
           <div className="tab-actions">
-            <Button className="tab-actions-create">
+            <Button
+              className="tab-actions-create"
+              href={
+                locale === "fa" ? "/fa/about#callback" : "/en/about#callback"
+              }
+            >
               {t("products.info-action-create")}
             </Button>
-            <Button className="tab-actions-details">
+            <Button
+              className="tab-actions-details"
+              href={locale === "fa" ? "/fa/" + detailsUrl : "/en/" + detailsUrl}
+            >
               {t("products.info-action-details")}
               <SvgIcon title="moreAboutUsArrowIcon" viewBox="0 0 20 21" />
             </Button>
           </div>
           <div className="tab-sub">
             <span>{t("products.info-sub")}</span>{" "}
-            <Link href="/" className="products.info-sub-link">
+            <Link href="/about#callback" className="products.info-sub-link">
               {t("products.info-sub-link")}
             </Link>
           </div>

@@ -2,7 +2,7 @@ import { Button, Col, Row } from "antd";
 import StyledWrapper from "./edgePricingSection.style";
 import SvgIcon from "../../SvgIcon";
 import EdgePricingCard from "./EdgePricingCard";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 type Icon = {
   title: string;
@@ -33,6 +33,22 @@ export default function EdgePricingSection({
           title: t("pricing.cards.0.item-title.0"),
           status: true,
         },
+        {
+          title: t("pricing.cards.0.item-title.1"),
+          status: false,
+        },
+        {
+          title: t("pricing.cards.0.item-title.2"),
+          status: false,
+        },
+        {
+          title: t("pricing.cards.0.item-title.3"),
+          status: true,
+        },
+        {
+          title: t("pricing.cards.0.item-title.4"),
+          status: true,
+        },
       ],
     },
     {
@@ -45,6 +61,22 @@ export default function EdgePricingSection({
           title: t("pricing.cards.1.item-title.0"),
           status: false,
         },
+        {
+          title: t("pricing.cards.1.item-title.1"),
+          status: true,
+        },
+        {
+          title: t("pricing.cards.1.item-title.2"),
+          status: true,
+        },
+        {
+          title: t("pricing.cards.1.item-title.3"),
+          status: false,
+        },
+        {
+          title: t("pricing.cards.1.item-title.4"),
+          status: false,
+        },
       ],
     },
     {
@@ -55,7 +87,23 @@ export default function EdgePricingSection({
       items: [
         {
           title: t("pricing.cards.2.item-title.0"),
+          status: true,
+        },
+        {
+          title: t("pricing.cards.2.item-title.1"),
           status: false,
+        },
+        {
+          title: t("pricing.cards.2.item-title.2"),
+          status: false,
+        },
+        {
+          title: t("pricing.cards.2.item-title.3"),
+          status: true,
+        },
+        {
+          title: t("pricing.cards.2.item-title.4"),
+          status: true,
         },
       ],
     },

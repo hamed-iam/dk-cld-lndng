@@ -113,6 +113,8 @@ export default styled.div(
             transform: rotate(${locale === "fa" ? "270deg" : "0deg"});
           }
           .start-btn {
+            display: flex;
+            align-items: center;
             width: 185px;
             height: 46px;
             font-style: normal;

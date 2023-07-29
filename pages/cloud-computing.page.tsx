@@ -1,6 +1,8 @@
 import { Layout } from "@/components";
 import { CloudComputingCTR } from "@/containers";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+import Head from "next/head";
 
 interface PageProps {
   theme: string | (() => void);
@@ -8,10 +10,17 @@ interface PageProps {
 }
 
 const CloudComputingPage = ({ toggleTheme, theme }: PageProps) => {
+  const { t } = useTranslation("cloud-computing");
+
   return (
-    <Layout toggleTheme={toggleTheme} theme={theme}>
-      <CloudComputingCTR />
-    </Layout>
+    <>
+      <Head>
+        <title>{t("title")}</title>
+      </Head>
+      <Layout toggleTheme={toggleTheme} theme={theme}>
+        <CloudComputingCTR />
+      </Layout>
+    </>
   );
 };
 

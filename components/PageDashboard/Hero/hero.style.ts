@@ -33,8 +33,10 @@ export default styled.div(
           .icon {
             width: 32px;
             position: absolute;
-            left: -3rem;
+            left: ${locale === "fa" ? "auto" : "-3rem"};
+            right: ${locale === "fa" ? "-3rem" : "auto"};
             top: -1rem;
+            transform: rotateY(${locale === "fa" ? "180deg" : "0deg"});
 
             @media (max-width: 600px) {
               display: none;

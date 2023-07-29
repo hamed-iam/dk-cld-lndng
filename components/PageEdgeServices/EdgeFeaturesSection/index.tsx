@@ -6,12 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import StyledWrapper from "./featuresSection.style";
 import EdgeFeaturesTable from "./EdgeFeaturesTable";
-import { useTranslation } from "react-i18next";
-
-type Icon = {
-  title: string;
-  viewBox: string;
-};
+import { useTranslation } from "next-i18next";
 
 interface DefineFeaturesProps {
   superTitle: string;
@@ -31,14 +26,14 @@ export default function EdgeFeaturesSection({
           <p className="title-wrapper-super">{superTitle}</p>
           <div style={{ display: "flex", flex: 1 }}>
             <div className="title-wrapper-title">
-              <h1>{t("protect.h1-bold")}</h1>
-              <span className="title-rest">{t("protect.h1")}</span>
+              <h1>{t("approach.h1-bold")}</h1>
+              <span className="title-rest">{t("approach.h1")}</span>
             </div>
           </div>
           <h2 className="title-wrapper-subheading">
-            {t("protect.h2")}{" "}
+            {t("approach.h2")}{" "}
             <span className="highlight">
-              <span className="highlight-word">{t("protect.h2-colored")}</span>
+              <span className="highlight-word">{t("approach.h2-colored")}</span>
             </span>
           </h2>
           <div className="title-wrapper-sub">

@@ -4,7 +4,7 @@ import { ThemeStyledProps } from "@/styles/themes";
 export default styled.div(
   ({
     theme: {
-      colors: { DarkBGGrade15 },
+      colors: { DarkBGGrade15, DarkTextMid },
       locale,
     },
   }: ThemeStyledProps) => {
@@ -12,7 +12,6 @@ export default styled.div(
       color: white;
       background: ${DarkBGGrade15};
       margin-top: calc(68px + (80 - 24) * ((100vw - 320px) / (1920 - 320)));
-      /* overflow: hidden; */
 
       .triangle {
         width: 100%;
@@ -75,24 +74,6 @@ export default styled.div(
         );
         position: relative;
 
-        /* ::before {
-          content: "";
-          background: #3d88eb;
-          position: absolute;
-          width: 500px;
-          height: 500px;
-          bottom: -250px;
-          right: -250px;
-          left: ${locale === "fa" ? "-250px" : "auto"};
-          right: ${locale === "fa" ? "auto" : "-250px"};
-          background: radial-gradient(
-            circle,
-            rgba(0, 185, 255, 1) 0%,
-            rgba(255, 0, 0, 0) 60%
-          );
-          opacity: 0.3;
-        } */
-
         @media screen and (max-width: 768px) {
           ::before {
             content: "";
@@ -116,7 +97,6 @@ export default styled.div(
           &-icon {
             border-radius: 50%;
             margin-inline-end: 7px;
-            font-size: 15px;
           }
 
           .active {
@@ -124,7 +104,7 @@ export default styled.div(
               z-index: 1;
               width: 12px;
               height: 12px;
-              box-shadow: 0px 3px 24px 3px #ff64b8bf;
+              box-shadow: 0px 3px 24px 3px #ff5a82;
               background: linear-gradient(
                 89.74deg,
                 #cb5ff2 0.2%,
@@ -149,7 +129,7 @@ export default styled.div(
             div {
               width: 6px;
               height: 6px;
-              background: #fff;
+              background: ${DarkTextMid};
             }
           }
 
@@ -179,7 +159,7 @@ export default styled.div(
             width: max-content;
             background: ${DarkBGGrade15};
             border-radius: 40px;
-            padding: 2px 5px;
+            padding: 2px 6px;
           }
           .tab-button:hover {
             cursor: pointer;
@@ -193,14 +173,14 @@ export default styled.div(
 
           .storage-pos {
             top: 80px;
-            left: ${locale === "fa" ? "auto" : "150px"};
-            right: ${locale === "fa" ? "150px" : "auto"};
+            left: ${locale === "fa" ? "auto" : "140px"};
+            right: ${locale === "fa" ? "140px" : "auto"};
           }
 
           .edge-pos {
             top: 310px;
-            left: ${locale === "fa" ? "auto" : "135px"};
-            right: ${locale === "fa" ? "135px" : "auto"};
+            left: ${locale === "fa" ? "auto" : "145px"};
+            right: ${locale === "fa" ? "145px" : "auto"};
           }
         }
 
@@ -285,7 +265,8 @@ export default styled.div(
         }
 
         .features-wrapper {
-          padding: 68px 20px 96px 20px;
+          padding: 68px 5px 96px 5px;
+          margin-inline-end: 12%;
         }
 
         .features-title {
@@ -316,7 +297,6 @@ export default styled.div(
 
         ::before {
           content: "";
-          background: #3d88eb;
           position: absolute;
           width: 300px;
           height: 300px;
@@ -471,6 +451,9 @@ export const ProductChartsStyledWrapper = styled.div(
         LightThemePrimary600,
         DarkTextMid,
         DarkTextLow,
+        DarkThemePrimary500Light,
+        DarkBGGrade3,
+        DarkThemePrimary700,
       },
       locale,
     },
@@ -572,7 +555,7 @@ export const ProductChartsStyledWrapper = styled.div(
 
       .circle-bg {
         fill: none;
-        stroke: #262738;
+        stroke: ${DarkBGGrade3};
         stroke-width: 8;
       }
 
@@ -592,8 +575,8 @@ export const ProductChartsStyledWrapper = styled.div(
         }
       }
 
-      .circular-chart.orange .circle {
-        stroke: #2e518f;
+      .circular-chart.stroke .circle {
+        stroke: ${DarkThemePrimary500Light};
       }
 
       .bar-graph-vertical .bar-container {
@@ -615,8 +598,6 @@ export const ProductChartsStyledWrapper = styled.div(
         -webkit-animation: fade-in-text 2.2s 0.1s forwards;
         -moz-animation: fade-in-text 2.2s 0.1s forwards;
         animation: fade-in-text 2.2s 0.1s forwards;
-        color: #fff;
-        font-weight: 700;
         left: 0;
         margin: 0 auto;
         position: absolute;
@@ -631,14 +612,14 @@ export const ProductChartsStyledWrapper = styled.div(
       }
 
       .bar-graph-two .bar-one .bar {
-        background-color: #22336b;
+        background-color: ${DarkThemePrimary700};
         -webkit-animation: show-bar-one-vertical 1.2s 0.1s forwards;
         -moz-animation: show-bar-one-vertical 1.2s 0.1s forwards;
         animation: show-bar-one-vertical 1.2s 0.1s forwards;
       }
 
       .bar-graph-two .bar-two .bar {
-        background-color: #2e518f;
+        background-color: ${DarkThemePrimary500Light};
         -webkit-animation: show-bar-two-vertical 1.2s 0.2s forwards;
         -moz-animation: show-bar-two-vertical 1.2s 0.2s forwards;
         animation: show-bar-two-vertical 1.2s 0.2s forwards;
@@ -804,8 +785,10 @@ export const ProductFeaturesStyledWrapper = styled.div(
   }: ThemeStyledProps) => {
     return css`
       .feature {
-        display: flex;
-        margin-inline-end: 5%;
+        &-collapse {
+          display: flex;
+          flex-wrap: wrap;
+        }
 
         .save-collapses {
           width: 100%;
@@ -816,8 +799,8 @@ export const ProductFeaturesStyledWrapper = styled.div(
             background-color: ${DarkBGGrade2};
             border-radius: 12px;
             border: 1px solid ${DarkBorderHigh};
-            width: 312px;
-            margin: 20px 10px 20px 10px;
+            width: 300px;
+            margin: 10px;
 
             &-desc {
               margin: unset;
@@ -825,6 +808,7 @@ export const ProductFeaturesStyledWrapper = styled.div(
           }
           .panel-header {
             display: flex;
+
             .icon {
               width: 32px;
               height: 32px;

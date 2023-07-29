@@ -3,7 +3,7 @@ import { Button, Col, Row } from "antd";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import HelpCard from "./HelpCard";
 import StyleWrapper from "./helpSection.style";
 
