@@ -22,7 +22,7 @@ export default styled.nav(
       }
 
       .nav {
-        height: 30px;
+        min-height: 35px;
         display: flex;
         align-items: center;
 
