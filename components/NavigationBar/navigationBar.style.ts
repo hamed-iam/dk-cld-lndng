@@ -17,8 +17,14 @@ export default styled.nav(
       width: 100%;
       justify-content: space-evenly;
 
+      .ant-select {
+        min-width: 140px;
+      }
+
       .nav {
-        /* margin: 0 40px; */
+        min-height: 35px;
+        display: flex;
+        align-items: center;
 
         color: ${LightTextDarkLow};
         font-weight: 400;

@@ -149,9 +149,9 @@ const EdgeServicesCtr = () => {
         }}
       />
       <CaseStudy
-        panels={caseStudyPanels}
         title={t("usecase.h2")}
         desc={t("usecase.desc")}
+        panels={caseStudyPanels}
       />
       <Faq
         loc="edge-services"

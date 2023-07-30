@@ -9,8 +9,8 @@
     "docs": "Docs",
     "products-label": "Products",
     "products": {
-      "cloud-computing": "Cloud computing",
-      "oss": "Oss Storage",
+      "cloud-computing": "Cloud Computing",
+      "oss": "Object Storage",
       "edge-services": "Edge Services"
     },
     "menu": "Menu"
@@ -54,6 +54,10 @@
     "h3": "Know about Customers Using",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
     "link": "Request fo Call Back"
+  },
+  "usecase":{
+    "super-h1": "Guidance",
+    "h1": "Use Cases In"
   },
   "faq": {
     "h1": "FAQ",

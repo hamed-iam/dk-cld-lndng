@@ -49,7 +49,6 @@ const DashboardCtr = () => {
     <StyledWrapper>
       <Hero videoHandler={handlePlay} />
       <ProductsFeatures />
-      <button onClick={handlePlay}>Play</button>
       <AboutUs videoRef={videoRef} />
       <SaveMore />
       {/* <SolutionsSection cards={solutionsCards} /> */}
